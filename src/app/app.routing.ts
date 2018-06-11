@@ -7,13 +7,13 @@ export const AppRoutes: Routes = [{
   component: FullComponent,
   children: [{
     path: '',
-    redirectTo: '/starter',
+    redirectTo: '/upload',
     pathMatch: 'full'
   }, {
     path: '',
     loadChildren: './material-component/material.module#MaterialComponentsModule'
   }, {
-    path: 'starter',
+    path: 'upload',
     loadChildren: './starter/starter.module#StarterModule'
   }]
 }];

@@ -1,56 +1,6 @@
 <!-- ============================================================== -->
 <!-- Main wrapper - style you can find in pages.scss -->
 <!-- ============================================================== -->
-<mat-toolbar color="primary">
-  <button mat-icon-button [matMenuTriggerFor]="menu2"><mat-icon>menu</mat-icon></button>
-  <mat-menu #menu2="matMenu">
-    <button mat-menu-item>View Programmes</button>
-    <button mat-menu-item>Logout</button>
-  </mat-menu>
-
-  <span id = "title">Programme Search</span>
-</mat-toolbar>
-<!--<br> <br>-->
-
-<div fxLayout="row" fxLayout.xs = "column">
-  <mat-card class = "outer">
-    <mat-card-title> 643 Programmes </mat-card-title>
-    <mat-card-content>
-      <mat-grid-list cols="2" rowHeight="6:1">
-        <mat-grid-tile> Social Sciences 100 </mat-grid-tile>
-        <mat-grid-tile>Engineering 90 </mat-grid-tile>
-        <mat-grid-tile>Engineering 90</mat-grid-tile>
-        <mat-grid-tile>Engineering 90</mat-grid-tile>
-        <mat-grid-tile>Engineering 90</mat-grid-tile>
-        <mat-grid-tile>Engineering 90</mat-grid-tile>
-        <mat-grid-tile>Engineering 90</mat-grid-tile>
-      </mat-grid-list>
-
-    </mat-card-content>
-
-    <mat-card-actions>
-      <button mat-raised-button color="primary">View Programmes</button>
-    </mat-card-actions>
-  </mat-card>
-
-  <mat-card class = "outer">
-    <div id="upload-area">
-      <i class="material-icons">
-        cloud_upload
-      </i>
-      <mat-card-title> Drag and drop files here </mat-card-title>
-      <mat-card-subtitle>or</mat-card-subtitle>
-      <mat-card-actions>
-        <button mat-raised-button color="primary">Browse files</button>
-      </mat-card-actions>
-    </div>
-    <br>
-    <button mat-raised-button color="primary">Edit Programmes</button>
-  </mat-card>
-</div>
-
-
-
-<!--<router-outlet><app-spinner></app-spinner></router-outlet>-->
+<router-outlet><app-spinner></app-spinner></router-outlet>
 
 
