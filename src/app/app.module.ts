@@ -17,6 +17,7 @@ import { DemoMaterialModule} from './demo-material-module';
 
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
+import { EditProgrammePageComponent } from './edit-programme-page/edit-programme-page.component';
 
 @NgModule({
   declarations: [
@@ -24,17 +25,18 @@ import { SpinnerComponent } from './shared/spinner.component';
     FullComponent,
     AppHeaderComponent,
     SpinnerComponent,
-    AppSidebarComponent  
+    AppSidebarComponent,
+    EditProgrammePageComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     DemoMaterialModule,
     FormsModule,
-    FlexLayoutModule,  
+    FlexLayoutModule,
     HttpClientModule,
-    SharedModule,  
-    RouterModule.forRoot(AppRoutes)  
+    SharedModule,
+    RouterModule.forRoot(AppRoutes)
   ],
   providers: [
   {

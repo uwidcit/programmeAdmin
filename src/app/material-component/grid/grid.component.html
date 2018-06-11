@@ -15,11 +15,11 @@
                       [style.background]="tile.color">
                     {{tile.text}}
                   </mat-grid-tile>
-                </mat-grid-list>  
-            </mat-card-content>        
+                </mat-grid-list>
+            </mat-card-content>
         </mat-card>
     </div>
-</div>    
+</div>
 <!-- ============================================================== -->
 <!-- Basic Card Grid-->
 <!-- ============================================================== -->
@@ -28,10 +28,24 @@
       <mat-card-title>Basic grid-list</mat-card-title>
       <mat-card-subtitle><code>&lt;mat-grid-list&gt;</code> is a two-dimensional list view that arranges cells into grid-based layout. See Material Design spec. <a href="https://material.io/guidelines/components/grid-lists.html">here</a></mat-card-subtitle>
       <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile>1</mat-grid-tile>
-        <mat-grid-tile>2</mat-grid-tile>
-        <mat-grid-tile>3</mat-grid-tile>
-        <mat-grid-tile>4</mat-grid-tile>
-      </mat-grid-list>  
-    </mat-card-content>        
+        <mat-grid-tile>
+          <mat-card>
+            <mat-card-title> 643 Programmes </mat-card-title>
+            <mat-card-content>
+              <p>Social Sciences 100</p>
+              <p>Engineering 90</p>
+            </mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-card>
+            <mat-card-title> 643 Programmes </mat-card-title>
+            <mat-card-content>
+              <p>Social Sciences 100</p>
+              <p>Engineering 90</p>
+            </mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
 </mat-card>
