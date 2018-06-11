@@ -12,7 +12,6 @@ import { StarterRoutes } from './starter.routing';
     DemoMaterialModule,
       FlexLayoutModule,
     RouterModule.forChild(StarterRoutes)
-    
   ],
   declarations: [ StarterComponent ]
 })

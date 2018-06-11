@@ -8,16 +8,10 @@
 
 <div fxLayout="row" fxLayout.xs = "column">
   <mat-card class = "outer">
-    <mat-card-title> 643 Programmes </mat-card-title>
+    <mat-card-title> {{progTotal}} Programmes </mat-card-title>
     <mat-card-content>
       <mat-grid-list cols="2" rowHeight="6:1">
-        <mat-grid-tile> Social Sciences 100 </mat-grid-tile>
-        <mat-grid-tile>Engineering 90 </mat-grid-tile>
-        <mat-grid-tile>Engineering 90</mat-grid-tile>
-        <mat-grid-tile>Engineering 90</mat-grid-tile>
-        <mat-grid-tile>Engineering 90</mat-grid-tile>
-        <mat-grid-tile>Engineering 90</mat-grid-tile>
-        <mat-grid-tile>Engineering 90</mat-grid-tile>
+        <mat-grid-tile *ngFor = "let prog of programmes"> {{prog.title}} {{prog.number}}</mat-grid-tile>
       </mat-grid-list>
 
     </mat-card-content>
@@ -32,6 +26,9 @@
       <i class="material-icons">
         cloud_upload
       </i>
+      <!--<angular-file-uploader-->
+        <!--[config]="afuConfig">-->
+      <!--</angular-file-uploader>-->
       <mat-card-title> Drag and drop files here </mat-card-title>
       <mat-card-subtitle>or</mat-card-subtitle>
       <mat-card-actions>

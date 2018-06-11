@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Social Sciences",
+    "number": 100
+  },
+  {
+    "title": "Engineering",
+    "number": 90
+  },
+  {
+    "title": "Food and Agriculture",
+    "number": 128
+  },
+  {
+    "title": "Humanities and Education",
+    "number": 150
+  },
+  {
+    "title": "IGDS",
+    "number": 20
+  },
+  {
+    "title": "Law",
+    "number": 5
+  },
+  {
+    "title": "Science and Technology",
+    "number": 150
+  }
+]
