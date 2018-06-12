@@ -1,6 +1,5 @@
-import * as $ from 'jquery';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,7 +17,7 @@ import { DemoMaterialModule} from './demo-material-module';
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
 import { EditProgrammePageComponent } from './edit-programme-page/edit-programme-page.component';
-import {FileUploadModule} from 'angular-file-uploader';
+import { FileUploadModule } from 'angular-file-uploader';
 
 @NgModule({
   declarations: [
@@ -37,7 +36,7 @@ import {FileUploadModule} from 'angular-file-uploader';
     FlexLayoutModule,
     HttpClientModule,
     SharedModule,
-    // FileUploadModule,
+    FileUploadModule,
     RouterModule.forRoot(AppRoutes),
   ],
   providers: [

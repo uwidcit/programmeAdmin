@@ -1,30 +1,52 @@
-import { Component, AfterViewInit, Inject, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {FormControl, Validators} from '@angular/forms';
+import { Component, AfterViewInit} from '@angular/core';
 import {UploadService} from '../upload.service';
-import {FileUploadModule} from 'angular-file-uploader';
-import { ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'starter',
+  selector: 'app-starter',
   templateUrl: './starter.component.html',
   styleUrls: ['./starter.component.scss'],
   providers: [UploadService]
 })
 export class StarterComponent implements AfterViewInit {
-    programmes: any = [];
-    progTotal: number = 0;
-    ngAfterViewInit() {}
+    faculties: any[] = [];
+    progTotal: number;
+
+  afuConfig = {
+    uploadAPI: {
+      url: 'https://example-file-upload-api'
+    },
+    formatsAllowed: '.xlsx',
+    hideProgressBar: false,
+    hideResetBtn: false,
+    hideSelectBtn: false
+  };
+
+  afuConfigDragAndDrop = {
+    multiple: false,
+    formatsAllowed: '.xlsx',
+    maxSize: '10',
+    uploadAPI:  {
+      url: 'https://example-file-upload-api',
+      headers: {
+        'Content-Type' : 'text/plain;charset=UTF-8',
+      }
+    },
+    theme: 'dragNDrop',
+    hideProgressBar: false,
+    hideResetBtn: false,
+    hideSelectBtn: true
+  };
 
     constructor(public progData: UploadService) {}
 
     ngOnInit() {
       this.progData.getProgrammeNumbers().subscribe((data: any) => {
         console.log(data);
-        this.programmes = data;
+        this.faculties = data;
         data.forEach((each_obj) => {
           this.progTotal += each_obj.number;
         });
       });
     }
+    ngAfterViewInit() {}
 }

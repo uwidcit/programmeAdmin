@@ -1,8 +1,5 @@
-<!-- ============================================================== -->
-<!-- Simple four boxes Row -->
-<!-- ============================================================== -->
 <mat-toolbar color="primary">
-  <span id = "title">Programme Upload</span>
+  <span id = "title">Programme Upload </span>
 </mat-toolbar>
 <!--<br> <br>-->
 
@@ -10,10 +7,24 @@
   <mat-card class = "outer">
     <mat-card-title> {{progTotal}} Programmes </mat-card-title>
     <mat-card-content>
-      <mat-grid-list cols="2" rowHeight="6:1">
-        <mat-grid-tile *ngFor = "let prog of programmes"> {{prog.title}} {{prog.number}}</mat-grid-tile>
-      </mat-grid-list>
+      <div class="container-fluid">
+        <table class = "table">
+          <thead>
+          <tr>
+            <th scope="col">Faculty</th>
+            <th scope="col">Programmes offered</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor = "let fac of faculties">
+            <td>{{fac.title}}</td>
+            <td>{{fac.number}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
 
+      <!--<mat-grid-tile *ngFor = "let prog of programmes"> <p> {{prog.title}} {{prog.number}} </p></mat-grid-tile>-->
     </mat-card-content>
 
     <mat-card-actions>
@@ -26,16 +37,22 @@
       <i class="material-icons">
         cloud_upload
       </i>
-      <!--<angular-file-uploader-->
-        <!--[config]="afuConfig">-->
-      <!--</angular-file-uploader>-->
       <mat-card-title> Drag and drop files here </mat-card-title>
-      <mat-card-subtitle>or</mat-card-subtitle>
+      <angular-file-uploader
+        [config]="afuConfigDragAndDrop"
+        [resetUpload]=resetVar
+        (ApiResponse)="DocUpload($event)">
+      </angular-file-uploader>
+
+      <hr>
       <mat-card-actions>
-        <button mat-raised-button color="primary">Browse files</button>
+        <mat-card-title>Browse files</mat-card-title>
+        <angular-file-uploader [config]="afuConfig">
+        </angular-file-uploader>
       </mat-card-actions>
     </div>
     <br>
-    <button mat-raised-button color="primary">Edit Programmes</button>
+    <!--<button mat-raised-button color="primary">Edit Programmes</button>-->
+
   </mat-card>
 </div>

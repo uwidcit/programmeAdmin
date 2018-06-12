@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { FullComponent } from './layouts/full/full.component';
+import {EditProgrammePageComponent} from './edit-programme-page/edit-programme-page.component';
 
 export const AppRoutes: Routes = [{
   path: '',
@@ -15,6 +16,9 @@ export const AppRoutes: Routes = [{
   }, {
     path: 'upload',
     loadChildren: './starter/starter.module#StarterModule'
+  }, {
+    path: 'edit',
+    component: EditProgrammePageComponent
   }]
 }];
 

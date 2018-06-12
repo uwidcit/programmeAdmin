@@ -3,27 +3,21 @@
   text-align: center;
 }
 
-button {
-  display: inline;
-}
+button { display: inline;}
 
 .outer {
   text-align: center;
   display: inline-block;
   padding: 20px !important;
   width: 750px;
-  height: 400px;
 }
 
-mat-card {
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5) !important;
-}
-mat-card p {
-  margin: 7px;
-}
-
+mat-card { box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5) !important; }
+mat-card-content { padding: 0 !important; }
 
 i {font-size: 75px; }
+table { text-align: center;}
+hr { border-top: 1px solid black; }
 
 #upload-area {
   background: lightgray;
