@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule} from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { AppRoutes } from './app.routing';
@@ -18,6 +18,8 @@ import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
 import { EditProgrammePageComponent } from './edit-programme-page/edit-programme-page.component';
 import { FileUploadModule } from 'angular-file-uploader';
+import { LoginPageComponent } from './login-page/login-page.component';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { FileUploadModule } from 'angular-file-uploader';
     SpinnerComponent,
     AppSidebarComponent,
     EditProgrammePageComponent,
+    LoginPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +40,7 @@ import { FileUploadModule } from 'angular-file-uploader';
     HttpClientModule,
     SharedModule,
     FileUploadModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(AppRoutes),
   ],
   providers: [
