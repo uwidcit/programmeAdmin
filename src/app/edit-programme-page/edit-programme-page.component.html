@@ -1,11 +1,104 @@
-<!--<mat-toolbar color = "primary">-->
-  <!--<mat-toolbar-row>-->
-    <!--<h1>Edit Programmes</h1>-->
-  <!--</mat-toolbar-row>-->
+<mat-toolbar color = "primary">
+  <mat-toolbar-row>
+    <h1>Edit Programmes</h1>
+  </mat-toolbar-row>
 
-  <!--<mat-toolbar-row>-->
-    <!--<mat-form-field class="example-full-width">-->
-      <!--<textarea matInput placeholder="Search"></textarea>-->
-    <!--</mat-form-field>-->
-  <!--</mat-toolbar-row>-->
-<!--</mat-toolbar>-->
+  <mat-toolbar-row id = "search">
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Search"></textarea>
+    </mat-form-field>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <mat-nav-list>
+        <mat-list-item> Agribusiness Management </mat-list-item>
+        <mat-list-item> Computer Science </mat-list-item>
+        <mat-list-item> Information Technology </mat-list-item>
+        <mat-list-item> Electrical Engineering </mat-list-item>
+        <mat-list-item> Civil Engineering </mat-list-item>
+        <mat-list-item> Petroleum Engineering </mat-list-item>
+        <mat-list-item> Chemical Engineering </mat-list-item>
+        <mat-list-item> Mechanical Engineering </mat-list-item>
+
+      </mat-nav-list>
+    </div>
+    <div class="col-md-9">
+      <mat-card>
+        <div class="container-fluid">
+          <div class="row">
+            <h1>Agribusiness Management </h1>
+          </div>
+          <div class="row">
+            <div class="col-md-7">
+              <mat-label>Single Subject Requirements</mat-label>
+              <mat-form-field class="general-requirements">
+                <mat-chip-list #chipList>
+                  <mat-chip *ngFor="let req of generalReqs" [selectable]="selectable"
+                            [removable]="removable" (removed)="removeGenReq(req)">
+                    {{req.name}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                  </mat-chip>
+                  <input [matChipInputFor]="chipList"
+                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                         [matChipInputAddOnBlur]="addOnBlur"
+                         (matChipInputTokenEnd)="addGenReq($event)" />
+                </mat-chip-list>
+              </mat-form-field>
+
+              <mat-label>Grouped Requirements (CSEC)</mat-label>
+              <mat-form-field class="csec-requirements">
+                <mat-chip-list #chipList>
+                  <mat-chip *ngFor="let subs of csecSubs" [selectable]="selectable"
+                            [removable]="removable" (removed)="removeCSECReq(subs)">
+                    {{subs.name}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                  </mat-chip>
+                  <input [matChipInputFor]="chipList"
+                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                         [matChipInputAddOnBlur]="addOnBlur"
+                         (matChipInputTokenEnd)="addCSECReq($event)" />
+                </mat-chip-list>
+              </mat-form-field>
+
+              <mat-label>Grouped Requirements (CAPE)</mat-label>
+              <mat-form-field class="cape-requirements">
+                <mat-chip-list #chipList>
+                  <mat-chip *ngFor="let subs of capeSubs" [selectable]="selectable"
+                            [removable]="removable" (removed)="removeCAPEReq(subs)">
+                    {{subs.name}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                  </mat-chip>
+                  <input [matChipInputFor]="chipList"
+                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                         [matChipInputAddOnBlur]="addOnBlur"
+                         (matChipInputTokenEnd)="addCAPEReq($event)" />
+                </mat-chip-list>
+              </mat-form-field>
+
+            </div>
+            <div class="offset-md-1 col-md-4">
+              <div class="row">
+                <mat-checkbox [(ngModel)]="ptChecked">Part time</mat-checkbox>
+                <mat-checkbox [(ngModel)]="ftChecked">Full time</mat-checkbox>
+                <mat-checkbox [(ngModel)]="eveningChecked">Evening</mat-checkbox>
+              </div>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="CAPE Passes (2 unit)">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="CSEC Passes">
+              </mat-form-field>
+              <!--Full time, part time, number of passes etc-->
+            </div>
+          </div>
+
+          <button mat-raised-button color="primary">Save Changes</button>
+
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

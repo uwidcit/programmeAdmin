@@ -37,19 +37,19 @@
       <i class="material-icons">
         cloud_upload
       </i>
-      <mat-card-title> Drag and drop files here </mat-card-title>
+      <mat-card-title> Drag and drop files here or browse your file system </mat-card-title>
+      <mat-card-subtitle> Only one file allowed at a time</mat-card-subtitle>
       <angular-file-uploader
-        [config]="afuConfigDragAndDrop"
-        [resetUpload]=resetVar
+        [config]="afuConfig"
         (ApiResponse)="DocUpload($event)">
       </angular-file-uploader>
 
-      <hr>
-      <mat-card-actions>
-        <mat-card-title>Browse files</mat-card-title>
-        <angular-file-uploader [config]="afuConfig">
-        </angular-file-uploader>
-      </mat-card-actions>
+      <!--<hr>-->
+      <!--<mat-card-actions>-->
+        <!--<mat-card-title>Browse files</mat-card-title>-->
+        <!--<angular-file-uploader [config]="afuConfig">-->
+        <!--</angular-file-uploader>-->
+      <!--</mat-card-actions>-->
     </div>
     <br>
     <!--<button mat-raised-button color="primary">Edit Programmes</button>-->

@@ -11,31 +11,21 @@ export class StarterComponent implements AfterViewInit {
     faculties: any[] = [];
     progTotal: number;
 
-  afuConfig = {
-    uploadAPI: {
-      url: 'https://example-file-upload-api'
-    },
-    formatsAllowed: '.xlsx',
-    hideProgressBar: false,
-    hideResetBtn: false,
-    hideSelectBtn: false
-  };
-
-  afuConfigDragAndDrop = {
-    multiple: false,
-    formatsAllowed: '.xlsx',
-    maxSize: '10',
-    uploadAPI:  {
-      url: 'https://example-file-upload-api',
-      headers: {
-        'Content-Type' : 'text/plain;charset=UTF-8',
-      }
-    },
-    theme: 'dragNDrop',
-    hideProgressBar: false,
-    hideResetBtn: false,
-    hideSelectBtn: true
-  };
+    afuConfig = {
+      multiple: false,
+      formatsAllowed: '.xlsx',
+      maxSize: '10',
+      uploadAPI:  {
+        url: 'https://example-file-upload-api',
+        headers: {
+          'Content-Type' : 'text/plain;charset=UTF-8',
+        }
+      },
+      theme: 'dragNDrop',
+      hideProgressBar: false,
+      hideResetBtn: false,
+      hideSelectBtn: false
+    };
 
     constructor(public progData: UploadService) {}
 
@@ -48,5 +38,9 @@ export class StarterComponent implements AfterViewInit {
         });
       });
     }
+
+  DocUpload($event) {
+    this.afuConfig.hideResetBtn = false;
+  }
     ngAfterViewInit() {}
 }
