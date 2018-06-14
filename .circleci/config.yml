@@ -14,3 +14,10 @@ jobs:
           paths:
             - "node_modules"
       - run: xvfb-run -a npm run test -- --no-progress --browsers=ChromeNoSandbox --watch=false
+      - run: npm run build
+      - run:
+          name: Deploy Master to Firebase
+          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+
+
+

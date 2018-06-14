@@ -34,7 +34,6 @@ describe('AppComponent', () => {
       ],
       imports: [
         BrowserModule,
-        BrowserAnimationsModule,
         DemoMaterialModule,
         FormsModule,
         FlexLayoutModule,
