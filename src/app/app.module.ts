@@ -11,7 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FullComponent } from './layouts/full/full.component';
 import { AppHeaderComponent } from './layouts/full/header/header.component';
 import { AppSidebarComponent } from './layouts/full/sidebar/sidebar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { DemoMaterialModule} from './demo-material-module';
 
 import { SharedModule } from './shared/shared.module';
@@ -41,6 +41,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
     SharedModule,
     FileUploadModule,
     ReactiveFormsModule,
+    NoopAnimationsModule,
     RouterModule.forRoot(AppRoutes),
   ],
   providers: [

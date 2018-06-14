@@ -1,6 +1,18 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditProgrammePageComponent } from './edit-programme-page.component';
+import {
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatListModule,
+  MatInputModule,
+  MatToolbarModule,
+} from '@angular/material';
+import {FormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('EditProgrammePageComponent', () => {
   let component: EditProgrammePageComponent;
@@ -8,6 +20,18 @@ describe('EditProgrammePageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        MatToolbarModule,
+        MatFormFieldModule,
+        MatCardModule,
+        MatListModule,
+        MatCheckboxModule,
+        MatChipsModule,
+        MatInputModule,
+        MatIconModule,
+        FormsModule,
+        BrowserAnimationsModule
+      ],
       declarations: [ EditProgrammePageComponent ]
     })
     .compileComponents();

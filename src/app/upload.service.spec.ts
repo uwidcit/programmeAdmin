@@ -1,11 +1,16 @@
 import { TestBed, inject } from '@angular/core/testing';
 
 import { UploadService } from './upload.service';
+import {HttpClient, HttpHandler} from '@angular/common/http';
 
 describe('UploadService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [UploadService]
+      providers: [
+        UploadService,
+        HttpClient,
+        HttpHandler
+      ]
     });
   });
 
