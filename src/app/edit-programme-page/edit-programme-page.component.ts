@@ -20,9 +20,7 @@ export class EditProgrammePageComponent implements OnInit {
   // Enter, comma
   separatorKeysCodes = [ENTER, COMMA];
 
-  generalReqs = [
-    { name: 'English' },
-  ];
+  generalReqs = [];
   csecSubs = [];
   capeSubs = [];
 

@@ -1,25 +1,28 @@
 #search {
-  margin-top: 20px;
+  margin-top: 40px;
+  width: 25%;
 }
 
 mat-list-item {
   border-bottom: 1px solid rgba(183, 183, 183, 0.5);
 }
 
-.row {
-  margin-top: 15px !important;
-}
-
+.col-md-3 { padding: 0; }
 .col-md-9 {
   padding-left: 5px;
   padding-right: 5px;
+  margin-top: -100px;
 }
+
+.row { margin: 0; }
+.row .col-md-8 { padding-left: 0; }
 mat-card {
   height: 100%;
   margin: 0 !important;
   margin-top: 10px !important;
 }
 
-mat-checkbox {
-  margin-right: 5px;
-}
+#programmeList { margin-top: 0 !important; }
+
+mat-checkbox { margin-right: 5px; }
+.mat-nav-list { padding-top: 0; }

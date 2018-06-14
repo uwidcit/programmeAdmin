@@ -6,7 +6,7 @@ import { environment } from '../environments/environment';
 export class UploadService {
   constructor(private http: HttpClient) { }
 
-  getProgrammeNumbers() {
+  getFacultyNumbers() {
     return this.http.get(environment.programmeNumberURL);
   }
 

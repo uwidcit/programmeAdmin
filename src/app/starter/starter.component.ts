@@ -30,12 +30,15 @@ export class StarterComponent implements AfterViewInit {
     constructor(public progData: UploadService) {}
 
     ngOnInit() {
-      this.progData.getProgrammeNumbers().subscribe((data: any) => {
-        console.log(data);
-        this.faculties = data;
-        data.forEach((each_obj) => {
-          this.progTotal += each_obj.number;
+      if (this.faculties.length === 0) {
+        this.progData.getFacultyNumbers().subscribe((data: any) => {
+          console.log('Getting data from server...');
+          console.log(data);
+          this.faculties = data;
         });
+      } else { console.log('Values already stored, fetching...'); }
+      this.faculties.forEach((each_obj) => {
+        this.progTotal += each_obj.number;
       });
     }
 

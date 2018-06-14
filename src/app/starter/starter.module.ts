@@ -15,7 +15,9 @@ import {FileUploadModule} from 'angular-file-uploader';
     FileUploadModule,
     RouterModule.forChild(StarterRoutes)
   ],
-  declarations: [ StarterComponent ]
+  declarations: [
+    StarterComponent,
+  ]
 })
 
 export class StarterModule {}

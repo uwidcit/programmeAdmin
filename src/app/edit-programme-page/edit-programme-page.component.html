@@ -1,8 +1,4 @@
 <mat-toolbar color = "primary">
-  <mat-toolbar-row>
-    <h1>Edit Programmes</h1>
-  </mat-toolbar-row>
-
   <mat-toolbar-row id = "search">
     <mat-form-field class="example-full-width">
       <textarea matInput placeholder="Search"></textarea>
@@ -10,29 +6,31 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<div class="container-fluid">
+<div class="container-fluid" style = "padding: 0px !important;">
   <div class="row">
     <div class="col-md-3">
-      <mat-nav-list>
-        <mat-list-item> Agribusiness Management </mat-list-item>
-        <mat-list-item> Computer Science </mat-list-item>
-        <mat-list-item> Information Technology </mat-list-item>
-        <mat-list-item> Electrical Engineering </mat-list-item>
-        <mat-list-item> Civil Engineering </mat-list-item>
-        <mat-list-item> Petroleum Engineering </mat-list-item>
-        <mat-list-item> Chemical Engineering </mat-list-item>
-        <mat-list-item> Mechanical Engineering </mat-list-item>
-
-      </mat-nav-list>
+      <mat-card id = "programmeList">
+        <mat-nav-list>
+          <mat-list-item> Agribusiness Management </mat-list-item>
+          <mat-list-item> Computer Science </mat-list-item>
+          <mat-list-item> Information Technology </mat-list-item>
+          <mat-list-item> Electrical Engineering </mat-list-item>
+          <mat-list-item> Civil Engineering </mat-list-item>
+          <mat-list-item> Petroleum Engineering </mat-list-item>
+          <mat-list-item> Chemical Engineering </mat-list-item>
+          <mat-list-item> Mechanical Engineering </mat-list-item>
+        </mat-nav-list>
+      </mat-card>
     </div>
-    <div class="col-md-9">
-      <mat-card>
+
+    <div class="col-md-9" style = "padding: 0px !important;">
+      <mat-card style = "height: 140% !important;">
         <div class="container-fluid">
           <div class="row">
             <h1>Agribusiness Management </h1>
           </div>
           <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-8">
               <mat-label>Single Subject Requirements</mat-label>
               <mat-form-field class="general-requirements">
                 <mat-chip-list #chipList>
@@ -48,38 +46,8 @@
                 </mat-chip-list>
               </mat-form-field>
 
-              <mat-label>Grouped Requirements (CSEC)</mat-label>
-              <mat-form-field class="csec-requirements">
-                <mat-chip-list #chipList>
-                  <mat-chip *ngFor="let subs of csecSubs" [selectable]="selectable"
-                            [removable]="removable" (removed)="removeCSECReq(subs)">
-                    {{subs.name}}
-                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-                  </mat-chip>
-                  <input [matChipInputFor]="chipList"
-                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                         [matChipInputAddOnBlur]="addOnBlur"
-                         (matChipInputTokenEnd)="addCSECReq($event)" />
-                </mat-chip-list>
-              </mat-form-field>
-
-              <mat-label>Grouped Requirements (CAPE)</mat-label>
-              <mat-form-field class="cape-requirements">
-                <mat-chip-list #chipList>
-                  <mat-chip *ngFor="let subs of capeSubs" [selectable]="selectable"
-                            [removable]="removable" (removed)="removeCAPEReq(subs)">
-                    {{subs.name}}
-                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-                  </mat-chip>
-                  <input [matChipInputFor]="chipList"
-                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                         [matChipInputAddOnBlur]="addOnBlur"
-                         (matChipInputTokenEnd)="addCAPEReq($event)" />
-                </mat-chip-list>
-              </mat-form-field>
-
             </div>
-            <div class="offset-md-1 col-md-4">
+            <div class="col-md-4">
               <div class="row">
                 <mat-checkbox [(ngModel)]="ptChecked">Part time</mat-checkbox>
                 <mat-checkbox [(ngModel)]="ftChecked">Full time</mat-checkbox>
@@ -91,9 +59,45 @@
               <mat-form-field class="example-full-width">
                 <input matInput placeholder="CSEC Passes">
               </mat-form-field>
-              <!--Full time, part time, number of passes etc-->
+
             </div>
           </div>
+
+          <!--<div class="row">-->
+            <!--<mat-label>Grouped Requirements (CSEC)</mat-label>-->
+            <!--<mat-form-field class="csec-requirements">-->
+              <!--<mat-chip-list #chipList>-->
+                <!--<mat-chip *ngFor="let subs of csecSubs" [selectable]="selectable"-->
+                <!--[removable]="removable" (removed)="removeCSECReq(subs)">-->
+                <!--{{subs.name}}-->
+                <!--<mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>-->
+                <!--</mat-chip>-->
+                <!--<input disabled-->
+                       <!--[matChipInputFor]="chipList"-->
+                       <!--[matChipInputSeparatorKeyCodes]="separatorKeysCodes"-->
+                       <!--[matChipInputAddOnBlur]="addOnBlur"-->
+                       <!--(matChipInputTokenEnd)="addCSECReq($event)" />-->
+              <!--</mat-chip-list>-->
+            <!--</mat-form-field>-->
+          <!--</div>-->
+
+          <!--<div class="row">-->
+            <!--<mat-label>Grouped Requirements (CAPE)</mat-label>-->
+            <!--<mat-form-field class="cape-requirements">-->
+              <!--<mat-chip-list #chipList>-->
+                <!--<mat-chip *ngFor="let subs of capeSubs" [selectable]="selectable"-->
+                  <!--[removable]="removable" (removed)="removeCAPEReq(subs)">-->
+                  <!--{{subs.name}}-->
+                  <!--<mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>-->
+                <!--</mat-chip>-->
+                <!--<input disabled-->
+                       <!--[matChipInputFor]="chipList"-->
+                       <!--[matChipInputSeparatorKeyCodes]="separatorKeysCodes"-->
+                       <!--[matChipInputAddOnBlur]="addOnBlur"-->
+                       <!--(matChipInputTokenEnd)="addCAPEReq($event)" />-->
+              <!--</mat-chip-list>-->
+            <!--</mat-form-field>-->
+          <!--</div>-->
 
           <button mat-raised-button color="primary">Save Changes</button>
 
