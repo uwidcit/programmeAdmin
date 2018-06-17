@@ -41,7 +41,6 @@ import { LoginPageComponent } from './login-page/login-page.component';
     SharedModule,
     FileUploadModule,
     ReactiveFormsModule,
-    NoopAnimationsModule,
     RouterModule.forRoot(AppRoutes),
   ],
   providers: [
