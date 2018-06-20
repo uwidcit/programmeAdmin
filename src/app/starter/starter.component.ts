@@ -27,6 +27,8 @@ export class StarterComponent implements AfterViewInit {
       hideSelectBtn: false
     };
 
+    formatText = document.createElement('p');
+
     constructor(public progData: UploadService) {}
 
     ngOnInit() {
@@ -42,8 +44,17 @@ export class StarterComponent implements AfterViewInit {
       });
     }
 
-  DocUpload($event) {
-    this.afuConfig.hideResetBtn = false;
-  }
-    ngAfterViewInit() {}
+    DocUpload($event) {
+      const fileInfo = document.querySelector('.textOverflow');
+      console.log(fileInfo);
+      // fileInfo.style.width = '100%';
+      // fileInfo.nextSibling.style.width = '100%';
+    }
+
+    ngAfterViewInit() {
+      const p_elem = <HTMLElement>document.querySelector('.constraints-info');
+      p_elem.style.display = 'none';
+      this.formatText.innerText = 'only .xlsx format is allowed for upload';
+      document.querySelector('#div1').appendChild(this.formatText);
+    }
 }

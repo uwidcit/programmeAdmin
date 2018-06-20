@@ -22,7 +22,7 @@
         </mat-nav-list>
       </mat-card>
     </div>
-
+<!--thus is a comment-->
     <div class="col-md-9" style = "padding: 0px !important;">
       <mat-card style = "height: 140% !important;">
         <div class="container-fluid">
@@ -54,10 +54,10 @@
                 <mat-checkbox [(ngModel)]="eveningChecked">Evening</mat-checkbox>
               </div>
               <mat-form-field class="example-full-width">
-                <input matInput placeholder="CAPE Passes (2 unit)">
+                <input type = "number" matInput placeholder="CAPE Passes (2 unit)">
               </mat-form-field>
               <mat-form-field class="example-full-width">
-                <input matInput placeholder="CSEC Passes">
+                <input type = "number" matInput placeholder="CSEC Passes">
               </mat-form-field>
 
             </div>
@@ -99,7 +99,7 @@
             <!--</mat-form-field>-->
           <!--</div>-->
 
-          <button mat-raised-button color="primary">Save Changes</button>
+          <button mat-raised-button color="primary" (click) = "saveInfo()">Save Changes</button>
 
         </div>
       </mat-card>
