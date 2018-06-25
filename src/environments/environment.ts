@@ -5,5 +5,7 @@
 
 export const environment = {
   production: false,
-  programmeNumberURL: 'assets/images/programmes.json'
+  programmeNumberURL: 'assets/images/programmes.json',
+  programmeLoc: '../assets/programmes.json',
+  dcitLoc: '../assets/dcit.json'
 };

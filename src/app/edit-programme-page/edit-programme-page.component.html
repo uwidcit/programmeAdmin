@@ -8,26 +8,35 @@
 
 <div class="container-fluid" style = "padding: 0px !important;">
   <div class="row">
+
     <div class="col-md-3">
-      <mat-card id = "programmeList">
-        <mat-nav-list>
-          <mat-list-item> Agribusiness Management </mat-list-item>
-          <mat-list-item> Computer Science </mat-list-item>
-          <mat-list-item> Information Technology </mat-list-item>
-          <mat-list-item> Electrical Engineering </mat-list-item>
-          <mat-list-item> Civil Engineering </mat-list-item>
-          <mat-list-item> Petroleum Engineering </mat-list-item>
-          <mat-list-item> Chemical Engineering </mat-list-item>
-          <mat-list-item> Mechanical Engineering </mat-list-item>
+      <mat-card id = "facultyList">
+        <mat-nav-list (click) = "hideProgs = false;">
+          <mat-list-item> Social Sciences</mat-list-item>
+          <mat-list-item> Engineering </mat-list-item>
+          <mat-list-item> Food and Agriculture </mat-list-item>
+          <mat-list-item> Humanities and Education</mat-list-item>
+          <mat-list-item> IGDS </mat-list-item>
+          <mat-list-item> Law </mat-list-item>
+          <mat-list-item> Science and Technology</mat-list-item>
         </mat-nav-list>
       </mat-card>
     </div>
+
+    <div class="col-md-3" [hidden] = hideProgs>
+      <mat-card id = "programmeList">
+        <mat-nav-list>
+          <mat-list-item *ngFor="let prog of programmes" (click) = "getProgInfo($event)"> {{ prog }}</mat-list-item>
+        </mat-nav-list>
+      </mat-card>
+    </div>
+
 <!--thus is a comment-->
-    <div class="col-md-9" style = "padding: 0px !important;">
+    <div class="col-md-6" [hidden] = hideInfo style = "padding: 0px !important;">
       <mat-card style = "height: 140% !important;">
         <div class="container-fluid">
           <div class="row">
-            <h1>Agribusiness Management </h1>
+            <h1> {{title}} </h1>
           </div>
           <div class="row">
             <div class="col-md-8">

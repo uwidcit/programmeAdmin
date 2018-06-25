@@ -16,6 +16,10 @@ export class EditProgrammePageComponent implements OnInit {
   selectable = true;
   removable = true;
   addOnBlur = true;
+  programmes = ['Programme 1', 'Programme 2', 'Programme 3', 'Programme 4', 'Programme 5', 'Programme 6', 'Programme 7', 'Programme 8'];
+  title = '';
+  hideInfo = true;
+  hideProgs = true;
 
   // Enter, comma
   separatorKeysCodes = [ENTER, COMMA];
@@ -30,6 +34,12 @@ export class EditProgrammePageComponent implements OnInit {
     { name: 'Accent', color: 'accent' },
     { name: 'Warn', color: 'warn' }
   ];
+
+  getProgInfo(event: any) {
+    // Make a request to get all the requirements for this programme
+    this.title = event.srcElement.innerText;
+    this.hideInfo = false;
+  }
 
 
   addGenReq(event: MatChipInputEvent): void {
