@@ -11,7 +11,7 @@
 
     <div class="col-md-3">
       <mat-card id = "facultyList">
-        <mat-nav-list (click) = "hideProgs = false;">
+        <mat-nav-list (click) = "hideProgs = 'visible';">
           <mat-list-item> Social Sciences</mat-list-item>
           <mat-list-item> Engineering </mat-list-item>
           <mat-list-item> Food and Agriculture </mat-list-item>
@@ -23,7 +23,7 @@
       </mat-card>
     </div>
 
-    <div class="col-md-3" [hidden] = hideProgs>
+    <div class="col-md-3" [style.visibility] = hideProgs>
       <mat-card id = "programmeList">
         <mat-nav-list>
           <mat-list-item *ngFor="let prog of programmes" (click) = "getProgInfo($event)"> {{ prog }}</mat-list-item>
@@ -32,7 +32,7 @@
     </div>
 
 <!--thus is a comment-->
-    <div class="col-md-6" [hidden] = hideInfo style = "padding: 0px !important;">
+    <div class="col-md-6" [style.visibility] = hideInfo style = "padding: 0px !important;">
       <mat-card style = "height: 140% !important;">
         <div class="container-fluid">
           <div class="row">

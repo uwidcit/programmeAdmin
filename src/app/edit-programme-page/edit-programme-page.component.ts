@@ -18,8 +18,8 @@ export class EditProgrammePageComponent implements OnInit {
   addOnBlur = true;
   programmes = ['Programme 1', 'Programme 2', 'Programme 3', 'Programme 4', 'Programme 5', 'Programme 6', 'Programme 7', 'Programme 8'];
   title = '';
-  hideInfo = true;
-  hideProgs = true;
+  hideInfo = 'hidden';
+  hideProgs = 'hidden';
 
   // Enter, comma
   separatorKeysCodes = [ENTER, COMMA];
@@ -38,7 +38,7 @@ export class EditProgrammePageComponent implements OnInit {
   getProgInfo(event: any) {
     // Make a request to get all the requirements for this programme
     this.title = event.srcElement.innerText;
-    this.hideInfo = false;
+    this.hideInfo = 'visible';
   }
 
 
