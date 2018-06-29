@@ -13,6 +13,7 @@ import {
 } from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('EditProgrammePageComponent', () => {
   let component: EditProgrammePageComponent;
@@ -30,7 +31,8 @@ describe('EditProgrammePageComponent', () => {
         MatInputModule,
         MatIconModule,
         FormsModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        HttpClientModule
       ],
       declarations: [ EditProgrammePageComponent ]
     })
