@@ -41,8 +41,8 @@ export class StarterComponent implements AfterViewInit {
           'number': 0
         };
         new_info.title = each_fac;
-        this.data.getProgsByFaculty(environment.faculties[each_fac])._subscribe((data) => {
-          new_info.number = data.body.length;
+        this.data.getProgsByFaculty(environment.faculties[each_fac]).subscribe((data: any) => {
+          new_info.number = data.length;
         });
 
         this.faculties.push(new_info);

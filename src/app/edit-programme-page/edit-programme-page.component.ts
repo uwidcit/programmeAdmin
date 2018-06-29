@@ -36,8 +36,8 @@ export class EditProgrammePageComponent implements OnInit {
   getProgs(event: any) {
     const fac_name = event.srcElement.innerText.trim();
 
-    this.data.getProgsByFaculty(environment.faculties[fac_name])._subscribe((names: any) => {
-      this.programmes = names.body;
+    this.data.getProgsByFaculty(environment.faculties[fac_name]).subscribe((names: any) => {
+      this.programmes = names;
     });
   }
 
@@ -45,7 +45,6 @@ export class EditProgrammePageComponent implements OnInit {
     this.resetState();
     this.title = event.srcElement.innerText;
     const thisProg = this.programmes.filter( (obj) => (obj.name.trim() === this.title.trim()))[0];
-    console.log(thisProg);
     Object.assign(this.currProg, thisProg);
     const combos = thisProg.requirements.combinations;
 
@@ -84,8 +83,8 @@ export class EditProgrammePageComponent implements OnInit {
   constructor(public data: DataLayerService) {}
 
   ngOnInit() {
-    this.data.getFacultyNames()._subscribe((names: any) => {
-      this.faculties = names.body;
+    this.data.getFacultyNames().subscribe((names: any) => {
+      this.faculties = names;
     });
   }
 
