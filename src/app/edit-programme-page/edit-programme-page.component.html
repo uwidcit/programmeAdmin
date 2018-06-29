@@ -9,7 +9,7 @@
 <div class="container-fluid" style = "padding: 0px !important;">
   <div class="row" style = "height: 600px !important">
 
-    <div class="col-md-3">
+    <div class="col-md-2">
       <mat-card id = "facultyList">
         <mat-nav-list (click) = "hideProgs = 'visible';">
           <mat-list-item style = "height: auto" *ngFor = "let fac of faculties" (click) = "getProgs($event)"><span class="test">{{fac}}</span></mat-list-item>
@@ -17,16 +17,16 @@
       </mat-card>
     </div>
 
-    <div class="col-md-3" [style.visibility] = hideProgs style = "overflow-y:scroll;">
-      <mat-card id = "programmeList">
-        <mat-nav-list>
-          <mat-list-item style = "height: auto" *ngFor="let prog of programmes" (click) = "getProgInfo($event)"><span class = "test">{{prog.name}}</span></mat-list-item>
+    <div class="col-md-3" [style.visibility] = hideProgs style = "overflow-y:scroll; -ms-overflow-y: scroll; ">
+      <mat-card id = "programmeList" >
+        <mat-nav-list style = "min-height: 0 !important;">
+          <mat-list-item style = "height: auto;" *ngFor="let prog of programmes" (click) = "getProgInfo($event)"><span class = "test">{{prog.name}}</span></mat-list-item>
         </mat-nav-list>
       </mat-card>
     </div>
 
 <!--thus is a comment-->
-    <div class="col-md-6" [style.visibility] = hideInfo style = "padding: 0px !important;">
+    <div class="col-md-6" [style.visibility] = hideInfo >
       <mat-card>
         <div class="container-fluid">
           <div class="row" [style.padding-bottom] = "10">

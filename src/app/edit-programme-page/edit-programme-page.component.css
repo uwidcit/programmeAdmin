@@ -9,19 +9,19 @@ mat-list-item {
 
 .test { padding: 15px; }
 
-.col-md-3 { padding: 0; }
+.col-md-3, .col-md-2 {
+  margin: 2px 15px !important;
+  padding: 0 !important;
+}
+
 .col-md-6 {
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-top: -100px;
+  margin-top: -50px;
+  padding: 0;
 }
 
 .row { margin: 0; }
 .row .col-md-8 { padding-left: 0; }
-mat-card {
-  /*height: 700px;*/
-  margin: 0 !important;
-}
+mat-card { margin: 0 !important;}
 
 #programmeList { margin-top: 0 !important; }
 
