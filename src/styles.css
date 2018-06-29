@@ -12,6 +12,8 @@ body {
   width: 100% !important;
 }
 
+#div1 { width: 100% !important; }
+
 .page-content {
   padding: 0 !important;
 }
