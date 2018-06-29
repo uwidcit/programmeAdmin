@@ -8,9 +8,9 @@ export interface Menu {
 }
 
 const MENUITEMS = [
-    {state: 'upload', name: 'Programme Upload', type: 'link', icon: 'av_timer' },
-    {state: 'edit', name: 'Programme Edit', type: 'link', icon: 'av_timer' },
     {state: 'login', name: 'Login Page', type: 'link', icon: 'av_timer' },
+    {state: 'home', name: 'Admin Home Page', type: 'link', icon: 'av_timer' },
+    {state: 'edit', name: 'View Programmes', type: 'link', icon: 'av_timer' },
     // {state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5'},
     // {state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy'},
     // {state: 'lists', type: 'link', name: 'Lists', icon: 'view_list'},

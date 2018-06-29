@@ -7,6 +7,7 @@ mat-list-item {
   border-bottom: 1px solid rgba(183, 183, 183, 0.5);
 }
 
+.test { padding: 15px; }
 
 .col-md-3 { padding: 0; }
 .col-md-6 {
@@ -18,7 +19,7 @@ mat-list-item {
 .row { margin: 0; }
 .row .col-md-8 { padding-left: 0; }
 mat-card {
-  height: 150%;
+  /*height: 700px;*/
   margin: 0 !important;
 }
 

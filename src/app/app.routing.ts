@@ -9,13 +9,13 @@ export const AppRoutes: Routes = [{
   component: FullComponent,
   children: [{
     path: '',
-    redirectTo: '/upload',
+    redirectTo: '/login',
     pathMatch: 'full'
   }, {
     path: '',
     loadChildren: './material-component/material.module#MaterialComponentsModule'
   }, {
-    path: 'upload',
+    path: 'home',
     loadChildren: './starter/starter.module#StarterModule'
   }, {
     path: 'edit',

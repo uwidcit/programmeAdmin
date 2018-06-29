@@ -1,11 +1,12 @@
 import { Component, AfterViewInit} from '@angular/core';
-import {UploadService} from '../upload.service';
+import {DataLayerService} from '../data-layer.service';
+import {environment} from '../../environments/environment';
 
 @Component({
   selector: 'app-starter',
   templateUrl: './starter.component.html',
   styleUrls: ['./starter.component.scss'],
-  providers: [UploadService]
+  providers: [DataLayerService]
 })
 export class StarterComponent implements AfterViewInit {
     faculties: any[] = [];
@@ -29,18 +30,24 @@ export class StarterComponent implements AfterViewInit {
 
     formatText = document.createElement('p');
 
-    constructor(public progData: UploadService) {}
+    constructor(public data: DataLayerService) {}
 
     ngOnInit() {
-      if (this.faculties.length === 0) {
-        this.progData.getFacultyNumbers().subscribe((data: any) => {
-          console.log('Getting data from server...');
-          console.log(data);
-          this.faculties = data;
+      const facs = Object.keys(environment.faculties);
+
+      facs.forEach((each_fac) => {
+        const new_info = {
+          'title': '',
+          'number': 0
+        };
+        new_info.title = each_fac;
+        this.data.getProgsByFaculty(environment.faculties[each_fac])._subscribe((data) => {
+          new_info.number = data.body.length;
         });
-      } else { console.log('Values already stored, fetching...'); }
-      this.faculties.forEach((each_obj) => {
-        this.progTotal += each_obj.number;
+
+        this.faculties.push(new_info);
+
+        // new_info.number =
       });
     }
 
