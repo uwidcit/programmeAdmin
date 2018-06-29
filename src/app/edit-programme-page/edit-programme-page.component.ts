@@ -30,7 +30,12 @@ export class EditProgrammePageComponent implements OnInit {
       'department': '',
       'duration': 0,
       'url': '',
-      'requirements': {}
+      'requirements': {
+        'csec_passes': 0,
+        'cape_passes': 0,
+        'mandatory': [],
+        'combinations': {}
+      }
     };
 
   getProgs(event: any) {
