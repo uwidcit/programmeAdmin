@@ -9,16 +9,16 @@ import { environment } from '../../environments/environment';
   providers: [DataLayerService]
 })
 export class EditProgrammePageComponent implements OnInit {
-  hideOneCSEC = true; oneCSEC = [];
-  hideTwoCSEC = true; twoCSEC = [];
-  hideOneCAPE = true; oneCAPE = [];
-  hideTwoCAPE = true; twoCAPE = [];
+  hideOneCSEC = true; oneCSEC = []; // arrays to hold the combo requirements
+  hideTwoCSEC = true; twoCSEC = []; // arrays to hold the combo requirements
+  hideOneCAPE = true; oneCAPE = []; // arrays to hold the combo requirements
+  hideTwoCAPE = true; twoCAPE = []; // arrays to hold the combo requirements
   noCombos = false;
-  faculties = [];
-  programmes = [];
+  faculties = []; // faculty listing, populated by get request onInit
+  programmes = []; // populated when user clicks on faculty name
   title = '';
   hideInfo = 'hidden';
-  currProg =
+  currProg = // programme template
     {
       'name': '',
       'type': '',
@@ -37,6 +37,11 @@ export class EditProgrammePageComponent implements OnInit {
       }
     };
 
+  /**
+   * @param {event: any} Waits for a mouse click
+   * @desc Waits for the user to click on a faculty so that it can fetch all the programmes under that faculty
+   * @return {undefined}
+   * */
   getProgs(event: any) {
     const fac_name = event.srcElement.innerText.trim();
 
@@ -45,6 +50,10 @@ export class EditProgrammePageComponent implements OnInit {
     });
   }
 
+  /**
+   * @param {event:any} Waits for a mouse click
+   * @desc Waits on a user to click on a programme name so that all the data can be fetched and displayed on the right
+   * */
   getProgInfo(event: any) {
     this.resetState();
     this.title = event.srcElement.innerText;
@@ -76,6 +85,10 @@ export class EditProgrammePageComponent implements OnInit {
     this.hideInfo = 'visible';
   }
 
+  /**
+   * @desc Resets the arrays so that the previous values do not appear when the next set of programme info is fetched
+   * @return {undefined}
+   * */
   resetState() {
     this.noCombos = false;
     this.hideOneCSEC = true; this.oneCSEC = [];
@@ -86,6 +99,10 @@ export class EditProgrammePageComponent implements OnInit {
 
   constructor(public data: DataLayerService) {}
 
+  /**
+   * @desc When the component is initialized, the list of faculty names is obtained from the server
+   * @return {undefined}
+   * */
   ngOnInit() {
     this.data.getFacultyNames().subscribe((names: any) => {
       this.faculties = names;

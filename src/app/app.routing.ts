@@ -18,7 +18,7 @@ export const AppRoutes: Routes = [{
     path: 'home',
     loadChildren: './starter/starter.module#StarterModule'
   }, {
-    path: 'edit',
+    path: 'view',
     component: EditProgrammePageComponent
   }, {
     path: 'login',

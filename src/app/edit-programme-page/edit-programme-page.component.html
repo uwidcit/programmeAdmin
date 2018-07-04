@@ -12,19 +12,16 @@
     <div class="col-md-4" style = "overflow-y:scroll;" id = "listContainter">
       <mat-card id = "programmeList">
         <mat-nav-list style = "min-height: 0 !important;">
-          <!--<mat-form-field>-->
-            <mat-select placeholder="Select a faculty" id = "separator" matTooltip="Select a faculty" matTooltipPosition = "above">
-              <mat-option *ngFor="let fac of faculties" [value]="fac" (click) = "getProgs($event)">
-                {{fac}}
-              </mat-option>
-            </mat-select>
-          <!--</mat-form-field>-->
+          <mat-select placeholder="Select a faculty" id = "separator" matTooltip="Select a faculty" matTooltipPosition = "above">
+            <mat-option *ngFor="let fac of faculties" [value]="fac" (click) = "getProgs($event)">
+              {{fac}}
+            </mat-option>
+          </mat-select>
           <mat-list-item style = "height: auto;" *ngFor="let prog of programmes" (click) = "getProgInfo($event)"><span class = "test">{{prog.name}}</span></mat-list-item>
         </mat-nav-list>
       </mat-card>
     </div>
 
-<!--this is a comment-->
     <div class="col-md-8" style = "margin-top: -50px;" [style.visibility] = hideInfo >
       <mat-card>
         <div class="container-fluid">

@@ -12,7 +12,7 @@ export class LoginPageComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { // validation is set as soon as page is initialized
     this.myForm = new FormGroup({
       email: new FormControl('', [
         Validators.required,

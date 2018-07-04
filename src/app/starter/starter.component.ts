@@ -46,16 +46,12 @@ export class StarterComponent implements AfterViewInit {
         });
 
         this.faculties.push(new_info);
-
-        // new_info.number =
       });
     }
 
     DocUpload($event) {
       const fileInfo = document.querySelector('.textOverflow');
       console.log(fileInfo);
-      // fileInfo.style.width = '100%';
-      // fileInfo.nextSibling.style.width = '100%';
     }
 
     ngAfterViewInit() {

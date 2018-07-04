@@ -2,7 +2,6 @@
   margin-top: 10px;
   margin-bottom: 20px;
   width: 25%;
-  /*padding: 0px 16px 16px 16px;*/
 }
 
 mat-list-item {
@@ -12,11 +11,8 @@ mat-list-item {
 .test { padding: 15px; }
 
 .col-md-4 {
-  /*margin: 2px 15px !important;*/
   padding: 0 !important;
 }
-
-
 .row { margin: 0; }
 .row .col-md-8 {
   padding-left: 10px;
