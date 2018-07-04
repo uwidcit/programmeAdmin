@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {MatSelectModule} from '@angular/material/select';
 import { EditProgrammePageComponent } from './edit-programme-page.component';
 import {
   MatCardModule,
@@ -32,7 +32,8 @@ describe('EditProgrammePageComponent', () => {
         MatIconModule,
         FormsModule,
         BrowserAnimationsModule,
-        HttpClientModule
+        HttpClientModule,
+        MatSelectModule
       ],
       declarations: [ EditProgrammePageComponent ]
     })
