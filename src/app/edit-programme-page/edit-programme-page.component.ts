@@ -18,7 +18,6 @@ export class EditProgrammePageComponent implements OnInit {
   programmes = [];
   title = '';
   hideInfo = 'hidden';
-  hideProgs = 'hidden';
   currProg =
     {
       'name': '',
@@ -92,5 +91,6 @@ export class EditProgrammePageComponent implements OnInit {
       this.faculties = names;
     });
   }
+
 
 }
