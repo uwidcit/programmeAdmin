@@ -105,7 +105,8 @@ export class EditProgrammePageComponent implements OnInit {
    * */
   ngOnInit() {
     this.data.getFacultyNames().subscribe((names: any) => {
-      this.faculties = names;
+      // console.log(names);
+      this.faculties = Object.values(names);
     });
   }
 

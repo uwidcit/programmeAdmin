@@ -18,6 +18,11 @@
         </button>
 
         <span id = "globTitle">Programme Admin Dashboard</span>
+
+      <!-- This fills the remaining space of the current row -->
+      <span style = "flex: 1 1 auto;"></span>
+
+      <img src="assets/images/logo_bar.png" alt="No logo available" style = "height: inherit; margin-bottom: 5px;">
     </mat-toolbar>
     <!-- ============================================================== -->
     <!-- End Topbar - style you can find in pages.scss -->
@@ -26,7 +31,7 @@
         <!-- ============================================================== -->
         <!-- Sidebar - style you can find in sidebar.scss -->
         <!-- ============================================================== -->
-        <mat-sidenav #snav id="snav" class="dark-sidebar pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0" [opened]= false [disableClose]="mobileQuery.matches"  >
+        <mat-sidenav style = "text-align: center;" #snav id="snav" class="dark-sidebar pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0" [opened]= false [disableClose]="mobileQuery.matches"  >
 
                 <app-sidebar></app-sidebar>
 
