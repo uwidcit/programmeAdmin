@@ -1,5 +1,6 @@
 # UWI Programme Admin website
 This website is made for administrative personnel in charge of uploading and viewing entry requirements for degree programmes at the University of the West Indies. 
+Currently available [here](https://uwiprogrammeadmin.firebaseapp.com)
 
 Run `npm install` and then `ng serve` to run the application, defaults to localhost:4200
 Due to this angular application using a material pro template, within src/app there are a number of extra directories such as layouts, material-component and starter.
