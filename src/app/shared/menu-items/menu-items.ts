@@ -15,7 +15,7 @@ const MENUITEMS = [
 @Injectable()
 
 export class MenuItems {
-  static getMenuitem(): Menu[] {
+  getMenuitem(): Menu[] {
     return MENUITEMS;
   }
 
