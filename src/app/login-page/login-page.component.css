@@ -5,9 +5,7 @@
   width: 40%;
   margin-top: 10%;
 }
-.mat-card-content {
-  padding: 10px 24px 10px 24px !important;
-}
+.mat-card-content { padding: 10px 24px 10px 24px !important; }
 
 .mat-card-footer {
   margin: 10px 0 10px 0;
@@ -21,9 +19,7 @@
   font-size: 20px;
 }
 
-.mat-form-field {
-  width: 90%;
-}
+.mat-form-field { width: 90%; }
 
 i {
   vertical-align: middle;

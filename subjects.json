@@ -1,0 +1,274 @@
+[
+	{
+		"level":"CSEC",
+		"name":"Agricultural Science (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Caribbean History (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"English Language (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Geography (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Modern Languages (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Religious Education (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Social Studies (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Certificate in Business Studies (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Economics (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Electronic Document Preparation and Management (EDPM) (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Home Economics (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Industrial Technology (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Integrated Science (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Office Administration (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Physical Education and Sport (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Principles of Accounts (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Principles of Business (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Additional Mathematics (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Biology (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Chemistry (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Human and Social Biology (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Information Technology (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Mathematics (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Physics (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Building Technology (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Electrical and Electronic Technology (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Mechanical Engineering Technology (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Music (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Technical Drawing (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Theatre Arts (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Visual Arts (CSEC)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Food And Nutrition (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"French (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Geography (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"History (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Law (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Literatures in English (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Performing Arts (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Sociology (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Spanish (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Tourism (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Accounting (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Caribbean Studies (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Communication Studies (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Digital Media (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Economics (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Entrepreneurship (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Financial Services Studies (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Logistics and Supply Chain Operations (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Management Of Business (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Animation & Game Design (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Agricultural Science (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Applied Mathematics (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Biology (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Chemistry (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Computer Science (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Electrical and Electronic Engineering Technology (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Environmental Science (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Green Engineering (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Information Technology (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Physics (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Physical Education and Sport (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Pure Mathematics (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Building and Mechanical Engineering Drawing (CAPE)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Integrated Mathematics (CAPE)"
+	},
+	{
+		"level":"CSEC",
+		"name":"Spanish (CSEC)"
+	},
+	{
+		"level":"CSEC",
+		"name":"French (CSEC)"
+	},
+	{
+		"level":"CAPE",
+		"name":"Art and Design"
+	}
+]

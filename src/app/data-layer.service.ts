@@ -13,15 +13,7 @@ export class DataLayerService {
     return this.http.get(environment.facURL);
   }
 
-  getDepartmentNames(faculty: string) {
-    return this.http.get(environment.facURL + faculty);
-  }
-
   getProgsByFaculty(faculty: string) {
     return this.http.get(environment.allProgsBy + faculty);
-  }
-
-  getProgsByDepartment(faculty: string, department: string) {
-    return this.http.get(environment.allProgsBy + faculty + '/' + department);
   }
 }

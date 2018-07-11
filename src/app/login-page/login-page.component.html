@@ -14,11 +14,6 @@
         <input matInput required placeholder="E-mail" type = "email" formControlName="email">
       </mat-form-field>
       <div *ngIf = "myForm.controls.email.invalid && myForm.controls.email.touched" class = "has-danger"> Invalid Email format! </div>
-      <!--<pre>Pristine? {{ myForm.controls.email.pristine }}</pre>-->
-      <!--<pre>Touched? {{ myForm.controls.email.touched }}</pre>-->
-      <!--<pre>Touched? {{ myForm.controls.email.untouched }}</pre>-->
-      <!--<pre>Valid? {{ myForm.controls.email.valid }}</pre>-->
-      <!--<pre>Invalid? {{ myForm.controls.email.invalid }}</pre>-->
 
       <i class="material-icons">
         vpn_key
