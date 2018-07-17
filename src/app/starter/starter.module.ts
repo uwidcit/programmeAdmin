@@ -8,7 +8,6 @@ import { StarterRoutes } from './starter.routing';
 import {FileUploadModule} from 'angular-file-uploader';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {SpinnerComponent} from '../shared/spinner.component';
 
 @NgModule({
   imports: [
@@ -21,8 +20,7 @@ import {SpinnerComponent} from '../shared/spinner.component';
     RouterModule.forChild(StarterRoutes)
   ],
   declarations: [
-    StarterComponent,
-    SpinnerComponent
+    StarterComponent
   ]
 })
 
