@@ -2,7 +2,6 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import { ChangeDetectorRef, Component, OnDestroy, AfterViewInit } from '@angular/core';
 import { MenuItems } from '../../shared/menu-items/menu-items';
 import {Router, NavigationEnd} from '@angular/router';
-
 /** @title Responsive sidenav */
 @Component({
   selector: 'app-full-layout',
@@ -25,7 +24,7 @@ export class FullComponent implements OnDestroy, AfterViewInit {
     this.mobileQuery.addListener(this._mobileQueryListener);
     router.events.subscribe(val => {
       if (val instanceof NavigationEnd) {
-        if (val.url === '/login' || val.url === '/') {
+        if (val.url === '/login') {
           console.log(val.url);
           this.hidebtn = true; } else { this.hidebtn = false; }
       }

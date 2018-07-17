@@ -41,4 +41,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-uwiprogrammeadmin-firebase-adminsdk-1sand-fe7ea404d4.json
+fb_key.json

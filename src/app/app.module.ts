@@ -14,12 +14,14 @@ import { AppSidebarComponent } from './layouts/full/sidebar/sidebar.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DemoMaterialModule} from './demo-material-module';
 import {MatSelectModule} from '@angular/material/select';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
 import { EditProgrammePageComponent } from './edit-programme-page/edit-programme-page.component';
 import { FileUploadModule } from 'angular-file-uploader';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { ErrorsComponent } from './errors/errors.component';
 
 
 @NgModule({
@@ -31,6 +33,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
     AppSidebarComponent,
     EditProgrammePageComponent,
     LoginPageComponent,
+    ErrorsComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +46,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
     FileUploadModule,
     ReactiveFormsModule,
     MatSelectModule,
+    MatSidenavModule,
     RouterModule.forRoot(AppRoutes),
   ],
   providers: [
@@ -51,6 +55,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
     useClass: HashLocationStrategy
   }
   ],
+  entryComponents: [ErrorsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

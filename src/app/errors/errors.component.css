@@ -1,0 +1,12 @@
+#buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.table thead th {
+  vertical-align: middle;
+}
+
+#spinner { text-align: center; }
+
+

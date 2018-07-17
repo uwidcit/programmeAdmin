@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DataLayerService} from '../data-layer.service';
 import { environment } from '../../environments/environment';
 
@@ -9,11 +9,13 @@ import { environment } from '../../environments/environment';
   providers: [DataLayerService]
 })
 export class EditProgrammePageComponent implements OnInit {
+
   hideOneCSEC = true; oneCSEC = []; // arrays to hold the combo requirements
   hideTwoCSEC = true; twoCSEC = []; // arrays to hold the combo requirements
   hideOneCAPE = true; oneCAPE = []; // arrays to hold the combo requirements
   hideTwoCAPE = true; twoCAPE = []; // arrays to hold the combo requirements
   noCombos = false;
+  filtered = [];
   faculties = []; // faculty listing, populated by get request onInit
   programmes = []; // populated when user clicks on faculty name
   title = '';
@@ -38,21 +40,29 @@ export class EditProgrammePageComponent implements OnInit {
     };
 
   /**
-   * @param {event: any} Waits for a mouse click
    * @desc Waits for the user to click on a faculty so that it can fetch all the programmes under that faculty
    * @return {undefined}
+   * @param event
    * */
   getProgs(event: any) {
     const fac_name = event.srcElement.innerText.trim();
+    if (fac_name === 'All') {
+      this.data.getAllProgs().subscribe((progs: any) => {
+        this.programmes = progs;
+        this.filtered =  progs;
+      });
+    } else {
+      this.data.getProgsByFaculty(environment.faculties[fac_name]).subscribe((names: any) => {
+        this.programmes = names;
+        this.filtered = names;
+      });
+    }
 
-    this.data.getProgsByFaculty(environment.faculties[fac_name]).subscribe((names: any) => {
-      this.programmes = names;
-    });
   }
 
   /**
-   * @param {event:any} Waits for a mouse click
    * @desc Waits on a user to click on a programme name so that all the data can be fetched and displayed on the right
+   * @param event
    * */
   getProgInfo(event: any) {
     this.resetState();
@@ -97,6 +107,19 @@ export class EditProgrammePageComponent implements OnInit {
     this.hideTwoCAPE = true; this.twoCAPE = [];
   }
 
+  filter(value) {
+    console.log(value);
+    if (value === '') { this.filtered = this.programmes; } else {
+      let subset = [];
+      this.programmes.forEach(prog => {
+        if (prog.name.toLowerCase().includes(value.toLowerCase())) {
+          subset.push(prog);
+        }
+      });
+      this.filtered = subset;
+    }
+  }
+
   constructor(public data: DataLayerService) {}
 
   /**
@@ -105,10 +128,8 @@ export class EditProgrammePageComponent implements OnInit {
    * */
   ngOnInit() {
     this.data.getFacultyNames().subscribe((names: any) => {
-      // console.log(names);
       this.faculties = Object.values(names);
+      this.faculties.unshift('All');
     });
   }
-
-
 }

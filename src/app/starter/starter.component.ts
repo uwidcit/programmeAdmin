@@ -1,6 +1,8 @@
 import { Component, AfterViewInit} from '@angular/core';
 import {DataLayerService} from '../data-layer.service';
 import {environment} from '../../environments/environment';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatSnackBar} from '@angular/material';
+import {ErrorsComponent} from '../errors/errors.component';
 
 @Component({
   selector: 'app-starter',
@@ -11,6 +13,7 @@ import {environment} from '../../environments/environment';
 export class StarterComponent implements AfterViewInit {
     faculties: any[] = [];
     progTotal: number;
+    pendingRequest = true;
 
     afuConfig = {
       multiple: false,
@@ -30,7 +33,19 @@ export class StarterComponent implements AfterViewInit {
 
     formatText = document.createElement('p');
 
-    constructor(public data: DataLayerService) {}
+  openDialog(): void {
+    let dialogRef = this.dialog.open(ErrorsComponent, {
+      width: '75%'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+    constructor(public data: DataLayerService,
+                public dialog: MatDialog,
+                public snackBar: MatSnackBar) {}
 
     ngOnInit() {
       const facs = Object.keys(environment.faculties);
@@ -43,6 +58,7 @@ export class StarterComponent implements AfterViewInit {
         new_info.title = each_fac;
         this.data.getProgsByFaculty(environment.faculties[each_fac]).subscribe((data: any) => {
           new_info.number = data.length;
+          this.pendingRequest = false;
         });
 
         this.faculties.push(new_info);
@@ -52,6 +68,7 @@ export class StarterComponent implements AfterViewInit {
     DocUpload($event) {
       const fileInfo = document.querySelector('.textOverflow');
       console.log(fileInfo);
+      this.snackBar.open('Upload Completed!');
     }
 
     ngAfterViewInit() {

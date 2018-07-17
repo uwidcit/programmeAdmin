@@ -1,5 +1,5 @@
 const admin = require('firebase-admin');
-const serviceAccount = require('./uwiprogrammeadmin-firebase-adminsdk-1sand-fe7ea404d4.json');
+const serviceAccount = require('./fb_key.json');
 const allProgs = require('./results.json');
 const allSubsObjs = require('./subjects.json');
 // const fs = require('fs');
@@ -31,9 +31,9 @@ function main() {
   queryAll().then((passed) => {
     console.log(passed.length);
     console.log('execution finished');
+    console.timeEnd('exec');
   });
 
-  console.timeEnd('exec');
 }
 
 // const txt_out = fs.createWriteStream('test.txt', {flags: 'a'});

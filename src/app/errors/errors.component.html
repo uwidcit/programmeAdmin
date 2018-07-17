@@ -1,0 +1,45 @@
+<div *ngIf = "pendingRequest" id = "spinner">
+  <mat-spinner></mat-spinner>
+  <p> Loading programmes... </p>
+</div>
+
+<div *ngIf = "!pendingRequest" id = "errorInfo" class = "text-center">
+  <h1 mat-dialog-title>Errors and Corrections</h1>
+  <div mat-dialog-content>
+    <table class = "table text-center">
+      <thead>
+      <tr>
+        <th scope="col">Programme Name</th>
+        <th scope="col">Spelling Changes (Subject names)</th>
+        <th scope="col">Unknown Subjects (Bad data entry)</th>
+        <th scope="col">Empty Mandatory Subject List</th>
+        <th style = "width: 20%" scope="col">Found in both Mandatory and Combination Arrays</th>
+        <th scope="col">Number of CAPE and CSEC Passes</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor = "let error of errors">
+        <td>{{error.name}}</td>
+        <td class = "alert alert-danger" *ngIf = "error.corrected !== undefined; else spellingPass">{{error.corrected}}</td>
+          <ng-template #spellingPass><td class = "alert alert-success">No changes made</td></ng-template>
+
+        <td class = "alert alert-danger"  *ngIf = "error.report.missing_subjects.length !== 0; else noMissingSubs">{{error.report.missing_subjects}}</td>
+          <ng-template #noMissingSubs><td class = "alert alert-success">All subjects exist in DB</td></ng-template>
+
+        <td class = "alert alert-danger"  *ngIf = "error.report.mandatory !== undefined; else manPass">{{error.report.mandatory}}</td>
+          <ng-template #manPass><td class = "alert alert-success">Has Mandatory Subjects</td></ng-template>
+
+        <td class = "alert alert-danger"  *ngIf = "error.report.req_conflict !== ''; else reqPass">{{error.report.req_conflict}}</td>
+          <ng-template #reqPass><td class = "alert alert-success">No Subject Conflicts</td></ng-template>
+
+        <td class = "alert alert-danger"  *ngIf = "error.report.passes !== undefined; else numPass">{{error.report.passes}}</td>
+          <ng-template #numPass><td class = "alert alert-success">CAPE/CSEC passes specified</td></ng-template>
+
+       </tr>
+      </tbody>
+    </table>
+  </div>
+  <div mat-dialog-actions id = "buttons">
+    <button mat-raised-button color="primary" (click)="onNoClick()">Close</button>
+  </div>
+</div>

@@ -9,7 +9,7 @@ export const AppRoutes: Routes = [{
   component: FullComponent,
   children: [{
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/home',
     pathMatch: 'full'
   }, {
     path: '',

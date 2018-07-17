@@ -8,8 +8,5 @@ import { Component } from '@angular/core';
 export class ProgressSnipperComponent {
     color = 'warn';
     mode = 'determinate';
-    value = 50;
-  
-
-  
+    value = 20;
 }

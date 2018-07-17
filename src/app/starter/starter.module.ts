@@ -6,6 +6,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { StarterComponent } from './starter.component';
 import { StarterRoutes } from './starter.routing';
 import {FileUploadModule} from 'angular-file-uploader';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   imports: [
@@ -13,6 +15,8 @@ import {FileUploadModule} from 'angular-file-uploader';
     DemoMaterialModule,
       FlexLayoutModule,
     FileUploadModule,
+    MatBadgeModule,
+    MatSnackBarModule,
     RouterModule.forChild(StarterRoutes)
   ],
   declarations: [

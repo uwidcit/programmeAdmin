@@ -1,5 +1,5 @@
 #search {
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 20px;
   width: 25%;
 }
@@ -17,6 +17,7 @@ mat-card { margin: 0 !important;}
 #listContainter {
   background: white;
   overflow-y: scroll;
+  height: 550px;
 }
 #programmeList { margin-top: 0 !important; }
 
@@ -28,3 +29,7 @@ mat-checkbox { margin-right: 5px; }
   text-align:center;
   border-bottom: 1px solid black;
 }
+
+#allInfo { height: 600px !important; }
+#infoArea { height:500px; }
+#scrollTest { overflow-y: scroll; }

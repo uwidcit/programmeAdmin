@@ -1,9 +1,14 @@
 <div fxLayout="row" fxLayout.xs = "column">
   <mat-card class = "outer">
-    <mat-card-title> {{progTotal}} Programmes </mat-card-title>
+    <mat-card-title><h2>{{progTotal}} Programmes </h2></mat-card-title>
     <mat-card-content>
       <div class="container-fluid">
-        <table class = "table">
+        <div *ngIf = "pendingRequest" id = "spinner">
+            <mat-spinner></mat-spinner>
+            <p> Loading programmes... </p>
+        </div>
+
+        <table class = "table" *ngIf = "!pendingRequest">
           <thead>
           <tr>
             <th scope="col">Faculty</th>
@@ -22,12 +27,12 @@
       <!--<mat-grid-tile *ngFor = "let prog of programmes"> <p> {{prog.title}} {{prog.number}} </p></mat-grid-tile>-->
     </mat-card-content>
 
-    <mat-card-actions>
-      <button mat-raised-button color="primary" [routerLink]="['/edit']">View Programmes</button>
-    </mat-card-actions>
+    <mat-card-actions> <button mat-raised-button color="primary" [routerLink]="['/view']">View Programmes</button> </mat-card-actions>
+    <mat-card-actions> <button mat-raised-button color="warn" matBadge="8" (click) = "openDialog()">Show Upload Errors</button> </mat-card-actions>
   </mat-card>
 
-  <mat-card class = "outer">
+  <mat-card class = "outer" id = "upload">
+    <!--<div></div>-->
     <div id="upload-area">
       <i class="material-icons">
         cloud_upload
@@ -38,9 +43,7 @@
         [config]="afuConfig"
         (ApiResponse)="DocUpload($event)">
       </angular-file-uploader>
-
     </div>
-    <br>
-
+    <!--<div></div>-->
   </mat-card>
 </div>

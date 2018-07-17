@@ -8,22 +8,32 @@ button { display: inline;}
 .outer {
   text-align: center;
   display: inline-block;
-  padding: 20px !important;
-  width: 750px;
+  padding: 10px !important;
+  width: 100%;
 }
 
 mat-card {
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5) !important;
-  margin: 0px 15px 0px 15px !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5) !important;
+  margin: 0 15px 0 15px;
 }
-mat-card-content { padding: 0 !important; }
+mat-card-content { padding: 0 5px !important; }
 
 i {font-size: 75px; }
 table { text-align: center;}
 hr { border-top: 1px solid black; }
 
+#upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #upload-area {
   background: lightgray;
-  padding: 30px;
+  width: 100%;
+  padding: 100px;
 }
+
+#spinner { text-align: center; }
+#spinner mat-spinner { display: inline-block; }
 

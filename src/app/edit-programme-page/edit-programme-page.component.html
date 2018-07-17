@@ -1,13 +1,13 @@
 <mat-toolbar color = "primary">
-  <mat-toolbar-row id = "search">
+  <mat-toolbar-row  id = "search" >
     <mat-form-field class="example-full-width">
-      <input type = "text" matInput placeholder="Search">
+      <input #searchbar (keyup) = "filter(searchbar.value)" type = "text" matInput placeholder="Filter programmes">
     </mat-form-field>
   </mat-toolbar-row>
 </mat-toolbar>
 
 <div class="container-fluid" style = "padding: 0 !important;">
-  <div class="row" style = "height: 600px !important; margin-top: 10px;">
+  <div class="row" style = "margin-top: 10px;">
 
     <div class="col-md-4" id = "listContainter">
       <mat-card id = "programmeList">
@@ -17,102 +17,103 @@
               {{fac}}
             </mat-option>
           </mat-select>
-          <mat-list-item style = "height: auto;" *ngFor="let prog of programmes" (click) = "getProgInfo($event)"><span class = "test">{{prog.name}}</span></mat-list-item>
+          <mat-list-item style = "height: auto;" *ngFor="let prog of filtered" (click) = "getProgInfo($event)"><span class = "test">{{prog.name}}</span></mat-list-item>
         </mat-nav-list>
       </mat-card>
     </div>
 
     <div class="col-md-8" style = "margin-top: -50px;" [style.visibility] = hideInfo >
-      <mat-card>
-        <div class="container-fluid">
+      <mat-card id = "allInfo">
+        <div class="container-fluid" id = "scrollTest">
           <h1 style = "padding: 15px"> {{title}} </h1>
-          <div class="row">
-            <div class="col-md-8">
-              <mat-label>Single Subject Requirements</mat-label>
-              <mat-form-field class="general-requirements">
-                <mat-chip-list #genreqs>
-                  <mat-chip *ngFor="let req of currProg.requirements.mandatory" [selectable]=true>
-                    {{req}}
+          <div id="infoArea">
+            <div class="row">
+              <div class="col-md-8">
+                <mat-label>Single Subject Requirements</mat-label>
+                <mat-form-field class="general-requirements">
+                  <mat-chip-list #genreqs>
+                    <mat-chip *ngFor="let req of currProg.requirements.mandatory" [selectable]=true>
+                      {{req}}
+                      <mat-icon matChipRemove>cancel</mat-icon>
+                    </mat-chip>
+                    <input disabled [matChipInputFor]="genreqs"/>
+                  </mat-chip-list>
+                </mat-form-field>
+
+              </div>
+              <div class="col-md-4">
+                <div class="row">
+                  <mat-checkbox disabled [(ngModel)]="currProg.part_time">Part time</mat-checkbox>
+                  <mat-checkbox disabled [(ngModel)]="currProg.full_time">Full time</mat-checkbox>
+                  <mat-checkbox disabled [(ngModel)]="currProg.evening">Evening</mat-checkbox>
+                </div>
+                <mat-form-field class="example-full-width">
+                  <input disabled type = "number" matInput placeholder="CAPE Passes (2 unit)" [(ngModel)] = "currProg.requirements.cape_passes" >
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <input disabled type = "number" matInput placeholder="CSEC Passes" [(ngModel)] = "currProg.requirements.csec_passes">
+                </mat-form-field>
+
+              </div>
+            </div>
+
+            <h2> Grouped Requirements </h2>
+            <h3 *ngIf = "noCombos">(No combination requirements for this programme)</h3>
+
+            <div class="row" [hidden] = "hideOneCSEC">
+              <mat-label>CSEC (any one of the following)</mat-label>
+              <mat-form-field class="csec-requirements">
+                <mat-chip-list #anyOneCSEC>
+                  <mat-chip *ngFor="let subs of oneCSEC" [selectable]= true>
+                    {{subs}}
                     <mat-icon matChipRemove>cancel</mat-icon>
                   </mat-chip>
-                  <input disabled [matChipInputFor]="genreqs"/>
+                  <input disabled [matChipInputFor]="anyOneCSEC"/>
                 </mat-chip-list>
               </mat-form-field>
-
             </div>
-            <div class="col-md-4">
-              <div class="row">
-                <mat-checkbox disabled [(ngModel)]="currProg.part_time">Part time</mat-checkbox>
-                <mat-checkbox disabled [(ngModel)]="currProg.full_time">Full time</mat-checkbox>
-                <mat-checkbox disabled [(ngModel)]="currProg.evening">Evening</mat-checkbox>
-              </div>
-              <mat-form-field class="example-full-width">
-                <input disabled type = "number" matInput placeholder="CAPE Passes (2 unit)" [(ngModel)] = "currProg.requirements.cape_passes" >
-              </mat-form-field>
-              <mat-form-field class="example-full-width">
-                <input disabled type = "number" matInput placeholder="CSEC Passes" [(ngModel)] = "currProg.requirements.csec_passes">
-              </mat-form-field>
 
+            <div class="row" [hidden] = "hideTwoCSEC">
+              <mat-label>CSEC (any two of the following)</mat-label>
+              <mat-form-field class="csec-requirements">
+                <mat-chip-list #anyTwoCSEC>
+                  <mat-chip *ngFor="let subs of twoCSEC" [selectable]= true>
+                    {{subs}}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                  </mat-chip>
+                  <input disabled [matChipInputFor]="anyTwoCSEC"/>
+                </mat-chip-list>
+              </mat-form-field>
+            </div>
+
+            <div class="row" [hidden] = "hideOneCAPE">
+              <mat-label>CAPE (any one of the following)</mat-label>
+              <mat-form-field class="cape-requirements">
+                <mat-chip-list #anyOneCAPE>
+                  <mat-chip *ngFor="let subs of oneCAPE" [selectable]= true>
+                    {{subs}}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                  </mat-chip>
+                  <input disabled
+                         [matChipInputFor]="anyOneCAPE"/>
+                </mat-chip-list>
+              </mat-form-field>
+            </div>
+
+            <div class="row" [hidden] = "hideTwoCAPE">
+              <mat-label>CAPE (any two of the following)</mat-label>
+              <mat-form-field class="cape-requirements">
+                <mat-chip-list #anyTwoCape>
+                  <mat-chip *ngFor="let subs of twoCAPE" [selectable]= true>
+                    {{subs}}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                  </mat-chip>
+                  <input disabled
+                         [matChipInputFor]="anyTwoCape"/>
+                </mat-chip-list>
+              </mat-form-field>
             </div>
           </div>
-
-          <h2> Grouped Requirements </h2>
-          <h3 *ngIf = "noCombos">(No combination requirements for this programme)</h3>
-
-          <div class="row" [hidden] = "hideOneCSEC">
-            <mat-label>CSEC (any one of the following)</mat-label>
-            <mat-form-field class="csec-requirements">
-              <mat-chip-list #anyOneCSEC>
-                <mat-chip *ngFor="let subs of oneCSEC" [selectable]= true>
-                {{subs}}
-                <mat-icon matChipRemove>cancel</mat-icon>
-                </mat-chip>
-                <input disabled [matChipInputFor]="anyOneCSEC"/>
-              </mat-chip-list>
-            </mat-form-field>
-          </div>
-
-          <div class="row" [hidden] = "hideTwoCSEC">
-            <mat-label>CSEC (any two of the following)</mat-label>
-            <mat-form-field class="csec-requirements">
-              <mat-chip-list #anyTwoCSEC>
-                <mat-chip *ngFor="let subs of twoCSEC" [selectable]= true>
-                  {{subs}}
-                  <mat-icon matChipRemove>cancel</mat-icon>
-                </mat-chip>
-                <input disabled [matChipInputFor]="anyTwoCSEC"/>
-              </mat-chip-list>
-            </mat-form-field>
-          </div>
-
-          <div class="row" [hidden] = "hideOneCAPE">
-            <mat-label>CAPE (any one of the following)</mat-label>
-            <mat-form-field class="cape-requirements">
-              <mat-chip-list #anyOneCAPE>
-                <mat-chip *ngFor="let subs of oneCAPE" [selectable]= true>
-                  {{subs}}
-                  <mat-icon matChipRemove>cancel</mat-icon>
-                </mat-chip>
-                <input disabled
-                       [matChipInputFor]="anyOneCAPE"/>
-              </mat-chip-list>
-            </mat-form-field>
-          </div>
-
-          <div class="row" [hidden] = "hideTwoCAPE">
-            <mat-label>CAPE (any two of the following)</mat-label>
-            <mat-form-field class="cape-requirements">
-              <mat-chip-list #anyTwoCape>
-                <mat-chip *ngFor="let subs of twoCAPE" [selectable]= true>
-                  {{subs}}
-                  <mat-icon matChipRemove>cancel</mat-icon>
-                </mat-chip>
-                <input disabled
-                       [matChipInputFor]="anyTwoCape"/>
-              </mat-chip-list>
-            </mat-form-field>
-          </div>
-
         </div>
       </mat-card>
     </div>
