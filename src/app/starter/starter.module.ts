@@ -13,7 +13,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
   imports: [
     CommonModule,
     DemoMaterialModule,
-      FlexLayoutModule,
+    FlexLayoutModule,
     FileUploadModule,
     MatBadgeModule,
     MatSnackBarModule,
