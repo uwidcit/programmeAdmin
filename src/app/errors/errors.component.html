@@ -21,25 +21,25 @@
       <tr *ngFor = "let error of errors">
         <td>{{error.name}}</td>
         <td class = "alert alert-danger" *ngIf = "error.corrected !== undefined; else spellingPass">{{error.corrected}}</td>
-          <ng-template #spellingPass><td class = "alert alert-success">No changes made</td></ng-template>
+        <ng-template #spellingPass><td class = "alert alert-success">No changes made</td></ng-template>
 
         <td class = "alert alert-danger"  *ngIf = "error.report.missing_subjects.length !== 0; else noMissingSubs">{{error.report.missing_subjects}}</td>
-          <ng-template #noMissingSubs><td class = "alert alert-success">All subjects exist in DB</td></ng-template>
+        <ng-template #noMissingSubs><td class = "alert alert-success">All subjects exist in DB</td></ng-template>
 
         <td class = "alert alert-danger"  *ngIf = "error.report.mandatory !== undefined; else manPass">{{error.report.mandatory}}</td>
-          <ng-template #manPass><td class = "alert alert-success">Has Mandatory Subjects</td></ng-template>
+        <ng-template #manPass><td class = "alert alert-success">Has Mandatory Subjects</td></ng-template>
 
         <td class = "alert alert-danger"  *ngIf = "error.report.req_conflict !== ''; else reqPass">{{error.report.req_conflict}}</td>
-          <ng-template #reqPass><td class = "alert alert-success">No Subject Conflicts</td></ng-template>
+        <ng-template #reqPass><td class = "alert alert-success">No Subject Conflicts</td></ng-template>
 
         <td class = "alert alert-danger"  *ngIf = "error.report.passes !== undefined; else numPass">{{error.report.passes}}</td>
-          <ng-template #numPass><td class = "alert alert-success">CAPE/CSEC passes specified</td></ng-template>
+        <ng-template #numPass><td class = "alert alert-success">CAPE/CSEC passes specified</td></ng-template>
 
-       </tr>
+      </tr>
       </tbody>
     </table>
   </div>
   <div mat-dialog-actions id = "buttons">
-    <button mat-raised-button color="primary" (click)="onNoClick()">Close</button>
+    <button mat-raised-button color="primary" [mat-dialog-close] >Close</button>
   </div>
 </div>

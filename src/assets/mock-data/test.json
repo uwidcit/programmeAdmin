@@ -1,21 +1,548 @@
-[
-  {"name":"Agriculture - Major in Agricultural Extnsion","type":"BACHELOR OF SCIENCE (BSc) GENERAL","part_time":false,"evening":false,"full_time":false,"faculty":"Food & Agriculture","department":"Agricultural Economics & Extension","duration":0,"url":"","requirements":{"cape_passes":0,"csec_passes":0,"mandatory":[],"combinations":[]},"report":{"valid":false,"missing_subjects":"","req_conflict":"","mandatory":"Empty array","passes":"No cape and no csec passes"}},
-  {"name":"Agriculture - Minor in Communication and Extension","type":"BACHELOR OF SCIENCE (BSc) GENERAL","part_time":false,"evening":false,"full_time":false,"faculty":"Food & Agriculture","department":"Agricultural Economics & Extension","duration":3,"url":"","requirements":{"cape_passes":0,"csec_passes":0,"mandatory":[],"combinations":[]},"report":{"valid":false,"missing_subjects":"","req_conflict":"","mandatory":"Empty array","passes":"No cape and no csec passes"}},
-  {"name":"Agriculture - Minor in Entrepreneurship","type":"BACHELOR OF SCIENCE (BSc) GENERAL","part_time":false,"evening":false,"full_time":false,"faculty":"Food & Agriculture","department":"Agricultural Economics & Extension","duration":3,"url":"","requirements":{"cape_passes":0,"csec_passes":0,"mandatory":[],"combinations":[]},"report":{"valid":false,"missing_subjects":"","req_conflict":"","mandatory":"Empty array","passes":"No cape and no csec passes"}},
-  {"name":"Agriculture - Minor in Sports Nutrition","type":"BACHELOR OF SCIENCE (BSc) GENERAL","part_time":false,"evening":false,"full_time":false,"faculty":"Food & Agriculture","department":"Agricultural Economics & Extension","duration":3,"url":"","requirements":{"cape_passes":0,"csec_passes":0,"mandatory":[],"combinations":[]},"report":{"valid":false,"missing_subjects":"","req_conflict":"","mandatory":"Empty array","passes":"No cape and no csec passes"}},
-  {"name":"Agricultural & Rural Development (by distance)","type":"CERTIFICATE","part_time":false,"evening":false,"full_time":false,"faculty":"Food & Agriculture","department":"Business Development Unit","duration":"?","url":"","requirements":{"cape_passes":0,"csec_passes":0,"mandatory":[],"combinations":[]},"report":{"valid":false,"missing_subjects":"","req_conflict":"","mandatory":"Empty array","passes":"No cape and no csec passes"}},
-  {"name":"Diploma / Internship in Institutional and Community Dietetics & Nutrition","type":"DIPLOMA ","part_time":false,"evening":false,"full_time":true,"faculty":"Food & Agriculture","department":"Agricultural Economics & Extension","duration":"?","url":"http://sta.uwi.edu/ffa/daee/diploma-institutional-and-community-dietetics-and-nutrition","requirements":{"cape_passes":0,"csec_passes":0,"mandatory":[],"combinations":[]},"description":"Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS","report":{"valid":false,"missing_subjects":"","req_conflict":"","mandatory":"Empty array","passes":"No cape and no csec passes"}},
-  {"name":"Speech & Language Science","type":"CERTIFICATE ","part_time":false,"evening":false,"full_time":false,"faculty":"Humanities & Education","department":"Modern Languages & Linguistics","duration":"?","url":"http://sta.uwi.edu/fhe/dmll/undergraduate.asp","requirements":{"cape_passes":0,"csec_passes":0,"mandatory":[],"combinations":[]},"description":"Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS","possible_careers":["Special Education","Medicine (Diagnostic and Rehabilitation services)","Consultancy."],"job_titles":["Speech Therapist","Speech-Language Pathologist"],"report":{"valid":false,"missing_subjects":"","req_conflict":"","mandatory":"Empty array","passes":"No cape and no csec passes"}},
-  {"name":"Art & Science of Coaching","type":"CERTIFICATE ","part_time":true,"evening":false,"full_time":false,"faculty":"Humanities & Education","department":"School of Education","duration":"?","url":"http://sta.uwi.edu/fhe/education/coaching","requirements":{"cape_passes":0,"csec_passes":0,"mandatory":["English Language (CSEC)"],"combinations":[]},"description":"Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS","report":{"valid":false,"missing_subjects":"","req_conflict":"","passes":"No cape and no csec passes"}},
-  {"name":"Education","type":"","part_time":false,"evening":false,"full_time":false,"faculty":"Humanities & Education","department":"School of Education","duration":0,"url":"","requirements":{"cape_passes":0,"csec_passes":0,"mandatory":[],"combinations":[]},"report":{"valid":false,"missing_subjects":"","req_conflict":"","mandatory":"Empty array","passes":"No cape and no csec passes"}},
-  {"name":"Speech & Language Science","type":"","part_time":false,"evening":false,"full_time":false,"faculty":"Humanities & Education","department":"Modern Languages & Linguistics","duration":0,"url":"","requirements":{"cape_passes":0,"csec_passes":0,"mandatory":[],"combinations":[]},"report":{"valid":false,"missing_subjects":"","req_conflict":"","mandatory":"Empty array","passes":"No cape and no csec passes"}},
-  {"name":"Professional Development in TESOL (Teaching of English to Speakers of Other Languages)","type":"DIPLOMA","part_time":false,"evening":false,"full_time":false,"faculty":"Humanities & Education","department":"Modern Languages & Linguistics","duration":0,"url":"","requirements":{"cape_passes":0,"csec_passes":0,"mandatory":[],"combinations":[]},"report":{"valid":false,"missing_subjects":"","req_conflict":"","mandatory":"Empty array","passes":"No cape and no csec passes"}},
-  {"name":"Sign Language & Interpreting","type":"DIPLOMA ","part_time":false,"evening":false,"full_time":false,"faculty":"Humanities & Education","department":"Modern Languages & Linguistics","duration":0,"url":"","requirements":{"cape_passes":0,"csec_passes":0,"mandatory":[],"combinations":[]},"report":{"valid":false,"missing_subjects":"","req_conflict":"","mandatory":"Empty array","passes":"No cape and no csec passes"}},
-  {"name":"Biochemistry (Major)","type":"BACHELOR OF SCIENCE (BSc) GENERAL","part_time":true,"evening":false,"full_time":true,"faculty":"Science & Technology","department":"Life Sciences","duration":3,"url":"","requirements":{"cape_passes":2,"csec_passes":5,"mandatory":["English Language (CSEC)","Mathematics (CSEC)","Chemistry (CAPE)","Biology (CAPE)"],"combinations":[{"amt":1,"list":["Chemistry (CSEC)","Biology (CSEC)"]},{"amt":1,"list":["Chemistry (CSEC)","Biology (CSEC)"]},{"amt":2,"list":["Chemistry (CSEC)","Biology (CSEC)","Agricultural Science (CSEC)","Physics (CSEC)","Geography (CSEC)"]},{"amt":2,"list":["Agricultural Science (CAPE)","Biology (CAPE)","Chemistry (CAPE)","Computer Science (CAPE)","Electrical and Electronic Engineering Technology (CAPE)","Environmental Science (CAPE)","Green Engineering (CAPE)","Information Technology (CAPE)","Physics (CAPE)","Physical Education and Sport (CAPE)"]}]},"corrected":"Changed \"Chemistry and Biology\" to separate subjects","description":"Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS","possible_careers":["Pharmaceutical Industry","Food and Drug Industry","Dietetics","Biotechnology Firms","Bioprospecting Firms","Forensics","Immunology","Analytical and/or Diagnostic Laboratories","Academia",""],"job_titles":["Immunologist","Clinical Research Associate","Lecturer","Technician","Dietician","Developer of Educational tools","Manufacturing Research Associate","Quality Assurance Manager/ Auditor","Sales Representative","Technical Writer","Quality Control Engineer"],"report":{"valid":false,"missing_subjects":"","req_conflict":"Biology (CAPE); Chemistry (CAPE); "}},
-  {"name":"Biology (Major)","type":"BACHELOR OF SCIENCE (BSc) GENERAL","part_time":true,"evening":false,"full_time":true,"faculty":"Science & Technology","department":"Life Sciences","duration":3,"url":"","requirements":{"cape_passes":2,"csec_passes":5,"mandatory":["English Language (CSEC)","Mathematics (CSEC)","Biology (CAPE)"],"combinations":[{"amt":2,"list":["Chemistry (CSEC)","Biology (CSEC)","Agricultural Science (CSEC)","Physics (CSEC)","Geography (CSEC)"]},{"amt":2,"list":["Agricultural Science (CAPE)","Biology (CAPE)","Chemistry (CAPE)","Computer Science (CAPE)","Electrical and Electronic Engineering Technology (CAPE)","Environmental Science (CAPE)","Green Engineering (CAPE)","Information Technology (CAPE)","Physics (CAPE)","Physical Education and Sport (CAPE)"]}]},"description":"Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS","possible_careers":["Biotechnology Firms","Chemical Companies","Academia","Environmental Consultancy","Food and Drug Industry","Fisheries and Wildlife","Ministry of Agriculture","Research institutes"],"job_titles":["Agronomist","Biochemist","Biologist","Consultant","Microbiologist","Pathologist","Wildlife Biologist","Food and Drug inspector","Fisheries Biologist"],"report":{"valid":false,"missing_subjects":"","req_conflict":"Biology (CAPE); "}},
-  {"name":"Chemistry","type":"BACHELOR OF SCIENCE (BSc):","part_time":true,"evening":false,"full_time":true,"faculty":"Science & Technology","department":"Chemistry","duration":3,"url":"","requirements":{"cape_passes":2,"csec_passes":5,"mandatory":["English Language (CSEC)","Mathematics (CSEC)","Chemistry (CAPE)"],"combinations":[{"amt":2,"list":["Chemistry (CSEC)","Biology (CSEC)","Agricultural Science (CSEC)","Physics (CSEC)","Geography (CSEC)"]},{"amt":2,"list":["Agricultural Science (CAPE)","Biology (CAPE)","Chemistry (CAPE)","Computer Science (CAPE)","Electrical and Electronic Engineering Technology (CAPE)","Environmental Science (CAPE)","Green Engineering (CAPE)","Information Technology (CAPE)","Physics (CAPE)","Physical Education and Sport (CAPE)"]}]},"description":"Chemistry is the study of matter, its properties, how and why substances combine or separate to form other substances, and how substances interact with energy.","possible_careers":["Laboratories","Chemical Companies","Academia","Teaching","Pharmaceutical Industry"],"job_titles":["Chemist","Laboratory Technician","Science Teacher","Pharmaceutical Sales Representative"],"report":{"valid":false,"missing_subjects":"","req_conflict":"Chemistry (CAPE); "}},
-  {"name":"Chemistry (Major)","type":"BACHELOR OF SCIENCE (BSc) GENERAL","part_time":true,"evening":false,"full_time":true,"faculty":"Science & Technology","department":"Chemistry","duration":3,"url":"","requirements":{"cape_passes":2,"csec_passes":5,"mandatory":["English Language (CSEC)","Mathematics (CSEC)","Chemistry (CAPE)"],"combinations":[{"amt":2,"list":["Chemistry (CSEC)","Biology (CSEC)","Agricultural Science (CSEC)","Physics (CSEC)","Geography (CSEC)"]},{"amt":2,"list":["Agricultural Science (CAPE)","Biology (CAPE)","Chemistry (CAPE)","Computer Science (CAPE)","Electrical and Electronic Engineering Technology (CAPE)","Environmental Science (CAPE)","Green Engineering (CAPE)","Information Technology (CAPE)","Physics (CAPE)","Physical Education and Sport (CAPE)"]}]},"description":"Chemistry is the study of matter, its properties, how and why substances combine or separate to form other substances, and how substances interact with energy.","possible_careers":["Laboratories","Chemical Companies","Academia","Teaching","Pharmaceutical Industry"],"job_titles":["Chemist","Laboratory Technician","Science Teacher","Pharmaceutical Sales Representative"],"report":{"valid":false,"missing_subjects":"","req_conflict":"Chemistry (CAPE); "}},
-  {"name":"Chemistry and Management","type":"BACHELOR OF SCIENCE (BSc):","part_time":true,"evening":false,"full_time":true,"faculty":"Science & Technology","department":"Chemistry","duration":3,"url":"","requirements":{"cape_passes":2,"csec_passes":5,"mandatory":["English Language (CSEC)","Mathematics (CSEC)","Chemistry (CAPE)"],"combinations":[{"amt":2,"list":["Chemistry (CSEC)","Biology (CSEC)","Agricultural Science (CSEC)","Physics (CSEC)","Geography (CSEC)"]},{"amt":2,"list":["Agricultural Science (CAPE)","Biology (CAPE)","Chemistry (CAPE)","Computer Science (CAPE)","Electrical and Electronic Engineering Technology (CAPE)","Environmental Science (CAPE)","Green Engineering (CAPE)","Information Technology (CAPE)","Physics (CAPE)","Physical Education and Sport (CAPE)"]}]},"description":"Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS","possible_careers":["Laboratories","Chemical Companies","Academia","Teaching","Pharmaceutical Industry"],"job_titles":["Chemist","Laboratory Technician","Science Teacher","Pharmaceutical Sales Representative"],"report":{"valid":false,"missing_subjects":"","req_conflict":"Chemistry (CAPE); "}},
-  {"name":"Environmental Science","type":"BACHELOR OF SCIENCE (BSc):","part_time":true,"evening":false,"full_time":true,"faculty":"Science & Technology","department":"Life Sciences","duration":3,"url":"","requirements":{"cape_passes":2,"csec_passes":5,"mandatory":["English Language (CSEC)","Mathematics (CSEC)","Biology (CAPE)","Geography (CAPE)","Environmental Science (CAPE)"],"combinations":[{"amt":2,"list":["Chemistry (CSEC)","Biology (CSEC)","Agricultural Science (CSEC)","Physics (CSEC)","Geography (CSEC)"]},{"amt":2,"list":["Agricultural Science (CAPE)","Biology (CAPE)","Chemistry (CAPE)","Computer Science (CAPE)","Electrical and Electronic Engineering Technology (CAPE)","Environmental Science (CAPE)","Green Engineering (CAPE)","Information Technology (CAPE)","Physics (CAPE)","Physical Education and Sport (CAPE)"]},{"amt":2,"list":["Biology (CAPE)","Geography (CAPE)","Environmental Science (CAPE)"]}]},"description":"Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS","possible_careers":["Forestry Science","Recreation","Parks and Tourism Management","Environmental Protection Agencies/Consulting Firms","Wildlife and Fisheries"],"job_titles":["Environmental Analyst","Consultant","Forest/ Park Ranger","Natural Resources Manager"],"report":{"valid":false,"missing_subjects":"","req_conflict":"Biology (CAPE); Environmental Science (CAPE); Biology (CAPE); Geography (CAPE); Environmental Science (CAPE); "}},
-  {"name":"Industrial Chemistry (Major)","type":"BACHELOR OF SCIENCE (BSc) GENERAL","part_time":true,"evening":false,"full_time":true,"faculty":"Science & Technology","department":"Chemistry","duration":3,"url":"","requirements":{"cape_passes":2,"csec_passes":5,"mandatory":["English Language (CSEC)","Mathematics (CSEC)","Chemistry (CAPE)"],"combinations":[{"amt":2,"list":["Chemistry (CSEC)","Biology (CSEC)","Agricultural Science (CSEC)","Physics (CSEC)","Geography (CSEC)"]},{"amt":2,"list":["Agricultural Science (CAPE)","Biology (CAPE)","Chemistry (CAPE)","Computer Science (CAPE)","Electrical and Electronic Engineering Technology (CAPE)","Environmental Science (CAPE)","Green Engineering (CAPE)","Information Technology (CAPE)","Physics (CAPE)","Physical Education and Sport (CAPE)"]}]},"description":"Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS","report":{"valid":false,"missing_subjects":"","req_conflict":"Chemistry (CAPE); "}},
-  {"name":"Information Technology (Major)","type":"BACHELOR OF SCIENCE (BSc) GENERAL","part_time":true,"evening":false,"full_time":true,"faculty":"Science & Technology","department":"Computing & Information Technology","duration":"3 (FT) 5 (PT)","url":"","requirements":{"cape_passes":2,"csec_passes":5,"mandatory":["English Language (CSEC)","Mathematics (CSEC)","Science (CAPE)","Accounting (CAPE)","Economics (CAPE)"],"combinations":[{"amt":2,"list":["Chemistry (CSEC)","Biology (CSEC)","Agricultural Science (CSEC)","Physics (CSEC)","Geography (CSEC)"]},{"amt":2,"list":["Agricultural Science (CAPE)","Biology (CAPE)","Chemistry (CAPE)","Computer Science (CAPE)","Electrical and Electronic Engineering Technology (CAPE)","Environmental Science (CAPE)","Green Engineering (CAPE)","Information Technology (CAPE)","Physics (CAPE)","Physical Education and Sport (CAPE)"]}]},"description":"Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS  IT professionals are the users of technology. IT utilizes existing operating systems, software and applications in tandem to create a larger system that solves a specific business problem. IT constructs a network from established building blocks to carry out a task, such as an automated supplies ordering service. IT candidates will possess strong critical thinking skills; IT professionals are tasked with resourcefully and cost-effectively applying the tools at their disposal.","job_titles":["Information Security Analyst","Network Architect","Computer Support Specialist","Database Administrator","Systems Administrator."],"report":{"valid":false,"missing_subjects":"Science (CAPE); ","req_conflict":""}}]
+[{
+  "name": "Agriculture - Major in Agricultural Extnsion",
+  "type": "BACHELOR OF SCIENCE (BSc) GENERAL",
+  "part_time": false,
+  "evening": false,
+  "full_time": false,
+  "faculty": "Food & Agriculture",
+  "department": "Agricultural Economics & Extension",
+  "duration": 0,
+  "url": "",
+  "requirements": {
+    "cape_passes": 0,
+    "csec_passes": 0,
+    "mandatory": [],
+    "combinations": []
+  },
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "",
+    "mandatory": "Empty array",
+    "passes": "No cape and no csec passes"
+  }
+},
+{
+  "name": "Agriculture - Minor in Communication and Extension",
+  "type": "BACHELOR OF SCIENCE (BSc) GENERAL",
+  "part_time": false,
+  "evening": false,
+  "full_time": false,
+  "faculty": "Food & Agriculture",
+  "department": "Agricultural Economics & Extension",
+  "duration": 3,
+  "url": "",
+  "requirements": {
+    "cape_passes": 0,
+    "csec_passes": 0,
+    "mandatory": [],
+    "combinations": []
+  },
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "",
+    "mandatory": "Empty array",
+    "passes": "No cape and no csec passes"
+  }
+},
+{
+  "name": "Agriculture - Minor in Entrepreneurship",
+  "type": "BACHELOR OF SCIENCE (BSc) GENERAL",
+  "part_time": false,
+  "evening": false,
+  "full_time": false,
+  "faculty": "Food & Agriculture",
+  "department": "Agricultural Economics & Extension",
+  "duration": 3,
+  "url": "",
+  "requirements": {
+    "cape_passes": 0,
+    "csec_passes": 0,
+    "mandatory": [],
+    "combinations": []
+  },
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "",
+    "mandatory": "Empty array",
+    "passes": "No cape and no csec passes"
+  }
+},
+{
+  "name": "Agriculture - Minor in Sports Nutrition",
+  "type": "BACHELOR OF SCIENCE (BSc) GENERAL",
+  "part_time": false,
+  "evening": false,
+  "full_time": false,
+  "faculty": "Food & Agriculture",
+  "department": "Agricultural Economics & Extension",
+  "duration": 3,
+  "url": "",
+  "requirements": {
+    "cape_passes": 0,
+    "csec_passes": 0,
+    "mandatory": [],
+    "combinations": []
+  },
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "",
+    "mandatory": "Empty array",
+    "passes": "No cape and no csec passes"
+  }
+},
+{
+  "name": "Agricultural & Rural Development (by distance)",
+  "type": "CERTIFICATE",
+  "part_time": false,
+  "evening": false,
+  "full_time": false,
+  "faculty": "Food & Agriculture",
+  "department": "Business Development Unit",
+  "duration": "?",
+  "url": "",
+  "requirements": {
+    "cape_passes": 0,
+    "csec_passes": 0,
+    "mandatory": [],
+    "combinations": []
+  },
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "",
+    "mandatory": "Empty array",
+    "passes": "No cape and no csec passes"
+  }
+},
+{
+  "name": "Diploma / Internship in Institutional and Community Dietetics & Nutrition",
+  "type": "DIPLOMA ",
+  "part_time": false,
+  "evening": false,
+  "full_time": true,
+  "faculty": "Food & Agriculture",
+  "department": "Agricultural Economics & Extension",
+  "duration": "?",
+  "url": "http://sta.uwi.edu/ffa/daee/diploma-institutional-and-community-dietetics-and-nutrition",
+  "requirements": {
+    "cape_passes": 0,
+    "csec_passes": 0,
+    "mandatory": [],
+    "combinations": []
+  },
+  "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "",
+    "mandatory": "Empty array",
+    "passes": "No cape and no csec passes"
+  }
+},
+{
+  "name": "Speech & Language Science",
+  "type": "CERTIFICATE ",
+  "part_time": false,
+  "evening": false,
+  "full_time": false,
+  "faculty": "Humanities & Education",
+  "department": "Modern Languages & Linguistics",
+  "duration": "?",
+  "url": "http://sta.uwi.edu/fhe/dmll/undergraduate.asp",
+  "requirements": {
+    "cape_passes": 0,
+    "csec_passes": 0,
+    "mandatory": [],
+    "combinations": []
+  },
+  "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
+  "possible_careers": ["Special Education", "Medicine (Diagnostic and Rehabilitation services)", "Consultancy."],
+  "job_titles": ["Speech Therapist", "Speech-Language Pathologist"],
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "",
+    "mandatory": "Empty array",
+    "passes": "No cape and no csec passes"
+  }
+},
+{
+  "name": "Art & Science of Coaching",
+  "type": "CERTIFICATE ",
+  "part_time": true,
+  "evening": false,
+  "full_time": false,
+  "faculty": "Humanities & Education",
+  "department": "School of Education",
+  "duration": "?",
+  "url": "http://sta.uwi.edu/fhe/education/coaching",
+  "requirements": {
+    "cape_passes": 0,
+    "csec_passes": 0,
+    "mandatory": ["English Language (CSEC)"],
+    "combinations": []
+  },
+  "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "",
+    "passes": "No cape and no csec passes"
+  }
+},
+{
+  "name": "Education",
+  "type": "",
+  "part_time": false,
+  "evening": false,
+  "full_time": false,
+  "faculty": "Humanities & Education",
+  "department": "School of Education",
+  "duration": 0,
+  "url": "",
+  "requirements": {
+    "cape_passes": 0,
+    "csec_passes": 0,
+    "mandatory": [],
+    "combinations": []
+  },
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "",
+    "mandatory": "Empty array",
+    "passes": "No cape and no csec passes"
+  }
+},
+{
+  "name": "Speech & Language Science",
+  "type": "",
+  "part_time": false,
+  "evening": false,
+  "full_time": false,
+  "faculty": "Humanities & Education",
+  "department": "Modern Languages & Linguistics",
+  "duration": 0,
+  "url": "",
+  "requirements": {
+    "cape_passes": 0,
+    "csec_passes": 0,
+    "mandatory": [],
+    "combinations": []
+  },
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "",
+    "mandatory": "Empty array",
+    "passes": "No cape and no csec passes"
+  }
+},
+{
+  "name": "Professional Development in TESOL (Teaching of English to Speakers of Other Languages)",
+  "type": "DIPLOMA",
+  "part_time": false,
+  "evening": false,
+  "full_time": false,
+  "faculty": "Humanities & Education",
+  "department": "Modern Languages & Linguistics",
+  "duration": 0,
+  "url": "",
+  "requirements": {
+    "cape_passes": 0,
+    "csec_passes": 0,
+    "mandatory": [],
+    "combinations": []
+  },
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "",
+    "mandatory": "Empty array",
+    "passes": "No cape and no csec passes"
+  }
+},
+{
+  "name": "Sign Language & Interpreting",
+  "type": "DIPLOMA ",
+  "part_time": false,
+  "evening": false,
+  "full_time": false,
+  "faculty": "Humanities & Education",
+  "department": "Modern Languages & Linguistics",
+  "duration": 0,
+  "url": "",
+  "requirements": {
+    "cape_passes": 0,
+    "csec_passes": 0,
+    "mandatory": [],
+    "combinations": []
+  },
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "",
+    "mandatory": "Empty array",
+    "passes": "No cape and no csec passes"
+  }
+},
+{
+  "name": "Biochemistry (Major)",
+  "type": "BACHELOR OF SCIENCE (BSc) GENERAL",
+  "part_time": true,
+  "evening": false,
+  "full_time": true,
+  "faculty": "Science & Technology",
+  "department": "Life Sciences",
+  "duration": 3,
+  "url": "",
+  "requirements": {
+    "cape_passes": 2,
+    "csec_passes": 5,
+    "mandatory": ["English Language (CSEC)", "Mathematics (CSEC)", "Chemistry (CAPE)", "Biology (CAPE)"],
+    "combinations": [{
+      "amt": 1,
+      "list": ["Chemistry (CSEC)", "Biology (CSEC)"]
+    }, {
+      "amt": 1,
+      "list": ["Chemistry (CSEC)", "Biology (CSEC)"]
+    }, {
+      "amt": 2,
+      "list": ["Chemistry (CSEC)", "Biology (CSEC)", "Agricultural Science (CSEC)", "Physics (CSEC)", "Geography (CSEC)"]
+    }, {
+      "amt": 2,
+      "list": ["Agricultural Science (CAPE)", "Biology (CAPE)", "Chemistry (CAPE)", "Computer Science (CAPE)", "Electrical and Electronic Engineering Technology (CAPE)", "Environmental Science (CAPE)", "Green Engineering (CAPE)", "Information Technology (CAPE)", "Physics (CAPE)", "Physical Education and Sport (CAPE)"]
+    }]
+  },
+  "corrected": "Changed \"Chemistry and Biology\" to separate subjects",
+  "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
+  "possible_careers": ["Pharmaceutical Industry", "Food and Drug Industry", "Dietetics", "Biotechnology Firms", "Bioprospecting Firms", "Forensics", "Immunology", "Analytical and/or Diagnostic Laboratories", "Academia", ""],
+  "job_titles": ["Immunologist", "Clinical Research Associate", "Lecturer", "Technician", "Dietician", "Developer of Educational tools", "Manufacturing Research Associate", "Quality Assurance Manager/ Auditor", "Sales Representative", "Technical Writer", "Quality Control Engineer"],
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "Biology (CAPE); Chemistry (CAPE); "
+  }
+},
+{
+  "name": "Biology (Major)",
+  "type": "BACHELOR OF SCIENCE (BSc) GENERAL",
+  "part_time": true,
+  "evening": false,
+  "full_time": true,
+  "faculty": "Science & Technology",
+  "department": "Life Sciences",
+  "duration": 3,
+  "url": "",
+  "requirements": {
+    "cape_passes": 2,
+    "csec_passes": 5,
+    "mandatory": ["English Language (CSEC)", "Mathematics (CSEC)", "Biology (CAPE)"],
+    "combinations": [{
+      "amt": 2,
+      "list": ["Chemistry (CSEC)", "Biology (CSEC)", "Agricultural Science (CSEC)", "Physics (CSEC)", "Geography (CSEC)"]
+    }, {
+      "amt": 2,
+      "list": ["Agricultural Science (CAPE)", "Biology (CAPE)", "Chemistry (CAPE)", "Computer Science (CAPE)", "Electrical and Electronic Engineering Technology (CAPE)", "Environmental Science (CAPE)", "Green Engineering (CAPE)", "Information Technology (CAPE)", "Physics (CAPE)", "Physical Education and Sport (CAPE)"]
+    }]
+  },
+  "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
+  "possible_careers": ["Biotechnology Firms", "Chemical Companies", "Academia", "Environmental Consultancy", "Food and Drug Industry", "Fisheries and Wildlife", "Ministry of Agriculture", "Research institutes"],
+  "job_titles": ["Agronomist", "Biochemist", "Biologist", "Consultant", "Microbiologist", "Pathologist", "Wildlife Biologist", "Food and Drug inspector", "Fisheries Biologist"],
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "Biology (CAPE); "
+  }
+},
+{
+  "name": "Chemistry",
+  "type": "BACHELOR OF SCIENCE (BSc):",
+  "part_time": true,
+  "evening": false,
+  "full_time": true,
+  "faculty": "Science & Technology",
+  "department": "Chemistry",
+  "duration": 3,
+  "url": "",
+  "requirements": {
+    "cape_passes": 2,
+    "csec_passes": 5,
+    "mandatory": ["English Language (CSEC)", "Mathematics (CSEC)", "Chemistry (CAPE)"],
+    "combinations": [{
+      "amt": 2,
+      "list": ["Chemistry (CSEC)", "Biology (CSEC)", "Agricultural Science (CSEC)", "Physics (CSEC)", "Geography (CSEC)"]
+    }, {
+      "amt": 2,
+      "list": ["Agricultural Science (CAPE)", "Biology (CAPE)", "Chemistry (CAPE)", "Computer Science (CAPE)", "Electrical and Electronic Engineering Technology (CAPE)", "Environmental Science (CAPE)", "Green Engineering (CAPE)", "Information Technology (CAPE)", "Physics (CAPE)", "Physical Education and Sport (CAPE)"]
+    }]
+  },
+  "description": "Chemistry is the study of matter, its properties, how and why substances combine or separate to form other substances, and how substances interact with energy.",
+  "possible_careers": ["Laboratories", "Chemical Companies", "Academia", "Teaching", "Pharmaceutical Industry"],
+  "job_titles": ["Chemist", "Laboratory Technician", "Science Teacher", "Pharmaceutical Sales Representative"],
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "Chemistry (CAPE); "
+  }
+},
+{
+  "name": "Chemistry (Major)",
+  "type": "BACHELOR OF SCIENCE (BSc) GENERAL",
+  "part_time": true,
+  "evening": false,
+  "full_time": true,
+  "faculty": "Science & Technology",
+  "department": "Chemistry",
+  "duration": 3,
+  "url": "",
+  "requirements": {
+    "cape_passes": 2,
+    "csec_passes": 5,
+    "mandatory": ["English Language (CSEC)", "Mathematics (CSEC)", "Chemistry (CAPE)"],
+    "combinations": [{
+      "amt": 2,
+      "list": ["Chemistry (CSEC)", "Biology (CSEC)", "Agricultural Science (CSEC)", "Physics (CSEC)", "Geography (CSEC)"]
+    }, {
+      "amt": 2,
+      "list": ["Agricultural Science (CAPE)", "Biology (CAPE)", "Chemistry (CAPE)", "Computer Science (CAPE)", "Electrical and Electronic Engineering Technology (CAPE)", "Environmental Science (CAPE)", "Green Engineering (CAPE)", "Information Technology (CAPE)", "Physics (CAPE)", "Physical Education and Sport (CAPE)"]
+    }]
+  },
+  "description": "Chemistry is the study of matter, its properties, how and why substances combine or separate to form other substances, and how substances interact with energy.",
+  "possible_careers": ["Laboratories", "Chemical Companies", "Academia", "Teaching", "Pharmaceutical Industry"],
+  "job_titles": ["Chemist", "Laboratory Technician", "Science Teacher", "Pharmaceutical Sales Representative"],
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "Chemistry (CAPE); "
+  }
+},
+{
+  "name": "Chemistry and Management",
+  "type": "BACHELOR OF SCIENCE (BSc):",
+  "part_time": true,
+  "evening": false,
+  "full_time": true,
+  "faculty": "Science & Technology",
+  "department": "Chemistry",
+  "duration": 3,
+  "url": "",
+  "requirements": {
+    "cape_passes": 2,
+    "csec_passes": 5,
+    "mandatory": ["English Language (CSEC)", "Mathematics (CSEC)", "Chemistry (CAPE)"],
+    "combinations": [{
+      "amt": 2,
+      "list": ["Chemistry (CSEC)", "Biology (CSEC)", "Agricultural Science (CSEC)", "Physics (CSEC)", "Geography (CSEC)"]
+    }, {
+      "amt": 2,
+      "list": ["Agricultural Science (CAPE)", "Biology (CAPE)", "Chemistry (CAPE)", "Computer Science (CAPE)", "Electrical and Electronic Engineering Technology (CAPE)", "Environmental Science (CAPE)", "Green Engineering (CAPE)", "Information Technology (CAPE)", "Physics (CAPE)", "Physical Education and Sport (CAPE)"]
+    }]
+  },
+  "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
+  "possible_careers": ["Laboratories", "Chemical Companies", "Academia", "Teaching", "Pharmaceutical Industry"],
+  "job_titles": ["Chemist", "Laboratory Technician", "Science Teacher", "Pharmaceutical Sales Representative"],
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "Chemistry (CAPE); "
+  }
+},
+{
+  "name": "Environmental Science",
+  "type": "BACHELOR OF SCIENCE (BSc):",
+  "part_time": true,
+  "evening": false,
+  "full_time": true,
+  "faculty": "Science & Technology",
+  "department": "Life Sciences",
+  "duration": 3,
+  "url": "",
+  "requirements": {
+    "cape_passes": 2,
+    "csec_passes": 5,
+    "mandatory": ["English Language (CSEC)", "Mathematics (CSEC)", "Biology (CAPE)", "Geography (CAPE)", "Environmental Science (CAPE)"],
+    "combinations": [{
+      "amt": 2,
+      "list": ["Chemistry (CSEC)", "Biology (CSEC)", "Agricultural Science (CSEC)", "Physics (CSEC)", "Geography (CSEC)"]
+    }, {
+      "amt": 2,
+      "list": ["Agricultural Science (CAPE)", "Biology (CAPE)", "Chemistry (CAPE)", "Computer Science (CAPE)", "Electrical and Electronic Engineering Technology (CAPE)", "Environmental Science (CAPE)", "Green Engineering (CAPE)", "Information Technology (CAPE)", "Physics (CAPE)", "Physical Education and Sport (CAPE)"]
+    }, {
+      "amt": 2,
+      "list": ["Biology (CAPE)", "Geography (CAPE)", "Environmental Science (CAPE)"]
+    }]
+  },
+  "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
+  "possible_careers": ["Forestry Science", "Recreation", "Parks and Tourism Management", "Environmental Protection Agencies/Consulting Firms", "Wildlife and Fisheries"],
+  "job_titles": ["Environmental Analyst", "Consultant", "Forest/ Park Ranger", "Natural Resources Manager"],
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "Biology (CAPE); Environmental Science (CAPE); Biology (CAPE); Geography (CAPE); Environmental Science (CAPE); "
+  }
+},
+{
+  "name": "Industrial Chemistry (Major)",
+  "type": "BACHELOR OF SCIENCE (BSc) GENERAL",
+  "part_time": true,
+  "evening": false,
+  "full_time": true,
+  "faculty": "Science & Technology",
+  "department": "Chemistry",
+  "duration": 3,
+  "url": "",
+  "requirements": {
+    "cape_passes": 2,
+    "csec_passes": 5,
+    "mandatory": ["English Language (CSEC)", "Mathematics (CSEC)", "Chemistry (CAPE)"],
+    "combinations": [{
+      "amt": 2,
+      "list": ["Chemistry (CSEC)", "Biology (CSEC)", "Agricultural Science (CSEC)", "Physics (CSEC)", "Geography (CSEC)"]
+    }, {
+      "amt": 2,
+      "list": ["Agricultural Science (CAPE)", "Biology (CAPE)", "Chemistry (CAPE)", "Computer Science (CAPE)", "Electrical and Electronic Engineering Technology (CAPE)", "Environmental Science (CAPE)", "Green Engineering (CAPE)", "Information Technology (CAPE)", "Physics (CAPE)", "Physical Education and Sport (CAPE)"]
+    }]
+  },
+  "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
+  "report": {
+    "valid": false,
+    "missing_subjects": "",
+    "req_conflict": "Chemistry (CAPE); "
+  }
+},
+{
+  "name": "Information Technology (Major)",
+  "type": "BACHELOR OF SCIENCE (BSc) GENERAL",
+  "part_time": true,
+  "evening": false,
+  "full_time": true,
+  "faculty": "Science & Technology",
+  "department": "Computing & Information Technology",
+  "duration": "3 (FT) 5 (PT)",
+  "url": "",
+  "requirements": {
+    "cape_passes": 2,
+    "csec_passes": 5,
+    "mandatory": ["English Language (CSEC)", "Mathematics (CSEC)", "Science (CAPE)", "Accounting (CAPE)", "Economics (CAPE)"],
+    "combinations": [{
+      "amt": 2,
+      "list": ["Chemistry (CSEC)", "Biology (CSEC)", "Agricultural Science (CSEC)", "Physics (CSEC)", "Geography (CSEC)"]
+    }, {
+      "amt": 2,
+      "list": ["Agricultural Science (CAPE)", "Biology (CAPE)", "Chemistry (CAPE)", "Computer Science (CAPE)", "Electrical and Electronic Engineering Technology (CAPE)", "Environmental Science (CAPE)", "Green Engineering (CAPE)", "Information Technology (CAPE)", "Physics (CAPE)", "Physical Education and Sport (CAPE)"]
+    }]
+  },
+  "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS  IT professionals are the users of technology. IT utilizes existing operating systems, software and applications in tandem to create a larger system that solves a specific business problem. IT constructs a network from established building blocks to carry out a task, such as an automated supplies ordering service. IT candidates will possess strong critical thinking skills; IT professionals are tasked with resourcefully and cost-effectively applying the tools at their disposal.",
+  "job_titles": ["Information Security Analyst", "Network Architect", "Computer Support Specialist", "Database Administrator", "Systems Administrator."],
+  "report": {
+    "valid": false,
+    "missing_subjects": "Science (CAPE); ",
+    "req_conflict": ""
+  }
+}
+]

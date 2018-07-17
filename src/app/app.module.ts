@@ -21,19 +21,19 @@ import { SpinnerComponent } from './shared/spinner.component';
 import { EditProgrammePageComponent } from './edit-programme-page/edit-programme-page.component';
 import { FileUploadModule } from 'angular-file-uploader';
 import { LoginPageComponent } from './login-page/login-page.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {MatDialogModule} from '@angular/material';
 import { ErrorsComponent } from './errors/errors.component';
-
 
 @NgModule({
   declarations: [
     AppComponent,
     FullComponent,
     AppHeaderComponent,
-    SpinnerComponent,
     AppSidebarComponent,
     EditProgrammePageComponent,
     LoginPageComponent,
-    ErrorsComponent,
+    ErrorsComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +47,7 @@ import { ErrorsComponent } from './errors/errors.component';
     ReactiveFormsModule,
     MatSelectModule,
     MatSidenavModule,
+    MatDialogModule,
     RouterModule.forRoot(AppRoutes),
   ],
   providers: [
@@ -56,6 +57,7 @@ import { ErrorsComponent } from './errors/errors.component';
   }
   ],
   entryComponents: [ErrorsComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

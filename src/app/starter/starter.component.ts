@@ -34,13 +34,13 @@ export class StarterComponent implements AfterViewInit {
     formatText = document.createElement('p');
 
   openDialog(): void {
-    let dialogRef = this.dialog.open(ErrorsComponent, {
+    const dialogRef = this.dialog.open(ErrorsComponent, {
       width: '75%'
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log('The dialog was closed');
+    // });
   }
 
     constructor(public data: DataLayerService,
