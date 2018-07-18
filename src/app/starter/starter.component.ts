@@ -20,7 +20,7 @@ export class StarterComponent implements AfterViewInit {
       formatsAllowed: '.xlsx',
       maxSize: '10',
       uploadAPI:  {
-        url: 'http://localhost:3004/upload',
+        url: environment.upload,
         // headers: {
         //   'Content-Type' : 'application/x-www-form-urlencoded',
         // }
