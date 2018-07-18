@@ -11,6 +11,7 @@ export const environment = {
   subjects: 'https://snickdx.me:3004/subjects',
   testJSON: '../assets/mock-data/test.json',
   getErrors: 'https://snickdx.me:3004/errors',
+  upload: 'https://snickdx.me:3004/upload',
   faculties: {
     'Social Sciences': 'fss',
     'Engineering': 'eng',
