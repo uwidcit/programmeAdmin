@@ -6,7 +6,7 @@
 <div *ngIf = "!pendingRequest" id = "errorInfo" class = "text-center">
   <h1 mat-dialog-title>Errors and Corrections</h1>
   <div mat-dialog-content>
-    <table class = "table text-center">
+    <table *ngIf = "errors !== null; else noErrors" class = "table text-center">
       <thead>
       <tr>
         <th scope="col">Programme Name</th>
@@ -38,6 +38,7 @@
       </tr>
       </tbody>
     </table>
+    <ng-template #noErrors>No errors found in uploaded file.</ng-template>
   </div>
   <div mat-dialog-actions id = "buttons">
     <button mat-raised-button color="primary" [mat-dialog-close] >Close</button>

@@ -28,7 +28,7 @@
     </mat-card-content>
 
     <mat-card-actions> <button mat-raised-button color="primary" [routerLink]="['/view']">View Programmes</button> </mat-card-actions>
-    <mat-card-actions> <button mat-raised-button color="warn" matBadge="8" (click) = "openDialog()">Show Upload Errors</button> </mat-card-actions>
+    <mat-card-actions> <button mat-raised-button color="warn" [matBadge] = "errTotal" (click) = "openDialog()">Show Upload Errors</button> </mat-card-actions>
   </mat-card>
 
   <mat-card class = "outer" id = "upload">
@@ -39,7 +39,8 @@
       </i>
       <mat-card-title> Drag and drop files here or browse your file system </mat-card-title>
       <mat-card-subtitle> Only one file allowed at a time</mat-card-subtitle>
-      <angular-file-uploader style = "width: 100%"
+      <angular-file-uploader
+        style = "width: 100%"
         [config]="afuConfig"
         (ApiResponse)="DocUpload($event)">
       </angular-file-uploader>

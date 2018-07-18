@@ -3,6 +3,7 @@ import {DataLayerService} from '../data-layer.service';
 import {environment} from '../../environments/environment';
 import {MatDialog, MatSnackBar} from '@angular/material';
 import {ErrorsComponent} from '../errors/errors.component';
+import {OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-starter',
@@ -10,9 +11,11 @@ import {ErrorsComponent} from '../errors/errors.component';
   styleUrls: ['./starter.component.scss'],
   providers: [DataLayerService]
 })
-export class StarterComponent implements AfterViewInit {
+export class StarterComponent implements OnInit, AfterViewInit {
     faculties: any[] = [];
     progTotal: number;
+    errTotal: number;
+    hideBadge = true;
     pendingRequest = true;
 
     afuConfig = {
@@ -20,10 +23,7 @@ export class StarterComponent implements AfterViewInit {
       formatsAllowed: '.xlsx',
       maxSize: '10',
       uploadAPI:  {
-        url: 'http://localhost:3004/upload',
-        // headers: {
-        //   'Content-Type' : 'application/x-www-form-urlencoded',
-        // }
+        url: 'https://snickdx.me:3004/upload'
       },
       theme: 'dragNDrop',
       hideProgressBar: false,
@@ -37,10 +37,6 @@ export class StarterComponent implements AfterViewInit {
     const dialogRef = this.dialog.open(ErrorsComponent, {
       width: '75%'
     });
-
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed');
-    // });
   }
 
     constructor(public data: DataLayerService,
@@ -48,6 +44,12 @@ export class StarterComponent implements AfterViewInit {
                 public snackBar: MatSnackBar) {}
 
     ngOnInit() {
+      this.data.getErrors().subscribe((progs: any) => {
+        this.errTotal = progs.length;
+        this.hideBadge = (progs == null);
+      });
+
+
       const facs = Object.keys(environment.faculties);
 
       facs.forEach((each_fac) => {
@@ -65,7 +67,14 @@ export class StarterComponent implements AfterViewInit {
       });
     }
 
-    DocUpload($event) {
+    DocUpload(event) {
+      console.log(event);
+      const response = JSON.parse(event);
+      this.progTotal = response.programmes;
+      if (response.errors !== 0) {
+        this.errTotal = response.errors;
+        this.hideBadge = false;
+      }
       const fileInfo = document.querySelector('.textOverflow');
       console.log(fileInfo);
       this.snackBar.open('Upload Completed!', 'Close', {duration: 750});

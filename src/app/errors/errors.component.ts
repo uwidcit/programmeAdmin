@@ -11,13 +11,15 @@ import {HttpClient} from '@angular/common/http';
 export class ErrorsComponent implements OnInit {
 
   pendingRequest = true;
-  errors = [];
+  errors: any;
+  // noErrorMessage = 'No errors found in the upload file';
   constructor(
     public data: DataLayerService,
     ) { }
 
   ngOnInit() {
     this.data.getErrors().subscribe((progs: any) => {
+      console.log(progs);
       this.errors = progs;
       this.pendingRequest = false;
     });

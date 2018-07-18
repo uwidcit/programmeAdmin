@@ -14,7 +14,7 @@ mat-list-item { border-bottom: 1px solid rgba(183, 183, 183, 0.5); }
 .row .col-md-8 { padding-left: 10px; }
 mat-card { margin: 0 !important;}
 
-#listContainter {
+#listContainer {
   background: white;
   overflow-y: scroll;
   height: 550px;
