@@ -1,7 +1,7 @@
 import { Component, AfterViewInit} from '@angular/core';
 import {DataLayerService} from '../data-layer.service';
 import {environment} from '../../environments/environment';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatSnackBar} from '@angular/material';
+import {MatDialog, MatSnackBar} from '@angular/material';
 import {ErrorsComponent} from '../errors/errors.component';
 
 @Component({
@@ -20,10 +20,10 @@ export class StarterComponent implements AfterViewInit {
       formatsAllowed: '.xlsx',
       maxSize: '10',
       uploadAPI:  {
-        url: 'https://example-file-upload-api',
-        headers: {
-          'Content-Type' : 'text/plain;charset=UTF-8',
-        }
+        url: 'http://localhost:3004/upload',
+        // headers: {
+        //   'Content-Type' : 'application/x-www-form-urlencoded',
+        // }
       },
       theme: 'dragNDrop',
       hideProgressBar: false,
@@ -68,13 +68,14 @@ export class StarterComponent implements AfterViewInit {
     DocUpload($event) {
       const fileInfo = document.querySelector('.textOverflow');
       console.log(fileInfo);
-      this.snackBar.open('Upload Completed!');
+      this.snackBar.open('Upload Completed!', 'Close', {duration: 750});
     }
 
     ngAfterViewInit() {
       const p_elem = <HTMLElement>document.querySelector('.constraints-info');
       p_elem.style.display = 'none';
-      this.formatText.innerText = 'only .xlsx format is allowed for upload';
-      document.querySelector('#div1').appendChild(this.formatText);
+      this.formatText.innerText = 'Supported formats: .xlsx';
+      const div1 = <HTMLElement>document.querySelector('#div1');
+      div1.appendChild(this.formatText);
     }
 }

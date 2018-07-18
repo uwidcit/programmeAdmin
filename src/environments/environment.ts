@@ -9,8 +9,8 @@ export const environment = {
   allProgsBy: 'https://snickdx.me:3004/sta/programmes/',
   programmes: 'https://snickdx.me:3004/sta/programmes',
   subjects: 'https://snickdx.me:3004/subjects',
-  errors: '', // update this when the endpoint is made
   testJSON: '../assets/mock-data/test.json',
+  getErrors: 'https://snickdx.me:3004/errors',
   faculties: {
     'Social Sciences': 'fss',
     'Engineering': 'eng',

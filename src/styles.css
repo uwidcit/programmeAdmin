@@ -8,11 +8,14 @@ body {
   margin: 10px;
 }
 
-#dragNDrop[_ngcontent-c9] #div1[_ngcontent-c9] {
-  width: 100% !important;
-}
+/*#dragNDrop[_ngcontent-c9] #div1[_ngcontent-c9] {*/
+  /*!*width: 100% !important;*!*/
+/*}*/
 
-#div1 { width: 100% !important; }
+#div1 {
+  width: 100% !important;
+  height: 100% !important;
+}
 
 .page-content {
   padding: 0 !important;

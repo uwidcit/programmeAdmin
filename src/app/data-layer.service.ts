@@ -22,9 +22,16 @@ export class DataLayerService {
     return this.http.get(environment.allProgsBy + faculty);
   }
 
+  // getErrors() {
+  //   return this.http.get(environment.testJSON);
+  // }
+
   getErrors() {
-    return this.http.get(environment.testJSON);
+    return this.http.get(environment.getErrors);
   }
 }
+
+// excelUpload: 'localhost:3004/upload',
+//   getErrors: 'https://snickdx.me:3004/errors',
 
 

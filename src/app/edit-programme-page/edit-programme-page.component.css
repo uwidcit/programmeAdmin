@@ -30,6 +30,5 @@ mat-checkbox { margin-right: 5px; }
   border-bottom: 1px solid black;
 }
 
-#allInfo { height: 600px !important; }
-#infoArea { height:500px; }
-#scrollTest { overflow-y: scroll; }
+#allInfo { overflow-y: scroll; height: 600px !important; }
+#infoArea { height:500px;}
