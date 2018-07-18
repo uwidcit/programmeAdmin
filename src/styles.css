@@ -20,3 +20,9 @@ body {
 .page-content {
   padding: 0 !important;
 }
+
+.progress { width: 100% !important; }
+.col-xs-3 {
+  width: 100% !important;
+  height: 30px !important;
+}
