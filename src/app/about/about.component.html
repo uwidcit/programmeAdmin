@@ -1,0 +1,46 @@
+<div class = "area" id="about-area">
+  <mat-card id = "about-text">
+    <h2>About</h2>
+
+    <mat-card-content>
+      <p>
+        This administratuve interface shows all programmes and subjects that are available for students to enroll for at
+        the University of the West Indies. It also shows all the requirements needed for a potential student to qualify and
+        gives an adminstrator the option to update the current programmes in the database by uploading an excel file.
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class = "area" id = "subject-area">
+  <mat-card>
+    <h2>Subject list</h2>
+
+    <mat-card-content id = "filters">
+      <mat-form-field class="example-full-width">
+        <input #searchbar id = "searchbar" (keyup) = "subjectFilter(clickedSub)" matInput placeholder="Search for a subject" >
+      </mat-form-field>
+      <span>Filters: </span>
+      <mat-radio-group [(ngModel)] = "clickedSub">
+        <mat-radio-button (click) = "subjectFilter(value)" *ngFor = "let value of radios" [value] = value>{{value}}</mat-radio-button>
+      </mat-radio-group>
+    </mat-card-content> <hr>
+
+    <mat-card-content>
+      <table class = "table table-striped">
+        <thead>
+          <tr>
+            <th scope = "col">Programme name</th>
+            <th scope = "col">Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let sub of filtered">
+            <td>{{sub.name.slice(0,-7)}}</td>
+            <td>{{sub.level}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

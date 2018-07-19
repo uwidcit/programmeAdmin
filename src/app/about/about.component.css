@@ -1,0 +1,16 @@
+
+.area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#about-text { width: 60% }
+
+#subject-area mat-card { width: 80%; }
+#filters {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+mat-radio-button { margin: 30px; }

@@ -10,7 +10,7 @@ export interface Menu {
 const MENUITEMS = [
     {state: 'home', name: 'Admin Home Page', type: 'link', icon: 'home' },
     {state: 'view', name: 'View Programmes', type: 'link', icon: 'remove_red_eye' },
-  // {state: 'starter', name: 'Starter Page', type: 'link', icon: 'av_timer' },
+    {state: 'about', name: 'About', type: 'link', icon: 'info' },
   // {state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5'},
   // {state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy'},
   // {state: 'lists', type: 'link', name: 'Lists', icon: 'view_list'},

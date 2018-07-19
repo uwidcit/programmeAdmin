@@ -21,10 +21,9 @@ export class DataLayerService {
   getProgsByFaculty(faculty: string) {
     return this.http.get(environment.allProgsBy + faculty);
   }
-
-  // getErrors() {
-  //   return this.http.get(environment.testJSON);
-  // }
+  getSubjects() {
+    return this.http.get(environment.subjects);
+  }
 
   getErrors() {
     return this.http.get(environment.getErrors);

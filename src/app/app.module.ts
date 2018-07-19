@@ -17,13 +17,13 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { SharedModule } from './shared/shared.module';
-import { SpinnerComponent } from './shared/spinner.component';
 import { EditProgrammePageComponent } from './edit-programme-page/edit-programme-page.component';
 import { FileUploadModule } from 'angular-file-uploader';
 import { LoginPageComponent } from './login-page/login-page.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {MatDialogModule} from '@angular/material';
 import { ErrorsComponent } from './errors/errors.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,8 @@ import { ErrorsComponent } from './errors/errors.component';
     AppSidebarComponent,
     EditProgrammePageComponent,
     LoginPageComponent,
-    ErrorsComponent
+    ErrorsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
