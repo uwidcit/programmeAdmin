@@ -9,7 +9,6 @@ import {FileUploadModule} from 'angular-file-uploader';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {SpinnerComponent} from '../shared/spinner.component';
-import {MatDialogRef} from '@angular/material';
 
 @NgModule({
   imports: [

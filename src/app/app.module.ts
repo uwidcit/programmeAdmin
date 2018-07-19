@@ -24,6 +24,8 @@ import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {MatDialogModule} from '@angular/material';
 import { ErrorsComponent } from './errors/errors.component';
 import { AboutComponent } from './about/about.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { AboutComponent } from './about/about.component';
     MatSelectModule,
     MatSidenavModule,
     MatDialogModule,
+    MatCardModule,
+    MatRadioModule,
     RouterModule.forRoot(AppRoutes),
   ],
   providers: [
