@@ -1,8 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import {FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { AppRoutes } from './app.routing';
@@ -17,7 +16,6 @@ import { DemoMaterialModule} from './demo-material-module';
 
 import { SharedModule } from './shared/shared.module';
 import {EditProgrammePageComponent} from './edit-programme-page/edit-programme-page.component';
-import {LoginPageComponent} from './login-page/login-page.component';
 import {SpinnerComponent} from './shared/spinner.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {AboutComponent} from './about/about.component';
@@ -32,9 +30,8 @@ describe('AppComponent', () => {
         AppHeaderComponent,
         AppSidebarComponent,
         EditProgrammePageComponent,
-        LoginPageComponent,
         SpinnerComponent,
-        AboutComponent
+        AboutComponent,
       ],
       imports: [
         BrowserModule,

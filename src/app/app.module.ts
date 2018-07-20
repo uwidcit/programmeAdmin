@@ -19,13 +19,13 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { SharedModule } from './shared/shared.module';
 import { EditProgrammePageComponent } from './edit-programme-page/edit-programme-page.component';
 import { FileUploadModule } from 'angular-file-uploader';
-import { LoginPageComponent } from './login-page/login-page.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {MatDialogModule} from '@angular/material';
 import { ErrorsComponent } from './errors/errors.component';
 import { AboutComponent } from './about/about.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
+// import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -34,9 +34,9 @@ import {MatRadioModule} from '@angular/material/radio';
     AppHeaderComponent,
     AppSidebarComponent,
     EditProgrammePageComponent,
-    LoginPageComponent,
     ErrorsComponent,
-    AboutComponent
+    AboutComponent,
+    // LoginComponent
   ],
   imports: [
     BrowserModule,
