@@ -1,0 +1,24 @@
+#login-wrapper {
+  position: absolute;
+  top: -85px; bottom: 0;
+  left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#login-wrapper mat-card { width: 50%; }
+
+h2 {
+  background-color: rgb(30,136,229);
+  color: white;
+  padding: 10px;
+}
+
+mat-form-field { margin-top: 20px; }
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px !important;
+}

@@ -19,6 +19,7 @@ import {EditProgrammePageComponent} from './edit-programme-page/edit-programme-p
 import {SpinnerComponent} from './shared/spinner.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {AboutComponent} from './about/about.component';
+import {LoginComponent} from './login/login.component';
 
 
 describe('AppComponent', () => {
@@ -32,6 +33,7 @@ describe('AppComponent', () => {
         EditProgrammePageComponent,
         SpinnerComponent,
         AboutComponent,
+        LoginComponent
       ],
       imports: [
         BrowserModule,

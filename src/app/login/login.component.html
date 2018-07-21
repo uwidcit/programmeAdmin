@@ -1,0 +1,36 @@
+<div id="login-wrapper">
+  <mat-card>
+    <h2 class = "text-center" >Login</h2>
+
+    <mat-card-content>
+      <form><!-- action="/login" method = "POST" -->
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" [formControl]="emailFormControl"
+                 [errorStateMatcher]="matcher">
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Must be a valid email. eg. <em>someone@example.com</em>
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput type = "password" placeholder="Password" [formControl]="pwordFormControl"
+                 [errorStateMatcher]="matcher">
+          <mat-error *ngIf="pwordFormControl.hasError('pattern') && !pwordFormControl.hasError('required')">
+            Must contain at least: <em>8 characters, 1 uppercase letter, 1 lowercase letter, and 1 number</em>
+          </mat-error>
+          <mat-error *ngIf="pwordFormControl.hasError('required')">
+            Password is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Submit</button>
+      <button mat-raised-button color="warn">Cancel</button>
+    </mat-card-actions>
+
+  </mat-card>
+</div>

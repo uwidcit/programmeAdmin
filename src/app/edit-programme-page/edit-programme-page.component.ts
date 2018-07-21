@@ -50,12 +50,12 @@ export class EditProgrammePageComponent implements OnInit {
       this.data.getAllProgs().subscribe((progs: any) => {
         this.programmes = progs;
         this.filtered =  progs;
-      });
+      }, (error: any) => { console.log(error); });
     } else {
       this.data.getProgsByFaculty(environment.faculties[fac_name]).subscribe((names: any) => {
         this.programmes = names;
         this.filtered = names;
-      });
+      }, (error: any) => { console.log(error); });
     }
 
   }
@@ -110,7 +110,7 @@ export class EditProgrammePageComponent implements OnInit {
   filter(value) {
     console.log(value);
     if (value === '') { this.filtered = this.programmes; } else {
-      let subset = [];
+      const subset = [];
       this.programmes.forEach(prog => {
         if (prog.name.toLowerCase().includes(value.toLowerCase())) {
           subset.push(prog);
@@ -130,6 +130,6 @@ export class EditProgrammePageComponent implements OnInit {
     this.data.getFacultyNames().subscribe((names: any) => {
       this.faculties = Object.values(names);
       this.faculties.unshift('All');
-    });
+    }, (error: any) => { console.log(error); });
   }
 }

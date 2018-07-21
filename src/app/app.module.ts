@@ -25,7 +25,7 @@ import { ErrorsComponent } from './errors/errors.component';
 import { AboutComponent } from './about/about.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
-// import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import {MatRadioModule} from '@angular/material/radio';
     EditProgrammePageComponent,
     ErrorsComponent,
     AboutComponent,
-    // LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

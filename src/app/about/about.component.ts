@@ -30,7 +30,7 @@ export class AboutComponent implements OnInit {
       console.log(subs);
       this.subjects = subs;
       this.filtered = subs;
-    });
+    }, (error: any) => { console.log(error); });
   }
 
   filter(value) {

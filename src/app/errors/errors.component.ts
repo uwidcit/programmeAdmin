@@ -22,7 +22,7 @@ export class ErrorsComponent implements OnInit {
       console.log(progs);
       this.errors = progs;
       this.pendingRequest = false;
-    });
+    }, (error: any) => { console.log(error); });
   }
 
 }

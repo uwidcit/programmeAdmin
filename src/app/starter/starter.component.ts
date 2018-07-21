@@ -47,7 +47,7 @@ export class StarterComponent implements OnInit, AfterViewInit {
       this.data.getErrors().subscribe((progs: any) => {
         this.errTotal = progs.length;
         this.hideBadge = (progs == null);
-      });
+      }, (error: any) => { console.log(error); });
 
 
       const facs = Object.keys(environment.faculties);
@@ -61,7 +61,7 @@ export class StarterComponent implements OnInit, AfterViewInit {
         this.data.getProgsByFaculty(environment.faculties[each_fac]).subscribe((data: any) => {
           new_info.number = data.length;
           this.pendingRequest = false;
-        });
+        }, (error: any) => { console.log(error); });
 
         this.faculties.push(new_info);
       });
