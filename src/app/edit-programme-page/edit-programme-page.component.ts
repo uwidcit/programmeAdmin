@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
   providers: [DataLayerService]
 })
 export class EditProgrammePageComponent implements OnInit {
-
+  pendingprogs: boolean;
   hideOneCSEC = true; oneCSEC = []; // arrays to hold the combo requirements
   hideTwoCSEC = true; twoCSEC = []; // arrays to hold the combo requirements
   hideOneCAPE = true; oneCAPE = []; // arrays to hold the combo requirements
@@ -45,14 +45,25 @@ export class EditProgrammePageComponent implements OnInit {
    * @param event
    * */
   getProgs(event: any) {
+    this.pendingprogs = true;
     const fac_name = event.srcElement.innerText.trim();
+    console.log(fac_name);
     if (fac_name === 'All') {
-      this.data.getAllProgs().subscribe((progs: any) => {
-        this.programmes = progs;
-        this.filtered =  progs;
-      }, (error: any) => { console.log(error); });
+      let all = [];
+      const facs = this.faculties.slice(1, this.faculties.length);
+      facs.forEach(fac => {
+        this.data.getProgsByFaculty(environment.faculties[fac]).subscribe((names: any) => {
+          all = all.concat(names);
+          if (facs.indexOf(fac) === facs.length - 1) {
+            this.pendingprogs = false;
+            this.programmes = all;
+            this.filtered =  all;
+          }
+        }, (error: any) => { console.log(error); });
+      });
     } else {
       this.data.getProgsByFaculty(environment.faculties[fac_name]).subscribe((names: any) => {
+        this.pendingprogs = false;
         this.programmes = names;
         this.filtered = names;
       }, (error: any) => { console.log(error); });

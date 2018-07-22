@@ -9,7 +9,7 @@ import {
   MatIconModule,
   MatListModule,
   MatInputModule,
-  MatToolbarModule,
+  MatToolbarModule, MatSpinner,
 } from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -35,7 +35,10 @@ describe('EditProgrammePageComponent', () => {
         HttpClientModule,
         MatSelectModule
       ],
-      declarations: [ EditProgrammePageComponent ]
+      declarations: [
+        EditProgrammePageComponent,
+        MatSpinner,
+      ]
     })
     .compileComponents();
   }));

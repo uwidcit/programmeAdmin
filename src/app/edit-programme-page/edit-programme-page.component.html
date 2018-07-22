@@ -10,16 +10,24 @@
   <div class="row" style = "margin-top: 10px;">
 
     <div class="col-md-4" id = "listContainer">
-      <mat-card id = "programmeList">
-        <mat-nav-list style = "min-height: 0 !important;">
-          <mat-select placeholder="Select a faculty" id = "separator" matTooltip="Select a faculty" matTooltipPosition = "above">
-            <mat-option *ngFor="let fac of faculties" [value]="fac" (click) = "getProgs($event)">
-              {{fac}}
-            </mat-option>
-          </mat-select>
+
+      <mat-nav-list style = "min-height: 0 !important;">
+        <mat-select placeholder="Select a faculty" id = "separator" matTooltip="Select a faculty" matTooltipPosition = "above">
+          <mat-option *ngFor="let fac of faculties" [value]="fac" (click) = "getProgs($event)">
+            {{fac}}
+          </mat-option>
+        </mat-select>
+
+        <ng-template #loading id = "loading">
+          <mat-spinner></mat-spinner>
+        </ng-template>
+        <div *ngIf = "!pendingprogs; else loading">
           <mat-list-item style = "height: auto;" *ngFor="let prog of filtered" (click) = "getProgInfo($event)"><span class = "test">{{prog.name}}</span></mat-list-item>
-        </mat-nav-list>
-      </mat-card>
+        </div>
+      </mat-nav-list>
+      <!--<mat-card id = "programmeList">-->
+        <!---->
+      <!--</mat-card>-->
     </div>
 
     <div class="col-md-8 text-center" style = "margin-top: -50px;" [style.visibility] = hideInfo >
@@ -113,6 +121,8 @@
                 </mat-chip-list>
               </mat-form-field>
             </div>
+            <button mat-raised-button disabled>Edit</button>
+            <button mat-raised-button disabled>Save</button>
           </div>
         </div>
       </mat-card>

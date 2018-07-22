@@ -12,14 +12,17 @@ mat-list-item { border-bottom: 1px solid rgba(183, 183, 183, 0.5); }
 }
 .row { margin: 0; }
 .row .col-md-8 { padding-left: 10px; }
-mat-card { margin: 0 !important;}
+mat-card {
+  margin: 0 !important;
+  height: 100%;
+}
 
 #listContainer {
   background: white;
   overflow-y: scroll;
   height: 550px;
 }
-#programmeList { margin-top: 0 !important; }
+/*#programmeList { margin-top: 0 !important; }*/
 
 mat-checkbox { margin-right: 5px; }
 .mat-nav-list { padding-top: 0; }
@@ -32,3 +35,12 @@ mat-checkbox { margin-right: 5px; }
 
 #allInfo { overflow-y: scroll; height: 600px !important; }
 #infoArea { height:500px;}
+
+#loading {
+  height: 100%;
+}
+
+mat-spinner {
+  margin: 0 auto !important;
+  margin-top: 35% !important;
+}
