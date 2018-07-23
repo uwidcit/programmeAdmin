@@ -25,9 +25,6 @@
           <mat-list-item style = "height: auto;" *ngFor="let prog of filtered" (click) = "getProgInfo($event)"><span class = "test">{{prog.name}}</span></mat-list-item>
         </div>
       </mat-nav-list>
-      <!--<mat-card id = "programmeList">-->
-        <!---->
-      <!--</mat-card>-->
     </div>
 
     <div class="col-md-8 text-center" style = "margin-top: -50px;" [style.visibility] = hideInfo >

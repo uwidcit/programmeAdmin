@@ -24,7 +24,6 @@ import {SpinnerComponent} from '../shared/spinner.component';
     StarterComponent,
     SpinnerComponent,
   ],
-  // providers: [MatDialogRef]
 })
 
 export class StarterModule {}

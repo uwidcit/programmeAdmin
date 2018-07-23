@@ -12,7 +12,6 @@ export class ErrorsComponent implements OnInit {
 
   pendingRequest = true;
   errors: any;
-  // noErrorMessage = 'No errors found in the upload file';
   constructor(
     public data: DataLayerService,
     ) { }
