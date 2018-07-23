@@ -9,21 +9,24 @@
 <div class="container-fluid" style = "padding: 0 !important;">
   <div class="row" style = "margin-top: 10px;">
 
-    <div class="col-md-4" id = "listContainer">
+    <div class="col-md-4">
 
       <mat-nav-list style = "min-height: 0 !important;">
-        <mat-select placeholder="Select a faculty" id = "separator" matTooltip="Select a faculty" matTooltipPosition = "above">
+        <mat-select placeholder="All Programmes" id = "separator" matTooltip="Select a faculty" matTooltipPosition = "above">
           <mat-option *ngFor="let fac of faculties" [value]="fac" (click) = "getProgs($event)">
             {{fac}}
           </mat-option>
         </mat-select>
 
-        <ng-template #loading id = "loading">
-          <mat-spinner></mat-spinner>
-        </ng-template>
-        <div *ngIf = "!pendingprogs; else loading">
-          <mat-list-item style = "height: auto;" *ngFor="let prog of filtered" (click) = "getProgInfo($event)"><span class = "test">{{prog.name}}</span></mat-list-item>
+        <div id = "scrollList">
+          <ng-template #loading id = "loading">
+            <mat-spinner></mat-spinner>
+          </ng-template>
+          <div *ngIf = "!pendingprogs; else loading">
+            <mat-list-item style = "height: auto;" *ngFor="let prog of filtered" (click) = "getProgInfo($event)"><span class = "test">{{prog.name}}</span></mat-list-item>
+          </div>
         </div>
+
       </mat-nav-list>
     </div>
 
@@ -41,22 +44,22 @@
                       {{req}}
                       <mat-icon matChipRemove>cancel</mat-icon>
                     </mat-chip>
-                    <input disabled [matChipInputFor]="genreqs"/>
+                    <input [disabled] = "disabled" [matChipInputFor]="genreqs"/>
                   </mat-chip-list>
                 </mat-form-field>
 
               </div>
               <div class="col-md-4">
                 <div class="row">
-                  <mat-checkbox disabled [(ngModel)]="currProg.part_time">Part time</mat-checkbox>
-                  <mat-checkbox disabled [(ngModel)]="currProg.full_time">Full time</mat-checkbox>
-                  <mat-checkbox disabled [(ngModel)]="currProg.evening">Evening</mat-checkbox>
+                  <mat-checkbox [disabled] = "disabled" [(ngModel)]="currProg.part_time">Part time</mat-checkbox>
+                  <mat-checkbox [disabled] = "disabled" [(ngModel)]="currProg.full_time">Full time</mat-checkbox>
+                  <mat-checkbox [disabled] = "disabled" [(ngModel)]="currProg.evening">Evening</mat-checkbox>
                 </div>
                 <mat-form-field class="example-full-width">
-                  <input disabled type = "number" matInput placeholder="CAPE Passes (2 unit)" [(ngModel)] = "currProg.requirements.cape_passes" >
+                  <input [disabled] = "disabled" type = "number" matInput placeholder="CAPE Passes (2 unit)" [(ngModel)] = "currProg.requirements.cape_passes" >
                 </mat-form-field>
                 <mat-form-field class="example-full-width">
-                  <input disabled type = "number" matInput placeholder="CSEC Passes" [(ngModel)] = "currProg.requirements.csec_passes">
+                  <input [disabled] = "disabled" type = "number" matInput placeholder="CSEC Passes" [(ngModel)] = "currProg.requirements.csec_passes">
                 </mat-form-field>
 
               </div>
@@ -73,7 +76,7 @@
                     {{subs}}
                     <mat-icon matChipRemove>cancel</mat-icon>
                   </mat-chip>
-                  <input disabled [matChipInputFor]="anyOneCSEC"/>
+                  <input [disabled] = "disabled" [matChipInputFor]="anyOneCSEC"/>
                 </mat-chip-list>
               </mat-form-field>
             </div>
@@ -86,7 +89,7 @@
                     {{subs}}
                     <mat-icon matChipRemove>cancel</mat-icon>
                   </mat-chip>
-                  <input disabled [matChipInputFor]="anyTwoCSEC"/>
+                  <input [disabled] = "disabled" [matChipInputFor]="anyTwoCSEC"/>
                 </mat-chip-list>
               </mat-form-field>
             </div>
@@ -99,7 +102,7 @@
                     {{subs}}
                     <mat-icon matChipRemove>cancel</mat-icon>
                   </mat-chip>
-                  <input disabled
+                  <input [disabled] = "disabled"
                          [matChipInputFor]="anyOneCAPE"/>
                 </mat-chip-list>
               </mat-form-field>
@@ -113,13 +116,13 @@
                     {{subs}}
                     <mat-icon matChipRemove>cancel</mat-icon>
                   </mat-chip>
-                  <input disabled
+                  <input [disabled]
                          [matChipInputFor]="anyTwoCape"/>
                 </mat-chip-list>
               </mat-form-field>
             </div>
-            <button mat-raised-button disabled>Edit</button>
-            <button mat-raised-button disabled>Save</button>
+            <button mat-raised-button (click) = "toggleEditable()">Edit</button>
+            <button mat-raised-button [disabled] = "disabled">Save</button>
           </div>
         </div>
       </mat-card>

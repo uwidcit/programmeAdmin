@@ -10,17 +10,16 @@ mat-list-item { border-bottom: 1px solid rgba(183, 183, 183, 0.5); }
 .col-md-4 {
   padding: 0 !important;
 }
-.row { margin: 0; }
+.row { margin: 0;}
 .row .col-md-8 { padding-left: 10px; }
 mat-card {
   margin: 0 !important;
   height: 100%;
 }
 
-#listContainer {
-  background: white;
+#scrollList {
+  height: 495px;
   overflow-y: scroll;
-  height: 550px;
 }
 /*#programmeList { margin-top: 0 !important; }*/
 

@@ -3,8 +3,42 @@
   justify-content: center;
 }
 
-.table thead th {
-  vertical-align: middle;
+#spinner { text-align: center; }
+#tableContainer {
+  text-align: center;
+  height: 500px;
+  overflow-y: scroll;
 }
 
-#spinner { text-align: center; }
+mat-header-row {
+  position: sticky;
+  top: 0;
+  background-color: inherit;
+}
+
+mat-header-cell {
+  display:flex;
+  justify-content:flex-end;
+}
+
+mat-cell {
+  padding: 0 !important;
+  display: block !important;
+}
+
+mat-row {
+  padding: 10px 0;
+  min-height: inherit;
+}
+
+.table thead th,td { vertical-align: middle; }
+tbody {
+  display:block;
+  height:400px;
+  overflow:auto;
+}
+thead, tbody tr {
+  display:table;
+  width:100%;
+  table-layout:fixed;
+}

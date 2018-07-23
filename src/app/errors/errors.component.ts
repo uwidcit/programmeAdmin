@@ -9,7 +9,6 @@ import {HttpClient} from '@angular/common/http';
   providers: [HttpClient]
 })
 export class ErrorsComponent implements OnInit {
-
   pendingRequest = true;
   errors: any;
   constructor(

@@ -1,8 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-body {
-  background: white !important;
-}
+body { background: white !important; }
 .btn {
   vertical-align: baseline !important;
   margin: 10px;
@@ -13,12 +11,10 @@ body {
   height: 100% !important;
 }
 
-.page-content {
-  padding: 0 !important;
-}
-
+.page-content { padding: 0 !important; }
 .progress { width: 100% !important; }
 .col-xs-3 {
   width: 100% !important;
   height: 30px !important;
 }
+

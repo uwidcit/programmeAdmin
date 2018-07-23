@@ -9,12 +9,13 @@ import { environment } from '../../environments/environment';
   providers: [DataLayerService]
 })
 export class ViewComponent implements OnInit {
-  pendingprogs: boolean;
+  pendingprogs = true;
   hideOneCSEC = true; oneCSEC = []; // arrays to hold the combo requirements
   hideTwoCSEC = true; twoCSEC = []; // arrays to hold the combo requirements
   hideOneCAPE = true; oneCAPE = []; // arrays to hold the combo requirements
   hideTwoCAPE = true; twoCAPE = []; // arrays to hold the combo requirements
   noCombos = false;
+  disabled = true;
   filtered = [];
   faculties = []; // faculty listing, populated by get request onInit
   programmes = []; // populated when user clicks on faculty name
@@ -37,6 +38,15 @@ export class ViewComponent implements OnInit {
         'mandatory': [],
         'combinations': {}
       }
+    };
+    facColour = {
+      'Social Sciences': '#F36E21',
+      'Engineering': '#00AEEF',
+      'Food & Agriculture': '#00A54F',
+      'Humanities & Education': '#0072BC',
+      'Medical Sciences': '#ED028C',
+      'Law': '#231F20',
+      'Science & Technology': '#FCB814'
     };
 
   /**
@@ -111,6 +121,7 @@ export class ViewComponent implements OnInit {
    * @return {undefined}
    * */
   resetState() {
+    this.disabled = true;
     this.noCombos = false;
     this.hideOneCSEC = true; this.oneCSEC = [];
     this.hideTwoCSEC = true; this.twoCSEC = [];
@@ -131,6 +142,10 @@ export class ViewComponent implements OnInit {
     }
   }
 
+  toggleEditable() {
+    this.disabled = !this.disabled;
+  }
+
   constructor(public data: DataLayerService) {}
 
   /**
@@ -139,7 +154,19 @@ export class ViewComponent implements OnInit {
    * */
   ngOnInit() {
     this.data.getFacultyNames().subscribe((names: any) => {
+      let all = [];
       this.faculties = Object.values(names);
+      this.faculties.forEach(fac => {
+        this.data.getProgsByFaculty(environment.faculties[fac]).subscribe((prognames: any) => {
+          all = all.concat(prognames);
+          if (this.faculties.indexOf(fac) === this.faculties.length - 1) {
+            this.pendingprogs = false;
+            this.programmes = all;
+            this.filtered =  all;
+          }
+        }, (error: any) => { console.log(error); });
+      });
+
       this.faculties.unshift('All');
     }, (error: any) => { console.log(error); });
   }
