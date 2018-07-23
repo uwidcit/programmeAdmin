@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import {MatSelectModule} from '@angular/material/select';
-import { EditProgrammePageComponent } from './edit-programme-page.component';
 import {
   MatCardModule,
   MatCheckboxModule,
@@ -14,10 +13,11 @@ import {
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
+import {ViewComponent} from './view.component';
 
-describe('EditProgrammePageComponent', () => {
-  let component: EditProgrammePageComponent;
-  let fixture: ComponentFixture<EditProgrammePageComponent>;
+describe('ViewComponent', () => {
+  let component: ViewComponent;
+  let fixture: ComponentFixture<ViewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -36,7 +36,7 @@ describe('EditProgrammePageComponent', () => {
         MatSelectModule
       ],
       declarations: [
-        EditProgrammePageComponent,
+        ViewComponent,
         MatSpinner,
       ]
     })
@@ -44,7 +44,7 @@ describe('EditProgrammePageComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditProgrammePageComponent);
+    fixture = TestBed.createComponent(ViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

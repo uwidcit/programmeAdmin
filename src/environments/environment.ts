@@ -7,6 +7,7 @@ export const environment = {
   production: false,
   facURL: 'https://snickdx.me:3004/sta/faculties',
   allProgsBy: 'https://snickdx.me:3004/sta/programmes/',
+  facStats: 'https://snickdx.me:3004/sta/stats',
   programmes: 'https://snickdx.me:3004/sta/programmes',
   subjects: 'https://snickdx.me:3004/subjects',
   testJSON: '../assets/mock-data/test.json',

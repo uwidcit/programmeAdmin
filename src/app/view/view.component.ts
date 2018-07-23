@@ -3,12 +3,12 @@ import {DataLayerService} from '../data-layer.service';
 import { environment } from '../../environments/environment';
 
 @Component({
-  selector: 'app-edit-programme-page',
-  templateUrl: './edit-programme-page.component.html',
-  styleUrls: ['./edit-programme-page.component.css'],
+  selector: 'app-view-page',
+  templateUrl: './view.component.html',
+  styleUrls: ['./view.component.css'],
   providers: [DataLayerService]
 })
-export class EditProgrammePageComponent implements OnInit {
+export class ViewComponent implements OnInit {
   pendingprogs: boolean;
   hideOneCSEC = true; oneCSEC = []; // arrays to hold the combo requirements
   hideTwoCSEC = true; twoCSEC = []; // arrays to hold the combo requirements

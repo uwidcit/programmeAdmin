@@ -17,7 +17,6 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { SharedModule } from './shared/shared.module';
-import { EditProgrammePageComponent } from './edit-programme-page/edit-programme-page.component';
 import { FileUploadModule } from 'angular-file-uploader';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {MatDialogModule} from '@angular/material';
@@ -26,6 +25,7 @@ import { AboutComponent } from './about/about.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
 import { LoginComponent } from './login/login.component';
+import {ViewComponent} from './view/view.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { LoginComponent } from './login/login.component';
     FullComponent,
     AppHeaderComponent,
     AppSidebarComponent,
-    EditProgrammePageComponent,
+    ViewComponent,
     ErrorsComponent,
     AboutComponent,
     LoginComponent,

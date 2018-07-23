@@ -49,22 +49,17 @@ export class StarterComponent implements OnInit, AfterViewInit {
         this.hideBadge = (progs == null);
       }, (error: any) => { console.log(error); });
 
+      this.data.getFacStats().subscribe((stats: any) => {
+        const names = Object.keys(stats);
+        this.faculties = names.map(fac_name => {
+          return {
+            title: fac_name,
+            number: stats[fac_name]
+          };
+        });
+        this.pendingRequest = false;
+      }, (error: any) => { console.log(error); });
 
-      const facs = Object.keys(environment.faculties);
-
-      facs.forEach((each_fac) => {
-        const new_info = {
-          'title': '',
-          'number': 0
-        };
-        new_info.title = each_fac;
-        this.data.getProgsByFaculty(environment.faculties[each_fac]).subscribe((data: any) => {
-          new_info.number = data.length;
-          this.pendingRequest = false;
-        }, (error: any) => { console.log(error); });
-
-        this.faculties.push(new_info);
-      });
     }
 
     DocUpload(event) {

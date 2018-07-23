@@ -15,11 +15,11 @@ import { NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { DemoMaterialModule} from './demo-material-module';
 
 import { SharedModule } from './shared/shared.module';
-import {EditProgrammePageComponent} from './edit-programme-page/edit-programme-page.component';
 import {SpinnerComponent} from './shared/spinner.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {AboutComponent} from './about/about.component';
 import {LoginComponent} from './login/login.component';
+import {ViewComponent} from './view/view.component';
 
 
 describe('AppComponent', () => {
@@ -30,7 +30,7 @@ describe('AppComponent', () => {
         FullComponent,
         AppHeaderComponent,
         AppSidebarComponent,
-        EditProgrammePageComponent,
+        ViewComponent,
         SpinnerComponent,
         AboutComponent,
         LoginComponent

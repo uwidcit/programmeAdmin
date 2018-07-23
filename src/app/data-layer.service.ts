@@ -18,6 +18,10 @@ export class DataLayerService {
     return this.http.get(environment.programmes);
   }
 
+  getFacStats() {
+    return this.http.get(environment.facStats);
+  }
+
   getProgsByFaculty(faculty: string) {
     return this.http.get(environment.allProgsBy + faculty);
   }
