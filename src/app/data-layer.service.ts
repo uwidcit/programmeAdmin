@@ -14,10 +14,6 @@ export class DataLayerService {
     return this.http.get(environment.facURL);
   }
 
-  getAllProgs() {
-    return this.http.get(environment.programmes);
-  }
-
   getFacStats() {
     return this.http.get(environment.facStats);
   }
