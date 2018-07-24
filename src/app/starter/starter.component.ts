@@ -56,6 +56,11 @@ export class StarterComponent implements OnInit, AfterViewInit {
             number: stats[fac_name]
           };
         });
+        this.progTotal = this.faculties
+          .map(obj => obj.number)
+          .reduce((a, b) => a + b);
+
+        console.log(this.progTotal);
         this.pendingRequest = false;
       }).catch((error: any) => { console.log(error); });
 
@@ -63,7 +68,6 @@ export class StarterComponent implements OnInit, AfterViewInit {
 
     DocUpload(event) {
       const response = JSON.parse(event);
-      this.progTotal = response.programmes;
       if (response.errors !== 0) {
         this.errTotal = response.errors;
         this.hideBadge = false;

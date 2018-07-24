@@ -6,6 +6,7 @@ export const environment = {
   subjects: 'https://snickdx.me:3004/subjects', // returns a list fo all CSEC and CAPE subjects stored in database
   testJSON: '../assets/mock-data/test.json',
   getErrors: 'https://snickdx.me:3004/errors', //  returns a JSON array of all subjects failing validation after parsing
+  downloadErrors: '',
   upload: 'https://snickdx.me:3004/upload', // URL to upload excel file to
   faculties: {
     'Social Sciences': 'fss',

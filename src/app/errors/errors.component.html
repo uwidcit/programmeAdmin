@@ -44,6 +44,7 @@
   <ng-template #noErrors>No errors found in uploaded file.</ng-template>
   </div>
   <div mat-dialog-actions id = "buttons">
+    <button mat-raised-button color="primary" (click) = downloadErrors()>Download errors</button>
     <button mat-raised-button color="primary" [mat-dialog-close] >Close</button>
   </div>
 
