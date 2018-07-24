@@ -16,11 +16,10 @@ export class ErrorsComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.data.getErrors().subscribe((progs: any) => {
-      console.log(progs);
+    this.data.getErrors().then((progs: any) => {
       this.errors = progs;
       this.pendingRequest = false;
-    }, (error: any) => { console.log(error); });
+    }).catch((error: any) => { console.log(error); });
   }
 
 }

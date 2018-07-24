@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataLayerService} from '../data-layer.service';
 
-interface Subject {
-  name: string;
-  level: string;
-  id: number;
-}
-
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -21,20 +15,18 @@ export class AboutComponent implements OnInit {
   constructor(public data: DataLayerService) { }
 
   ngOnInit() {
-    this.data.getSubjects().subscribe((subs: Subject[]) => {
+    this.data.getSubjects().then((subs: any[]) => {
       subs = subs.sort((sub1, sub2) => { // sort objects alphabetically
         if (sub1.name > sub2.name) { return 1;  }
         if (sub1.name < sub2.name) { return -1; }
         return 0;
       });
-      console.log(subs);
       this.subjects = subs;
       this.filtered = subs;
-    }, (error: any) => { console.log(error); });
+    }).catch((error: any) => { console.log(error); });
   }
 
   filter(value) {
-    console.log(value);
     if (value === null) { return this.subjects; }
     // else
     const subset = [];

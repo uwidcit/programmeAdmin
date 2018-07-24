@@ -1,6 +1,5 @@
 import { Component, AfterViewInit} from '@angular/core';
 import {DataLayerService} from '../data-layer.service';
-import {environment} from '../../environments/environment';
 import {MatDialog, MatSnackBar} from '@angular/material';
 import {ErrorsComponent} from '../errors/errors.component';
 import {OnInit} from '@angular/core';
@@ -44,12 +43,12 @@ export class StarterComponent implements OnInit, AfterViewInit {
                 public snackBar: MatSnackBar) {}
 
     ngOnInit() {
-      this.data.getErrors().subscribe((progs: any) => {
+      this.data.getErrors().then((progs: any) => {
         this.errTotal = progs.length;
         this.hideBadge = (progs == null);
-      }, (error: any) => { console.log(error); });
+      }).catch((error: any) => { console.log(error); });
 
-      this.data.getFacStats().subscribe((stats: any) => {
+      this.data.getFacStats().then((stats: any) => {
         const names = Object.keys(stats);
         this.faculties = names.map(fac_name => {
           return {
@@ -58,12 +57,11 @@ export class StarterComponent implements OnInit, AfterViewInit {
           };
         });
         this.pendingRequest = false;
-      }, (error: any) => { console.log(error); });
+      }).catch((error: any) => { console.log(error); });
 
     }
 
     DocUpload(event) {
-      console.log(event);
       const response = JSON.parse(event);
       this.progTotal = response.programmes;
       if (response.errors !== 0) {

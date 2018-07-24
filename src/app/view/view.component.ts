@@ -57,28 +57,19 @@ export class ViewComponent implements OnInit {
   getProgs(event: any) {
     this.pendingprogs = true;
     const fac_name = event.srcElement.innerText.trim();
-    console.log(fac_name);
-    if (fac_name === 'All') {
-      let all = [];
-      const facs = this.faculties.slice(1, this.faculties.length);
-      facs.forEach(fac => {
-        this.data.getProgsByFaculty(environment.faculties[fac]).subscribe((names: any) => {
-          all = all.concat(names);
-          if (facs.indexOf(fac) === facs.length - 1) {
-            this.pendingprogs = false;
-            this.programmes = all;
-            this.filtered =  all;
-          }
-        }, (error: any) => { console.log(error); });
+    if (fac_name === 'All Programmes') {
+      this.data.getAllProgs().then((allProgs: any[]) => {
+        this.programmes = allProgs;
+        this.filtered = allProgs;
+        this.pendingprogs = false;
       });
     } else {
-      this.data.getProgsByFaculty(environment.faculties[fac_name]).subscribe((names: any) => {
+      this.data.getProgsByFaculty(environment.faculties[fac_name]).then((names: any[]) => {
         this.pendingprogs = false;
         this.programmes = names;
         this.filtered = names;
       }, (error: any) => { console.log(error); });
     }
-
   }
 
   /**
@@ -130,7 +121,6 @@ export class ViewComponent implements OnInit {
   }
 
   filter(value) {
-    console.log(value);
     if (value === '') { this.filtered = this.programmes; } else {
       const subset = [];
       this.programmes.forEach(prog => {
@@ -153,21 +143,15 @@ export class ViewComponent implements OnInit {
    * @return {undefined}
    * */
   ngOnInit() {
-    this.data.getFacultyNames().subscribe((names: any) => {
-      let all = [];
+    // Get all faculty names to
+    this.data.getFacultyNames().then(names => {
       this.faculties = Object.values(names);
-      this.faculties.forEach(fac => {
-        this.data.getProgsByFaculty(environment.faculties[fac]).subscribe((prognames: any) => {
-          all = all.concat(prognames);
-          if (this.faculties.indexOf(fac) === this.faculties.length - 1) {
-            this.pendingprogs = false;
-            this.programmes = all;
-            this.filtered =  all;
-          }
-        }, (error: any) => { console.log(error); });
-      });
-
-      this.faculties.unshift('All');
-    }, (error: any) => { console.log(error); });
+      this.faculties.unshift('All Programmes');
+    });
+    this.data.getAllProgs().then((allProgs: any[]) => {
+      this.programmes = allProgs;
+      this.filtered = allProgs;
+      this.pendingprogs = false;
+    });
   }
 }
