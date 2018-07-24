@@ -15,7 +15,9 @@ export class ErrorsComponent implements OnInit {
 
   downloadErrors() {
     console.log('Download started');
-    // download logic here
+    this.data.downloadErrors().subscribe((data) => {
+      console.log(data);
+    });
   }
 
   ngOnInit() {

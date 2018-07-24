@@ -107,4 +107,8 @@ export class DataLayerService {
       resolve(JSON.parse(fixedData));
     });
   }
+
+  downloadErrors() {
+    return this.http.get(environment.downloadErrors);
+  }
 }
