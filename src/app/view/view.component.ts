@@ -131,10 +131,10 @@ export class ViewComponent implements OnInit {
       this.filtered = subset;
     }
   }
-
-  toggleEditable() {
-    this.disabled = !this.disabled;
-  }
+  //
+  // toggleEditable() {
+  //   this.disabled = !this.disabled;
+  // }
 
   constructor(public data: DataLayerService) {}
 

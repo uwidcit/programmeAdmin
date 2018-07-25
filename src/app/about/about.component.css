@@ -1,3 +1,7 @@
+h2 {
+  padding-top: 15px;
+}
+
 .area {
   display: flex;
   align-items: center;
@@ -24,8 +28,8 @@ thead, tbody tr {
   width:100%;
   table-layout:fixed;
 }
+mat-card-content { padding: 15px !important;}
 
-mat-card-content {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+#tableContent {
+  padding: 0 !important;
 }

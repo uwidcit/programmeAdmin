@@ -93,6 +93,7 @@ export class DataLayerService {
       console.log('Errors not cached. Polling server...');
       return new Promise((resolve, reject) => {
         this.http.get(environment.getErrors).subscribe((errs: any) => {
+          console.log(errs);
           sessionStorage.setItem('errors', JSON.stringify(errs));
           resolve(errs);
         }, (error: any) => { reject(error); });
