@@ -13,12 +13,12 @@ export class ErrorsComponent implements OnInit {
   errors: any;
   constructor(public data: DataLayerService) { }
 
-  downloadErrors() {
-    console.log('Download started');
-    this.data.downloadErrors().subscribe((data) => {
-      console.log(data);
-    });
-  }
+  // downloadErrors() {
+  //   console.log('Download started');
+  //   this.data.downloadErrors().subscribe((data) => {
+  //     console.log(data);
+  //   });
+  // }
 
   ngOnInit() {
     this.data.getErrors().then((progs: any) => {
