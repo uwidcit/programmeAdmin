@@ -23,13 +23,12 @@ export class FullComponent implements OnDestroy, AfterViewInit {
       public menuItems: MenuItems,
       public router: Router,
       private auth: AuthService) {
-    this.hidebtn = true;
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
     router.events.subscribe(val => {
       if (val instanceof NavigationEnd) {
-        this.hidebtn = val.url === '/login';
+        this.hidebtn = (val.url === '/login');
       }
     });
   }
@@ -39,7 +38,7 @@ export class FullComponent implements OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit() {
-
+    this.hidebtn = true;
   }
 
   signOut() {

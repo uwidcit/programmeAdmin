@@ -10,7 +10,7 @@ export class DataLayerService {
   constructor(private http: HttpClient) {
   }
 
-  getFacultyNames() {
+  getFacultyNames(): Promise<Object> {
     const fac_names = sessionStorage.getItem('fac_names');
     if (fac_names === null) {
       console.log('Faculty names not cached. Polling server...');
@@ -107,9 +107,5 @@ export class DataLayerService {
       if (fixedData === undefined || fixedData === null) { reject('Null or undefined data found...'); }
       resolve(JSON.parse(fixedData));
     });
-  }
-
-  downloadErrors() {
-    return this.http.get(environment.downloadErrors);
   }
 }

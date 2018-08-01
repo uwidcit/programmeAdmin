@@ -13,7 +13,7 @@ export const environment = {
     storageBucket: 'uwiprogrammeadmin.appspot.com',
     messagingSenderId: '904597835769'
   },
-  facURL: 'https://snickdx.me:3004/sta/faculties', // returns an object contain the faculty abbreviation as the key and the full name as the value
+  facURL: 'https://snickdx.me:3004/sta/faculties', // returns { fac_abbr: faculty_name }
   allProgsBy: 'https://snickdx.me:3004/sta/programmes/',
   facStats: 'https://snickdx.me:3004/sta/stats', // returns an object containing each faculty and the number of programmes offered in each
   subjects: 'https://snickdx.me:3004/subjects', // returns a list fo all CSEC and CAPE subjects stored in database
