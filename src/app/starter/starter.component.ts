@@ -3,85 +3,93 @@ import {DataLayerService} from '../data-layer.service';
 import {MatDialog, MatSnackBar} from '@angular/material';
 import {ErrorsComponent} from '../errors/errors.component';
 import {OnInit} from '@angular/core';
+import {AuthService} from '../auth.service';
 
 @Component({
   selector: 'app-starter',
   templateUrl: './starter.component.html',
   styleUrls: ['./starter.component.scss'],
-  providers: [DataLayerService]
+  providers: [DataLayerService, AuthService]
 })
 export class StarterComponent implements OnInit, AfterViewInit {
-    faculties: any[] = [];
-    progTotal: number;
-    errTotal: number;
-    hideBadge = true;
-    pendingRequest = true;
+  faculties: any[] = [];
+  progTotal: number;
+  errTotal: number;
+  hideBadge: boolean;
+  pendingRequest: boolean;
 
-    afuConfig = {
-      multiple: false,
-      formatsAllowed: '.xlsx',
-      maxSize: '10',
-      uploadAPI:  {
-        url: 'https://snickdx.me:3004/upload'
-      },
-      theme: 'dragNDrop',
-      hideProgressBar: false,
-      hideResetBtn: false,
-      hideSelectBtn: false
-    };
+  afuConfig = {
+    multiple: false,
+    formatsAllowed: '.xlsx',
+    maxSize: '10',
+    uploadAPI:  {
+      url: 'https://snickdx.me:3004/upload'
+    },
+    theme: 'dragNDrop',
+    hideProgressBar: false,
+    hideResetBtn: false,
+    hideSelectBtn: false
+  };
 
-    formatText = document.createElement('p');
+  admin_view: boolean;
+  formatText = document.createElement('p');
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(ErrorsComponent, {
-      width: '75%'
+  constructor(private data: DataLayerService,
+              private dialog: MatDialog,
+              private snackBar: MatSnackBar,
+              private auth: AuthService) {
+    this.hideBadge = true;
+    this.pendingRequest = true;
+    this.auth.data_incoming.subscribe(userInfo => {
+      console.log(userInfo);
+      if (userInfo !== undefined ) {
+        this.admin_view = userInfo.write;
+      }
     });
   }
 
-    constructor(public data: DataLayerService,
-                public dialog: MatDialog,
-                public snackBar: MatSnackBar) {}
+  openDialog(): void {
+    this.dialog.open(ErrorsComponent, { width: '75%' });
+  }
 
-    ngOnInit() {
-      this.data.getErrors().then((progs: any) => {
-        this.errTotal = progs.length;
-        this.hideBadge = (progs == null);
-      }).catch((error: any) => { console.log(error); });
+  ngOnInit() {
+    this.data.getErrors().then((progs: any) => {
+      this.errTotal = progs.length;
+      this.hideBadge = (progs == null);
+    }).catch((error: any) => { console.log(error); });
 
-      this.data.getFacStats().then((stats: any) => {
-        const names = Object.keys(stats);
-        this.faculties = names.map(fac_name => {
-          return {
-            title: fac_name,
-            number: stats[fac_name]
-          };
-        });
-        this.progTotal = this.faculties
-          .map(obj => obj.number)
-          .reduce((a, b) => a + b);
+    this.data.getFacStats().then((stats: any) => {
+      const names = Object.keys(stats);
+      this.faculties = names.map(fac_name => {
+        return {
+          title: fac_name,
+          number: stats[fac_name]
+        };
+      });
+      this.progTotal = this.faculties
+        .map(obj => obj.number)
+        .reduce((a, b) => a + b);
 
-        console.log(this.progTotal);
-        this.pendingRequest = false;
-      }).catch((error: any) => { console.log(error); });
+      this.pendingRequest = false;
+    }).catch((error: any) => { console.log(error); });
 
+  }
+
+  DocUpload(event) {
+    const response = JSON.parse(event);
+    if (response.errors !== 0) {
+      this.errTotal = response.errors;
+      this.hideBadge = false;
     }
+    document.querySelector('.textOverflow');
+    this.snackBar.open('Upload Completed!', 'Close', {duration: 750});
+  }
 
-    DocUpload(event) {
-      const response = JSON.parse(event);
-      if (response.errors !== 0) {
-        this.errTotal = response.errors;
-        this.hideBadge = false;
-      }
-      const fileInfo = document.querySelector('.textOverflow');
-      console.log(fileInfo);
-      this.snackBar.open('Upload Completed!', 'Close', {duration: 750});
-    }
-
-    ngAfterViewInit() {
-      const p_elem = <HTMLElement>document.querySelector('.constraints-info');
-      p_elem.style.display = 'none';
-      this.formatText.innerText = 'Supported formats: .xlsx';
-      const div1 = <HTMLElement>document.querySelector('#div1');
-      div1.appendChild(this.formatText);
-    }
+  ngAfterViewInit() {
+    const p_elem = <HTMLElement>document.querySelector('.constraints-info');
+    if (p_elem) { p_elem.style.display = 'none'; }
+    this.formatText.innerText = 'Supported formats: .xlsx';
+    const div1 = <HTMLElement>document.querySelector('#div1');
+    if (div1) { div1.appendChild(this.formatText); }
+  }
 }

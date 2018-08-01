@@ -13,19 +13,16 @@ import { AppHeaderComponent } from './layouts/full/header/header.component';
 import { AppSidebarComponent } from './layouts/full/sidebar/sidebar.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DemoMaterialModule} from './demo-material-module';
-import {MatSelectModule} from '@angular/material/select';
-import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { SharedModule } from './shared/shared.module';
 import { FileUploadModule } from 'angular-file-uploader';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {MatDialogModule} from '@angular/material';
 import { ErrorsComponent } from './errors/errors.component';
 import { AboutComponent } from './about/about.component';
-import {MatCardModule} from '@angular/material/card';
-import {MatRadioModule} from '@angular/material/radio';
 import { LoginComponent } from './login/login.component';
 import {ViewComponent} from './view/view.component';
+import {AuthGuard} from './auth.guard';
+import {AuthService} from './auth.service';
 
 @NgModule({
   declarations: [
@@ -48,18 +45,15 @@ import {ViewComponent} from './view/view.component';
     SharedModule,
     FileUploadModule,
     ReactiveFormsModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatDialogModule,
-    MatCardModule,
-    MatRadioModule,
     RouterModule.forRoot(AppRoutes),
   ],
   providers: [
   {
     provide: LocationStrategy,
     useClass: HashLocationStrategy
-  }
+  },
+    AuthGuard,
+    AuthService
   ],
   entryComponents: [ErrorsComponent],
   bootstrap: [AppComponent],

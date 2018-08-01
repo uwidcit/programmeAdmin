@@ -1,32 +1,35 @@
 import { MediaMatcher } from '@angular/cdk/layout';
-import { ChangeDetectorRef, Component, OnDestroy, AfterViewInit } from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import { MenuItems } from '../../shared/menu-items/menu-items';
 import {Router, NavigationEnd} from '@angular/router';
+import {AuthService} from '../../auth.service';
 /** @title Responsive sidenav */
 @Component({
   selector: 'app-full-layout',
   templateUrl: 'full.component.html',
-  styleUrls: []
+  styleUrls: [],
+  providers: [AuthService]
 })
 export class FullComponent implements OnDestroy, AfterViewInit {
   mobileQuery: MediaQueryList;
-  hidebtn = true;
+  hidebtn: boolean;
+  fac_name: string;
 
   private _mobileQueryListener: () => void;
 
   constructor(
-    changeDetectorRef: ChangeDetectorRef,
-    media: MediaMatcher,
-    public menuItems: MenuItems,
-    public router: Router) {
+      changeDetectorRef: ChangeDetectorRef,
+      media: MediaMatcher,
+      public menuItems: MenuItems,
+      public router: Router,
+      private auth: AuthService) {
+    this.hidebtn = true;
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
     router.events.subscribe(val => {
       if (val instanceof NavigationEnd) {
-        if (val.url === '/login') {
-          console.log(val.url);
-          this.hidebtn = true; } else { this.hidebtn = false; }
+        this.hidebtn = val.url === '/login';
       }
     });
   }
@@ -34,8 +37,14 @@ export class FullComponent implements OnDestroy, AfterViewInit {
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
- ngAfterViewInit() {
 
- }
+  ngAfterViewInit() {
+
+  }
+
+  signOut() {
+    this.auth.signout();
+    this.router.navigate(['/login']);
+  }
 
 }

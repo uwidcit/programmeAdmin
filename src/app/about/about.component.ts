@@ -8,11 +8,16 @@ import {DataLayerService} from '../data-layer.service';
 })
 
 export class AboutComponent implements OnInit {
-  subjects = [];
-  filtered = [];
+  subjects: any[];
+  filtered: any[];
   clickedSub: string;
-  radios = ['Any', 'CSEC', 'CAPE'];
-  constructor(public data: DataLayerService) { }
+  radios: string[];
+
+  constructor(public data: DataLayerService) {
+    this.subjects = [];
+    this.filtered = [];
+    this.radios = ['Any', 'CSEC', 'CAPE'];
+  }
 
   ngOnInit() {
     this.data.getSubjects().then((subs: any[]) => {
@@ -28,7 +33,6 @@ export class AboutComponent implements OnInit {
 
   filter(value) {
     if (value === null) { return this.subjects; }
-    // else
     const subset = [];
     this.subjects.forEach(prog => {
       if (prog.name.toLowerCase().includes(value.toLowerCase())) {

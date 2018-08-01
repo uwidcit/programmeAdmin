@@ -50,7 +50,7 @@ describe('AppComponent', () => {
         {
           provide: LocationStrategy,
           useClass: HashLocationStrategy
-        }
+        },
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();

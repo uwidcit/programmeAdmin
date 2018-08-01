@@ -5,6 +5,14 @@
 
 export const environment = {
   production: false,
+  config: {
+    apiKey: 'AIzaSyCYRRom29CfnxtD6uQSTKL--SRGpV_S1HU',
+    authDomain: 'uwiprogrammeadmin.firebaseapp.com',
+    databaseURL: 'https://uwiprogrammeadmin.firebaseio.com',
+    projectId: 'uwiprogrammeadmin',
+    storageBucket: 'uwiprogrammeadmin.appspot.com',
+    messagingSenderId: '904597835769'
+  },
   facURL: 'https://snickdx.me:3004/sta/faculties', // returns an object contain the faculty abbreviation as the key and the full name as the value
   allProgsBy: 'https://snickdx.me:3004/sta/programmes/',
   facStats: 'https://snickdx.me:3004/sta/stats', // returns an object containing each faculty and the number of programmes offered in each
@@ -22,4 +30,13 @@ export const environment = {
     'Law': 'law',
     'Science & Technology': 'fst'
   },
+  facColour: {
+    'Social Sciences': '#F36E21',
+    'Engineering': '#00AEEF',
+    'Food & Agriculture': '#00A54F',
+    'Humanities & Education': '#0072BC',
+    'Medical Sciences': '#ED028C',
+    'Law': '#231F20',
+    'Science & Technology': '#FCB814'
+  }
 };

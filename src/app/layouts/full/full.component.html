@@ -22,6 +22,8 @@
       <!-- This fills the remaining space of the current row -->
       <span style = "flex: 1 1 auto;"></span>
 
+      <button mat-raised-button colour = "warn" (click) = "signOut(); snav.close();" style = "margin-right: 20px;">Sign out</button>
+
       <img src="assets/images/logo_bar.png" alt="No logo available" style = "height: inherit; margin-bottom: 5px;">
     </mat-toolbar>
     <!-- ============================================================== -->
@@ -32,7 +34,7 @@
         <!-- Sidebar - style you can find in sidebar.scss -->
         <!-- ============================================================== -->
         <mat-sidenav style = "text-align: center;" #snav id="snav" class="dark-sidebar pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0" [opened]= false [disableClose]="mobileQuery.matches"  >
-                <app-sidebar></app-sidebar>
+                <app-sidebar (click) = "snav.close()"></app-sidebar>
         </mat-sidenav>
 
         <mat-sidenav-content class="page-wrapper">

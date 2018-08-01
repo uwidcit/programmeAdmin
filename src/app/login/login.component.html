@@ -1,36 +1,77 @@
-<div id="login-wrapper">
+<div id="login-wrapper" #showLogin>
   <mat-card>
     <h2 class = "text-center" >Login</h2>
 
-    <mat-card-content>
-      <form><!-- action="/login" method = "POST" -->
+    <mat-card-content [ngClass] = "classes">
+      <form>
+
+        <!--<mat-form-field *ngIf = "newUser">-->
+          <!--<input matInput placeholder="First name" [formControl] = "fnameControl"-->
+                 <!--[errorStateMatcher]="matcher" id = "fname" name = "firstName">-->
+          <!--<mat-error *ngIf="fnameControl.hasError('required')">-->
+            <!--First name is <strong>required</strong>.-->
+          <!--</mat-error>-->
+        <!--</mat-form-field>-->
+
+        <!--<mat-form-field *ngIf = "newUser">-->
+          <!--<input matInput placeholder="Last name" [formControl] = "lnameControl"-->
+                 <!--[errorStateMatcher]="matcher" id = "lname" name = "lastName">-->
+          <!--<mat-error *ngIf="lnameControl.hasError('required')">-->
+            <!--Last name is <strong>required</strong>.-->
+          <!--</mat-error>-->
+        <!--</mat-form-field>-->
+
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Email" [formControl]="emailFormControl"
-                 [errorStateMatcher]="matcher">
-          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          <input matInput placeholder="Email" [formControl]="emailControl"
+                 [errorStateMatcher]="matcher" id = "email" name = "email">
+          <mat-error *ngIf="emailControl.hasError('email') && !emailControl.hasError('required')">
             Must be a valid email. eg. <em>someone@example.com</em>
           </mat-error>
-          <mat-error *ngIf="emailFormControl.hasError('required')">
+          <mat-error *ngIf="emailControl.hasError('required')">
             Email is <strong>required</strong>
           </mat-error>
         </mat-form-field>
+
         <mat-form-field class="example-full-width">
-          <input matInput type = "password" placeholder="Password" [formControl]="pwordFormControl"
-                 [errorStateMatcher]="matcher">
-          <mat-error *ngIf="pwordFormControl.hasError('pattern') && !pwordFormControl.hasError('required')">
+          <input matInput type = "password" placeholder="Password" [formControl]="pwordControl"
+                 [errorStateMatcher]="matcher" id = "pword" name = "password">
+          <mat-error *ngIf="pwordControl.hasError('pattern') && !pwordControl.hasError('required')">
             Must contain at least: <em>8 characters, 1 uppercase letter, 1 lowercase letter, and 1 number</em>
           </mat-error>
-          <mat-error *ngIf="pwordFormControl.hasError('required')">
+          <mat-error *ngIf="pwordControl.hasError('required')">
             Password is <strong>required</strong>
           </mat-error>
         </mat-form-field>
+
+        <!--<mat-form-field class="example-full-width" *ngIf = "newUser">-->
+          <!--<input matInput type = "password" placeholder="Confirm Password" [formControl]="newPwordControl"-->
+                 <!--[errorStateMatcher]="matcher" id = "confirmPword" name = "confirmPassword" >-->
+          <!--<mat-error *ngIf="newPwordControl.hasError('pattern') && !newPwordControl.hasError('required')">-->
+            <!--Must contain at least: <em>8 characters, 1 uppercase letter, 1 lowercase letter, and 1 number</em>-->
+          <!--</mat-error>-->
+          <!--<mat-error *ngIf="newPwordControl.hasError('required')">-->
+            <!--Password Confirmation is <strong>required</strong>-->
+          <!--</mat-error>-->
+        <!--</mat-form-field>-->
+
+        <!--<mat-form-field class="example-full-width" *ngIf = "newUser">-->
+          <!--<mat-select placeholder="Select a faculty" id = "faculty" name = "faculty">-->
+            <!--<mat-option *ngFor="let fac of faculties" [(ngModel)] = "selectedFaculty">-->
+              <!--{{fac}}-->
+            <!--</mat-option>-->
+          <!--</mat-select>-->
+        <!--</mat-form-field>-->
       </form>
     </mat-card-content>
 
     <mat-card-actions>
-      <button mat-raised-button color="primary">Submit</button>
-      <button mat-raised-button color="warn">Cancel</button>
+      <button mat-raised-button color="primary" (click) = "login()">Submit</button>
+      <button mat-raised-button color="warn">Clear fields</button>
+      <!--<button mat-raised-button color="accent" *ngIf = "newUser" (click) = "removeUserFields()">Back to login</button>-->
+
     </mat-card-actions>
+
+    <!--<p id = "showFields" (click) = "newUserFields()" *ngIf = "!newUser">Don't have an account? Sign up here!</p>-->
 
   </mat-card>
 </div>

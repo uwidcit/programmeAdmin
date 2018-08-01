@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DataLayerService} from '../data-layer.service';
 import { environment } from '../../environments/environment';
+import {AuthService} from '../auth.service';
 
 @Component({
   selector: 'app-view-page',
@@ -9,18 +10,17 @@ import { environment } from '../../environments/environment';
   providers: [DataLayerService]
 })
 export class ViewComponent implements OnInit {
-  pendingprogs = true;
-  hideOneCSEC = true; oneCSEC = []; // arrays to hold the combo requirements
-  hideTwoCSEC = true; twoCSEC = []; // arrays to hold the combo requirements
-  hideOneCAPE = true; oneCAPE = []; // arrays to hold the combo requirements
-  hideTwoCAPE = true; twoCAPE = []; // arrays to hold the combo requirements
-  noCombos = false;
-  disabled = true;
-  filtered = [];
-  faculties = []; // faculty listing, populated by get request onInit
-  programmes = []; // populated when user clicks on faculty name
-  title = '';
-  hideInfo = 'hidden';
+  title: string;
+  hideInfo: string;
+  current_faculty: string;
+  faculties: string[]; // faculty listing, populated by get request onInit
+  hideOneCSEC: boolean; oneCSEC: string[]; // arrays to hold the combo requirements
+  hideTwoCSEC: boolean; twoCSEC: string[]; // arrays to hold the combo requirements
+  hideOneCAPE: boolean; oneCAPE: string[]; // arrays to hold the combo requirements
+  hideTwoCAPE: boolean; twoCAPE: string[]; // arrays to hold the combo requirements
+  pendingprogs: boolean; disabled: boolean;
+  admin_view: boolean; noCombos: boolean;
+  filtered: any[]; programmes: any[]; // populated when user clicks on faculty name
   currProg = // programme template
     {
       'name': '',
@@ -39,15 +39,31 @@ export class ViewComponent implements OnInit {
         'combinations': {}
       }
     };
-    facColour = {
-      'Social Sciences': '#F36E21',
-      'Engineering': '#00AEEF',
-      'Food & Agriculture': '#00A54F',
-      'Humanities & Education': '#0072BC',
-      'Medical Sciences': '#ED028C',
-      'Law': '#231F20',
-      'Science & Technology': '#FCB814'
-    };
+
+  constructor(
+    private data: DataLayerService,
+    private auth: AuthService
+  ) {
+    this.pendingprogs = true;
+    this.hideOneCSEC = true; this.oneCSEC = []; // arrays to hold the combo requirements
+    this.hideTwoCSEC = true; this.twoCSEC = []; // arrays to hold the combo requirements
+    this.hideOneCAPE = true; this.oneCAPE = []; // arrays to hold the combo requirements
+    this.hideTwoCAPE = true; this.twoCAPE = []; // arrays to hold the combo requirements
+    this.noCombos = false;
+    this.disabled = true;
+    this.filtered = [];
+    this.faculties = []; // faculty listing, populated by get request onInit
+    this.programmes = []; // populated when user clicks on faculty name
+    this.title = '';
+    this.hideInfo = 'hidden';
+    this.auth.data_incoming.subscribe(userInfo => {
+      if (userInfo !== undefined ) {
+        this.admin_view = userInfo.write;
+        this.current_faculty = userInfo.faculty;
+        console.log(this.admin_view);
+      }
+    });
+  }
 
   /**
    * @desc Waits for the user to click on a faculty so that it can fetch all the programmes under that faculty
@@ -131,27 +147,33 @@ export class ViewComponent implements OnInit {
       this.filtered = subset;
     }
   }
-  //
+
   // toggleEditable() {
   //   this.disabled = !this.disabled;
   // }
-
-  constructor(public data: DataLayerService) {}
 
   /**
    * @desc When the component is initialized, the list of faculty names is obtained from the server
    * @return {undefined}
    * */
   ngOnInit() {
-    // Get all faculty names to
-    this.data.getFacultyNames().then(names => {
-      this.faculties = Object.values(names);
-      this.faculties.unshift('All Programmes');
-    });
-    this.data.getAllProgs().then((allProgs: any[]) => {
-      this.programmes = allProgs;
-      this.filtered = allProgs;
-      this.pendingprogs = false;
-    });
+    if (this.admin_view) {
+      this.data.getFacultyNames().then(names => {
+        this.faculties = Object.values(names);
+        this.faculties.unshift('All Programmes');
+      });
+      this.data.getAllProgs().then((allProgs: any[]) => {
+        this.programmes = allProgs;
+        this.filtered = allProgs;
+        this.pendingprogs = false;
+      });
+    } else {
+      this.data.getProgsByFaculty(environment.faculties[this.current_faculty]).then((names: any[]) => {
+        this.pendingprogs = false;
+        this.programmes = names;
+        this.filtered = names;
+      }, (error: any) => { console.log(error); });
+    }
+
   }
 }

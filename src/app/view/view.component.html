@@ -6,13 +6,13 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<div class="container-fluid" style = "padding: 0 !important;">
+<div class="container-fluid" style = "padding: 0 !important;" *ngIf = "admin_view !== undefined; else spinnerPermissions">
   <div class="row" style = "margin-top: 10px;">
 
     <div class="col-md-4">
 
       <mat-nav-list style = "min-height: 0 !important;">
-        <mat-select placeholder="All Programmes" id = "separator" matTooltip="Select a faculty" matTooltipPosition = "above">
+        <mat-select placeholder="All Programmes" id = "separator" matTooltip="Select a faculty" matTooltipPosition = "above" *ngIf = "admin_view">
           <mat-option *ngFor="let fac of faculties" [value]="fac" (click) = "getProgs($event)">
             {{fac}}
           </mat-option>
@@ -22,7 +22,7 @@
           <ng-template #loading id = "loading">
             <mat-spinner></mat-spinner>
           </ng-template>
-          <div *ngIf = "!pendingprogs; else loading">
+          <div *ngIf = "!pendingprogs && current_faculty !== undefined; else loading">
             <mat-list-item style = "height: auto;" *ngFor="let prog of filtered" (click) = "getProgInfo($event)"><span class = "test">{{prog.name}}</span></mat-list-item>
           </div>
         </div>
@@ -129,3 +129,8 @@
     </div>
   </div>
 </div>
+
+<ng-template #spinnerPermissions>
+  <mat-spinner id = "permissions"></mat-spinner>
+  <p style = "text-align: center;">Reading permissions...</p>
+</ng-template>

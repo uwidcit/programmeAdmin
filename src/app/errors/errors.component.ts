@@ -9,16 +9,13 @@ import {HttpClient} from '@angular/common/http';
   providers: [HttpClient]
 })
 export class ErrorsComponent implements OnInit {
-  pendingRequest = true;
+  pendingRequest: boolean;
   errors: any;
-  constructor(public data: DataLayerService) { }
 
-  // downloadErrors() {
-  //   console.log('Download started');
-  //   this.data.downloadErrors().subscribe((data) => {
-  //     console.log(data);
-  //   });
-  // }
+  constructor(public data: DataLayerService) {
+    this.pendingRequest = true;
+  }
+
 
   ngOnInit() {
     this.data.getErrors().then((progs: any) => {
