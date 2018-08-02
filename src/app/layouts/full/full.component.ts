@@ -27,6 +27,8 @@ export class FullComponent implements OnDestroy, AfterViewInit, OnInit {
       public menuItems: MenuItems,
       public router: Router,
       private auth: AuthService) {
+    this.topBarColor = 'rgb(30,136,229)';
+    this.text_color = 'white';
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -39,6 +41,7 @@ export class FullComponent implements OnDestroy, AfterViewInit, OnInit {
     });
     this.auth.data_incoming.subscribe(user => {
       if (user !== undefined) {
+        console.log(user);
         this.loaded = true;
         this.topBarColor = user.color;
       } else { this.loaded = false; }
@@ -46,8 +49,7 @@ export class FullComponent implements OnDestroy, AfterViewInit, OnInit {
   }
 
   ngOnInit() {
-    this.topBarColor = 'rgb(30,136,229)';
-    this.text_color = 'white';
+
   }
 
   ngOnDestroy(): void {
