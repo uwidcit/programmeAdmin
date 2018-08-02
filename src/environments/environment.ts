@@ -38,6 +38,6 @@ export const environment = {
     'Medical Sciences': '#ED028C',
     'Law': '#231F20',
     'Science & Technology': '#FCB814',
-    'all_faculties': 'rgb(30,136,229)'
+    'all_faculties': '#1e88e5'
   }
 };
