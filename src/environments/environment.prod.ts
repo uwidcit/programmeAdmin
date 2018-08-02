@@ -32,6 +32,7 @@ export const environment = {
     'Humanities & Education': '#0072BC',
     'Medical Sciences': '#ED028C',
     'Law': '#231F20',
-    'Science & Technology': '#FCB814'
+    'Science & Technology': '#FCB814',
+    'all_faculties': '#1E88E5'
   }
 };

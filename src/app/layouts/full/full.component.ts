@@ -34,14 +34,12 @@ export class FullComponent implements OnDestroy, AfterViewInit, OnInit {
     this.mobileQuery.addListener(this._mobileQueryListener);
     router.events.subscribe(val => {
       if (val instanceof NavigationEnd) {
-        console.log('something');
         this.hidebtn = (val.url === '/login');
         this.hideSignOut = (val.url !== '/login');
       }
     });
     this.auth.data_incoming.subscribe(user => {
       if (user !== undefined) {
-        console.log(user);
         this.loaded = true;
         this.topBarColor = user.color;
       } else { this.loaded = false; }
