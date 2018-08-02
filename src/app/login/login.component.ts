@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
-import { Router } from '@angular/router';
 import {AuthService} from '../auth.service';
 import { MatSnackBar } from '@angular/material';
 import { environment } from '../../environments/environment';
@@ -22,10 +21,11 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class LoginComponent implements OnInit {
   faculties = Object.keys(environment.faculties);
+  // form: FormGroup;
   classes: any[];
   pattern = new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})');
-  fnameControl = new FormControl('', [Validators.required]);
-  lnameControl = new FormControl('', [Validators.required]);
+  // fnameControl = new FormControl('', [Validators.required]);
+  // lnameControl = new FormControl('', [Validators.required]);
   emailControl = new FormControl('', [
     Validators.required,
     Validators.email,
@@ -40,9 +40,9 @@ export class LoginComponent implements OnInit {
   // ]);
   matcher = new MyErrorStateMatcher();
   pword: string;
+  admin_view: boolean;
 
   constructor(
-    private router: Router,
     private authService: AuthService,
     private snackBar: MatSnackBar) {
   }
@@ -54,8 +54,8 @@ export class LoginComponent implements OnInit {
   login() {
       const email = (document.getElementById('email') as HTMLInputElement).value;
       const pword = (document.getElementById('pword') as HTMLInputElement).value;
-      this.authService.emailLogin(email, pword).then(() => {
-        this.router.navigate(['/home']);
+      this.authService.emailLogin(email, pword).then(user => {
+        this.admin_view = (user !== undefined);
       }).catch(() => {
         this.snackBar.open('Invalid Credentials :(', 'Close', { duration : 1000});
       });

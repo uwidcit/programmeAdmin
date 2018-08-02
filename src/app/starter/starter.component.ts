@@ -17,6 +17,8 @@ export class StarterComponent implements OnInit, AfterViewInit {
   errTotal: number;
   hideBadge: boolean;
   pendingRequest: boolean;
+  bg_color: string;
+  text_color: string;
 
   afuConfig = {
     multiple: false,
@@ -40,10 +42,11 @@ export class StarterComponent implements OnInit, AfterViewInit {
               private auth: AuthService) {
     this.hideBadge = true;
     this.pendingRequest = true;
-    this.auth.data_incoming.subscribe(userInfo => {
-      console.log(userInfo);
-      if (userInfo !== undefined ) {
-        this.admin_view = userInfo.write;
+    this.auth.data_incoming.subscribe(user => {
+      if (user !== undefined ) {
+        this.admin_view = user.write;
+        this.bg_color = user.color;
+        this.text_color = 'white';
       }
     });
   }
@@ -53,6 +56,7 @@ export class StarterComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+    this.bg_color = 'primary';
     this.data.getErrors().then((progs: any) => {
       this.errTotal = progs.length;
       this.hideBadge = (progs == null);

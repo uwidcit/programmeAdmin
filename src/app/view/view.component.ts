@@ -13,6 +13,7 @@ export class ViewComponent implements OnInit {
   title: string;
   hideInfo: string;
   current_faculty: string;
+  curr_color: string;
   faculties: string[]; // faculty listing, populated by get request onInit
   hideOneCSEC: boolean; oneCSEC: string[]; // arrays to hold the combo requirements
   hideTwoCSEC: boolean; twoCSEC: string[]; // arrays to hold the combo requirements
@@ -56,11 +57,11 @@ export class ViewComponent implements OnInit {
     this.programmes = []; // populated when user clicks on faculty name
     this.title = '';
     this.hideInfo = 'hidden';
-    this.auth.data_incoming.subscribe(userInfo => {
-      if (userInfo !== undefined ) {
-        this.admin_view = userInfo.write;
-        this.current_faculty = userInfo.faculty;
-        console.log(this.admin_view);
+    this.auth.data_incoming.subscribe(user => {
+      if (user !== undefined ) {
+        this.admin_view = user.write;
+        this.curr_color = user.color;
+        this.current_faculty = user.faculty;
       }
     });
   }

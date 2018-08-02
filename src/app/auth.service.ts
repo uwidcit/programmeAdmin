@@ -3,11 +3,14 @@ import {BehaviorSubject} from 'rxjs';
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
+import {Router} from '@angular/router';
+import {environment} from 'environments/environment';
 
 export interface Admin {
   uid: string;
   email: string;
   faculty: string;
+  color: string;
   write: boolean;
 }
 
@@ -21,7 +24,7 @@ export class AuthService {
   sys_admin = new BehaviorSubject<Admin>(undefined);
   data_incoming = this.sys_admin.asObservable();
 
-  constructor() {
+  constructor(private router: Router) {
     this.auth.onAuthStateChanged(user => {
       if (user) {
         console.log('User recognized. Login successful.');
@@ -31,10 +34,12 @@ export class AuthService {
             uid: user.uid,
             email: data.email,
             faculty: data.faculty_name,
+            color: environment.facColour[data.faculty_name],
             write: data.write
           });
         });
         this.loggedIn = true;
+        this.router.navigate(['/home']);
       } else {
         console.log('Not logged in for some reason');
         this.loggedIn = false;

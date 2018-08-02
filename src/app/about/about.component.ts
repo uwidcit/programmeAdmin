@@ -13,7 +13,7 @@ export class AboutComponent implements OnInit {
   clickedSub: string;
   radios: string[];
 
-  constructor(public data: DataLayerService) {
+  constructor(private data: DataLayerService) {
     this.subjects = [];
     this.filtered = [];
     this.radios = ['Any', 'CSEC', 'CAPE'];

@@ -5,7 +5,7 @@
     <!-- ============================================================== -->
     <!-- Topbar - style you can find in header.scss -->
     <!-- ============================================================== -->
-    <mat-toolbar color = "primary" class="topbar telative" style = "z-index: 0 !important;">
+    <mat-toolbar [ngStyle]="{'background-color': topBarColor, 'color': text_color}" class="topbar telative" style = "z-index: 0 !important;">
         <!-- ============================================================== -->
         <!-- Logo - style you can find in header.scss -->
         <!-- ============================================================== -->
@@ -22,9 +22,9 @@
       <!-- This fills the remaining space of the current row -->
       <span style = "flex: 1 1 auto;"></span>
 
-      <button mat-raised-button colour = "warn" (click) = "signOut(); snav.close();" style = "margin-right: 20px;">Sign out</button>
+      <button mat-raised-button colour = "warn" *ngIf = "hideSignOut" (click) = "signOut(); snav.close();" style = "margin-right: 20px;">Sign out</button>
 
-      <img src="assets/images/logo_bar.png" alt="No logo available" style = "height: inherit; margin-bottom: 5px;">
+      <img src="assets/images/logo.png" alt="No logo available" style = "height: inherit; margin-bottom: 5px;">
     </mat-toolbar>
     <!-- ============================================================== -->
     <!-- End Topbar - style you can find in pages.scss -->
@@ -46,5 +46,9 @@
                 </div>
 
         </mat-sidenav-content>
+      <ng-template #loadingSpinner>
+        <mat-spinner></mat-spinner>
+        <p>Fetching permissions...</p>
+      </ng-template>
     </mat-sidenav-container>
 </div>

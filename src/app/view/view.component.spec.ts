@@ -14,6 +14,7 @@ import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {ViewComponent} from './view.component';
+import {Router} from '@angular/router';
 
 describe('ViewComponent', () => {
   let component: ViewComponent;
@@ -38,6 +39,12 @@ describe('ViewComponent', () => {
       declarations: [
         ViewComponent,
         MatSpinner,
+      ],
+      providers: [
+        {
+          provide: Router,
+          useClass: class { navigate = jasmine.createSpy('navigate'); }
+        }
       ]
     })
     .compileComponents();

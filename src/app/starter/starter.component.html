@@ -30,12 +30,19 @@
 
     </mat-card-content>
 
-    <mat-card-actions> <button mat-raised-button color="primary" [routerLink]="['/view']">View Programmes</button> </mat-card-actions>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        [ngStyle]="{'background-color': bg_color, 'color': text_color}"
+        [routerLink]="['/view']">
+        View Programmes
+      </button>
+    </mat-card-actions>
     <mat-card-actions *ngIf = "admin_view"> <button mat-raised-button color="warn" [matBadge] = "errTotal" (click) = "openDialog()">Show Upload Errors</button> </mat-card-actions>
   </mat-card>
 
-  <mat-card class = "outer" id = "upload" #upload >
-    <div id="upload-area" *ngIf = "admin_view; else unauthorized">
+  <mat-card class = "outer" id = "upload" #upload *ngIf = "admin_view" >
+    <div id="upload-area">
       <i class="material-icons">
         cloud_upload
       </i>
@@ -55,7 +62,4 @@
   <mat-spinner id = "permissions"></mat-spinner>
   <p style = "text-align: center;">Reading permissions...</p>
 </ng-template>
-<ng-template #unauthorized>
-  <h2>Only top-level administrators are allowed to upload files</h2>
-  <!--<p style = "text-align: center;"></p>-->
-</ng-template>
+

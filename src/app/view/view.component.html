@@ -1,4 +1,4 @@
-<mat-toolbar color = "primary">
+<mat-toolbar [ngStyle]="{'background-color': curr_color, 'color': text_color}">
   <mat-toolbar-row  id = "search" >
     <mat-form-field class="example-full-width">
       <input #searchbar (keyup) = "filter(searchbar.value)" type = "text" matInput placeholder="Filter programmes">
@@ -34,15 +34,17 @@
       <mat-card id = "allInfo">
         <div class="container-fluid" id = "scrollTest">
           <h1 style = "padding: 15px"> {{title}} </h1>
+          <h2 *ngIf = "admin_view">Faculty: {{currProg.faculty}}</h2>
+          <h2 *ngIf = "admin_view">Department: {{currProg.department}}</h2>
+          <mat-divider *ngIf = "admin_view"></mat-divider>
           <div id="infoArea">
             <div class="row">
               <div class="col-md-8">
-                <mat-label>Single Subject Requirements</mat-label>
+                <h3><mat-label>Mandatory Requirements</mat-label></h3>
                 <mat-form-field class="general-requirements">
                   <mat-chip-list #genreqs>
                     <mat-chip *ngFor="let req of currProg.requirements.mandatory" [selectable]=true>
                       {{req}}
-                      <mat-icon matChipRemove>cancel</mat-icon>
                     </mat-chip>
                     <input [disabled] = "disabled" [matChipInputFor]="genreqs"/>
                   </mat-chip-list>
@@ -65,7 +67,7 @@
               </div>
             </div>
 
-            <h2> Grouped Requirements </h2>
+            <h3> Grouped Requirements (each combination must be satisfied)</h3>
             <h3 *ngIf = "noCombos">(No combination requirements for this programme)</h3>
 
             <div class="row" [hidden] = "hideOneCSEC">
@@ -74,7 +76,6 @@
                 <mat-chip-list #anyOneCSEC>
                   <mat-chip *ngFor="let subs of oneCSEC" [selectable]= true>
                     {{subs}}
-                    <mat-icon matChipRemove>cancel</mat-icon>
                   </mat-chip>
                   <input [disabled] = "disabled" [matChipInputFor]="anyOneCSEC"/>
                 </mat-chip-list>
@@ -87,7 +88,6 @@
                 <mat-chip-list #anyTwoCSEC>
                   <mat-chip *ngFor="let subs of twoCSEC" [selectable]= true>
                     {{subs}}
-                    <mat-icon matChipRemove>cancel</mat-icon>
                   </mat-chip>
                   <input [disabled] = "disabled" [matChipInputFor]="anyTwoCSEC"/>
                 </mat-chip-list>
@@ -100,7 +100,6 @@
                 <mat-chip-list #anyOneCAPE>
                   <mat-chip *ngFor="let subs of oneCAPE" [selectable]= true>
                     {{subs}}
-                    <mat-icon matChipRemove>cancel</mat-icon>
                   </mat-chip>
                   <input [disabled] = "disabled"
                          [matChipInputFor]="anyOneCAPE"/>
@@ -114,7 +113,6 @@
                 <mat-chip-list #anyTwoCape>
                   <mat-chip *ngFor="let subs of twoCAPE" [selectable]= true>
                     {{subs}}
-                    <mat-icon matChipRemove>cancel</mat-icon>
                   </mat-chip>
                   <input [disabled]
                          [matChipInputFor]="anyTwoCape"/>
