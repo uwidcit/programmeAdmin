@@ -1,4 +1,4 @@
-<mat-toolbar [ngStyle]="{'background-color': curr_color, 'color': text_color}">
+<mat-toolbar [ngStyle]="{'background-color': curr_color, 'text-color': 'white' }">
   <mat-toolbar-row  id = "search" >
     <mat-form-field class="example-full-width">
       <input #searchbar (keyup) = "filter(searchbar.value)" type = "text" matInput placeholder="Filter programmes">

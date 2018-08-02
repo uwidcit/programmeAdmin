@@ -52,13 +52,18 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-      const email = (document.getElementById('email') as HTMLInputElement).value;
-      const pword = (document.getElementById('pword') as HTMLInputElement).value;
+      const email = this.emailControl.value;
+      const pword = this.pwordControl.value;
       this.authService.emailLogin(email, pword).then(user => {
         this.admin_view = (user !== undefined);
       }).catch(() => {
         this.snackBar.open('Invalid Credentials :(', 'Close', { duration : 1000});
       });
+  }
+
+  clearFields() {
+    this.emailControl.setValue('');
+    this.pwordControl.setValue('');
   }
 
   // newUserFields() {
