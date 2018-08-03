@@ -11,7 +11,6 @@ import {AuthService} from '../auth.service';
 })
 export class ViewComponent implements OnInit {
   title: string;
-  hideInfo: string;
   current_faculty: string;
   curr_color: string;
   faculties: string[]; // faculty listing, populated by get request onInit
@@ -21,6 +20,7 @@ export class ViewComponent implements OnInit {
   hideTwoCAPE: boolean; twoCAPE: string[]; // arrays to hold the combo requirements
   pendingprogs: boolean; disabled: boolean;
   admin_view: boolean; noCombos: boolean;
+  progClicked: boolean;
   filtered: any[]; programmes: any[]; // populated when user clicks on faculty name
   currProg = // programme template
     {
@@ -33,6 +33,7 @@ export class ViewComponent implements OnInit {
       'department': '',
       'duration': 0,
       'url': '',
+      description: '',
       'requirements': {
         'csec_passes': 0,
         'cape_passes': 0,
@@ -52,11 +53,11 @@ export class ViewComponent implements OnInit {
     this.hideTwoCAPE = true; this.twoCAPE = []; // arrays to hold the combo requirements
     this.noCombos = false;
     this.disabled = true;
+    this.progClicked = false;
     this.filtered = [];
     this.faculties = []; // faculty listing, populated by get request onInit
     this.programmes = []; // populated when user clicks on faculty name
     this.title = '';
-    this.hideInfo = 'hidden';
     this.auth.data_incoming.subscribe(user => {
       if (user !== undefined ) {
         this.admin_view = user.write;
@@ -73,7 +74,6 @@ export class ViewComponent implements OnInit {
    * */
   getProgs(event: any) {
     this.pendingprogs = true;
-    console.log(event.target);
     const fac_name = event.target.innerText.trim();
     if (fac_name === 'All Programmes') {
       this.data.getAllProgs().then((allProgs: any[]) => {
@@ -96,7 +96,7 @@ export class ViewComponent implements OnInit {
    * */
   getProgInfo(event: any) {
     this.resetState();
-    console.log(event.target);
+    this.progClicked = true;
     this.title = event.target.innerText;
     const thisProg = this.programmes.filter( (obj) => (obj.name.trim() === this.title.trim()))[0];
     Object.assign(this.currProg, thisProg);
@@ -123,7 +123,6 @@ export class ViewComponent implements OnInit {
         }
       });
     } else { this.noCombos = true; }
-    this.hideInfo = 'visible';
   }
 
   /**

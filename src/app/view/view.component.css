@@ -44,3 +44,8 @@ mat-spinner {
   margin: 0 auto !important;
   margin-top: 35% !important;
 }
+
+#clickProgramme {
+  margin-top: 30%;
+  padding: 0 10%;
+}

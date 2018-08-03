@@ -30,10 +30,11 @@
       </mat-nav-list>
     </div>
 
-    <div class="col-md-8 text-center" style = "margin-top: -50px;" [style.visibility] = hideInfo >
+    <div class="col-md-8 text-center" style = "margin-top: -50px;">
       <mat-card id = "allInfo">
-        <div class="container-fluid" id = "scrollTest">
+        <div class="container-fluid" id = "scrollTest" *ngIf = "progClicked; else clickProgramme" >
           <h1 style = "padding: 15px"> {{title}} </h1>
+          <p>Description: {{currProg.description}}</p>
           <h2 *ngIf = "admin_view">Faculty: {{currProg.faculty}}</h2>
           <h2 *ngIf = "admin_view">Department: {{currProg.department}}</h2>
           <mat-divider *ngIf = "admin_view"></mat-divider>
@@ -131,4 +132,8 @@
 <ng-template #spinnerPermissions>
   <mat-spinner id = "permissions"></mat-spinner>
   <p style = "text-align: center;">Reading permissions...</p>
+</ng-template>
+
+<ng-template #clickProgramme>
+  <h2 id = "clickProgramme">Please select a programme from the list on the left to view details</h2>
 </ng-template>
