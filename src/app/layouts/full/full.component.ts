@@ -17,7 +17,6 @@ export class FullComponent implements OnDestroy, AfterViewInit, OnInit {
   loaded: boolean;
   fac_name: string;
   topBarColor: string;
-  text_color: string;
 
   private _mobileQueryListener: () => void;
 
@@ -28,7 +27,6 @@ export class FullComponent implements OnDestroy, AfterViewInit, OnInit {
       public router: Router,
       private auth: AuthService) {
     this.topBarColor = 'rgb(30,136,229)';
-    this.text_color = 'white';
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);

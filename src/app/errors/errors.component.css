@@ -43,4 +43,8 @@ thead, tbody tr {
   table-layout:fixed;
 }
 
+#headerRow th {
+  padding-left: 20px;
+}
+
 a { color: white; }

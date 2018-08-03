@@ -18,7 +18,6 @@ export class StarterComponent implements OnInit, AfterViewInit {
   hideBadge: boolean;
   pendingRequest: boolean;
   bg_color: string;
-  text_color: string;
 
   afuConfig = {
     multiple: false,
@@ -46,13 +45,12 @@ export class StarterComponent implements OnInit, AfterViewInit {
       if (user !== undefined ) {
         this.admin_view = user.write;
         this.bg_color = user.color;
-        this.text_color = 'white';
       }
     });
   }
 
   openDialog(): void {
-    this.dialog.open(ErrorsComponent, { width: '75%' });
+    this.dialog.open(ErrorsComponent, { width: '80%%' });
   }
 
   ngOnInit() {
@@ -60,7 +58,10 @@ export class StarterComponent implements OnInit, AfterViewInit {
     this.data.getErrors().then((progs: any) => {
       this.errTotal = progs.length;
       this.hideBadge = (progs == null);
-    }).catch((error: any) => { console.log(error); });
+    }).catch((error: any) => {
+      this.snackBar.open(error.message, 'Close', { duration: 3000 });
+      console.log(error);
+    });
 
     this.data.getFacStats().then((stats: any) => {
       const names = Object.keys(stats);
@@ -75,7 +76,10 @@ export class StarterComponent implements OnInit, AfterViewInit {
         .reduce((a, b) => a + b);
 
       this.pendingRequest = false;
-    }).catch((error: any) => { console.log(error); });
+    }).catch((error: any) => {
+      this.snackBar.open(error.message, 'Close', { duration: 3000 });
+      console.log(error);
+    });
 
   }
 
