@@ -73,7 +73,8 @@ export class ViewComponent implements OnInit {
    * */
   getProgs(event: any) {
     this.pendingprogs = true;
-    const fac_name = event.srcElement.innerText.trim();
+    console.log(event.target);
+    const fac_name = event.target.innerText.trim();
     if (fac_name === 'All Programmes') {
       this.data.getAllProgs().then((allProgs: any[]) => {
         this.programmes = allProgs;
@@ -95,7 +96,8 @@ export class ViewComponent implements OnInit {
    * */
   getProgInfo(event: any) {
     this.resetState();
-    this.title = event.srcElement.innerText;
+    console.log(event.target);
+    this.title = event.target.innerText;
     const thisProg = this.programmes.filter( (obj) => (obj.name.trim() === this.title.trim()))[0];
     Object.assign(this.currProg, thisProg);
     const combos = thisProg.requirements.combinations;

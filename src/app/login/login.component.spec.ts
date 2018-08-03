@@ -59,28 +59,28 @@ describe('LoginComponent', () => {
   //   expect(component.form).toBeFalsy();
   // });
   //
-  // it ('should test email field for required and matching pattern', () => {
-  //   expect(emailControl.valid).toBeFalsy();
+  it ('should test email field for required and matching pattern', () => {
+    expect(emailControl.valid).toBeFalsy();
+
+    let emailErrors = {};
+    emailErrors = emailControl.errors || {};
+    expect(emailErrors['required']).toBeTruthy();
+
+    emailControl.setValue('test');
+    emailErrors = emailControl.errors || {};
+    expect(emailErrors['email']).toBeTruthy();
+  });
   //
-  //   let emailErrors = {};
-  //   emailErrors = emailControl.errors || {};
-  //   expect(emailErrors['required']).toBeTruthy();
-  //
-  //   emailControl.setValue('test');
-  //   emailErrors = emailControl.errors || {};
-  //   expect(emailErrors['email']).toBeTruthy();
-  // });
-  //
-  // it('should test password field for required and matching pattern', () => {
-  //   expect(pwordControl.valid).toBeFalsy();
-  //   let pwordErrors = {};
-  //   pwordErrors = pwordControl.errors || {};
-  //   expect(pwordErrors['required']).toBeTruthy();
-  //
-  //   pwordControl.setValue('somepassword');
-  //   pwordErrors = pwordControl.errors || {};
-  //   expect(pwordErrors['pattern']).toBeTruthy();
-  // });
+  it('should test password field for required and matching pattern', () => {
+    expect(pwordControl.valid).toBeFalsy();
+    let pwordErrors = {};
+    pwordErrors = pwordControl.errors || {};
+    expect(pwordErrors['required']).toBeTruthy();
+
+    pwordControl.setValue('somepassword');
+    pwordErrors = pwordControl.errors || {};
+    expect(pwordErrors['pattern']).toBeTruthy();
+  });
   //
   // it('should have valid email and password fields', () => {
   //   expect(emailControl.valid).toBeFalsy();
