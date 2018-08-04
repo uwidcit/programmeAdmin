@@ -41,6 +41,11 @@ export class AboutComponent implements OnInit {
   radios: string[];
 
   /**
+   * The current radio button that was clicked
+   * */
+  clickedSub: string;
+
+  /**
    * constructor - instantiates all Subject arrays to empty and the radios array to the subject levels
    * */
   constructor(private data: DataLayerService) {

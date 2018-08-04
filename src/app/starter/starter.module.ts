@@ -12,6 +12,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatProgressSpinnerModule} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import {MatRadioModule} from '@angular/material/radio';
     MatSelectModule,
     MatSnackBarModule,
     MatSidenavModule,
+    MatProgressSpinnerModule,
     MatCardModule,
     MatRadioModule,
     RouterModule.forChild(StarterRoutes)
