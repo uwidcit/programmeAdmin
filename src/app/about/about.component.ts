@@ -6,6 +6,14 @@ interface Subject {
   level: string;
 }
 
+/**
+ * This component is responsible for displaying basic information about the website
+ * as well as providing a list of subjects for the user to view. This list of subjects
+ * are all the subjects that exist in our database and the user should ensure that
+ * all programme requirement subjects come from this list. Any unknown programmes will
+ * be flagged as an error on the home page.
+ * */
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -13,17 +21,23 @@ interface Subject {
 })
 
 /**
- * This component is responsible for displaying basic information about the website
- * as well as providing a list of subjects for the user to view. This list of subjects
- * are all the subjects that exist in our database and the user should ensure that
- * all programme requirement subjects come from this list. Any unknown programmes will
- * be flagged as an error on the home page.
  * @class
  * */
 export class AboutComponent implements OnInit {
+  /**
+   * The list of all subjects in the database
+   * */
   subjects: Subject[];
+  /**
+   * The list of subjects when performing a search.
+   * This is the array that is always displayed, the subjects property is never changed
+   * after it has been populated with data
+   * */
   filtered: Subject[];
-  clickedSub: string;
+  /**
+   * Contains the different levels of subjects. More to be
+   * added later as the application includes more subjects and different examining bodies
+   * */
   radios: string[];
 
   /**

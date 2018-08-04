@@ -47,22 +47,22 @@
                     <mat-chip *ngFor="let req of currProg.requirements.mandatory" [selectable]=true>
                       {{req}}
                     </mat-chip>
-                    <input [disabled] = "disabled" [matChipInputFor]="genreqs"/>
+                    <input disabled/>
                   </mat-chip-list>
                 </mat-form-field>
 
               </div>
               <div class="col-md-4">
                 <div class="row">
-                  <mat-checkbox [disabled] = "disabled" [(ngModel)]="currProg.part_time">Part time</mat-checkbox>
-                  <mat-checkbox [disabled] = "disabled" [(ngModel)]="currProg.full_time">Full time</mat-checkbox>
-                  <mat-checkbox [disabled] = "disabled" [(ngModel)]="currProg.evening">Evening</mat-checkbox>
+                  <mat-checkbox disabled [(ngModel)]="currProg.part_time">Part time</mat-checkbox>
+                  <mat-checkbox disabled [(ngModel)]="currProg.full_time">Full time</mat-checkbox>
+                  <mat-checkbox disabled [(ngModel)]="currProg.evening">Evening</mat-checkbox>
                 </div>
                 <mat-form-field class="example-full-width">
-                  <input [disabled] = "disabled" type = "number" matInput placeholder="CAPE Passes (2 unit)" [(ngModel)] = "currProg.requirements.cape_passes" >
+                  <input disabled type = "number" matInput placeholder="CAPE Passes (2 unit)" [(ngModel)] = "currProg.requirements.cape_passes" >
                 </mat-form-field>
                 <mat-form-field class="example-full-width">
-                  <input [disabled] = "disabled" type = "number" matInput placeholder="CSEC Passes" [(ngModel)] = "currProg.requirements.csec_passes">
+                  <input disabled type = "number" matInput placeholder="CSEC Passes" [(ngModel)] = "currProg.requirements.csec_passes">
                 </mat-form-field>
 
               </div>
@@ -78,7 +78,7 @@
                   <mat-chip *ngFor="let subs of oneCSEC" [selectable]= true>
                     {{subs}}
                   </mat-chip>
-                  <input [disabled] = "disabled" [matChipInputFor]="anyOneCSEC"/>
+                  <input disabled/>
                 </mat-chip-list>
               </mat-form-field>
             </div>
@@ -90,7 +90,7 @@
                   <mat-chip *ngFor="let subs of twoCSEC" [selectable]= true>
                     {{subs}}
                   </mat-chip>
-                  <input [disabled] = "disabled" [matChipInputFor]="anyTwoCSEC"/>
+                  <input disabled/>
                 </mat-chip-list>
               </mat-form-field>
             </div>
@@ -102,8 +102,7 @@
                   <mat-chip *ngFor="let subs of oneCAPE" [selectable]= true>
                     {{subs}}
                   </mat-chip>
-                  <input [disabled] = "disabled"
-                         [matChipInputFor]="anyOneCAPE"/>
+                  <input disabled/>
                 </mat-chip-list>
               </mat-form-field>
             </div>
@@ -115,13 +114,10 @@
                   <mat-chip *ngFor="let subs of twoCAPE" [selectable]= true>
                     {{subs}}
                   </mat-chip>
-                  <input [disabled]
-                         [matChipInputFor]="anyTwoCape"/>
+                  <input disabled/>
                 </mat-chip-list>
               </mat-form-field>
             </div>
-            <!--<button mat-raised-button (click) = "toggleEditable()">Edit</button>-->
-            <!--<button mat-raised-button [disabled] = "disabled">Save</button>-->
           </div>
         </div>
       </mat-card>

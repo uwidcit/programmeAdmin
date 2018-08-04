@@ -18,7 +18,7 @@ export class ViewComponent implements OnInit {
   hideTwoCSEC: boolean; twoCSEC: string[]; // arrays to hold the combo requirements
   hideOneCAPE: boolean; oneCAPE: string[]; // arrays to hold the combo requirements
   hideTwoCAPE: boolean; twoCAPE: string[]; // arrays to hold the combo requirements
-  pendingprogs: boolean; disabled: boolean;
+  pendingprogs: boolean;
   admin_view: boolean; noCombos: boolean;
   progClicked: boolean;
   filtered: any[]; programmes: any[]; // populated when user clicks on faculty name
@@ -52,7 +52,6 @@ export class ViewComponent implements OnInit {
     this.hideOneCAPE = true; this.oneCAPE = []; // arrays to hold the combo requirements
     this.hideTwoCAPE = true; this.twoCAPE = []; // arrays to hold the combo requirements
     this.noCombos = false;
-    this.disabled = true;
     this.progClicked = false;
     this.filtered = [];
     this.faculties = []; // faculty listing, populated by get request onInit
@@ -130,7 +129,6 @@ export class ViewComponent implements OnInit {
    * @return {undefined}
    * */
   resetState() {
-    this.disabled = true;
     this.noCombos = false;
     this.hideOneCSEC = true; this.oneCSEC = [];
     this.hideTwoCSEC = true; this.twoCSEC = [];
@@ -149,10 +147,6 @@ export class ViewComponent implements OnInit {
       this.filtered = subset;
     }
   }
-
-  // toggleEditable() {
-  //   this.disabled = !this.disabled;
-  // }
 
   /**
    * @desc When the component is initialized, the list of faculty names is obtained from the server

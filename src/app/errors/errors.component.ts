@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {DataLayerService} from '../data-layer.service';
 import {HttpClient} from '@angular/common/http';
 
+/**
+ * This class is responsible for displaying a list of erroneous programmes inside a dialog box.
+ * */
+
 @Component({
   selector: 'app-errors',
   templateUrl: './errors.component.html',
@@ -10,11 +14,19 @@ import {HttpClient} from '@angular/common/http';
 })
 
 /**
- * This class is responsible for displaying a list of erroneous programmes inside a dialog box.
  * @class
  * */
 export class ErrorsComponent implements OnInit {
+  /**
+   * This will activate a spinner when true. This indicates that data has not arrived from
+   * the backend as yet. It is only set to false when there is data to be displayed, and thus
+   * will deactivate the spinner
+   * */
   pendingRequest: boolean;
+
+  /**
+   * This will hold all the erroneous data to be displayed on the screen
+   * */
   errors: any;
 
   /**
@@ -22,7 +34,7 @@ export class ErrorsComponent implements OnInit {
    * the get request is completed
    * @param data - This is the service that makes the get request
    * */
-  constructor(public data: DataLayerService) {
+  constructor(private data: DataLayerService) {
     this.pendingRequest = true;
   }
 

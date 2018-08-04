@@ -12,7 +12,6 @@ import { FullComponent } from './layouts/full/full.component';
 import { AppHeaderComponent } from './layouts/full/header/header.component';
 import { AppSidebarComponent } from './layouts/full/sidebar/sidebar.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { DemoMaterialModule} from './demo-material-module';
 
 import { SharedModule } from './shared/shared.module';
 import { FileUploadModule } from 'angular-file-uploader';
@@ -23,6 +22,8 @@ import { LoginComponent } from './login/login.component';
 import {ViewComponent} from './view/view.component';
 import {AuthGuard} from './auth.guard';
 import {AuthService} from './auth.service';
+import {MatDialogModule, MatInputModule} from '@angular/material';
+import {DemoMaterialModule} from './demo-material-module';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,8 @@ import {AuthService} from './auth.service';
     BrowserAnimationsModule,
     DemoMaterialModule,
     FormsModule,
+    MatDialogModule,
+    MatInputModule,
     FlexLayoutModule,
     HttpClientModule,
     SharedModule,

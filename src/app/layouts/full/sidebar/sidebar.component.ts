@@ -3,6 +3,10 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import { MenuItems } from '../../../shared/menu-items/menu-items';
 import {OnDestroy} from '@angular/core';
 
+/**
+ * This component displays all the available pages on this application.
+ * The pages are currently Home, View and About.
+ * */
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',

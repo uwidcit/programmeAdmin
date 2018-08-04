@@ -2,6 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
 
+/**
+ * This service is responsible for any fetching of data from the backend.
+ * All data is returned wrapped up inside of a promise to make use of the
+ * asynchronous property and to standardize the return type of this service.
+ * To lessen the load on the backend, {@link https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage sessionStorage} is used.
+ * Local Storage can be used in the future, but only when an updated upload flag is placed on the server to let all other clients know to
+ * clear their local storage and fetch the newly uploaded data.
+ * */
 @Injectable({
   providedIn: 'root'
 })
@@ -10,6 +18,10 @@ export class DataLayerService {
   constructor(private http: HttpClient) {
   }
 
+  /**
+   * Gets the names of all the faculties
+   * @return {Promise<Object>} A promise containing a string array of all the faculty names
+   */
   getFacultyNames(): Promise<Object> {
     const fac_names = sessionStorage.getItem('fac_names');
     if (fac_names === null) {
@@ -23,7 +35,12 @@ export class DataLayerService {
     } else { return this.staticPromise(fac_names); }
   }
 
-  getAllProgs() {
+  /**
+   * Gets a list of all programmes. It queries the backend per faculty and
+   * then gets all programmes by that faculty.
+   * @return {Promise<Object>} A promise containing all programme objects
+   */
+  getAllProgs(): Promise<Object> {
     const allProgs = sessionStorage.getItem('all_progs');
     if (allProgs === null) {
       console.log('All Programmes not cached. Polling server...');
@@ -48,7 +65,12 @@ export class DataLayerService {
     }
   }
 
-  getProgsByFaculty(faculty: string) {
+  /**
+   * Gets all the programmes offered by a single faculty
+   * @param faculty - The abbreviation of a faculty name
+   * @return {Promise<Object>} A promise containing all programme objects from a single faculty
+   */
+  getProgsByFaculty(faculty: string): Promise<Object> {
     const programmes = sessionStorage.getItem(faculty + '_programmes');
     if (programmes === null) {
         console.log('Programmes from ' + faculty + ' not cached. Polling server...');
@@ -61,6 +83,10 @@ export class DataLayerService {
     } else { return this.staticPromise(programmes); }
   }
 
+  /**
+   * Gets the number of programmes offered by each faculty
+   * @return {Promise<Object>} A promise containing each faculty and the number of programmes offered
+   */
   getFacStats() {
     const fac_stats = sessionStorage.getItem('fac_stats');
     if (fac_stats === null) {
@@ -74,7 +100,12 @@ export class DataLayerService {
     } else { return this.staticPromise(fac_stats); }
   }
 
-  getSubjects() {
+  /**
+   * Gets a list of all subjects currently stored in the backend. Note that the proramme information being uploaded should contain
+   * only subjects from this list, else the programme itself with be shown as an error.
+   * @return {Promise<Object>} A promise containing all subjects
+   */
+  getSubjects(): Promise<Object> {
     const subjects = sessionStorage.getItem('subjects');
     if (subjects === null) {
       console.log('Subjects not caches. Polling server...');
@@ -87,7 +118,11 @@ export class DataLayerService {
     } else { return this.staticPromise(subjects); }
   }
 
-  getErrors() {
+  /**
+   * Gets all erroneous programmes from the backend
+   * @return {Promise<Object>} A promise containing a list of all programme errors
+   */
+  getErrors(): Promise<Object> {
     const errors = sessionStorage.getItem('errors');
     if (errors === null) {
       console.log('Errors not cached. Polling server...');
@@ -102,7 +137,12 @@ export class DataLayerService {
 
   }
 
-  staticPromise(fixedData: any) {
+  /**
+   * Wraps up sessionStorage data in a promise if the data exists
+   * @param fixedData - Any data fetched from sessionStorage
+   * @return {Promise<Object>} A promise containing data already stored in sessionStorage
+   */
+  staticPromise(fixedData: any): Promise<Object> {
     return new Promise((resolve, reject) => {
       if (fixedData === undefined || fixedData === null) { reject('Null or undefined data found...'); }
       resolve(JSON.parse(fixedData));

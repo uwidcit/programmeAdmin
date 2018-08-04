@@ -1,29 +1,59 @@
+import {Router} from '@angular/router';
 import { Injectable } from '@angular/core';
-import {BehaviorSubject} from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
-import {Router} from '@angular/router';
 import {environment} from 'environments/environment';
 
 export interface Admin {
   uid: string;
-  email: string;
   faculty: string;
   color: string;
   write: boolean;
 }
 
+/**
+ * This services uses Firebase Authentication to determine whether or not a person has logged in to the application.
+ * Additionally, it uses extra information stored in the Firebase Realtime Database to determine who exactly is logged
+ * in. This will in turn determine how the view will look as well as read/write permissions on the page itself.
+ * */
+
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
+  /**
+   * Initialization of Firebase Auth functions
+   * */
   auth = firebase.auth();
+
+  /**
+   * Initialization of Firebase Realtime Database functions
+   * */
   db = firebase.database();
+
+  /**
+   * Determines whether or not a person is logged in
+   * */
   loggedIn: boolean;
+
+  /**
+   * The container holding the information about the current user. This information is fetched by the database and is undefined
+   * on starting the application, meaning that no person has logged in.
+   * */
   sys_admin = new BehaviorSubject<Admin>(undefined);
+
+  /**
+   * An RxJS Observable to listen when data changes. An event will be fired only when data comes in from the database, meaning that only
+   * when a person logs in, then this Observable will fire an event.
+   * */
   data_incoming = this.sys_admin.asObservable();
 
+  /**
+   * The application is immediately checked when the person has logged in or not. If the person has logged in previously, then they will
+   * be taken to the home page. If not, then are redirected to the login page
+   * */
   constructor(private router: Router) {
     this.auth.onAuthStateChanged(user => {
       if (user) {
@@ -32,7 +62,6 @@ export class AuthService {
           const data = snapshot.val();
           this.sys_admin.next({
             uid: user.uid,
-            email: data.email,
             faculty: data.faculty_name,
             color: environment.facColour[data.faculty_name],
             write: data.write
@@ -47,12 +76,17 @@ export class AuthService {
     });
   }
 
+  /**
+   * Built in Firebase email login
+   * */
   emailLogin(email, pword) {
     return this.auth.signInWithEmailAndPassword(email, pword);
   }
 
+  /**
+   * Built in Firebase auth sign out method
+   * */
   signout() {
-    // const routerInst = this.router;
     this.auth.signOut().then(function () {
       console.log('Sign out successful...');
     }).catch(function (error) {
@@ -60,30 +94,4 @@ export class AuthService {
       console.log('Error signing out user...');
     });
   }
-
-
-  // createUser(email, pword) {
-  //   // @ts-ignore
-  //   this.auth.createUserWithEmailAndPassword(email, pword)
-  //     .then((data) => {
-  //       console.log(data);
-  //     })
-  //     .catch(function (error) {
-  //       console.log(error.message);
-  //     });
-  // }
-
-  // addUserToDB(user: Admin) {
-  //   this.loggedIn = true;
-  //   // console.log(user.faculty);
-  //   const ref = this.db.ref('/').child('users').child(user.uid);
-  //   ref.set(user, (error) => {
-  //       if (error) { console.log(error); }
-  //       else { console.log('write of user ' + user.uid + ' was successful.'); }
-  //     });
-  // }
 }
-
-
-
-

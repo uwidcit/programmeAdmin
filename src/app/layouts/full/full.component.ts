@@ -3,7 +3,12 @@ import {AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit} from '@a
 import { MenuItems } from '../../shared/menu-items/menu-items';
 import {Router, NavigationEnd} from '@angular/router';
 import {AuthService} from '../../auth.service';
-/** @title Responsive sidenav */
+
+/**
+ * This is the overall wrapper of this Angular Material Design template.
+ * All other components and routing between them exists inside this Full Component.
+ * This is only instantiated once throughout the lifecycle of the application.
+ * */
 @Component({
   selector: 'app-full-layout',
   templateUrl: 'full.component.html',
@@ -12,14 +17,28 @@ import {AuthService} from '../../auth.service';
 })
 export class FullComponent implements OnDestroy, AfterViewInit, OnInit {
   mobileQuery: MediaQueryList;
+  /**
+   * This will either show or hide the sidebar menu button and the sign out button
+   * based on the current route. By default, these buttons should be hidden on the
+   * login page and shown at all other times.
+   * */
   hidebtn: boolean;
-  hideSignOut: boolean;
-  loaded: boolean;
-  fac_name: string;
+  /**
+   * This is a hex value represented as a string showing the faculty colour of the
+   * administrator currently logged in. A top-level administrator will have the default
+   * angular primary colour.
+   * */
   topBarColor: string;
 
   private _mobileQueryListener: () => void;
 
+  /**
+   * The application defaults to the login page when first started. Hence the top
+   * bar colour is set to rgb(30,136,229). If a user is already logged in, then
+   * the top bar colour will be changed. The constructor also sets up the required
+   * listeners for dynamically changing the sidebar and determining whether or not
+   * the menu and sign out buttons should be hidden
+   * */
   constructor(
       changeDetectorRef: ChangeDetectorRef,
       media: MediaMatcher,
@@ -32,30 +51,28 @@ export class FullComponent implements OnDestroy, AfterViewInit, OnInit {
     this.mobileQuery.addListener(this._mobileQueryListener);
     router.events.subscribe(val => {
       if (val instanceof NavigationEnd) {
-        this.hidebtn = (val.url === '/login');
-        this.hideSignOut = (val.url !== '/login');
+        this.hidebtn = (val.url !== '/login');
       }
     });
     this.auth.data_incoming.subscribe(user => {
-      if (user !== undefined) {
-        this.loaded = true;
-        this.topBarColor = user.color;
-      } else { this.loaded = false; }
+      if (user !== undefined) { this.topBarColor = user.color; }
     });
   }
 
   ngOnInit() {
+  }
 
+  ngAfterViewInit() {
   }
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
-  ngAfterViewInit() {
-    this.loaded = this.router.url === '/login';
-  }
-
+  /**
+   * Takes the user back to the login page, and removes the authenticated state
+   * from the application. Also resets the top bar colour.
+   * */
   signOut() {
     this.auth.signout();
     this.router.navigate(['/login']);
