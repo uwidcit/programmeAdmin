@@ -23,7 +23,7 @@ export const environment = {
     'Humanities & Education': 'fhe',
     'Medical Sciences': 'fms',
     'Law': 'law',
-    'Science & Technology': 'fst'
+    'Science & Technology': 'fst',
   },
   facColour: {
     'Social Sciences': '#F36E21',

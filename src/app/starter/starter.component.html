@@ -38,7 +38,15 @@
         View Programmes
       </button>
     </mat-card-actions>
-    <mat-card-actions *ngIf = "admin_view"> <button mat-raised-button color="warn" [matBadge] = "errTotal" (click) = "openDialog()">Show Upload Errors</button> </mat-card-actions>
+    <mat-card-actions *ngIf = "admin_view">
+      <button
+        mat-raised-button
+        color="warn"
+        [matBadge] = "errTotal"
+        (click) = "openDialog()">
+        Show Upload Errors
+      </button>
+    </mat-card-actions>
   </mat-card>
 
   <mat-card class = "outer" id = "upload" #upload *ngIf = "admin_view" >

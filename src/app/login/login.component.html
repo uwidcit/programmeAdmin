@@ -3,36 +3,36 @@
     <h2 class = "text-center" >Login</h2>
 
     <mat-card-content>
-      <form>
+      <form [formGroup] = form (ngSubmit) = "login()">
 
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Email" [formControl]="emailControl"
+          <input matInput placeholder="Email" [formControl]="form.controls['email']"
                  [errorStateMatcher]="matcher" id = "email" name = "email">
-          <mat-error *ngIf="emailControl.hasError('email') && !emailControl.hasError('required')">
+          <mat-error *ngIf="form.controls['email'].hasError('email') && !form.controls['email'].hasError('required')">
             Must be a valid email. eg. <em>someone@example.com</em>
           </mat-error>
-          <mat-error *ngIf="emailControl.hasError('required')">
+          <mat-error *ngIf="form.controls['email'].hasError('required')">
             Email is <strong>required</strong>
           </mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-          <input matInput type = "password" placeholder="Password" [formControl]="pwordControl"
+          <input matInput type = "password" placeholder="Password" [formControl]="form.controls['pword']"
                  [errorStateMatcher]="matcher" id = "pword" name = "password">
-          <mat-error *ngIf="pwordControl.hasError('pattern') && !pwordControl.hasError('required')">
+          <mat-error *ngIf="form.controls['pword'].hasError('pattern') && !form.controls['pword'].hasError('required')">
             Must contain at least: <em>8 characters, 1 uppercase letter, 1 lowercase letter, and 1 number</em>
           </mat-error>
-          <mat-error *ngIf="pwordControl.hasError('required')">
+          <mat-error *ngIf="form.controls['pword'].hasError('required')">
             Password is <strong>required</strong>
           </mat-error>
         </mat-form-field>
 
+        <div id="buttons">
+          <button mat-raised-button color="primary">Submit</button>
+          <button mat-raised-button color="warn" type = "reset">Clear fields</button>
+        </div>
+
       </form>
     </mat-card-content>
-
-    <mat-card-actions>
-      <button mat-raised-button color="primary" (click) = "login()">Submit</button>
-      <button mat-raised-button color="warn" (click) = "clearFields()">Clear fields</button>
-    </mat-card-actions>
   </mat-card>
 </div>

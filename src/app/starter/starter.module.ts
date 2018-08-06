@@ -12,13 +12,14 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
-import {MatProgressSpinnerModule} from '@angular/material';
+import {MatButtonModule, MatProgressSpinnerModule} from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
     FlexLayoutModule,
     FileUploadModule,
+    MatButtonModule,
     MatBadgeModule,
     MatSelectModule,
     MatSnackBarModule,

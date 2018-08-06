@@ -3,6 +3,7 @@ import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/form
 import {ErrorStateMatcher} from '@angular/material/core';
 import {AuthService} from '../auth.service';
 import { MatSnackBar } from '@angular/material';
+import {FormGroup} from '@angular/forms';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -25,22 +26,23 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   providers: [AuthService]
 })
 export class LoginComponent implements OnInit {
-  // form: FormGroup;
+  form: FormGroup = new FormGroup({
+    email: new FormControl('', [
+      Validators.required,
+      Validators.email,
+    ]),
+    pword: new FormControl('', [
+      Validators.required,
+      Validators.pattern(new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})'))
+    ])
+  });
   /**
    * Input control to help with validating input
    * */
-  emailControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
   /**
    * Password control. A password must contain at least: 8 characters,
    * 1 uppercase letter, 1 lowercase letter, and 1 number.
    * */
-  pwordControl = new FormControl('', [
-    Validators.required,
-    Validators.pattern(new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})'))
-  ]);
   /**
    * Takes in the form controls defined in this component to determine whether or not
    * input data is valid
@@ -59,19 +61,11 @@ export class LoginComponent implements OnInit {
    * Logs in a user
    * */
   login() {
-      const email = this.emailControl.value;
-      const pword = this.pwordControl.value;
+      const email = this.form.controls['email'].value;
+      const pword = this.form.controls['pword'].value;
       this.authService.emailLogin(email, pword).catch(() => {
         this.snackBar.open('Invalid Credentials :(', 'Close', { duration : 2000});
       });
-  }
-
-  /**
-   * Resets all fields
-   * */
-  clearFields() {
-    this.emailControl.setValue('');
-    this.pwordControl.setValue('');
   }
 }
 

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {DataLayerService} from '../data-layer.service';
 import { environment } from '../../environments/environment';
 import {AuthService} from '../auth.service';
@@ -19,7 +19,7 @@ export class ViewComponent implements OnInit {
   hideOneCAPE: boolean; oneCAPE: string[]; // arrays to hold the combo requirements
   hideTwoCAPE: boolean; twoCAPE: string[]; // arrays to hold the combo requirements
   pendingprogs: boolean;
-  admin_view: boolean; noCombos: boolean;
+  top_level_view: boolean; noCombos: boolean;
   progClicked: boolean;
   filtered: any[]; programmes: any[]; // populated when user clicks on faculty name
   currProg = // programme template
@@ -27,7 +27,6 @@ export class ViewComponent implements OnInit {
       'name': '',
       'type': '',
       'part_time': false,
-      'evening': false,
       'full_time': false,
       'faculty': '',
       'department': '',
@@ -58,8 +57,9 @@ export class ViewComponent implements OnInit {
     this.programmes = []; // populated when user clicks on faculty name
     this.title = '';
     this.auth.data_incoming.subscribe(user => {
+      console.log(user);
       if (user !== undefined ) {
-        this.admin_view = user.write;
+        this.top_level_view = user.view && (user.faculty === 'all_faculties');
         this.curr_color = user.color;
         this.current_faculty = user.faculty;
       }
@@ -153,7 +153,7 @@ export class ViewComponent implements OnInit {
    * @return {undefined}
    * */
   ngOnInit() {
-    if (this.admin_view) {
+    if (this.top_level_view) {
       this.data.getFacultyNames().then(names => {
         this.faculties = Object.values(names);
         this.faculties.unshift('All Programmes');
@@ -168,8 +168,9 @@ export class ViewComponent implements OnInit {
         this.pendingprogs = false;
         this.programmes = names;
         this.filtered = names;
-      }, (error: any) => { console.log(error); });
+      }, (error: any) => {
+        console.log(error);
+      });
     }
-
   }
 }

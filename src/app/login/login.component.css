@@ -15,28 +15,11 @@ h2 {
   padding: 10px;
 }
 
-/*mat-form-field { margin-top: 20px; }*/
-
-mat-card-actions {
+#buttons {
   display: flex;
   justify-content: center;
-  padding-bottom: 20px !important;
 }
 
-mat-card-content {
-  padding: 10px 24px !important;
-  margin-bottom: 0 !important;
+#buttons button {
+  margin-left: 10px;
 }
-
-/*#showFields {*/
-  /*padding-bottom: 20px;*/
-  /*text-align: center;*/
-  /*color: rgb(30,136,229);*/
-/*}*/
-
-/*#showFields:hover {*/
-  /*text-decoration: underline;*/
-  /*cursor: pointer;*/
-/*}*/
-
-/*.content { height: 420px; }*/

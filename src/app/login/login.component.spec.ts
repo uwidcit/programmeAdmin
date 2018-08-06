@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import {FormControl, ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { LoginComponent } from './login.component';
 import {MatCardModule, MatFormFieldModule, MatInputModule, MatSnackBar} from '@angular/material';
@@ -11,18 +11,18 @@ import {Overlay} from '@angular/cdk/overlay';
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
-  let emailControl: FormControl;
-  let pwordControl: FormControl;
+  let emailControl;
+  let pwordControl;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ LoginComponent ],
       imports : [
+        BrowserAnimationsModule,
         MatCardModule,
+        MatInputModule,
         MatFormFieldModule,
         FormsModule,
-        MatInputModule,
-        BrowserAnimationsModule,
         ReactiveFormsModule,
       ],
       providers: [
@@ -40,24 +40,29 @@ describe('LoginComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
-    emailControl = component.emailControl;
-    pwordControl = component.pwordControl;
+    emailControl = component.form.controls['email'];
+    pwordControl = component.form.controls['pword'];
     fixture.detectChanges();
   });
 
-  // afterEach(() => {
-  //   emailControl = null;
-  //   pwordControl = null;
-  // });
+  afterEach(() => {
+    emailControl = null;
+    pwordControl = null;
+  });
 
-  it('should create', () => {
+  it('Login Component should be created', () => {
     console.log(component);
     expect(component).toBeTruthy();
   });
 
-  // it('should be invalid when empty', () => {
-  //   expect(component.form).toBeFalsy();
-  // });
+  it('should check if a FormGroup Object exists', () => {
+    expect(component.form).toBeTruthy();
+  });
+
+  it('should test if email and password fields are invalid on start up', () => {
+    expect(emailControl.valid).toBeFalsy();
+    expect(pwordControl.valid).toBeFalsy();
+  });
   //
   it ('should test email field for required and matching pattern', () => {
     expect(emailControl.valid).toBeFalsy();
@@ -82,24 +87,24 @@ describe('LoginComponent', () => {
     expect(pwordErrors['pattern']).toBeTruthy();
   });
   //
-  // it('should have valid email and password fields', () => {
-  //   expect(emailControl.valid).toBeFalsy();
-  //   expect(pwordControl.valid).toBeFalsy();
-  //
-  //   emailControl.setValue('someone@example.com');
-  //   pwordControl.setValue('Something123');
-  //   expect(component.form.valid).toBeTruthy();
-  //
-  //   emailControl.setValue('someone.else@example.com');
-  //   pwordControl.setValue('Some123thing');
-  //   expect(component.form.valid).toBeTruthy();
-  //
-  //   emailControl.setValue('someone@example.server.com');
-  //   pwordControl.setValue('somethinG123');
-  //   expect(component.form.valid).toBeTruthy();
-  //
-  //   emailControl.setValue('someone.else@example.server.com');
-  //   pwordControl.setValue('Sifnfow12943');
-  //   expect(component.form.valid).toBeTruthy();
-  // });
+  it('should test various email and password inputs', () => {
+    expect(emailControl.valid).toBeFalsy();
+    expect(pwordControl.valid).toBeFalsy();
+
+    emailControl.setValue('someone@example.com');
+    pwordControl.setValue('Something123');
+    expect(component.form.valid).toBeTruthy();
+
+    emailControl.setValue('someone.else@example.com');
+    pwordControl.setValue('Some123thing');
+    expect(component.form.valid).toBeTruthy();
+
+    emailControl.setValue('someone@example.server.com');
+    pwordControl.setValue('somethinG123');
+    expect(component.form.valid).toBeTruthy();
+
+    emailControl.setValue('someone.else@example.server.com');
+    pwordControl.setValue('Sifnfow12943');
+    expect(component.form.valid).toBeTruthy();
+  });
 });

@@ -10,6 +10,7 @@ export interface Admin {
   uid: string;
   faculty: string;
   color: string;
+  view: boolean;
   write: boolean;
 }
 
@@ -64,6 +65,7 @@ export class AuthService {
             uid: user.uid,
             faculty: data.faculty_name,
             color: environment.facColour[data.faculty_name],
+            view: data.view,
             write: data.write
           });
         });
