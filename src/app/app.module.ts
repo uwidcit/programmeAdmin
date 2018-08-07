@@ -18,7 +18,7 @@ import { FileUploadModule } from 'angular-file-uploader';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { ErrorsComponent } from './errors/errors.component';
 import { AboutComponent } from './about/about.component';
-import { LoginComponent } from './login/login.component';
+import {LoginComponent} from './login/login.component';
 import {ViewComponent} from './view/view.component';
 import {AuthGuard} from './auth.guard';
 import {AuthService} from './auth.service';

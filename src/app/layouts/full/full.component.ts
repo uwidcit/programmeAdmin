@@ -45,6 +45,7 @@ export class FullComponent implements OnDestroy, AfterViewInit, OnInit {
       public menuItems: MenuItems,
       public router: Router,
       private auth: AuthService) {
+    this.hidebtn = false;
     this.topBarColor = 'rgb(30,136,229)';
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();

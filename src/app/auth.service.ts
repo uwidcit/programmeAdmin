@@ -80,8 +80,11 @@ export class AuthService {
 
   /**
    * Built in Firebase email login
+   * @param email
+   * @param pword
+   * @return {Promise<firebase.auth.UserCredential>}
    * */
-  emailLogin(email, pword) {
+  emailLogin(email: string, pword: string) {
     return this.auth.signInWithEmailAndPassword(email, pword);
   }
 
@@ -95,5 +98,13 @@ export class AuthService {
       console.log(error);
       console.log('Error signing out user...');
     });
+  }
+
+  /**
+   * Uses the built-in firebase password reset template to reset the user password
+   * @param email - the email to the account of the password that needs resetting
+   */
+  resetPword(email: string) {
+    return this.auth.sendPasswordResetEmail(email);
   }
 }

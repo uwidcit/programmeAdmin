@@ -16,7 +16,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="example-full-width" *ngIf = "!forgot_pword">
           <input matInput type = "password" placeholder="Password" [formControl]="form.controls['pword']"
                  [errorStateMatcher]="matcher" id = "pword" name = "password">
           <mat-error *ngIf="form.controls['pword'].hasError('pattern') && !form.controls['pword'].hasError('required')">
@@ -27,10 +27,19 @@
           </mat-error>
         </mat-form-field>
 
-        <div id="buttons">
+        <div class = "buttons" *ngIf = "!forgot_pword; else forgotPwordButtons">
           <button mat-raised-button color="primary">Submit</button>
           <button mat-raised-button color="warn" type = "reset">Clear fields</button>
         </div>
+        <a href="#" *ngIf = "!forgot_pword" (click) = "forgot_pword = true;">Forgot your password? Click here!</a>
+
+        <ng-template #forgotPwordButtons>
+          <div class = "buttons">
+            <button mat-raised-button color="primary">Send email link</button>
+            <button mat-raised-button color="warn" type = "reset" (click) = "forgot_pword = false;">Back to log in</button>
+          </div>
+        </ng-template>
+
 
       </form>
     </mat-card-content>
