@@ -24,6 +24,7 @@ import {AuthGuard} from './auth.guard';
 import {AuthService} from './auth.service';
 import {MatDialogModule, MatInputModule} from '@angular/material';
 import {DemoMaterialModule} from './demo-material-module';
+import { SubjectsComponent } from './subjects/subjects.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {DemoMaterialModule} from './demo-material-module';
     ErrorsComponent,
     AboutComponent,
     LoginComponent,
+    SubjectsComponent,
   ],
   imports: [
     BrowserModule,

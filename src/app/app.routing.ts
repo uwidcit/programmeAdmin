@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { ViewComponent } from './view/view.component';
 import { AuthGuard } from './auth.guard';
+import {SubjectsComponent} from './subjects/subjects.component';
 
 export const AppRoutes: Routes = [{
   path: '',
@@ -27,6 +28,10 @@ export const AppRoutes: Routes = [{
   }, {
     path: 'login',
     component: LoginComponent
+  }, {
+    path: 'subjects',
+    canActivate: [AuthGuard],
+    component: SubjectsComponent
   }, {
     path: 'about',
     canActivate: [AuthGuard],

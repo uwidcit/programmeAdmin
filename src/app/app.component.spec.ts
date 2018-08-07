@@ -20,6 +20,7 @@ import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {AboutComponent} from './about/about.component';
 import {LoginComponent} from './login/login.component';
 import {ViewComponent} from './view/view.component';
+import {SubjectsComponent} from './subjects/subjects.component';
 
 
 describe('AppComponent', () => {
@@ -33,7 +34,8 @@ describe('AppComponent', () => {
         ViewComponent,
         SpinnerComponent,
         AboutComponent,
-        LoginComponent
+        LoginComponent,
+        SubjectsComponent
       ],
       imports: [
         BrowserModule,

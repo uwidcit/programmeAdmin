@@ -1,0 +1,36 @@
+<div class = "area" id = "subject-area">
+  <mat-card>
+    <h2>Subject list</h2>
+    <p>A list of all subjects currently in the database is given below. If a new programme is to be defined, then its
+     subject requirements <strong>must come from the list below, otherwise the system will not recognise
+      the subject and will throw an error</strong>
+    </p>
+
+    <mat-card-content id = "filters">
+      <mat-form-field class="example-full-width">
+        <input #searchbar id = "searchbar" (keyup) = "subjectFilter(clickedSub)" matInput placeholder="Search for a subject" >
+      </mat-form-field>
+      <span>Filters: </span>
+      <mat-radio-group [(ngModel)] = "clickedSub">
+        <mat-radio-button (click) = "subjectFilter(value)" *ngFor = "let value of radios" [value] = value>{{value}}</mat-radio-button>
+      </mat-radio-group>
+    </mat-card-content>
+
+    <mat-card-content id = "tableContent">
+      <table class = "table table-striped">
+        <thead>
+        <tr>
+          <th scope = "col">Programme name</th>
+          <th scope = "col">Level</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor = "let sub of filtered">
+          <td>{{sub.name.slice(0,-7)}}</td>
+          <td>{{sub.level}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

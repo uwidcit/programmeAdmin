@@ -1,0 +1,31 @@
+#about-text { width: 60% }
+#subject-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#subject-area h2 { padding-top: 20px; }
+#subject-area mat-card {width: 80%;}
+#filters {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+mat-radio-button { margin: 30px; }
+
+table { text-align: center; }
+tbody {
+  display: block;
+  height: 50vh;
+  overflow:auto;
+}
+thead, tbody tr {
+  display:table;
+  width:100%;
+  table-layout:fixed;
+}
+mat-card-content { padding: 15px !important;}
+
+#tableContent {
+  padding: 0 !important;
+}
