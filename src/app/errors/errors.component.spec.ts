@@ -31,4 +31,8 @@ describe('ErrorsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should be waiting for a request on initialization', () => {
+    expect(component.pendingRequest).toBe(true);
+  });
 });

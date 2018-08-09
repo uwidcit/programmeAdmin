@@ -20,7 +20,7 @@ mat-card {
 }
 
 #scrollList {
-  height: 70vh;
+  height: 63vh;
   overflow-y: scroll;
 }
 
@@ -33,7 +33,10 @@ mat-checkbox { margin-right: 5px; }
   border-bottom: 1px solid black;
 }
 
-#allInfo { overflow-y: scroll; }
+#allInfo {
+  height: 77vh;
+  overflow-y: scroll;
+}
 
 #loading {
   height: 100%;

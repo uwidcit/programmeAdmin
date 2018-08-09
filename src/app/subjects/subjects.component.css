@@ -16,7 +16,7 @@ mat-radio-button { margin: 30px; }
 table { text-align: center; }
 tbody {
   display: block;
-  height: 50vh;
+  height: 43vh;
   overflow:auto;
 }
 thead, tbody tr {
@@ -24,8 +24,16 @@ thead, tbody tr {
   width:100%;
   table-layout:fixed;
 }
-mat-card-content { padding: 15px !important;}
+mat-card-content {
+  padding: 0 20% !important;
+  margin: 0 !important;
+}
 
 #tableContent {
   padding: 0 !important;
+}
+
+p {
+  padding-left: 15px;
+  padding-right: 15px;
 }

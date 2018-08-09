@@ -27,7 +27,7 @@ export class ErrorsComponent implements OnInit {
   /**
    * This will hold all the erroneous data to be displayed on the screen
    * */
-  errors: any;
+  errors: any[];
 
   /**
    * Initializes pendingRequest to true. This activates the progress spinner in the html until

@@ -15,6 +15,7 @@ import { environment } from '../environments/environment';
 })
 export class DataLayerService {
 
+
   constructor(private http: HttpClient) {
   }
 
@@ -26,11 +27,11 @@ export class DataLayerService {
     const fac_names = sessionStorage.getItem('fac_names');
     if (fac_names === null) {
       console.log('Faculty names not cached. Polling server...');
-      return new Promise((resolve, reject) => {
+      return new Promise((reject, resolve) => {
         this.http.get(environment.facURL).subscribe((names: any) => {
-          sessionStorage.setItem('fac_names', JSON.stringify(names));
+          sessionStorage.setItem('fac_names', JSON.stringify(fac_names));
           resolve(names);
-        }, (error) => reject(error));
+        });
       });
     } else { return this.staticPromise(fac_names); }
   }

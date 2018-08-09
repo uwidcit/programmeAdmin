@@ -1,18 +1,19 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import { ReactiveFormsModule} from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
 import { LoginComponent } from './login.component';
 import {MatCardModule, MatFormFieldModule, MatInputModule, MatSnackBar} from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {Router} from '@angular/router';
 import {Overlay} from '@angular/cdk/overlay';
+import {By} from '@angular/platform-browser';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
   let emailControl;
   let pwordControl;
+  let spy: any;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -67,8 +68,7 @@ describe('LoginComponent', () => {
   it ('should test email field for required and matching pattern', () => {
     expect(emailControl.valid).toBeFalsy();
 
-    let emailErrors = {};
-    emailErrors = emailControl.errors || {};
+    let emailErrors = emailControl.errors || {};
     expect(emailErrors['required']).toBeTruthy();
 
     emailControl.setValue('test');
@@ -78,8 +78,8 @@ describe('LoginComponent', () => {
   //
   it('should test password field for required and matching pattern', () => {
     expect(pwordControl.valid).toBeFalsy();
-    let pwordErrors = {};
-    pwordErrors = pwordControl.errors || {};
+
+    let pwordErrors = pwordControl.errors || {};
     expect(pwordErrors['required']).toBeTruthy();
 
     pwordControl.setValue('somepassword');
@@ -106,5 +106,13 @@ describe('LoginComponent', () => {
     emailControl.setValue('someone.else@example.server.com');
     pwordControl.setValue('Sifnfow12943');
     expect(component.form.valid).toBeTruthy();
+  });
+
+  it('should check if the login function is called when submitting the form', () => {
+    emailControl.setValue('someone@example.com');
+    pwordControl.setValue('Testing123');
+    spy = spyOn(component, 'login').and.returnValue(undefined);
+    fixture.debugElement.query(By.css('#submitBtn')).nativeElement.click();
+    expect(component.login).toHaveBeenCalled();
   });
 });

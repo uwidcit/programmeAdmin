@@ -21,7 +21,7 @@ import {AuthService} from '../auth.service';
 })
 export class StarterComponent implements OnInit, AfterViewInit {
   /**
-   * Conttains a list of faculty names and the number of programmes offered in each faculty
+   * Contains a list of faculty names and the number of programmes offered in each faculty
    * */
   faculties: any[] = [];
   /**

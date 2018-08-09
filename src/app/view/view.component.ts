@@ -155,6 +155,7 @@ export class ViewComponent implements OnInit {
   ngOnInit() {
     if (this.top_level_view) {
       this.data.getFacultyNames().then(names => {
+        sessionStorage.setItem('fac_names', JSON.stringify(names));
         this.faculties = Object.values(names);
         this.faculties.unshift('All Programmes');
       });
