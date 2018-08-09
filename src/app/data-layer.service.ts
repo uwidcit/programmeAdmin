@@ -88,7 +88,7 @@ export class DataLayerService {
    * Gets the number of programmes offered by each faculty
    * @return {Promise<Object>} A promise containing each faculty and the number of programmes offered
    */
-  getFacStats() {
+  getFacStats() { // testing finished
     const fac_stats = sessionStorage.getItem('fac_stats');
     if (fac_stats === null) {
       console.log('Faculty numbers not caches. Polling server...');
@@ -106,7 +106,7 @@ export class DataLayerService {
    * only subjects from this list, else the programme itself with be shown as an error.
    * @return {Promise<Object>} A promise containing all subjects
    */
-  getSubjects(): Promise<Object> {
+  getSubjects(): Promise<Object> { // testing finished
     const subjects = sessionStorage.getItem('subjects');
     if (subjects === null) {
       console.log('Subjects not caches. Polling server...');
