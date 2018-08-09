@@ -1,10 +1,10 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { DataLayerService } from './data-layer.service';
-import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
-import { HttpClient, HttpResponse, HttpErrorResponse } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import { HttpClient} from '@angular/common/http';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
+const mockData = require('./mock/data.service.json');
 
 describe('DataLayerService', () => {
   let service: DataLayerService;
@@ -23,101 +23,6 @@ describe('DataLayerService', () => {
 describe('DataLayerService (with spies)', () => {
   let httpClientSpy: { get: jasmine.Spy };
   let data: DataLayerService;
-  const mockData = {
-    facNames: {
-      'faculty abbr': 'faculty full name',
-      'fac': 'faculty',
-      'fac_abbr': 'faculty full'
-    },
-    facStats: {
-      'fac1': 12,
-      'fac2': 24,
-      'fac3': 50,
-      'fac4': 12
-    },
-    expectedErrors: [
-      {
-        'name': 'Agriculture - Major in Agricultural Extnsion',
-        'type': 'BACHELOR OF SCIENCE (BSc) GENERAL',
-        'part_time': false,
-        'evening': false,
-        'full_time': false,
-        'faculty': 'Food & Agriculture',
-        'department': 'Agricultural Economics & Extension',
-        'duration': 0,
-        'url': '',
-        'requirements': {
-          'cape_passes': 0,
-          'csec_passes': 0,
-          'mandatory': [],
-          'combinations': []
-        },
-        'corrected': '',
-        'report': {
-          'valid': false,
-          'corrected': '',
-          'missing_subjects': '',
-          'mandatory': 'Empty array',
-          'req_conflict': '',
-          'passes': 'No cape and no csec passes',
-          'classes': 'None specified'
-        }
-      }, {
-        'name': 'Agriculture - Minor in Communication and Extension',
-        'type': 'BACHELOR OF SCIENCE (BSc) GENERAL',
-        'part_time': false,
-        'evening': false,
-        'full_time': false,
-        'faculty': 'Food & Agriculture',
-        'department': 'Agricultural Economics & Extension',
-        'duration': 3,
-        'url': '',
-        'requirements': {
-          'cape_passes': 0,
-          'csec_passes': 0,
-          'mandatory': [],
-          'combinations': []
-        },
-        'corrected': '',
-        'report': {
-          'valid': false,
-          'corrected': '',
-          'missing_subjects': '',
-          'mandatory': 'Empty array',
-          'req_conflict': '',
-          'passes': 'No cape and no csec passes',
-          'classes': 'None specified'
-        }
-      }, {
-        'name': 'Agriculture - Minor in Entrepreneurship',
-        'type': 'BACHELOR OF SCIENCE (BSc) GENERAL',
-        'part_time': false,
-        'evening': false,
-        'full_time': false,
-        'faculty': 'Food & Agriculture',
-        'department': 'Agricultural Economics & Extension',
-        'duration': 3,
-        'url': '',
-        'requirements': {
-          'cape_passes': 0,
-          'csec_passes': 0,
-          'mandatory': [],
-          'combinations': []
-        },
-        'corrected': '',
-        'report': {
-          'valid': false,
-          'corrected': '',
-          'missing_subjects': '',
-          'mandatory': 'Empty array',
-          'req_conflict': '',
-          'passes': 'No cape and no csec passes',
-          'classes': 'None specified'
-        }
-      }
-    ],
-
-  };
   beforeEach(() => {
     httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
     data = new DataLayerService(<any>httpClientSpy);
@@ -160,7 +65,7 @@ describe('DataLayerService (with spies)', () => {
       expect(data.getFacStats().then()).toBeDefined();
     });
 
-    it('- should return more than 0 statistics in a Promise', () => {
+    it('- should test if the function returns more than 0 statistics in a Promise', () => {
       data.getFacStats().then(stats => {
         expect(stats).toBeDefined();
         expect(stats).toBe(mockData.facStats);
@@ -176,40 +81,92 @@ describe('DataLayerService (with spies)', () => {
       spyOn(data, 'getErrors').and.returnValue(Promise.resolve(mockData.expectedErrors));
     });
 
-    it('- should check if the function is defined', () => {
+    it('- should test if the function is defined', () => {
       expect(data.getErrors).toBeDefined();
     });
 
-    it('- should check if the function returns a Promise', () => {
+    it('- should test if the function returns a Promise', () => {
       expect(data.getErrors().then()).toBeDefined();
     });
 
-    it('- should return errors (if any) in a Promise', () => {
+    it('- should test if errors (if any) are returned in a Promise', () => {
       data.getErrors().then((errors: any[] ) => {
         expect(errors).toBeDefined();
         expect(errors).toBe(mockData.expectedErrors);
         if (errors.length > 0) {
           const error = errors[0];
           expect(error.name).toBeDefined();
-          expect(typeof error.name).toBe('string');
-
           expect(error.report).toBeDefined();
-          expect(error.report).not.toBe({});
-
           expect(error.report.valid).toBeDefined();
-          expect(typeof error.report.valid).toBe('boolean');
-          expect(error.report.valid).toBe(false);
-
           expect(error.report.corrected).toBeDefined();
-          expect(typeof error.report.corrected).toBe('string');
           expect(error.report.missing_subjects).toBeDefined();
           expect(error.report.mandatory).toBeDefined();
           expect(error.report.req_conflict).toBeDefined();
           expect(error.report.passes).toBeDefined();
           expect(error.report.classes).toBeDefined();
 
+          expect(typeof error.name).toBe('string');
+          expect(typeof error.report).toBe('object');
+          expect(typeof error.report.valid).toBe('boolean');
+          expect(typeof error.report.corrected).toBe('string');
+          expect(typeof error.report.missing_subjects).toBe('string');
+          expect(typeof error.report.mandatory).toBe('string');
+          expect(typeof error.report.req_conflict).toBe('string');
+          expect(typeof error.report.passes).toBe('string');
+          expect(typeof error.report.classes).toBe('string');
+
+          expect(error.report.valid).toBe(false);
+          expect(error.report).not.toBe({});
 
         }
+      });
+    });
+  });
+
+  describe('Testing getProgsByFaculty', () => {
+    beforeEach(() => {
+    });
+
+    it('- should test if the function is defined', () => {
+      expect(data.getProgsByFaculty).toBeDefined();
+    });
+
+    it('- should test if the function returns a Promise', () => {
+      expect(data.getProgsByFaculty('fac1').then()).toBeDefined();
+    });
+
+    it('- should test if programmes are returned in the Promise', () => {
+      spyOn(data, 'getProgsByFaculty').and.returnValue(Promise.resolve(mockData.faculty.fac1));
+
+      data.getProgsByFaculty('fac1').then((progs: any[]) => {
+        expect(progs).toBeDefined();
+        expect(progs.length).toBeGreaterThan(0);
+        expect(progs).toBe(mockData.faculty.fac1);
+      });
+    });
+
+    it('- should test if no programmes are returned for an invalid faculty name', () => {
+      spyOn(data, 'getProgsByFaculty').and.returnValue(Promise.resolve([]));
+      data.getProgsByFaculty('invalid_fac').then((progs: any[]) => {
+        expect(progs).toBeDefined();
+        expect(progs.length).toBe(0);
+      });
+    });
+  });
+
+  describe('Testing getAllProgs', () => {
+    beforeEach(() => {
+      spyOn(data, 'getAllProgs').and.returnValue(Promise.resolve(mockData.all));
+    });
+
+    it('should test if the function is defined', () => {
+      expect(data.getAllProgs).toBeDefined();
+    });
+
+    it('should test if all programmes are returned', () => {
+      data.getAllProgs().then((allProgs: any[]) => {
+        expect(allProgs).toBeDefined();
+        expect(allProgs.length).toBeGreaterThan(0);
       });
     });
   });

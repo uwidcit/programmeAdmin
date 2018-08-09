@@ -23,7 +23,7 @@ export class DataLayerService {
    * Gets the names of all the faculties
    * @return {Promise<Object>} A promise containing a string array of all the faculty names
    */
-  getFacultyNames(): Promise<Object> {
+  getFacultyNames(): Promise<Object> { //  testing finished
     const fac_names = sessionStorage.getItem('fac_names');
     if (fac_names === null) {
       console.log('Faculty names not cached. Polling server...');
@@ -41,7 +41,7 @@ export class DataLayerService {
    * then gets all programmes by that faculty.
    * @return {Promise<Object>} A promise containing all programme objects
    */
-  getAllProgs(): Promise<Object> {
+  getAllProgs(): Promise<Object> { // testing finished
     const allProgs = sessionStorage.getItem('all_progs');
     if (allProgs === null) {
       console.log('All Programmes not cached. Polling server...');
@@ -71,16 +71,16 @@ export class DataLayerService {
    * @param faculty - The abbreviation of a faculty name
    * @return {Promise<Object>} A promise containing all programme objects from a single faculty
    */
-  getProgsByFaculty(faculty: string): Promise<Object> {
+  getProgsByFaculty(faculty: string): Promise<Object> { // testing finished
     const programmes = sessionStorage.getItem(faculty + '_programmes');
     if (programmes === null) {
         console.log('Programmes from ' + faculty + ' not cached. Polling server...');
         return new Promise((resolve, reject) => {
-        this.http.get(environment.allProgsBy + faculty).subscribe((progs: any) => {
-          sessionStorage.setItem(faculty + '_programmes', JSON.stringify(progs));
-          resolve(progs);
-        }, (error: any) => { reject(error); });
-      });
+          this.http.get(environment.allProgsBy + faculty).subscribe((progs: any) => {
+            sessionStorage.setItem(faculty + '_programmes', JSON.stringify(progs));
+            resolve(progs);
+          }, (error: any) => { reject(error); });
+        });
     } else { return this.staticPromise(programmes); }
   }
 
@@ -123,7 +123,7 @@ export class DataLayerService {
    * Gets all erroneous programmes from the backend
    * @return {Promise<Object>} A promise containing a list of all programme errors
    */
-  getErrors(): Promise<Object> {
+  getErrors(): Promise<Object> { // testing finished
     const errors = sessionStorage.getItem('errors');
     if (errors === null) {
       console.log('Errors not cached. Polling server...');
