@@ -1,7 +1,7 @@
 import { MediaMatcher } from '@angular/cdk/layout';
 import {AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import { MenuItems } from '../../shared/menu-items/menu-items';
-import {Router, NavigationEnd} from '@angular/router';
+import {Router} from '@angular/router';
 import {AuthService} from '../../auth.service';
 
 /**
@@ -22,7 +22,7 @@ export class FullComponent implements OnDestroy, AfterViewInit, OnInit {
    * based on the current route. By default, these buttons should be hidden on the
    * login page and shown at all other times.
    * */
-  hidebtn: boolean;
+  showbtn: boolean;
   /**
    * This is a hex value represented as a string showing the faculty colour of the
    * administrator currently logged in. A top-level administrator will have the default
@@ -45,18 +45,16 @@ export class FullComponent implements OnDestroy, AfterViewInit, OnInit {
       public menuItems: MenuItems,
       public router: Router,
       private auth: AuthService) {
-    this.hidebtn = false;
+    this.showbtn = false;
     this.topBarColor = 'rgb(30,136,229)';
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
-    router.events.subscribe(val => {
-      if (val instanceof NavigationEnd) {
-        this.hidebtn = (val.url !== '/login');
-      }
-    });
     this.auth.data_incoming.subscribe(user => {
-      if (user !== undefined) { this.topBarColor = user.color; }
+      if (user !== undefined) {
+        this.showbtn = true;
+        this.topBarColor = user.color;
+      }
     });
   }
 
@@ -76,6 +74,7 @@ export class FullComponent implements OnDestroy, AfterViewInit, OnInit {
    * */
   signOut() {
     this.auth.signout();
+    this.showbtn = false;
     this.router.navigate(['/login']);
     this.topBarColor = 'rgb(30,136,229)';
   }

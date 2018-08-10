@@ -57,7 +57,6 @@ export class ViewComponent implements OnInit {
     this.programmes = []; // populated when user clicks on faculty name
     this.title = '';
     this.auth.data_incoming.subscribe(user => {
-      console.log(user);
       if (user !== undefined ) {
         this.top_level_view = user.view && (user.faculty === 'all_faculties');
         this.curr_color = user.color;
@@ -155,23 +154,21 @@ export class ViewComponent implements OnInit {
   ngOnInit() {
     if (this.top_level_view) {
       this.data.getFacultyNames().then(names => {
-        sessionStorage.setItem('fac_names', JSON.stringify(names));
-        this.faculties = Object.values(names);
-        this.faculties.unshift('All Programmes');
-      });
+          console.log(names);
+          this.faculties = Object.values(names);
+          this.faculties.unshift('All Programmes');
+      }).catch(error => { console.log(error); });
       this.data.getAllProgs().then((allProgs: any[]) => {
         this.programmes = allProgs;
         this.filtered = allProgs;
         this.pendingprogs = false;
-      });
+      }).catch(error => { console.log(error); });
     } else {
       this.data.getProgsByFaculty(environment.faculties[this.current_faculty]).then((names: any[]) => {
         this.pendingprogs = false;
         this.programmes = names;
         this.filtered = names;
-      }, (error: any) => {
-        console.log(error);
-      });
+      }).catch(error => { console.log(error); });
     }
   }
 }

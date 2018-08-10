@@ -29,8 +29,14 @@ export class DataLayerService {
       console.log('Faculty names not cached. Polling server...');
       return new Promise((reject, resolve) => {
         this.http.get(environment.facURL).subscribe((names: any) => {
-          sessionStorage.setItem('fac_names', JSON.stringify(fac_names));
+          if (names === undefined || names === null) {
+            reject('Faculty names unavailable at this time');
+          }
+          sessionStorage.setItem('fac_names', JSON.stringify(names));
           resolve(names);
+        }, (error) => {
+          console.log(error);
+          reject(error);
         });
       });
     } else { return this.staticPromise(fac_names); }

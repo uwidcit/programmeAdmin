@@ -13,7 +13,7 @@
         <!-- sidebar toggle -->
         <!-- ============================================================== -->
 
-        <button mat-icon-button (click)="snav.toggle()" *ngIf = "hidebtn" value="sidebarclosed">
+        <button mat-icon-button (click)="snav.toggle()" *ngIf = "showbtn" value="sidebarclosed">
             <mat-icon>menu</mat-icon>
         </button>
 
@@ -22,7 +22,7 @@
       <!-- This fills the remaining space of the current row -->
       <span style = "flex: 1 1 auto;"></span>
 
-      <button mat-raised-button colour = "warn" *ngIf = "hidebtn" (click) = "signOut(); snav.close();" style = "margin-right: 20px;">Sign out</button>
+      <button mat-raised-button colour = "warn" *ngIf = "showbtn" (click) = "signOut(); snav.close();" style = "margin-right: 20px;">Sign out</button>
 
       <img src="assets/images/logo.png" alt="No logo available" style = "height: inherit; margin-bottom: 5px;">
     </mat-toolbar>
