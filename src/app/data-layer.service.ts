@@ -23,20 +23,14 @@ export class DataLayerService {
    * Gets the names of all the faculties
    * @return {Promise<Object>} A promise containing a string array of all the faculty names
    */
-  getFacultyNames(): Promise<Object> { //  testing finished
+  getFacultyNames(): Promise<Object> {
     const fac_names = sessionStorage.getItem('fac_names');
     if (fac_names === null) {
       console.log('Faculty names not cached. Polling server...');
-      return new Promise((reject, resolve) => {
+      return new Promise((resolve, reject) => {
         this.http.get(environment.facURL).subscribe((names: any) => {
-          if (names === undefined || names === null) {
-            reject('Faculty names unavailable at this time');
-          }
           sessionStorage.setItem('fac_names', JSON.stringify(names));
           resolve(names);
-        }, (error) => {
-          console.log(error);
-          reject(error);
         });
       });
     } else { return this.staticPromise(fac_names); }
@@ -59,6 +53,11 @@ export class DataLayerService {
             .then(progs => {
               all = all.concat(progs);
               if (allFacs.indexOf(fac_name) === allFacs.length - 1) { // when end of array is reached inside of forEach
+                all = all.sort((a, b) => {
+                  if (a.name > b.name) { return 1; }
+                  if (a.name < b.name) { return -1; }
+                  return 0;
+                });
                 sessionStorage.setItem('all_progs', JSON.stringify(all));
                 resolve (all);
               }
@@ -83,6 +82,11 @@ export class DataLayerService {
         console.log('Programmes from ' + faculty + ' not cached. Polling server...');
         return new Promise((resolve, reject) => {
           this.http.get(environment.allProgsBy + faculty).subscribe((progs: any) => {
+            progs = progs.sort((a, b) => {
+              if (a.name > b.name) { return 1; }
+              if (a.name < b.name) { return -1; }
+              return 0;
+            });
             sessionStorage.setItem(faculty + '_programmes', JSON.stringify(progs));
             resolve(progs);
           }, (error: any) => { reject(error); });
@@ -118,6 +122,11 @@ export class DataLayerService {
       console.log('Subjects not caches. Polling server...');
       return new Promise((resolve, reject) => {
         this.http.get(environment.subjects).subscribe((subs: any) => {
+          subs = subs.sort((a, b) => {
+            if (a.name > b.name) { return 1; }
+            if (a.name < b.name) { return -1; }
+            return 0;
+          });
           sessionStorage.setItem('subjects', JSON.stringify(subs));
           resolve(subs);
         }, (error: any) => { reject(error); });
@@ -135,7 +144,6 @@ export class DataLayerService {
       console.log('Errors not cached. Polling server...');
       return new Promise((resolve, reject) => {
         this.http.get(environment.getErrors).subscribe((errs: any) => {
-          console.log(errs);
           sessionStorage.setItem('errors', JSON.stringify(errs));
           resolve(errs);
         }, (error: any) => { reject(error); });

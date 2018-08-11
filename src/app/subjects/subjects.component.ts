@@ -45,11 +45,6 @@ export class SubjectsComponent implements OnInit {
 
   ngOnInit() {
     this.data.getSubjects().then((subs: Subject[]) => {
-      subs = subs.sort((sub1, sub2) => { // sort objects alphabetically
-        if (sub1.name > sub2.name) { return 1;  }
-        if (sub1.name < sub2.name) { return -1; }
-        return 0;
-      });
       this.subjects = subs;
       this.filtered = subs;
     }).catch((error: any) => { console.log(error); });

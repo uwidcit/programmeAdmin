@@ -153,11 +153,11 @@ export class ViewComponent implements OnInit {
    * */
   ngOnInit() {
     if (this.top_level_view) {
-      this.data.getFacultyNames().then(names => {
+      this.data.getFacultyNames().then((names: Object) => {
           console.log(names);
           this.faculties = Object.values(names);
           this.faculties.unshift('All Programmes');
-      }).catch(error => { console.log(error); });
+      }).catch(error => console.log(error));
       this.data.getAllProgs().then((allProgs: any[]) => {
         this.programmes = allProgs;
         this.filtered = allProgs;

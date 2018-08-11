@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { StarterComponent } from './starter.component';
 import { StarterRoutes } from './starter.routing';
-import {FileUploadModule} from 'angular-file-uploader';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 import {SpinnerComponent} from '../shared/spinner.component';
@@ -18,7 +17,6 @@ import {MatButtonModule, MatProgressSpinnerModule} from '@angular/material';
   imports: [
     CommonModule,
     FlexLayoutModule,
-    FileUploadModule,
     MatButtonModule,
     MatBadgeModule,
     MatSelectModule,
