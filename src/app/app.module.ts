@@ -14,7 +14,6 @@ import { AppSidebarComponent } from './layouts/full/sidebar/sidebar.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { SharedModule } from './shared/shared.module';
-import { FileUploadModule } from 'angular-file-uploader';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { ErrorsComponent } from './errors/errors.component';
 import { AboutComponent } from './about/about.component';
@@ -48,7 +47,6 @@ import { SubjectsComponent } from './subjects/subjects.component';
     FlexLayoutModule,
     HttpClientModule,
     SharedModule,
-    FileUploadModule,
     ReactiveFormsModule,
     RouterModule.forRoot(AppRoutes),
   ],
