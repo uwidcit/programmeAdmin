@@ -12,12 +12,13 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatButtonModule, MatProgressSpinnerModule} from '@angular/material';
-import {FileUploadModule} from 'angular-file-uploader';
+import {AngularFileUploaderModule} from 'angular-file-uploader';
 
 @NgModule({
   imports: [
     CommonModule,
-    FileUploadModule,
+    AngularFileUploaderModule,
+    // FileUploadModule,
     FlexLayoutModule,
     MatButtonModule,
     MatBadgeModule,

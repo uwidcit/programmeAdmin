@@ -1,50 +1,21 @@
-<!-- ============================================================== -->
-<!-- Main wrapper - style you can find in pages.scss -->
-<!-- ============================================================== -->
 <div class="main-container">
-    <!-- ============================================================== -->
-    <!-- Topbar - style you can find in header.scss -->
-    <!-- ============================================================== -->
     <mat-toolbar [ngStyle]="{'background-color': topBarColor, 'color': 'white'}" class="topbar telative" style = "z-index: 0 !important;">
-        <!-- ============================================================== -->
-        <!-- Logo - style you can find in header.scss -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- sidebar toggle -->
-        <!-- ============================================================== -->
-
         <button mat-icon-button (click)="snav.toggle()" *ngIf = "showbtn" value="sidebarclosed">
             <mat-icon>menu</mat-icon>
         </button>
-
         <span id = "globTitle">Programme Admin Dashboard</span>
-
-      <!-- This fills the remaining space of the current row -->
       <span style = "flex: 1 1 auto;"></span>
-
       <button mat-raised-button colour = "warn" *ngIf = "showbtn" (click) = "signOut(); snav.close();" style = "margin-right: 20px;">Sign out</button>
-
       <img src="assets/images/logo.png" alt="No logo available" style = "height: inherit; margin-bottom: 5px;">
     </mat-toolbar>
-    <!-- ============================================================== -->
-    <!-- End Topbar - style you can find in pages.scss -->
-    <!-- ============================================================== -->
     <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
-        <!-- ============================================================== -->
-        <!-- Sidebar - style you can find in sidebar.scss -->
-        <!-- ============================================================== -->
         <mat-sidenav style = "text-align: center;" #snav id="snav" class="dark-sidebar pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0" [opened]= false [disableClose]="mobileQuery.matches"  >
                 <app-sidebar (click) = "snav.close()"></app-sidebar>
         </mat-sidenav>
-
         <mat-sidenav-content class="page-wrapper">
-
                 <div class="page-content">
-
                         <router-outlet><app-spinner></app-spinner></router-outlet>
-
                 </div>
-
         </mat-sidenav-content>
       <ng-template #loadingSpinner>
         <mat-spinner></mat-spinner>

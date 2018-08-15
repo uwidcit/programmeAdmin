@@ -43,6 +43,7 @@ export class ErrorsComponent implements OnInit {
    * */
   ngOnInit() {
     this.data.getErrors().then((progs: any) => {
+      console.log(progs);
       this.errors = progs;
       this.pendingRequest = false;
     }).catch((error: any) => { console.log(error); });

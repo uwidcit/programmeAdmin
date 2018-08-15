@@ -1,19 +1,7 @@
-// Protractor configuration file, see link for more information
-// https://github.com/angular/protractor/blob/master/lib/config.ts
-
 const { SpecReporter } = require('jasmine-spec-reporter');
-const config = require('./protractor.conf').config;
-
-config.capabilities = {
-  browserName: 'chrome',
-  chromeOptions: {
-    args: ['--no-sandbox']
-  }
-};
-exports.config = config;
 
 exports.config = {
-  allScriptsTimeout: 11000,
+  allScriptsTimeout: 20000,
   specs: [
     './e2e/**/*.e2e-spec.ts'
   ],
@@ -21,11 +9,12 @@ exports.config = {
     'browserName': 'chrome'
   },
   directConnect: true,
+  // SELENIUM_PROMISE_MANAGER: false,
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
-    defaultTimeoutInterval: 30000,
+    defaultTimeoutInterval: 20000,
     print: function() {}
   },
   onPrepare() {

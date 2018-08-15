@@ -22,7 +22,7 @@
         <tr *ngFor = "let error of errors">
           <td>{{error.name}}</td>
 
-          <td class = "alert alert-danger" *ngIf = "error.corrected !== undefined; else spellingPass">{{error.corrected}}</td>
+          <td class = "alert alert-danger" *ngIf = "error.corrected !== undefined && error.corrected !== ''; else spellingPass">{{error.corrected}}</td>
           <ng-template #spellingPass><td class = "alert alert-success">No changes made</td></ng-template>
 
           <td class = "alert alert-danger"  *ngIf = "error.report.missing_subjects.length !== 0; else noMissingSubs">{{error.report.missing_subjects}}</td>
