@@ -14,6 +14,7 @@ describe('LoginComponent', () => {
   let emailControl;
   let pwordControl;
   let spy: any;
+  let authState: boolean;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -43,6 +44,7 @@ describe('LoginComponent', () => {
     component = fixture.componentInstance;
     emailControl = component.form.controls['email'];
     pwordControl = component.form.controls['pword'];
+    authState = false;
     fixture.detectChanges();
   });
 
@@ -114,5 +116,7 @@ describe('LoginComponent', () => {
     spy = spyOn(component, 'login').and.returnValue(undefined);
     fixture.debugElement.query(By.css('#submitBtn')).nativeElement.click();
     expect(component.login).toHaveBeenCalled();
+    authState = component.form.valid;
+    expect(authState).toBeTruthy();
   });
 });

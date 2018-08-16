@@ -18,7 +18,6 @@ import {AngularFileUploaderModule} from 'angular-file-uploader';
   imports: [
     CommonModule,
     AngularFileUploaderModule,
-    // FileUploadModule,
     FlexLayoutModule,
     MatButtonModule,
     MatBadgeModule,

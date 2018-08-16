@@ -15,7 +15,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {ViewComponent} from './view.component';
 import {Router} from '@angular/router';
-// import {By} from '@angular/platform-browser';
+const programmes = require('../mock/data.service.json');
 
 describe('ViewComponent', () => {
   let component: ViewComponent;
@@ -55,6 +55,8 @@ describe('ViewComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewComponent);
     component = fixture.componentInstance;
+    component.programmes = programmes.all;
+    component.filtered = programmes.all;
     fixture.detectChanges();
   });
 
@@ -71,20 +73,9 @@ describe('ViewComponent', () => {
     expect(component.noCombos).toBe(false);
   });
 
-  // it('should display information on the right side of the screen when a programme name is clicked', () => {
-  //   component.ngOnInit();
-  //   setTimeout(() => {
-  //     spy = spyOn(component, 'getProgInfo');
-  //     const spy2 = spyOn(component, 'resetState');
-  //     fixture.detectChanges();
-  //     let items = fixture.debugElement.query(By.css('.mat-list-item'));
-  //     console.log(items);
-  //     expect(items.children.length).toBeGreaterThan(0);
-  //
-  //     items.children[0].nativeElement.click();
-  //     expect(component.progClicked).toBe(true);
-  //     expect(component.getProgInfo).toHaveBeenCalled();
-  //     expect(component.resetState).toHaveBeenCalled();
-  //   }, 5000);
-  // });
+  it('should filter the list of programmes by name', () => {
+    expect(component.programmes.filter((element) => element.name.includes('')).length).toBe(3);
+    expect(component.programmes.filter((element) => element.name.includes('Physics')).length).toBe(1);
+    expect(component.programmes.filter((element) => element.name.includes('DENTAL')).length).toBe(0);
+  });
 });

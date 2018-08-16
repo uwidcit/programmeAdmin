@@ -1,6 +1,22 @@
 {
-  "name": "material",
-  "version": "0.0.0",
+  "name": "uwi-programme-admin-dashboard",
+  "version": "1.0.0",
+  "description": "Allows a UWI adminstrator to view and update programme requirements for public viewing",
+  "contributors": [
+    {
+      "name": "Nicholas Mendez",
+      "email": "snickdx@gmail.com"
+    },
+    {
+      "name": "Qarun Qadir Bissoondial",
+      "email": "qarun80@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uwidcit/programmeAdmin"
+  },
+  "homepage": "https://github.com/uwidcit/programmeAdmin#readme",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -50,10 +66,10 @@
     "@types/jquery": "^3.2.5",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.4.3",
-    "firebase-tools": "^4.0.3",
+    "firebase-tools": "^4.1.1",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
-    "karma": "^2.0.5",
+    "karma": "^3.0.0",
     "karma-chrome-launcher": "~2.1.1",
     "karma-cli": "~1.0.1",
     "karma-coverage-istanbul-reporter": "^1.2.1",

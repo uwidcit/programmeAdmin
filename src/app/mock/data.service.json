@@ -1,4 +1,44 @@
 {
+  "good_subjects": [
+    { "name": "Sub 1 (CSEC)", "level": "CSEC" },
+    { "name": "Sub 2 (CAPE)", "level": "CAPE" },
+    { "name": "Sub 3 (CSEC)", "level": "CSEC" },
+    { "name": "Sub 4 (CAPE)", "level": "CAPE" },
+    { "name": "Sub 5 (CSEC)", "level": "CSEC" },
+    { "name": "Sub 6 (CAPE)", "level": "CAPE" },
+    { "name": "Sub 7 (CSEC)", "level": "CSEC" },
+    { "name": "Sub 8 (CAPE)", "level": "CAPE" },
+    { "name": "Sub 9 (CSEC)", "level": "CSEC" },
+    { "name": "Sub 10 (CAPE)", "level": "CAPE" }
+  ],
+  "bad_subjects": [
+    { "name": "Sub 1 (CSEC)", "level": "CAPE" },
+    { "name": "Sub 2 (CAPE)", "level": "CSEC" },
+    { "name": "Sub 3 (CSE)", "level": "CSEC" },
+    { "name": "Sub 4 (CAP)", "level": "CAPE" },
+    { "name": "Sub 5 (CSEC)", "level": "CSE" },
+    { "name": "Sub 6 (CAPE)", "level": "CAP" },
+    { "name": "Sub 7", "level": "CSEC" },
+    { "name": "Sub 8", "level": "CAPE" },
+    { "sub_name": "Sub 9 (CSEC)", "level": "CSEC" },
+    { "name": "Sub 10 (CAPE)", "sub_level": "CAPE" },
+    { "level": "CAPE" },
+    { "name": "Sub 10 (CAPE)"}
+  ],
+  "csec_subs": [
+    { "name": "Sub 1 (CSEC)", "level": "CSEC" },
+    { "name": "Sub 3 (CSEC)", "level": "CSEC" },
+    { "name": "Sub 5 (CSEC)", "level": "CSEC" },
+    { "name": "Sub 7 (CSEC)", "level": "CSEC" },
+    { "name": "Sub 9 (CSEC)", "level": "CSEC" }
+  ],
+  "cape_subs": [
+    { "name": "Sub 2 (CAPE)", "level": "CAPE" },
+    { "name": "Sub 4 (CAPE)", "level": "CAPE" },
+    { "name": "Sub 6 (CAPE)", "level": "CAPE" },
+    { "name": "Sub 8 (CAPE)", "level": "CAPE" },
+    { "name": "Sub 10 (CAPE)", "level": "CAPE" }
+  ],
   "facNames": {
     "faculty abbr": "faculty full name",
     "fac": "faculty",
