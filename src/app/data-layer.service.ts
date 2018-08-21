@@ -29,8 +29,25 @@ export class DataLayerService {
       console.log('Faculty names not cached. Polling server...');
       return new Promise((resolve, reject) => {
         this.http.get(environment.facURL).subscribe((names: any) => {
-          sessionStorage.setItem('fac_names', JSON.stringify(names));
-          resolve(names);
+
+          if (names === null || names === undefined) { reject('Returned data was null or undefined'); }
+          if (typeof names !== 'object') {
+            reject('Returned data was not an object');
+          } else {
+            Object.keys(names).forEach(key => {
+              if (typeof key  !== 'string') { return reject(key + ' is not a string'); }
+              if (typeof names[key] !== 'string') { return reject(names[key] + ' is not a string'); }
+              if (!/^[a-zA-z]+$/.test(key)) { return reject(key + ' should only contain letters'); }
+              if (!/^[a-zA-Z0-9_]+( [a-zA-Z0-9_&]+)*$/.test(names[key])) {
+                return reject(names[key] + ' should only contain letters');
+              }
+            });
+            sessionStorage.setItem('fac_names', JSON.stringify(names));
+            resolve(names);
+          }
+        }, (error) => {
+          console.log(error);
+          reject('Something is wrong with either your connection or our servers');
         });
       });
     } else { return this.staticPromise(fac_names); }
@@ -82,6 +99,40 @@ export class DataLayerService {
         console.log('Programmes from ' + faculty + ' not cached. Polling server...');
         return new Promise((resolve, reject) => {
           this.http.get(environment.allProgsBy + faculty).subscribe((progs: any) => {
+
+            if (progs === undefined || progs === null) {
+              console.log('Undefined or null data returned from the server');
+              reject('Received badly formatted data');
+            }
+            if (!(progs instanceof Array)) {
+              console.log('Returned data was not an array');
+              reject('Received no data from the server');
+            }
+
+            progs.forEach(prog => {
+              if (typeof prog !== 'object') {
+                console.log('Some data inside of the array is not an object');
+                reject('Contents of returned data is badly formatted');
+              }
+
+              const keys = [
+                'id', 'name', 'description', 'type',
+                'faculty', 'department', 'url',
+                'part_time', 'full_time', 'evening',
+                'campus', 'requirements', 'possible_careers'
+              ];
+              Object.keys(prog).forEach(key => {
+                if (!keys.includes(key)) {
+                  console.log(key + ' was not included in ' + prog);
+                  reject('Important parts of the data are missing!');
+                }
+                if (prog[key] === undefined) {
+                  console.log('Value of ' + key + ' is undefined');
+                  reject('Important parts of the data are empty');
+                }
+              });
+            });
+
             progs = progs.sort((a, b) => {
               if (a.name > b.name) { return 1; }
               if (a.name < b.name) { return -1; }
@@ -104,6 +155,31 @@ export class DataLayerService {
       console.log('Faculty numbers not caches. Polling server...');
       return new Promise((resolve, reject) => {
         this.http.get(environment.facStats).subscribe((stats: any) => {
+
+          if (stats === null || stats === undefined) {
+            console.log('Undefined or null data returned from the server');
+            reject('Received no data from the server');
+          }
+          if (typeof stats !== 'object') {
+            console.log('Returned data was not an array');
+            reject('Received badly formated data');
+          }
+
+          Object.keys(stats).forEach(stat => {
+            if (typeof stat !== 'string') {
+              console.log(stat + ' should be a string');
+              reject('Faculty data from server is badly formatted');
+            }
+            if (!/^[a-zA-Z0-9_]+( [a-zA-Z0-9_&]+)*$/.test(stat)) {
+              console.log(stat + ' should only contain letters');
+              reject('Faculty data from server is badly formatted');
+            }
+            if (typeof stats[stat] !== 'number') {
+              console.log('Faculty data from server is badly formatted');
+              reject(stats[stat] + ' should be a number');
+            }
+          });
+
           sessionStorage.setItem('fac_stats', JSON.stringify(stats));
           resolve(stats);
         }, (error) => { reject(error); });
@@ -122,13 +198,29 @@ export class DataLayerService {
       console.log('Subjects not caches. Polling server...');
       return new Promise((resolve, reject) => {
         this.http.get(environment.subjects).subscribe((subs: any) => {
-          subs = subs.sort((a, b) => {
+
+          if (subs === null || subs === undefined) {
+            reject('Undefined or null value was returned');
+          }
+          if (!(subs instanceof Array)) {
+            reject('An Array was not returned when it was expected');
+          }
+
+          subs.forEach(sub => {
+            if (sub === undefined || sub === null) { reject('Array contains undefined data'); }
+            if (typeof sub !== 'object') { reject('Array does not contain only Objects'); }
+            if (sub.name === undefined || null) { reject('Subject name is undefined or null'); }
+            if (sub.level === undefined || null) { reject('Subject level is undefined or null'); }
+            if (typeof sub.name !== 'string') { reject('Subject name is not a string'); }
+            if (typeof sub.level !== 'string') { reject('Subject level is not a string'); }
+            if (!sub.name.includes(sub.level)) { reject('Subject level should be after the subject name in brackets'); }
+          });
+          sessionStorage.setItem('subjects', JSON.stringify(subs));
+          resolve(subs.sort((a, b) => {
             if (a.name > b.name) { return 1; }
             if (a.name < b.name) { return -1; }
             return 0;
-          });
-          sessionStorage.setItem('subjects', JSON.stringify(subs));
-          resolve(subs);
+          }));
         }, (error: any) => { reject(error); });
       });
     } else { return this.staticPromise(subjects); }
@@ -144,6 +236,21 @@ export class DataLayerService {
       console.log('Errors not cached. Polling server...');
       return new Promise((resolve, reject) => {
         this.http.get(environment.getErrors).subscribe((errs: any) => {
+
+          if (errs === null || errs === undefined) { reject('Returned data was null or undefined'); }
+          if (!(errs instanceof Array)) { reject('Returned data should be an array'); }
+
+          errs.forEach(error => {
+            if (typeof error !== 'object') { reject('Data in array is not an Object'); }
+            if (error.report === undefined) { reject('Report field is missing from the error Object'); }
+            Object.keys(error).forEach(key => {
+              if (error[key] === undefined) { reject('A field was undefined'); }
+              Object.keys(error['report']).forEach(err_field => {
+                if (err_field !== 'valid' && typeof error['report'][err_field] !== 'string') { reject('Value of ' + err_field + ' should be a string'); }
+              });
+            });
+          });
+
           sessionStorage.setItem('errors', JSON.stringify(errs));
           resolve(errs);
         }, (error: any) => { reject(error); });

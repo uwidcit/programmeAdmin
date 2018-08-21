@@ -16,7 +16,7 @@ mat-radio-button { margin: 30px; }
 table { text-align: center; }
 tbody {
   display: block;
-  height: 43vh;
+  height: 53vh;
   overflow:auto;
 }
 thead, tbody tr {

@@ -1,6 +1,5 @@
 import { MediaMatcher } from '@angular/cdk/layout';
 import {AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
-import { MenuItems } from '../../shared/menu-items/menu-items';
 import {Router} from '@angular/router';
 import {AuthService} from '../../auth.service';
 
@@ -42,7 +41,6 @@ export class FullComponent implements OnDestroy, AfterViewInit, OnInit {
   constructor(
       changeDetectorRef: ChangeDetectorRef,
       media: MediaMatcher,
-      public menuItems: MenuItems,
       public router: Router,
       private auth: AuthService) {
     this.showbtn = false;

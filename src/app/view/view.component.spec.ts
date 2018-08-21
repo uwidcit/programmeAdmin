@@ -15,12 +15,16 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {ViewComponent} from './view.component';
 import {Router} from '@angular/router';
-const programmes = require('../mock/data.service.json');
+import {By} from '@angular/platform-browser';
 
 describe('ViewComponent', () => {
   let component: ViewComponent;
   let fixture: ComponentFixture<ViewComponent>;
   // let spy: any;
+
+  const queryElement = (selector: string) => {
+    return fixture.debugElement.query(By.css(selector));
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -55,8 +59,6 @@ describe('ViewComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewComponent);
     component = fixture.componentInstance;
-    component.programmes = programmes.all;
-    component.filtered = programmes.all;
     fixture.detectChanges();
   });
 
@@ -64,18 +66,20 @@ describe('ViewComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should be waiting for a request on startup', () => {
+  it('- should have basic DOM defined', () => {
+    expect(queryElement('mat-toolbar')).not.toBe(null);
+    expect(queryElement('#search')).not.toBe(null);
+    expect(queryElement('.col-md-4')).toBe(null);
+    expect(queryElement('.col-md-8')).toBe(null);
+    expect(queryElement('mat-select')).toBe(null);
+  });
+
+  it('should be waiting for data on startup', () => {
     expect(component.pendingprogs).toBe(true);
   });
 
   it('should have no programmes that was clicked on start up', () => {
     expect(component.progClicked).toBe(false);
     expect(component.noCombos).toBe(false);
-  });
-
-  it('should filter the list of programmes by name', () => {
-    expect(component.programmes.filter((element) => element.name.includes('')).length).toBe(3);
-    expect(component.programmes.filter((element) => element.name.includes('Physics')).length).toBe(1);
-    expect(component.programmes.filter((element) => element.name.includes('DENTAL')).length).toBe(0);
   });
 });

@@ -34,7 +34,7 @@ mat-row {
 .table thead th,td { vertical-align: middle; }
 tbody {
   display:block;
-  height:400px;
+  height: 53vh;
   overflow:auto;
 }
 thead, tbody tr {

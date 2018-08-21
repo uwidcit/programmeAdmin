@@ -96,7 +96,7 @@ export class StarterComponent implements OnInit, AfterViewInit {
    * Opens up an Angular Material Dialog box and launches the Errors Component
    * */
   openDialog(): void {
-    this.dialog.open(ErrorsComponent, { width: '80%%' });
+    this.dialog.open(ErrorsComponent, { width: '80%%', height: '80%'});
   }
 
   /**
@@ -127,6 +127,7 @@ export class StarterComponent implements OnInit, AfterViewInit {
 
       this.pendingRequest = false;
     }).catch((error: any) => {
+      console.log(error);
       this.snackBar.open(error.message, 'Close', { duration: 3000 });
       console.log(error);
     });
