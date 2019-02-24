@@ -6,12 +6,13 @@
       the subject and will throw an error</strong>
     </p>
 
-    <mat-card-content id = "filters">
-      <mat-form-field class="example-full-width">
+    <mat-card-content id = "filters" >
+      <mat-form-field style = "width: 60%">
         <input #searchbar id = "searchbar" (keyup) = "subjectFilter(clickedSub)" matInput placeholder="Search for a subject" >
       </mat-form-field>
+      <br>
       <span>Filters: </span>
-      <mat-radio-group [(ngModel)] = "clickedSub">
+      <mat-radio-group [(ngModel)] = "clickedSub" ngDefaultControl>
         <mat-radio-button (click) = "subjectFilter(value)" *ngFor = "let value of radios" [value] = value>{{value}}</mat-radio-button>
       </mat-radio-group>
     </mat-card-content>

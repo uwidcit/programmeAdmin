@@ -1,6 +1,7 @@
 import { Component, AfterViewInit} from '@angular/core';
 import {DataLayerService} from '../data-layer.service';
-import {MatDialog, MatSnackBar} from '@angular/material';
+import {MatDialog} from '@angular/material/dialog';
+import {MatSnackBar} from '@angular/material/snack-bar';
 import {ErrorsComponent} from '../errors/errors.component';
 import {OnInit} from '@angular/core';
 import {AuthService} from '../auth.service';

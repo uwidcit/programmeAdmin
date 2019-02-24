@@ -7,10 +7,6 @@
 }
 #subject-area h2 { padding-top: 20px; }
 #subject-area mat-card {width: 80%;}
-#filters {
-  padding-left: 20%;
-  padding-right: 20%;
-}
 mat-radio-button { margin: 30px; }
 
 table { text-align: center; }
@@ -23,10 +19,6 @@ thead, tbody tr {
   display:table;
   width:100%;
   table-layout:fixed;
-}
-mat-card-content {
-  padding: 0 20% !important;
-  margin: 0 !important;
 }
 
 #tableContent {

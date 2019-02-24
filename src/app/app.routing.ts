@@ -14,10 +14,8 @@ export const AppRoutes: Routes = [{
     path: '',
     redirectTo: '/login',
     pathMatch: 'full'
-  }, {
-    path: '',
-    loadChildren: './material-component/material.module#MaterialComponentsModule'
-  }, {
+  },
+  {
     path: 'home',
     loadChildren: './starter/starter.module#StarterModule',
     canActivate: [AuthGuard]

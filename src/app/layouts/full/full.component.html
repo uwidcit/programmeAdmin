@@ -1,12 +1,15 @@
 <div class="main-container">
-    <mat-toolbar [ngStyle]="{'background-color': topBarColor, 'color': 'white'}" class="topbar telative" style = "z-index: 0 !important;">
+    <mat-toolbar
+      [ngStyle]="{'background-color': topBarColor, 'color': 'white'}"
+      class="topbar telative"
+      style = "z-index: 0 !important; display: flex; align-items: center;">
         <button mat-icon-button (click)="snav.toggle()" *ngIf = "showbtn" value="sidebarclosed">
             <mat-icon>menu</mat-icon>
         </button>
         <span id = "globTitle">Programme Admin Dashboard</span>
       <span style = "flex: 1 1 auto;"></span>
-      <button mat-raised-button colour = "warn" *ngIf = "showbtn" (click) = "signOut(); snav.close();" style = "margin-right: 20px;">Sign out</button>
-      <img src="assets/images/logo.png" alt="No logo available" style = "height: inherit; margin-bottom: 5px;">
+      <button mat-raised-button color = "warn" *ngIf = "showbtn" (click) = "signOut(); snav.close();" style = "margin-right: 20px;">Sign out</button>
+      <img src="assets/images/logo.png" alt="No logo available" style = "height: 65px; margin-bottom: 5px;">
     </mat-toolbar>
     <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
         <mat-sidenav style = "text-align: center;" #snav id="snav" class="dark-sidebar pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0" [opened]= false [disableClose]="mobileQuery.matches"  >

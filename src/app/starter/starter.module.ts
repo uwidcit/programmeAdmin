@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { StarterComponent } from './starter.component';
 import { StarterRoutes } from './starter.routing';
 import {MatBadgeModule} from '@angular/material/badge';
@@ -11,14 +10,14 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
-import {MatButtonModule, MatProgressSpinnerModule} from '@angular/material';
+import {MatButtonModule} from '@angular/material/button';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {AngularFileUploaderModule} from 'angular-file-uploader';
 
 @NgModule({
   imports: [
     CommonModule,
     AngularFileUploaderModule,
-    FlexLayoutModule,
     MatButtonModule,
     MatBadgeModule,
     MatSelectModule,
