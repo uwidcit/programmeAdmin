@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataLayerService} from '../data-layer.service';
 import {HttpClient} from '@angular/common/http';
+import {environment} from '../../environments/environment.prod';
 
 /**
  * This class is responsible for displaying a list of erroneous programmes inside a dialog box.

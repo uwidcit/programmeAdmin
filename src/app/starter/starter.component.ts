@@ -4,6 +4,7 @@ import {MatDialog, MatSnackBar} from '@angular/material';
 import {ErrorsComponent} from '../errors/errors.component';
 import {OnInit} from '@angular/core';
 import {AuthService} from '../auth.service';
+import { environment } from '../../environments/environment';
 
 /**
  * This component shows the home page directly after a user has logged in
@@ -57,7 +58,7 @@ export class StarterComponent implements OnInit, AfterViewInit {
     formatsAllowed: '.xlsx', // only allow excel format
     maxSize: '10', // 10MB
     uploadAPI:  {
-      url: 'https://snickdx.me:3004/upload' // POST request endpoint
+      url: environment.upload // POST request endpoint
     },
     theme: 'dragNDrop',
     hideProgressBar: false,

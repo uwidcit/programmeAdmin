@@ -44,7 +44,7 @@
   <ng-template #noErrors>No errors found in uploaded file.</ng-template>
   </div>
   <div mat-dialog-actions id = "buttons">
-     <button mat-raised-button color="primary"><a href="https://snickdx.me/engine/out/errors.csv">Download errors</a></button>
+     <button mat-raised-button color="primary"><a href="{{environment.errors}}">Download errors</a></button>
     <button mat-raised-button color="primary" [mat-dialog-close] >Close</button>
   </div>
 
