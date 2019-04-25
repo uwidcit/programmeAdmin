@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
-import {environment} from 'environments/environment';
+import {environment} from '../environments/environment';
 
 export interface Admin {
   uid: string;

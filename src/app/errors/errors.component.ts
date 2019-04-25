@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataLayerService} from '../data-layer.service';
 import {HttpClient} from '@angular/common/http';
-import {environment} from '../../environments/environment.prod';
+import {environment} from '../../environments/environment';
 
 /**
  * This class is responsible for displaying a list of erroneous programmes inside a dialog box.
@@ -29,6 +29,7 @@ export class ErrorsComponent implements OnInit {
    * This will hold all the erroneous data to be displayed on the screen
    * */
   errors: any[];
+  environment = environment;
 
   /**
    * Initializes pendingRequest to true. This activates the progress spinner in the html until
