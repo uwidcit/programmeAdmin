@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ErrorsComponent } from './errors.component';
-import {MatSpinner, MatDialogModule} from '@angular/material';
+import {MatSpinner, MatDialogModule, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {HttpClient, HttpHandler} from '@angular/common/http';
 import {Mockdata} from '../mock/mock-data';
 import {By} from '@angular/platform-browser';
@@ -19,7 +19,9 @@ describe('ErrorsComponent', () => {
       imports: [
         MatDialogModule
       ],
-      providers: [HttpClient, HttpHandler]
+      providers: [HttpClient, HttpHandler,
+        { provide: MAT_DIALOG_DATA, useValue: {}},
+        { provide: MatDialogRef, useValue: ErrorsComponent }]
     })
     .compileComponents();
   }));

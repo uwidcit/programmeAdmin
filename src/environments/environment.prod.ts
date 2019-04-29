@@ -25,7 +25,7 @@ export const environment = {
     'Medical Sciences': 'fms',
     'Law': 'law',
     'Science & Technology': 'fst',
-    'Sport': 'fos'
+    'Sport': 'fsp'
   },
   facColour: {
     'Social Sciences': '#F36E21',
