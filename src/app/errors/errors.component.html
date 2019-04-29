@@ -4,7 +4,7 @@
 </div>
 
 <div *ngIf = "!pendingRequest" id = "errorInfo" class = "text-center">
-  <h1 mat-dialog-title>Errors and Corrections</h1>
+  <h1 mat-dialog-title>Errors and Corrections Upload {{data}}</h1>
   <div>
     <table *ngIf = "errors !== null; else noErrors" class = "table text-center">
       <thead>
@@ -44,7 +44,6 @@
   <ng-template #noErrors>No errors found in uploaded file.</ng-template>
   </div>
   <div mat-dialog-actions id = "buttons">
-     <button mat-raised-button color="primary"><a href="{{environment.downloadErrors}}">Download errors</a></button>
     <button mat-raised-button color="primary" [mat-dialog-close] >Close</button>
   </div>
 

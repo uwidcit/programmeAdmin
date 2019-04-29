@@ -1,0 +1,28 @@
+#title {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+button { display: inline;}
+
+.outer {
+  text-align: center;
+  display: inline-block;
+  padding: 10px !important;
+  width: 100%;
+}
+
+
+i {font-size: 75px; }
+table { text-align: center;}
+hr { border-top: 1px solid black; }
+
+
+
+#spinner { text-align: center; }
+#spinner mat-spinner { display: inline-block; }
+
+#totals td { font-weight: 500; }
+
+.line-break { width: 100%; }
+

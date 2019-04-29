@@ -24,6 +24,8 @@ import {AuthService} from './auth.service';
 import {MatDialogModule, MatInputModule} from '@angular/material';
 import {DemoMaterialModule} from './demo-material-module';
 import { SubjectsComponent } from './subjects/subjects.component';
+import { UploadComponent } from './upload/upload.component';
+import {AngularFileUploaderModule} from 'angular-file-uploader';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { SubjectsComponent } from './subjects/subjects.component';
     AboutComponent,
     LoginComponent,
     SubjectsComponent,
+    UploadComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,7 @@ import { SubjectsComponent } from './subjects/subjects.component';
     SharedModule,
     ReactiveFormsModule,
     RouterModule.forRoot(AppRoutes),
+    AngularFileUploaderModule,
   ],
   providers: [
   {
@@ -58,7 +62,7 @@ import { SubjectsComponent } from './subjects/subjects.component';
     AuthGuard,
     AuthService
   ],
-  entryComponents: [ErrorsComponent],
+  entryComponents: [ErrorsComponent, UploadComponent],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

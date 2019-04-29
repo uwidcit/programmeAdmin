@@ -14,7 +14,7 @@ export const environment = {
   facStats: 'https://nmendez.app:8080/sta/stats', // returns an object containing each faculty and the number of programmes offered in each
   subjects: 'https://nmendez.app:8080/subjects', // returns a list fo all CSEC and CAPE subjects stored in database
   testJSON: '../assets/mock-data/test.json',
-  getErrors: 'https://nmendez.app:8080/errors', //  returns a JSON array of all subjects failing validation after parsing
+  getErrors: 'https://nmendez.app:8080/files/errors/', //  returns a JSON array of all subjects failing validation after parsing
   downloadErrors: 'https://nmendez.app:8080/files/errors/errors.csv',
   upload: 'https://nmendez.app:8080/upload', // URL to upload excel file to
   faculties: {

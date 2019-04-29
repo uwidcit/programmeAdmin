@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import {DataLayerService} from '../data-layer.service';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
+import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 /**
  * This class is responsible for displaying a list of erroneous programmes inside a dialog box.
@@ -36,7 +37,8 @@ export class ErrorsComponent implements OnInit {
    * the get request is completed
    * @param data - This is the service that makes the get request
    * */
-  constructor(private data: DataLayerService) {
+  constructor(private dataService: DataLayerService, public dialogRef: MatDialogRef<ErrorsComponent>,
+              @Inject(MAT_DIALOG_DATA) public data) {
     this.pendingRequest = true;
   }
 
@@ -44,7 +46,7 @@ export class ErrorsComponent implements OnInit {
    * Immediately retrieves all errors from the database to be displayed on the screen
    * */
   ngOnInit() {
-    this.data.getErrors().then((progs: any) => {
+    this.dataService.getErrors(this.data).then((progs: any) => {
       console.log(progs);
       this.errors = progs;
       this.pendingRequest = false;

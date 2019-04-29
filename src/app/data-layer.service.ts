@@ -230,12 +230,12 @@ export class DataLayerService {
    * Gets all erroneous programmes from the backend
    * @return {Promise<Object>} A promise containing a list of all programme errors
    */
-  getErrors(): Promise<Object> { // testing finished
+  getErrors(id): Promise<Object> { // testing finished
     const errors = sessionStorage.getItem('errors');
     if (errors === null) {
       console.log('Errors not cached. Polling server...');
       return new Promise((resolve, reject) => {
-        this.http.get(environment.getErrors).subscribe((errs: any) => {
+        this.http.get(environment.getErrors+id+'.json').subscribe((errs: any) => {
 
           if (errs === null || errs === undefined) { reject('Returned data was null or undefined'); }
           if (!(errs instanceof Array)) { reject('Returned data should be an array'); }
@@ -269,5 +269,17 @@ export class DataLayerService {
       if (fixedData === undefined || fixedData === null) { reject('Null or undefined data found...'); }
       resolve(JSON.parse(fixedData));
     });
+  }
+
+  getUploads() {
+    return this.http.get(environment.host+'/uploads');
+  }
+
+  deleteUpload(id: any) {
+    return this.http.delete(environment.host+'/uploads/'+id);
+  }
+
+  activateUpload(id: any) {
+    return this.http.get(environment.host+'/sync/'+id);
   }
 }

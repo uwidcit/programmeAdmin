@@ -5,6 +5,7 @@ import {ErrorsComponent} from '../errors/errors.component';
 import {OnInit} from '@angular/core';
 import {AuthService} from '../auth.service';
 import { environment } from '../../environments/environment';
+import {UploadComponent} from '../upload/upload.component';
 
 /**
  * This component shows the home page directly after a user has logged in
@@ -48,29 +49,18 @@ export class StarterComponent implements OnInit, AfterViewInit {
    * This is the faculty colour of the currently logged in administrator.
    * */
   bg_color: string;
-
-  /**
-   * A config Object to set up the upload functionality. This is according
-   * to the documentation given by {@link https://github.com/kzrfaisal/angular-file-uploader Angular-File-Uploader}.
-   * */
-  //AFU config uploads form data with the key 'file'
-  afuConfig = {
-    multiple: false, // only one file upload at a time
-    formatsAllowed: '.xlsx', // only allow excel format
-    maxSize: '10', // 10MB
-    uploadAPI:  {
-      url: environment.upload // POST request endpoint
-    },
-    theme: 'dragNDrop',
-    hideProgressBar: false,
-    hideResetBtn: false,
-    hideSelectBtn: false
-  };
-
   /**
    * Determines whether or not the upload area and the errors button should be shown
    * */
   admin_view: boolean;
+
+  uploads:any = [];
+
+  active = null;
+
+  environment = environment;
+
+  activateLoading = false;
 
   /**
    * Creating a new paragraph tag to integrate into the angular file uploader html
@@ -97,9 +87,48 @@ export class StarterComponent implements OnInit, AfterViewInit {
   /**
    * Opens up an Angular Material Dialog box and launches the Errors Component
    * */
-  openDialog(): void {
-    this.dialog.open(ErrorsComponent, { width: '80%%', height: '80%'});
+  openDialog(id): void {
+    this.dialog.open(ErrorsComponent, {data:id});
   }
+
+  loadUploads(){
+    this.data.getUploads().subscribe(uploads=> {
+      this.uploads = uploads;
+      this.active = this.uploads.filter(upload=>upload.synced)[0].id;
+    });
+  }
+
+  deleteUpload(id){
+    this.data.deleteUpload(id).subscribe(res=>{
+      console.log(res);
+      this.snackBar.open(`Upload ${id} deleted!`, 'Close', { duration: 3000 });
+      this.loadUploads();
+    });
+  }
+
+  activateUpload(id){
+    this.activateLoading = true;
+    this.data.activateUpload(id).subscribe(res=>{
+      console.log(res);
+      this.activateLoading = false;
+      this.snackBar.open(`Upload ${id} activated!`, 'Close', { duration: 3000 });
+      this.loadUploads();
+    });
+  }
+
+
+  /**
+   * Opens up an Angular Material Dialog box and launches the Upload Component
+   * */
+  openUploadDialog(): void {
+    let dialogRef = this.dialog.open(UploadComponent, { data: { programmes: -1, errors: -1}});
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+      this.snackBar.open("File Uploaded", 'Close', { duration: 3000 });
+      this.loadUploads();
+    });
+  }
+
 
   /**
    * Immediately gets all the errors and number of programmes offered by each faculty. A
@@ -107,16 +136,12 @@ export class StarterComponent implements OnInit, AfterViewInit {
    * */
   ngOnInit() {
     this.bg_color = 'primary';
-    this.data.getErrors().then((progs: any) => {
-      this.errTotal = progs.length;
-      this.hideBadge = (progs == null);
-    }).catch((error: any) => {
-      this.snackBar.open(error.message, 'Close', { duration: 3000 });
-      console.log(error);
-    });
+    this.loadUploads();
+
 
     this.data.getFacStats().then((stats: any) => {
       const names = Object.keys(stats);
+      console.log(stats);
       this.faculties = names.map(fac_name => {
         return {
           title: fac_name,
@@ -134,20 +159,6 @@ export class StarterComponent implements OnInit, AfterViewInit {
       console.log(error);
     });
   }
-
-  /**
-   * This event is fired right after the upload button is pressed.
-   * */
-  DocUpload(event) {
-    const response = JSON.parse(event);
-    if (response.errors !== 0) {
-      this.errTotal = response.errors;
-      this.hideBadge = false;
-    }
-    document.querySelector('.textOverflow');
-    this.snackBar.open('Upload Completed!', 'Close', {duration: 750});
-  }
-
   /**
    * After the DOM is initialized, HTML is dynamically inserted into the angular file uploader HTML code
    * to make it more readable and informative. It has to be done this way since all the HTML code from

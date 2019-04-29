@@ -1,0 +1,14 @@
+
+  <div id="upload-area"  style="text-align: center">
+    <i class="material-icons">
+      cloud_upload
+    </i>
+    <mat-card-title> Drag and drop excel file here or browse your file system </mat-card-title>
+    <mat-card-subtitle> Only one file allowed at a time</mat-card-subtitle>
+    <angular-file-uploader
+      style = "width: 100%"
+      [config]="afuConfig"
+      (ApiResponse)="DocUpload($event)">
+    </angular-file-uploader>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+  </div>

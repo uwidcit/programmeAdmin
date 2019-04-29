@@ -1,9 +1,75 @@
-<div fxLayout="row" fxLayout.xs = "column" *ngIf = "admin_view !== undefined; else spinnerPermissions" style="padding-top:10px">
+<div fxLayout="column" fxLayout.xs = "column" *ngIf = "admin_view !== undefined; else spinnerPermissions" style="padding-top:10px">
+
   <mat-card class = "outer">
-    <mat-card-title><h2>All Programmes </h2></mat-card-title>
+    <mat-card-title>
+      <h2>
+        Upload Manager
+        <button mat-raised-button
+                color="primary"
+                matTooltip="Info about the action"
+                matTooltipPosition="above"
+                (click)="openUploadDialog()"
+                aria-label="Button that displays a tooltip in various positions">
+          Add New Upload
+        </button>
+      </h2>
+    </mat-card-title>
     <mat-card-content>
       <div class="container-fluid">
-        <div *ngIf = "pendingRequest" id = "spinner">
+        <div *ngIf = "pendingRequest"  class = "spinner">
+          <mat-spinner></mat-spinner>
+          <p> Loading Uploads... </p>
+        </div>
+
+        <table class = "table" *ngIf = "!pendingRequest">
+          <thead>
+            <tr>
+              <th scope="col">Upload ID</th>
+              <th scope="col">Created</th>
+              <th scope="col">Read Status</th>
+              <th scope="col">Programmes</th>
+              <th scope="col">Errors</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor = "let upload of uploads">
+            <td>{{upload.id}}</td>
+            <td>{{upload.created}}</td>
+            <td>{{upload.parsed ? 'Success' : 'Failed'}}</td>
+            <td>{{upload.parsed ? upload.numProgrammes : '-'}}</td>
+            <td>{{upload.parsed ? upload.numErrors : '-'}}</td>
+            <td>
+              <button mat-raised-button color="primary"  [disabled]="upload.synced || activateLoading|| !upload.parsed" (click)="activateUpload(upload.id)">
+                {{activateLoading ? 'Loading...' : 'Activate'}}
+              </button>
+              <a mat-button [disabled]="!upload.parsed" href="{{environment.host}}/files/uploads/{{upload.id}}.xlsx">Download File</a>
+<!--              <a mat-button [disabled]="!upload.parsed" href="{{environment.host}}/files/errors/{{upload.id}}.xlsx">Download Errors</a>-->
+              <button
+                mat-raised-button
+                [disabled]="!upload.parsed"
+                color="stable"
+                (click) = "openDialog(upload.id)">
+                Show Upload Errors
+              </button>
+              <button mat-raised-button color="warn" (click)="deleteUpload(upload.id)">
+                Delete
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </mat-card-content>
+
+  </mat-card>
+
+  <mat-card class = "outer" style="margin-top:15px">
+    <mat-card-title><h2>Upload ID:{{active}} active.</h2> </mat-card-title>
+    <mat-card-content>
+      <div class="container-fluid">
+        <div *ngIf = "pendingRequest" class = "spinner">
             <mat-spinner></mat-spinner>
             <p> Loading programmes... </p>
         </div>
@@ -38,30 +104,6 @@
         View Programmes
       </button>
     </mat-card-actions>
-    <mat-card-actions *ngIf = "admin_view">
-      <button
-        mat-raised-button
-        color="warn"
-        [matBadge] = "errTotal"
-        (click) = "openDialog()">
-        Show Upload Errors
-      </button>
-    </mat-card-actions>
-  </mat-card>
-
-  <mat-card class = "outer" id = "upload" #upload *ngIf = "admin_view" >
-    <div id="upload-area">
-      <i class="material-icons">
-        cloud_upload
-      </i>
-      <mat-card-title> Drag and drop files here or browse your file system </mat-card-title>
-      <mat-card-subtitle> Only one file allowed at a time</mat-card-subtitle>
-      <angular-file-uploader
-        style = "width: 100%"
-        [config]="afuConfig"
-        (ApiResponse)="DocUpload($event)">
-      </angular-file-uploader>
-    </div>
 
   </mat-card>
 </div>
