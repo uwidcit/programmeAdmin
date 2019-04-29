@@ -53,6 +53,7 @@ export class StarterComponent implements OnInit, AfterViewInit {
    * A config Object to set up the upload functionality. This is according
    * to the documentation given by {@link https://github.com/kzrfaisal/angular-file-uploader Angular-File-Uploader}.
    * */
+  //AFU config uploads form data with the key 'file'
   afuConfig = {
     multiple: false, // only one file upload at a time
     formatsAllowed: '.xlsx', // only allow excel format

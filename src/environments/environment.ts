@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  host:"http://localhost:8080",
+  host: 'https://nmendez.app:8080',
   config: {
     apiKey: 'AIzaSyCYRRom29CfnxtD6uQSTKL--SRGpV_S1HU',
     authDomain: 'uwiprogrammeadmin.firebaseapp.com',
@@ -9,14 +9,14 @@ export const environment = {
     storageBucket: 'uwiprogrammeadmin.appspot.com',
     messagingSenderId: '904597835769'
   },
-  facURL: 'http://localhost:8080/sta/faculties', // returns { fac_abbr: faculty_name }
-  allProgsBy: 'http://localhost:8080/sta/programmes/',
-  facStats: 'http://localhost:8080/sta/stats', // returns an object containing each faculty and the number of programmes offered in each
-  subjects: 'http://localhost:8080/subjects', // returns a list fo all CSEC and CAPE subjects stored in database
+  facURL: 'https://nmendez.app:8080/sta/faculties', // returns { fac_abbr: faculty_name }
+  allProgsBy: 'https://nmendez.app:8080/sta/programmes/',
+  facStats: 'https://nmendez.app:8080/sta/stats', // returns an object containing each faculty and the number of programmes offered in each
+  subjects: 'https://nmendez.app:8080/subjects', // returns a list fo all CSEC and CAPE subjects stored in database
   testJSON: '../assets/mock-data/test.json',
-  getErrors: 'http://localhost:8080/errors', //  returns a JSON array of all subjects failing validation after parsing
-  downloadErrors: 'http://localhost:8080/files/errors/errors.csv',
-  upload: 'http://localhost:8080/upload', // URL to upload excel file to
+  getErrors: 'https://nmendez.app:8080/errors', //  returns a JSON array of all subjects failing validation after parsing
+  downloadErrors: 'https://nmendez.app:8080/files/errors/errors.csv',
+  upload: 'https://nmendez.app:8080/upload', // URL to upload excel file to
   faculties: {
     'Social Sciences': 'fss',
     'Engineering': 'eng',
