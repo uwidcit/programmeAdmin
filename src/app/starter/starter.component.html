@@ -1,20 +1,25 @@
 <div fxLayout="column" fxLayout.xs = "column" *ngIf = "admin_view !== undefined; else spinnerPermissions" style="padding-top:10px">
 
+
+
   <mat-card class = "outer">
     <mat-card-title>
       <h2>
         Upload Manager
         <button mat-raised-button
                 color="primary"
-                matTooltip="Info about the action"
-                matTooltipPosition="above"
+                matTooltip="Upload a new file"
                 (click)="openUploadDialog()"
                 aria-label="Button that displays a tooltip in various positions">
           Add New Upload
         </button>
       </h2>
+      <mat-progress-bar mode="indeterminate" [hidden]="!activateLoading"></mat-progress-bar>
     </mat-card-title>
     <mat-card-content>
+
+
+
       <div class="container-fluid">
         <div *ngIf = "pendingRequest"  class = "spinner">
           <mat-spinner></mat-spinner>
@@ -34,23 +39,32 @@
           </thead>
           <tbody>
           <tr *ngFor = "let upload of uploads">
-            <td>{{upload.id}}</td>
+            <td>
+              <mat-chip-list>
+                <mat-chip color="{{ upload.synced ? 'primary' : 'stable' }}" selected>{{upload.id}}{{upload.synced? ' ACTIVE':''}}</mat-chip>
+              </mat-chip-list>
+            </td>
             <td>{{upload.created}}</td>
-            <td>{{upload.parsed ? 'Success' : 'Failed'}}</td>
+            <td>
+              <mat-chip-list>
+                <mat-chip *ngIf="upload.parsed" style="background-color:green; color:white" selected>Success</mat-chip>
+                <mat-chip *ngIf="!upload.parsed" matTooltip="Reading failed, more details will be available soon" color="warn" selected>Failed</mat-chip>
+              </mat-chip-list>
+            </td>
             <td>{{upload.parsed ? upload.numProgrammes : '-'}}</td>
             <td>{{upload.parsed ? upload.numErrors : '-'}}</td>
             <td>
-              <button mat-raised-button color="primary"  [disabled]="upload.synced || activateLoading|| !upload.parsed" (click)="activateUpload(upload.id)">
+              <button mat-raised-button color="primary"  [hidden]="upload.synced || !upload.parsed"   [disabled]="activateLoading|| !upload.parsed" (click)="activateUpload(upload.id)">
                 {{activateLoading ? 'Loading...' : 'Activate'}}
               </button>
-              <a mat-button [disabled]="!upload.parsed" href="{{environment.host}}/files/uploads/{{upload.id}}.xlsx">Download File</a>
-<!--              <a mat-button [disabled]="!upload.parsed" href="{{environment.host}}/files/errors/{{upload.id}}.xlsx">Download Errors</a>-->
+              <a mat-button [hidden]="!upload.parsed" href="{{environment.host}}/files/uploads/{{upload.id}}.xlsx">Download</a>
+<!--          <a mat-button [disabled]="!upload.parsed" href="{{environment.host}}/files/errors/{{upload.id}}.xlsx">Download Errors</a>-->
               <button
                 mat-raised-button
-                [disabled]="!upload.parsed"
                 color="stable"
+                [hidden]="!upload.parsed"
                 (click) = "openDialog(upload.id)">
-                Show Upload Errors
+                Errors
               </button>
               <button mat-raised-button color="warn" (click)="deleteUpload(upload.id)">
                 Delete

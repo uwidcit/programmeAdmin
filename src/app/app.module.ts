@@ -21,7 +21,9 @@ import {LoginComponent} from './login/login.component';
 import {ViewComponent} from './view/view.component';
 import {AuthGuard} from './auth.guard';
 import {AuthService} from './auth.service';
-import {MatDialogModule, MatInputModule} from '@angular/material';
+
+import {MatIconModule} from '@angular/material/icon';
+
 import {DemoMaterialModule} from './demo-material-module';
 import { SubjectsComponent } from './subjects/subjects.component';
 import { UploadComponent } from './upload/upload.component';
@@ -45,12 +47,11 @@ import {AngularFileUploaderModule} from 'angular-file-uploader';
     BrowserAnimationsModule,
     DemoMaterialModule,
     FormsModule,
-    MatDialogModule,
-    MatInputModule,
     FlexLayoutModule,
     HttpClientModule,
     SharedModule,
     ReactiveFormsModule,
+    MatIconModule,
     RouterModule.forRoot(AppRoutes),
     AngularFileUploaderModule,
   ],

@@ -11,8 +11,9 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
-import {MatButtonModule, MatProgressSpinnerModule} from '@angular/material';
+import {MatButtonModule, MatChipsModule, MatProgressBarModule, MatProgressSpinnerModule} from '@angular/material';
 import {AngularFileUploaderModule} from 'angular-file-uploader';
+import {DemoMaterialModule} from '../demo-material-module';
 
 @NgModule({
   imports: [
@@ -27,7 +28,10 @@ import {AngularFileUploaderModule} from 'angular-file-uploader';
     MatProgressSpinnerModule,
     MatCardModule,
     MatRadioModule,
-    RouterModule.forChild(StarterRoutes)
+    RouterModule.forChild(StarterRoutes),
+    MatChipsModule,
+    MatProgressBarModule,
+    DemoMaterialModule
   ],
   declarations: [
     StarterComponent,

@@ -50,7 +50,7 @@ export class ErrorsComponent implements OnInit {
       console.log(progs);
       this.errors = progs;
       this.pendingRequest = false;
-    }).catch((error: any) => { console.log(error); });
+    }).catch((error: any) => { console.log(error); this.errors = []; this.pendingRequest = false;});
   }
 
 }
