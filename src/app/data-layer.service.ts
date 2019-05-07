@@ -15,6 +15,12 @@ import { environment } from '../environments/environment';
 })
 export class DataLayerService {
 
+  fac_names = null;
+  allProgs = null;
+  programmes = null;
+  fac_stats = null;
+  errors = null;
+  subjects = null;
 
   constructor(private http: HttpClient) {
   }
@@ -24,8 +30,8 @@ export class DataLayerService {
    * @return {Promise<Object>} A promise containing a string array of all the faculty names
    */
   getFacultyNames(): Promise<Object> {
-    const fac_names = sessionStorage.getItem('fac_names');
-    if (fac_names === null) {
+
+    if (this.fac_names === null) {
       console.log('Faculty names not cached. Polling server...');
       return new Promise((resolve, reject) => {
         this.http.get(environment.facURL).subscribe((names: any) => {
@@ -50,7 +56,7 @@ export class DataLayerService {
           reject('Something is wrong with either your connection or our servers');
         });
       });
-    } else { return this.staticPromise(fac_names); }
+    } else { return this.staticPromise(this.fac_names); }
   }
 
   /**
@@ -59,8 +65,8 @@ export class DataLayerService {
    * @return {Promise<Object>} A promise containing all programme objects
    */
   getAllProgs(): Promise<Object> { // testing finished
-    const allProgs = sessionStorage.getItem('all_progs');
-    if (allProgs === null) {
+
+    if (this.allProgs === null) {
       console.log('All Programmes not cached. Polling server...');
       return new Promise((resolve, reject) => {
         let all = [];
@@ -84,7 +90,7 @@ export class DataLayerService {
         });
       });
     } else {
-      return this.staticPromise(allProgs);
+      return this.staticPromise(this.allProgs);
     }
   }
 
@@ -94,8 +100,8 @@ export class DataLayerService {
    * @return {Promise<Object>} A promise containing all programme objects from a single faculty
    */
   getProgsByFaculty(faculty: string): Promise<Object> { // testing finished
-    const programmes = sessionStorage.getItem(faculty + '_programmes');
-    if (programmes === null) {
+
+    if (this.programmes === null) {
         console.log('Programmes from ' + faculty + ' not cached. Polling server...');
         return new Promise((resolve, reject) => {
           this.http.get(environment.allProgsBy + faculty).subscribe((progs: any) => {
@@ -142,7 +148,7 @@ export class DataLayerService {
             resolve(progs);
           }, (error: any) => { reject(error); });
         });
-    } else { return this.staticPromise(programmes); }
+    } else { return this.staticPromise(this.programmes); }
   }
 
   /**
@@ -150,8 +156,7 @@ export class DataLayerService {
    * @return {Promise<Object>} A promise containing each faculty and the number of programmes offered
    */
   getFacStats() { // testing finished
-    const fac_stats = sessionStorage.getItem('fac_stats');
-    if (fac_stats === null) {
+    if (this.fac_stats === null) {
       console.log('Faculty numbers not caches. Polling server...');
       return new Promise((resolve, reject) => {
         this.http.get(environment.facStats).subscribe((stats: any) => {
@@ -184,7 +189,7 @@ export class DataLayerService {
           resolve(stats);
         }, (error) => { reject(error); });
       });
-    } else { return this.staticPromise(fac_stats); }
+    } else { return this.staticPromise(this.fac_stats); }
   }
 
   /**
@@ -193,8 +198,7 @@ export class DataLayerService {
    * @return {Promise<Object>} A promise containing all subjects
    */
   getSubjects(): Promise<Object> { // testing finished
-    const subjects = sessionStorage.getItem('subjects');
-    if (subjects === null) {
+    if (this.subjects === null) {
       console.log('Subjects not caches. Polling server...');
       return new Promise((resolve, reject) => {
         this.http.get(environment.subjects).subscribe((subs: any) => {
@@ -223,7 +227,7 @@ export class DataLayerService {
           }));
         }, (error: any) => { reject(error); });
       });
-    } else { return this.staticPromise(subjects); }
+    } else { return this.staticPromise(this.subjects); }
   }
 
   /**
@@ -231,8 +235,8 @@ export class DataLayerService {
    * @return {Promise<Object>} A promise containing a list of all programme errors
    */
   getErrors(id): Promise<Object> { // testing finished
-    const errors = sessionStorage.getItem('errors');
-    if (errors === null) {
+
+    if (this.errors === null) {
       console.log('Errors not cached. Polling server...');
       return new Promise((resolve, reject) => {
         this.http.get(environment.getErrors+id+'.json').subscribe((errs: any) => {
@@ -255,7 +259,7 @@ export class DataLayerService {
           resolve(errs);
         }, (error: any) => { reject(error); });
       });
-    } else { return this.staticPromise(errors); }
+    } else { return this.staticPromise(this.errors); }
 
   }
 
