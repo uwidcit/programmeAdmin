@@ -84,7 +84,7 @@ export class ViewComponent implements OnInit {
         this.pendingprogs = false;
         this.programmes = names;
         this.filtered = names;
-      }, (error: any) => { console.log(error); });
+      }, (error: any) => { console.log(error); this.pendingprogs = false; this.programmes = [ "Error Fetching Programmes" ];});
     }
   }
 
@@ -167,7 +167,7 @@ export class ViewComponent implements OnInit {
         this.pendingprogs = false;
         this.programmes = names;
         this.filtered = names;
-      }).catch(error => { console.log(error); });
+      }).catch(error => { console.log(error); this.pendingprogs = false; this.programmes = [ "Error Fetching Programmes" ];});
     }
   }
 }

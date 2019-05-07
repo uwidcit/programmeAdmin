@@ -15,7 +15,7 @@
         "combinations": []
     },
     "description": "The discipline of chemical engineering is concerned with the design, construction and operation of all the processes involved in these industries. Serious considerations are given in all of these industries to safety and environmental protection. The course of study requires basic knowledge of Physics, Chemistry and Mathematics at Advanced Level (A’ Level) status, and comprises a balanced curriculum of basic chemical engineering analysis, but with a significant component of practical and project work in engineering applications, computer studies and industrial plant projects. In the final year programme, students are required to carry out the design of a plant-this being the culmination of the programme of studies. The programme is ideal as a background for postgraduate studies in many areas, including petroleum engineering. ",
-    "possible_careers": ["Chemical & Process", "Manufacturing", "Environmental Industries", "Petroleum", "Food Processing", "Consultancy Agricultural/Chemical Companies", "Pharmaceuticals Companies", "Academia", "Research & Development"],
+    "careers": ["Chemical & Process", "Manufacturing", "Environmental Industries", "Petroleum", "Food Processing", "Consultancy Agricultural/Chemical Companies", "Pharmaceuticals Companies", "Academia", "Research & Development"],
     "job_titles": "Process Engineer; Project Engineer Environmental, Health & Safety Consultant"
 },
 {
@@ -59,7 +59,7 @@
         }]
     },
     "description": "Civil engineering is the discipline that covers the conversion of resources through the application of the laws of science and engineering to facilities, products and systems that sustain and improve the quality of life. It concerns itself with the provision of roads, bridges, buildings, airports, seaports, dams, water supply, beaches, marinas, ports and harbours, recreational facilities and environmental plant and systems, all as integrated components of civil infrastructure and facilities that support towns, cities, countries and regions. The Department offers training in five essential engineering sub-disciplines: geotechnical engineering, structural engineering, transportation engineering, water resources and coastal engineering, and environmental engineering. Civil engineering management is also included to cover the effective management of the conversion of resources to social, commercial and recreational infrastructure, and the event and impact of hurricanes, earthquakes and other natural hazards today form an essential module of the discipline. Because civil engineering is also concerned with the sustainability of infrastructure and society, emphasis on environmental engineering is considered vital to the discipline. Accordingly, the Department now offers two streams of engineering education, one in the traditional civil engineering and the other in civil with environmental engineering. ",
-    "possible_careers": ["Government", "Construction Companies", "Engineering and Architectural Firms", "Public Utility Companies", "Academia", "Consultancy"],
+    "careers": ["Government", "Construction Companies", "Engineering and Architectural Firms", "Public Utility Companies", "Academia", "Consultancy"],
     "job_titles": "Structural Engineer; Resident Engineer; Site Engineer; Highway Engineer, Civil Engineer, Project Engineer"
 },
 {
@@ -82,7 +82,7 @@
         }]
     },
     "description": "Electrical & Computer Engineering has been heralded as one of the most versatile, fastest growing and dynamic of the engineering disciplines and has been instrumental to the development of the technologies which sustain modern contemporary living. The digital revolution and evolving communication systems have connected remote societies to the rest of the world, fostering an accessible global market place and providing tremendous micro and macro business opportunities. \r\n\r\nElectrical and Computer engineers use their knowledge and expertise to continuously push the boundaries of electronic and computer design and manufacturing.  Their efforts have resulted in smaller, more cost effective and more energy efficient electronic and electrical devices and components.  Our students can specialise in one of five (5) exciting and dynamic areas of Electrical and Computer Engineering: Electronic Systems, Communication Systems, Control Systems, Energy Systems and Computer Systems. The knowledge gained will enable them to work in many of the new and high demand areas of electrical and computer engineering, such as the Internet of Things (IoT) - a global network of devices capable of sensing, communicating with and responding to their environment and the Smart Grid which develops novel approaches to facilitate harnessing and distribution of electrical energy from traditional and renewable resources.  In every aspect of human endeavour, Electrical and Computer Engineering continues to advance technology for humanity.\r\n",
-    "possible_careers": ["Computer", "Chemical & Process Companies", "Telecommunications Industries", "Energy Sector", "Power Utility Companies", "Air Conditioning Industry"],
+    "careers": ["Computer", "Chemical & Process Companies", "Telecommunications Industries", "Energy Sector", "Power Utility Companies", "Air Conditioning Industry"],
     "job_titles": "Electronics Engineer; Software Engineer; Electrical & Instrumentation Engineer; Telecommunications Engineer"
 },
 {
@@ -105,7 +105,7 @@
         }]
     },
     "description": "The BSc Geomatics programme aims to provide a comprehensive and detailed knowledge of the theory and methods of land surveying and the management of land information. Land Surveying is the general term used to refer to several sub-disciplines, including: \r\n• Geodetic surveying – the theoretical basis and the control framework for all other surveys:\r\n• Topographical surveying – mapping of the physical and cultural features on the earth's surface.\r\n• Engineering and mining surveying – the provision of spatial data for the design, construction and monitoring of engineering and mining works.\r\n• Cadastral surveying – delineation and parcellation of property rights and the establishment of a base for effective land administration.\r\n• Hydrographic surveying – offshore position fixing, tidal studies and mapping of water features and coastal areas.\r\nLand Surveying provides spatial (geographical) and attribute information in the form of maps and other manual records (analogue) or computer-compatible (digital and attribute) formats to meet the multitude of user needs. This course requires a firm background in mathematics, computer science, information systems, law, planning, valuation and management as well as surveying disciplines of geodesy, cadastre, engineering surveys, photogrammetry, remote sensing cartography and hydrography.\r\n",
-    "possible_careers": ["Land & Hydrographic Survey Industry", "Consultancy", "Geospatial Data Acquisition", "Management and Analysis", "Property Management", "Academia"],
+    "careers": ["Land & Hydrographic Survey Industry", "Consultancy", "Geospatial Data Acquisition", "Management and Analysis", "Property Management", "Academia"],
     "job_titles": "Surveyor; Cadastral Surveyor; Hydrographic Surveyor; Land Surveyor with specialisations in Engineering Surveying; Cadastral Surveying; Topographic Surveying; GIS Specialist; Geoscientist"
 },
 {
@@ -128,7 +128,7 @@
         }]
     },
     "description": "Industrial Engineering is concerned with the identification, analysis and synthesis of the various components (men, machines, materials, management and money) that are necessary for the design, construction and operation of organisations that produce goods or services. Thus, it is centred around the design and control of plants and production systems, and as such, needs a knowledge and understanding of materials, manufacturing processes, automatic control and instrumentation, and all aspects of production management. In addition, expertise in the areas of economics, marketing, industrial relations and law, and psychology is necessary.\r\n\r\nIndustrial Engineers therefore provide management with the necessary inputs for rational management decisions, and to control these inputs to ensure objectives are met. Industrial Engineers find employment in all fields of engineering, and often in fields which are not traditionally considered to be engineering.",
-    "possible_careers": ["Chemical Industry", "Manufacturing Companies", "Public Utility Companies", "Business Management Process Engineer/ Manager"],
+    "careers": ["Chemical Industry", "Manufacturing Companies", "Public Utility Companies", "Business Management Process Engineer/ Manager"],
     "job_titles": "Assembly Line Engineer; Post Market Compliance/Surveillance Manager"
 },
 {
@@ -151,7 +151,7 @@
         }]
     },
     "description": "Land Surveying is the general term used to refer to several sub-disciplines, including: \r\nGeodetic surveying – the theoretical basis and the control framework for all other surveys:\r\nTopographical surveying – mapping of the physical and cultural features on the earth's surface.\r\nEngineering and mining surveying – the provision of spatial data for the design, construction and monitoring of engineering and mining works.\r\nCadastral surveying – delineation and parcellation of property rights and the establishment of a base for effective land administration.\r\nHydrographic surveying – offshore position fixing, tidal studies and mapping of water features and coastal areas.\r\n\r\nLand Surveying provides spatial (geographical) and attribute information in the form of maps and other manual records (analogue) or computer-compatible (digital and attribute) formats to meet the multitude of user needs. \r\n\r\nLand Surveying requires a firm background in mathematics, computer science, information systems, law, planning, valuation and management as well as surveying disciplines of geodesy, cadastre, engineering surveys, photogrammetry, remote sensing cartography and hydrography.\r\n",
-    "possible_careers": ["Land & Hydrographic Survey Industry", "Consultancy", "Geospatial Data Acquisition", "Management and Analysis", "Property Management", "Academia"]
+    "careers": ["Land & Hydrographic Survey Industry", "Consultancy", "Geospatial Data Acquisition", "Management and Analysis", "Property Management", "Academia"]
 },
 {
     "name": "Mechanical Engineering",
@@ -173,7 +173,7 @@
         }]
     },
     "description": "Mechanical Engineering is concerned with the design, manufacture, testing, operation and maintenance of various types of machinery and industrial plants and often includes the executive management of industries. Its successful practice requires the application of mathematics, physics, chemistry and economics to a variety of machines and work areas. Mechanical engineers are employed mainly in manufacturing and service industries and are also engaged in independent research, design and development in the areas mentioned above.",
-    "possible_careers": ["Manufacturing Companies", "Consultancy", "Academia", "Chemical & Process industries", "Air Conditioning Industry", "Energy Industry"],
+    "careers": ["Manufacturing Companies", "Consultancy", "Academia", "Chemical & Process industries", "Air Conditioning Industry", "Energy Industry"],
     "job_titles": "Project Engineer; Mechanical Engineer; Engineer; Management Trainee/Engineer; Consultant"
 },
 {
@@ -196,7 +196,7 @@
         }]
     },
     "description": "Mechanical Engineering with a minor in Biosystems is concerned with the solution of engineering problems affecting agriculture in the production of food and feed for our present and future needs and involves the design, development and maintenance of farm machinery for tillage, planting, cultivation, harvesting and handling of crops; drainage; irrigation, erosion control and land and water management; and the storage and processing of food and feed with the adaptation and development of new technology and energy sources.\r\n\r\nAgricultural Engineers utilise basic engineering fundamentals and a knowledge of agriculture in their solutions to the problems of agricultural production and processes.",
-    "possible_careers": ["Government", "Environmental Industries", "Agricultural/ Process Industries", "Academia", "Consultancy", "Natural Resource Development", "Sustainable Development"],
+    "careers": ["Government", "Environmental Industries", "Agricultural/ Process Industries", "Academia", "Consultancy", "Natural Resource Development", "Sustainable Development"],
     "job_titles": "Agricultural Engineer; Food Engineer; Drainage & Irrigation Engineer; Environmental Engineer, Mechanical Engineer"
 },
 {
@@ -219,7 +219,7 @@
         }]
     },
     "description": "Petroleum geoscience is concerned with understanding the structure of the earth to depths of five miles to identify potential areas of hydrocarbon deposits, and to identify the hydrocarbon bearing zones, fault patterns and water ingress, in order to model them in sufficient detail so as to be able to design development programmes for economic exploitation.\r\n\r\nAfter a reservoir comes into production, petroleum geoscientists monitor production to ensure that forecasts are accurate, and identify potential geological problems and opportunities. Petroleum geoscientists are the professionals who assess acreage, identify exploration prospects, suggest possible drilling sites for hydrocarbon exploration, appraise new discoveries, plan and implement field development, monitor wells during production, and assist field management by teaming with petrophysicists, drillers, engineers and commercial units. The Petroleum Geoscience degree programme majors in quantitative petroleum geology and geophysics courses, but also includes significant, basic training in petrophysics and reservoir engineering.",
-    "possible_careers": ["Upstream Oil and Natural Gas Sector", "Government", "Service Companies To The Hydrocarbon Industry", "Academia", "Consultancy"],
+    "careers": ["Upstream Oil and Natural Gas Sector", "Government", "Service Companies To The Hydrocarbon Industry", "Academia", "Consultancy"],
     "job_titles": "Geoscientist; Geologist; Geophysicist; Geological Engineer; Environmental; Health & Safety Consultant"
 },
 {
@@ -264,7 +264,7 @@
         }]
     },
     "description": "BTech degrees deal with topics in engineering like the BSc degrees, but the knowledge is more applied and less theoretical. For example, mathematics, sciences and technical courses in BTech degrees are taught with more application based examples and supported by hands on laboratory exercises. B.Sc. degrees usually require additional higher-level mathematics, including calculus and calculus-based courses to prepare students for continued studies and research at the graduate level. Holders of B. Tech degrees in the UK have the title of Incorporated Engineer (IEng.) while in the USA and Canada they are known as Engineering Technologists or simply Technologists.  B. Tech Degrees are recognized and accredited globally as bonafide engineering degrees.\r\n\r\n",
-    "possible_careers": ["Manufacturing Companies", "Consultancy", "Academia", "Chemical & Process industries", "Air Conditioning Industry", "Energy Industry"],
+    "careers": ["Manufacturing Companies", "Consultancy", "Academia", "Chemical & Process industries", "Air Conditioning Industry", "Energy Industry"],
     "job_titles": "Project Engineer; Mechanical Engineer; Engineer; Management Trainee/Engineer; Consultant"
 },
 {
@@ -433,7 +433,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
+    "careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
     "job_titles": "Counsellor; Consultant; Interpreter; Therapist; Social Worker; Technical Writer; Copy Editor; Corporate Communications Manager; Account Executive; Educator, Research Assistant; Human Resources Manager; Video/Film Producer/Director; Journalist, Copywriter/Editor; PR Consultant"
 },
 {
@@ -479,7 +479,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The BA degree in Communication Studies serves as a platform for careers in the fields of advertising, corporate communication, events management, journalism and careers in other media, marketing, public relations, and more  The areas where Communication Studies can be an asset are limitless.\r\n\r\nThe skills gained from the theoretical and research methods component of the programme and participation in active research will contribute to a fulfilling postgraduate career. The programme also provides the acumen for conducting research for the public as well as the private sector(s) in the areas of social developme.nt, organisational behaviour, public policy, educational research and numerous other areas. In addition to traditional jobs, new media are providing a stage for budding, creative, entrepreneurial thinkers",
-    "possible_careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
+    "careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
     "job_titles": "Counsellor; Consultant; Interpreter; Therapist; Social Worker; Technical Writer; Copy Editor; Corporate Communications Manager; Account Executive; Educator, Research Assistant; Human Resources Manager; Video/Film Producer/Director; Journalist, Copywriter/Editor; PR Consultant"
 },
 {
@@ -503,7 +503,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The BA in Dance provides students with the practical, cultural, and theoretical knowledge of dance required to develop their own artistic practice.  BA students have the opportunity to explore dance through courses such as: Caribbean Dance, Indian Dance, Ballet Technique, Modern Dance Technique, Dance Education, Dance Injuries and Conditioning, Dance Composition, Dance History, and Introduction to Movement Analysis. Performance opportunities exist throughout the year and students perform for campus events as well as public shows. The Dance Unit also offers a one-year Certificate in Dance and Dance Education. Both programmes help students to develop their performance technique and gain valuable skills in choreographing, researching, and teaching dance. ",
-    "possible_careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
+    "careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
     "job_titles": "Artiste; Artist; Performer; Actor; Dramatist; Educator"
 },
 {
@@ -549,7 +549,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The BA Film consists of two Majors - Film Production and Film Studies. The Major in Film Production is offered by the Faculty of Humanities and Education as an interdisciplinary programme designed to teach potential filmmakers the technical skills of production at the very highest level, and to ensure that these filmmakers understand the theoretical and aesthetic principles of film. The programme is designed to ensure that this balance between theory and practice is maintained. The programme is also designed to teach high-level analytical and critical skills, so that future filmmakers may assess their own work and the work of other filmmakers. The Major in Film Studies is designed to teach students to evaluate, critique and analyse film products and to understand how film images work. It ensures that future critics and aestheticians of film will also be grounded in the basic technical skills of filmmaking.",
-    "possible_careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
+    "careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
     "job_titles": "Counsellor; Consultant; Interpreter; Therapist; Social Worker; Technical Writer; Copy Editor; Corporate Communications Manager; Account Executive; Educator, Research Assistant; Human Resources Manager; Video/Film Producer/Director; Journalist, Copywriter/Editor; PR Consultant"
 },
 {
@@ -573,7 +573,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The BA French includes core courses in French Language, French Literature, French Women Writers, Francophone Caribbean Literature and Film, and an Introduction to Business French. Students may enrol in the English Assistantship Programme in France.",
-    "possible_careers": ["Foreign Affairs", "International Business", "Education"],
+    "careers": ["Foreign Affairs", "International Business", "Education"],
     "job_titles": "Linguist; Foreign Officer; Diplomat; Interpreter; Educator"
 },
 {
@@ -597,7 +597,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Business", "Industry", "Government"],
+    "careers": ["Business", "Industry", "Government"],
     "job_titles": "GIS Data Analyst/Developer, Project Manager, Geographer, GIS Specialist"
 },
 {
@@ -621,7 +621,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The Department of History is a community of scholars and students active in the study and practice of History with emphasis on the Caribbean, Africa, South Asia, Latin America, and their global connections. Our West Indian collection of documents, housed in the Main Library, contains rare and valuable material on the region, and is constantly used by researchers worldwide. Our Archaeology Centre is engaged in the excavation, cataloguing, and preservation of Caribbean artifacts for the benefit of today's and future generations. Our student-run History Society publishes \"The Revolution\", a cutting-edge newsletter disseminating original, student, historical work, and leads exciting events throughout the year that bring history alive for our campus community.",
-    "possible_careers": ["Academia", "Teaching", "Research", "Management", "Consultancy"],
+    "careers": ["Academia", "Teaching", "Research", "Management", "Consultancy"],
     "job_titles": "Professor; Teacher; Archivist; Museum Curator/Guide; Consultant; Research Assistant; Corporate Historian, Administrator"
 },
 {
@@ -645,7 +645,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
+    "careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
     "job_titles": "Counsellor; Consultant; Interpreter; Therapist; Social Worker; Technical Writer; Copy Editor; Corporate Communications Manager; Account Executive; Educator, Research Assistant; Human Resources Manager; Video/Film Producer/Director; Journalist, Copywriter/Editor; PR Consultant"
 },
 {
@@ -669,7 +669,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The BA Linguistics includes courses on Phonetics and Phonology; Morphology and Syntax; Methodology, Lesson Planning and Classroom Management; Audiology; Anatomy and Physiology; Caribbean Sign Language and Interpreting. All Linguistics majors are strongly encouraged to learn a foreign language, whether French, French Creole (Patois), Hindi, Portuguese, Spanish  at the Centre for Language Learning, or T&T Sign Language in the Department.\r\n\r\n",
-    "possible_careers": ["Foreign Affairs", "International Business", "Education"],
+    "careers": ["Foreign Affairs", "International Business", "Education"],
     "job_titles": "Linguist; Foreign Officer; Diplomat; Interpreter; Educator"
 },
 {
@@ -693,7 +693,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The BA in Literatures in English prepares students to engage in critical thinking as well as analysis and production of literary expressions. Core courses focus on poetry, prose fiction, drama, Shakespeare, 20th Century Literary Theory, Selected West Indian Poetry and West Indian Literature.",
-    "possible_careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
+    "careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
     "job_titles": "Counsellor; Consultant; Interpreter; Therapist; Social Worker; Technical Writer; Copy Editor; Corporate Communications Manager; Account Executive; Educator, Research Assistant; Human Resources Manager; Video/Film Producer/Director; Journalist, Copywriter/Editor; PR Consultant"
 },
 {
@@ -717,7 +717,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Actuarial Science", "Business and Finance", "Education", "Engineering", "Statistics"],
+    "careers": ["Actuarial Science", "Business and Finance", "Education", "Engineering", "Statistics"],
     "job_titles": "Actuary; Statistician; Business Analyst"
 },
 {
@@ -741,7 +741,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "Students who have decided to continue to become professionals in Music or would like to pursue post-graduate degrees in Music\r\nwill benefit from the BA in Musical Arts (Special). Courses within the programme include Music Theory, Performance, Music History, Ethnomusicology (Musics of the Caribbean, Introduction to World Music), Music Therapy,  Jazz, Pan,  Choral Arranging, Composition, Choral and Steel Orchestral Techniques. Performance includes individual lessons in Voice, Steelpan, Orchestral Percussion, Piano, Saxophone, Flute, Clarinet, Oboe, Bassoon, French Horn, Trumpet, Trombone, Violin, Indian Musical instruments, Drum Kit and Guitar. On completion, graduates will be able to hone skills in performance, theoretical understanding of music, music education theories and methods as well as musical creativity.\r\n \r\nIn addition to scheduled courses, students may become involved with several ensembles including UWI Arts Steel, UWI Arts Chorale,\r\nUWI Arts Percussion, UWI Arts Indian Classical Ensemble, UWI Arts Afro-Caribbean Drumming Ensemble, UWI Arts Caribbean Contemporary Workshop, UWI Arts Jazz Ensemble, UWI Arts Intermendiate Pan Ensemble, UWI Arts Guitar Ensemble and the UWI Arts Wind Ensemble.\r\n \r\nStudents wishing to pursue a career in music coming out of CSEC or mature students who would like to obtain an academic qualification in Music will benefit from the Certificate in Music; \r\n",
-    "possible_careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
+    "careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
     "job_titles": "Artiste; Artist; Performer; Actor; Dramatist; Educator"
 },
 {
@@ -765,7 +765,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The BA Spanish includes core courses in Spanish Language, Hispanic Literature, Phonetics and Phonology, Morphology and Syntax.",
-    "possible_careers": ["Education", "Government", "Law", "Social Services", "Health Care", "Tourism", "Publishing And Non-Governmental Organisations", "Law Enforcement", "Sales And Marketing", "Tourism And Travel", "Libraries", "Government Posts / Administrator", "Refugee/Immigrant Assistance"],
+    "careers": ["Education", "Government", "Law", "Social Services", "Health Care", "Tourism", "Publishing And Non-Governmental Organisations", "Law Enforcement", "Sales And Marketing", "Tourism And Travel", "Libraries", "Government Posts / Administrator", "Refugee/Immigrant Assistance"],
     "job_titles": "Linguist; Foreign Officer; Diplomat; Interpreter; Educator, Speech Pathologist, Publishing Specialist, Foreign News Correspondent, Customs/Immigration Officer, Translator/Interpreter\r\n\r\n"
 },
 {
@@ -785,7 +785,7 @@
         "combinations": []
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Special Education", "Medicine (Diagnostic and Rehabilitation services)", "Consultancy."],
+    "careers": ["Special Education", "Medicine (Diagnostic and Rehabilitation services)", "Consultancy."],
     "job_titles": "Speech Therapist; Speech-Language Pathologist"
 },
 {
@@ -809,7 +809,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "Programmes offered by the Theatre Arts Unit allow students to develop their knowledge and build their skills in performance related activity through practice and research. Students who have emerged from the CSEC examination as well as mature students will benefit from either of the two Certificate programmes. Those who wish to further enhance their professional careers or wish to continue\r\non to postgraduate study will benefit from the BA in Theatre Arts. Courses within the BA in Theatre Arts include: Performance I/II; Elements of Drama; Directing; Caribbean Drama; Western Theatre History; Asian and African Theatre; Playwriting; Festivals, Drama and\r\nSociety; Production; Caribbean Performance; Theory and Practice of Educative Theatre\r\n \r\nOur graduates teach in many schools, run production companies, are members of the National Theatre Arts Company, and participate in many national theatre productions. The Theatre Arts Unit ensures that you will be able to contextualise your experience to take part in the myriad of national, regional and international activities as a practitioner, director, educator, playwright, theatrical technician,\r\nresearcher, and artistic entrepreneur- enabling you to find your artistic voice.",
-    "possible_careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
+    "careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
     "job_titles": "Artiste; Artist; Performer; Actor; Dramatist; Educator"
 },
 {
@@ -855,7 +855,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
+    "careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
     "job_titles": "Artiste; Artist; Performer; Actor; Dramatist; Educator"
 },
 {
@@ -1059,7 +1059,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Actuarial Science", "Business and Finance", "Education", "Engineering", "Statistics"],
+    "careers": ["Actuarial Science", "Business and Finance", "Education", "Engineering", "Statistics"],
     "job_titles": "Actuary; Statistician; Business Analyst"
 },
 {
@@ -1088,7 +1088,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Pharmaceutical Industry", "Food and Drug Industry", "Dietetics", "Biotechnology Firms", "Bioprospecting Firms", "Forensics", "Immunology", "Analytical and/or Diagnostic Laboratories", "Academia", ""],
+    "careers": ["Pharmaceutical Industry", "Food and Drug Industry", "Dietetics", "Biotechnology Firms", "Bioprospecting Firms", "Forensics", "Immunology", "Analytical and/or Diagnostic Laboratories", "Academia", ""],
     "job_titles": "Immunologist, Clinical Research Associate, Lecturer, Technician, Dietician, Developer of Educational tools, Manufacturing Research Associate, Quality Assurance Manager/ Auditor, Sales Representative, Technical Writer, Quality Control Engineer"
 },
 {
@@ -1114,7 +1114,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Biotechnology Firms", "Chemical Companies", "Academia", "Environmental Consultancy", "Food and Drug Industry", "Fisheries and Wildlife", "Ministry of Agriculture", "Research institutes"],
+    "careers": ["Biotechnology Firms", "Chemical Companies", "Academia", "Environmental Consultancy", "Food and Drug Industry", "Fisheries and Wildlife", "Ministry of Agriculture", "Research institutes"],
     "job_titles": "Agronomist, Biochemist; Biologist; Consultant; Microbiologist; Pathologist; Wildlife Biologist; Food and Drug inspector; Fisheries Biologist"
 },
 {
@@ -1140,7 +1140,7 @@
         }]
     },
     "description": "Chemistry is the study of matter, its properties, how and why substances combine or separate to form other substances, and how substances interact with energy.",
-    "possible_careers": ["Laboratories", "Chemical Companies", "Academia", "Teaching", "Pharmaceutical Industry"],
+    "careers": ["Laboratories", "Chemical Companies", "Academia", "Teaching", "Pharmaceutical Industry"],
     "job_titles": "Chemist; Laboratory Technician; Science Teacher; Pharmaceutical Sales Representative"
 },
 {
@@ -1166,7 +1166,7 @@
         }]
     },
     "description": "Chemistry is the study of matter, its properties, how and why substances combine or separate to form other substances, and how substances interact with energy.",
-    "possible_careers": ["Laboratories", "Chemical Companies", "Academia", "Teaching", "Pharmaceutical Industry"],
+    "careers": ["Laboratories", "Chemical Companies", "Academia", "Teaching", "Pharmaceutical Industry"],
     "job_titles": "Chemist; Laboratory Technician; Science Teacher; Pharmaceutical Sales Representative"
 },
 {
@@ -1192,7 +1192,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Laboratories", "Chemical Companies", "Academia", "Teaching", "Pharmaceutical Industry"],
+    "careers": ["Laboratories", "Chemical Companies", "Academia", "Teaching", "Pharmaceutical Industry"],
     "job_titles": "Chemist; Laboratory Technician; Science Teacher; Pharmaceutical Sales Representative"
 },
 {
@@ -1218,7 +1218,7 @@
         }]
     },
     "description": "Computer Science is based in mathematics—the language of computers. Computer scientists understand why computers work and can create a program or operating system that does what you want it to do. The BSc Computer Science includes courses on Computer Programming, Mathematics for Computing, Data Structures, Computer Architecture, Computer Networks, Internet Technologies and various electives including Human Computer Interaction, Wireless Mobile Computing, Database Management, and E-Commerce.",
-    "possible_careers": ["Telecommunications", "Software Companies", "Computer Services"],
+    "careers": ["Telecommunications", "Software Companies", "Computer Services"],
     "job_titles": "Computer Programmer; Systems Analyst; Software Engineer"
 },
 {
@@ -1244,7 +1244,7 @@
         }]
     },
     "description": "Computer Science is based in mathematics—the language of computers. Computer scientists understand why computers work and can create a program or operating system that does what you want it to do. The BSc Computer Science (Special) includes courses on Computer Programming, Mathematics for Computing, Data Structures, Computer Architecture, Computer Networks, Internet Technologies and various electives including Human Computer Interaction, Wireless Mobile Computing, Database Management, and E-Commerce. ",
-    "possible_careers": ["Telecommunications", "Software Companies", "Computer Services"],
+    "careers": ["Telecommunications", "Software Companies", "Computer Services"],
     "job_titles": "Computer Programmer; Systems Analyst; Software Engineer"
 },
 {
@@ -1270,7 +1270,7 @@
         }]
     },
     "description": "Computer Science is based in mathematics—the language of computers. Computer scientists understand why computers work and can create a program or operating system that does what you want it to do. The BSc Computer Science with Management includes courses on Computer Programming, Mathematics for Computing, Data Structures, Computer Architecture, Computer Networks, Internet Technologies and various Management core courses Business Law, Marketing, Organizational Behaviour, and Managerial Economics.",
-    "possible_careers": ["Telecommunications", "Software Companies", "Computer Services"],
+    "careers": ["Telecommunications", "Software Companies", "Computer Services"],
     "job_titles": "Computer Programmer; Systems Analyst; Software Engineer"
 },
 {
@@ -1320,7 +1320,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Forestry Science", "Recreation", "Parks and Tourism Management", "Environmental Protection Agencies/Consulting Firms", "Wildlife and Fisheries"],
+    "careers": ["Forestry Science", "Recreation", "Parks and Tourism Management", "Environmental Protection Agencies/Consulting Firms", "Wildlife and Fisheries"],
     "job_titles": "Environmental Analyst; Consultant; Forest/ Park Ranger; Natural Resources Manager"
 },
 {

@@ -58,7 +58,7 @@ export class DataLayerMockService {
           'name', 'description', 'type',
           'faculty', 'department', 'url',
           'part_time', 'full_time', 'campus',
-          'requirements', 'possible_careers'
+          'requirements', 'careers'
         ];
         Object.keys(prog).forEach(key => {
           if (!keys.includes(key)) {

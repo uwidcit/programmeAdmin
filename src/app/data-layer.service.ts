@@ -125,16 +125,14 @@ export class DataLayerService {
                 'id', 'name', 'description', 'type',
                 'faculty', 'department', 'url',
                 'part_time', 'full_time', 'evening',
-                'campus', 'requirements', 'possible_careers'
+                'campus', 'requirements'
               ];
               Object.keys(prog).forEach(key => {
                 if (!keys.includes(key)) {
                   console.log(key + ' was not included in ' + prog);
-                  reject('Important parts of the data are missing!');
                 }
                 if (prog[key] === undefined) {
                   console.log('Value of ' + key + ' is undefined');
-                  reject('Important parts of the data are empty');
                 }
               });
             });

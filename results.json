@@ -21,7 +21,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Agribusiness", "Wildlife and Fisheries", "Ministry of Agriculture", "Agricultural Development", "Economics", "Systems Management", "Agronomy", "Animal Science", "Horticulture", "Food Science & Technology", "Soil Sciences", "Forestry"],
+    "careers": ["Agribusiness", "Wildlife and Fisheries", "Ministry of Agriculture", "Agricultural Development", "Economics", "Systems Management", "Agronomy", "Animal Science", "Horticulture", "Food Science & Technology", "Soil Sciences", "Forestry"],
     "job_titles": "Agricultural Economist; Agronomist; Farm Owner and Manager; Forestry Specialist; Agriscience/Extension Educator; Environmental Educator; Forestry Consultant; Food Technician/ Chemist; Quality Control Manager"
 },
 {
@@ -47,7 +47,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Agribusiness", "Wildlife and Fisheries", "Ministry of Agriculture", "Agricultural Development", "Economics", "Systems Management", "Agronomy", "Animal Science", "Horticulture", "Food Science & Technology", "Soil Sciences", "Forestry"],
+    "careers": ["Agribusiness", "Wildlife and Fisheries", "Ministry of Agriculture", "Agricultural Development", "Economics", "Systems Management", "Agronomy", "Animal Science", "Horticulture", "Food Science & Technology", "Soil Sciences", "Forestry"],
     "job_titles": "Agricultural Economist; Agronomist; Farm Owner and Manager; Forestry Specialist; Agriscience/Extension Educator; Environmental Educator; Forestry Consultant; Food Technician/ Chemist; Quality Control Manager"
 },
 {
@@ -73,7 +73,7 @@
         }]
     },
     "description": "The BSc Agricultural Technology allows students to combine agriculture with other disciplines or specialized areas in agriculture. This is a science oriented programme covering animal science, agronomy, horticulture, soils, bio-systems engineering, mathematics and statistics. Special Options in Soil Science and Environment, Crop Science and Production and Livestock Science and Production. ",
-    "possible_careers": ["Agribusiness", "Wildlife and Fisheries", "Ministry of Agriculture", "Agricultural Development", "Economics", "Systems Management", "Agronomy", "Animal Science", "Horticulture", "Food Science & Technology", "Soil Sciences", "Forestry"],
+    "careers": ["Agribusiness", "Wildlife and Fisheries", "Ministry of Agriculture", "Agricultural Development", "Economics", "Systems Management", "Agronomy", "Animal Science", "Horticulture", "Food Science & Technology", "Soil Sciences", "Forestry"],
     "job_titles": "Agricultural Economist; Agronomist; Farm Owner and Manager; Forestry Specialist; Agriscience/Extension Educator; Environmental Educator; Forestry Consultant; Food Technician/ Chemist; Quality Control Manager"
 },
 {
@@ -99,7 +99,7 @@
         }]
     },
     "description": "The BSc Agriculture is science and technology oriented programme preparing students for employment opportunities in different areas. The programme has a science foundation and covers agronomy, horticulture, animal science and production, soils, extension and agricultural economics. In addition students are exposed to the principles and practice of bio-systems engineering, mathematics and statistics. \r\n",
-    "possible_careers": ["Agribusiness", "Wildlife and Fisheries", "Ministry of Agriculture", "Agricultural Development", "Economics", "Systems Management", "Agronomy", "Animal Science", "Horticulture", "Food Science & Technology", "Soil Sciences", "Forestry"],
+    "careers": ["Agribusiness", "Wildlife and Fisheries", "Ministry of Agriculture", "Agricultural Development", "Economics", "Systems Management", "Agronomy", "Animal Science", "Horticulture", "Food Science & Technology", "Soil Sciences", "Forestry"],
     "job_titles": "Agricultural Economist; Agronomist; Farm Owner and Manager; Forestry Specialist; Agriscience/Extension Educator; Environmental Educator; Forestry Consultant; Food Technician/ Chemist; Quality Control Manager"
 },
 {
@@ -149,7 +149,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Forestry Science", "Recreation", "Parks and Tourism Management", "Environmental Protection Agencies/Consulting Firms", "Wildlife and Fisheries"],
+    "careers": ["Forestry Science", "Recreation", "Parks and Tourism Management", "Environmental Protection Agencies/Consulting Firms", "Wildlife and Fisheries"],
     "job_titles": "Environmental Analyst; Consultant; Forest/ Park Ranger; Natural Resources Manager"
 },
 {
@@ -175,7 +175,7 @@
         }]
     },
     "description": "Geographers engage the earth at varying sites, situations, contexts, and locations in order the understand, explain, solve, and even assist in preventing many of the world’s most urgent and complex environmental and social problems. They conduct fieldwork to examine the connections and relationships that exist between the physical and human, ecological and cultural, and technological and political realms of the world. Geographers deal with issues such as development, migration, climate, geomorphology, planning, mapping, culture and power. Graduates emerge with one of the most well-rounded, panoramic, and critical, not to mention sophisticated, technical, and creative, skillsets and perspectives that a person can have - a jack of all trades, and a specialist of some.",
-    "possible_careers": ["Business", "Industry", "Government"],
+    "careers": ["Business", "Industry", "Government"],
     "job_titles": "GIS Data Analyst/Developer, Project Manager, Geographer, GIS Specialist"
 },
 {
@@ -201,7 +201,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Child Care", "Family Life Education", "Private Nutrition Consultancy", "Institutional Dietetics", "Sports and Fitness Centre", "Nutrition Counseling", "Public Health Nutrition", "Food Technology", "Senior Citizen Programmes", "Weight Management Programmes", "Teaching", "Fashion Industry", "Consumer Education", "Hospitality Industry", "Food Manufacturing Industry."],
+    "careers": ["Child Care", "Family Life Education", "Private Nutrition Consultancy", "Institutional Dietetics", "Sports and Fitness Centre", "Nutrition Counseling", "Public Health Nutrition", "Food Technology", "Senior Citizen Programmes", "Weight Management Programmes", "Teaching", "Fashion Industry", "Consumer Education", "Hospitality Industry", "Food Manufacturing Industry."],
     "job_titles": "Dietitian, Nutritionist, Nutritional Representatives for companies e.g. Ross, Consultants, Teachers, Research officers, Food Quality and Safety Officers, Lecturers"
 },
 {
@@ -299,7 +299,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Child Care", "Family Life Education", "Private Nutrition Consultancy", "Institutional Dietetics", "Sports and Fitness Centre", "Nutrition Counseling", "Public Health Nutrition", "Food Technology", "Senior Citizen Programmes", "Weight Management Programmes", "Teaching", "Fashion Industry", "Consumer Education", "Hospitality Industry", "Food Manufacturing Industry."],
+    "careers": ["Child Care", "Family Life Education", "Private Nutrition Consultancy", "Institutional Dietetics", "Sports and Fitness Centre", "Nutrition Counseling", "Public Health Nutrition", "Food Technology", "Senior Citizen Programmes", "Weight Management Programmes", "Teaching", "Fashion Industry", "Consumer Education", "Hospitality Industry", "Food Manufacturing Industry."],
     "job_titles": "Dietitian, Nutritionist, Nutritional Representatives for companies e.g. Ross, Consultants, Teachers, Research officers, Food Quality and Safety Officers, Lecturers"
 },
 {
@@ -368,7 +368,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
+    "careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
     "job_titles": "Counsellor; Consultant; Interpreter; Therapist; Social Worker; Technical Writer; Copy Editor; Corporate Communications Manager; Account Executive; Educator, Research Assistant; Human Resources Manager; Video/Film Producer/Director; Journalist, Copywriter/Editor; PR Consultant"
 },
 {
@@ -414,7 +414,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The BA degree in Communication Studies serves as a platform for careers in the fields of advertising, corporate communication, events management, journalism and careers in other media, marketing, public relations, and more  The areas where Communication Studies can be an asset are limitless.\r\n\r\nThe skills gained from the theoretical and research methods component of the programme and participation in active research will contribute to a fulfilling postgraduate career. The programme also provides the acumen for conducting research for the public as well as the private sector(s) in the areas of social developme.nt, organisational behaviour, public policy, educational research and numerous other areas. In addition to traditional jobs, new media are providing a stage for budding, creative, entrepreneurial thinkers",
-    "possible_careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
+    "careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
     "job_titles": "Counsellor; Consultant; Interpreter; Therapist; Social Worker; Technical Writer; Copy Editor; Corporate Communications Manager; Account Executive; Educator, Research Assistant; Human Resources Manager; Video/Film Producer/Director; Journalist, Copywriter/Editor; PR Consultant"
 },
 {
@@ -438,7 +438,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The BA in Dance provides students with the practical, cultural, and theoretical knowledge of dance required to develop their own artistic practice.  BA students have the opportunity to explore dance through courses such as: Caribbean Dance, Indian Dance, Ballet Technique, Modern Dance Technique, Dance Education, Dance Injuries and Conditioning, Dance Composition, Dance History, and Introduction to Movement Analysis. Performance opportunities exist throughout the year and students perform for campus events as well as public shows. The Dance Unit also offers a one-year Certificate in Dance and Dance Education. Both programmes help students to develop their performance technique and gain valuable skills in choreographing, researching, and teaching dance. ",
-    "possible_careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
+    "careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
     "job_titles": "Artiste; Artist; Performer; Actor; Dramatist; Educator"
 },
 {
@@ -484,7 +484,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The BA Film consists of two Majors - Film Production and Film Studies. The Major in Film Production is offered by the Faculty of Humanities and Education as an interdisciplinary programme designed to teach potential filmmakers the technical skills of production at the very highest level, and to ensure that these filmmakers understand the theoretical and aesthetic principles of film. The programme is designed to ensure that this balance between theory and practice is maintained. The programme is also designed to teach high-level analytical and critical skills, so that future filmmakers may assess their own work and the work of other filmmakers. The Major in Film Studies is designed to teach students to evaluate, critique and analyse film products and to understand how film images work. It ensures that future critics and aestheticians of film will also be grounded in the basic technical skills of filmmaking.",
-    "possible_careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
+    "careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
     "job_titles": "Counsellor; Consultant; Interpreter; Therapist; Social Worker; Technical Writer; Copy Editor; Corporate Communications Manager; Account Executive; Educator, Research Assistant; Human Resources Manager; Video/Film Producer/Director; Journalist, Copywriter/Editor; PR Consultant"
 },
 {
@@ -508,7 +508,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The BA French includes core courses in French Language, French Literature, French Women Writers, Francophone Caribbean Literature and Film, and an Introduction to Business French. Students may enrol in the English Assistantship Programme in France.",
-    "possible_careers": ["Foreign Affairs", "International Business", "Education"],
+    "careers": ["Foreign Affairs", "International Business", "Education"],
     "job_titles": "Linguist; Foreign Officer; Diplomat; Interpreter; Educator"
 },
 {
@@ -532,7 +532,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Business", "Industry", "Government"],
+    "careers": ["Business", "Industry", "Government"],
     "job_titles": "GIS Data Analyst/Developer, Project Manager, Geographer, GIS Specialist"
 },
 {
@@ -556,7 +556,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The Department of History is a community of scholars and students active in the study and practice of History with emphasis on the Caribbean, Africa, South Asia, Latin America, and their global connections. Our West Indian collection of documents, housed in the Main Library, contains rare and valuable material on the region, and is constantly used by researchers worldwide. Our Archaeology Centre is engaged in the excavation, cataloguing, and preservation of Caribbean artifacts for the benefit of today's and future generations. Our student-run History Society publishes \"The Revolution\", a cutting-edge newsletter disseminating original, student, historical work, and leads exciting events throughout the year that bring history alive for our campus community.",
-    "possible_careers": ["Academia", "Teaching", "Research", "Management", "Consultancy"],
+    "careers": ["Academia", "Teaching", "Research", "Management", "Consultancy"],
     "job_titles": "Professor; Teacher; Archivist; Museum Curator/Guide; Consultant; Research Assistant; Corporate Historian, Administrator"
 },
 {
@@ -580,7 +580,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
+    "careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
     "job_titles": "Counsellor; Consultant; Interpreter; Therapist; Social Worker; Technical Writer; Copy Editor; Corporate Communications Manager; Account Executive; Educator, Research Assistant; Human Resources Manager; Video/Film Producer/Director; Journalist, Copywriter/Editor; PR Consultant"
 },
 {
@@ -604,7 +604,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The BA Linguistics includes courses on Phonetics and Phonology; Morphology and Syntax; Methodology, Lesson Planning and Classroom Management; Audiology; Anatomy and Physiology; Caribbean Sign Language and Interpreting. All Linguistics majors are strongly encouraged to learn a foreign language, whether French, French Creole (Patois), Hindi, Portuguese, Spanish  at the Centre for Language Learning, or T&T Sign Language in the Department.\r\n\r\n",
-    "possible_careers": ["Foreign Affairs", "International Business", "Education"],
+    "careers": ["Foreign Affairs", "International Business", "Education"],
     "job_titles": "Linguist; Foreign Officer; Diplomat; Interpreter; Educator"
 },
 {
@@ -628,7 +628,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The BA in Literatures in English prepares students to engage in critical thinking as well as analysis and production of literary expressions. Core courses focus on poetry, prose fiction, drama, Shakespeare, 20th Century Literary Theory, Selected West Indian Poetry and West Indian Literature.",
-    "possible_careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
+    "careers": ["Advertising", "Business", "Communications", "Consultancy", "Education", "Human Resources", "Public Relations", "Social Services", "Technical Writing", "Government", "Journalism", "Television/Film Production", "Public Relations", "Event Promotion", "Publishing"],
     "job_titles": "Counsellor; Consultant; Interpreter; Therapist; Social Worker; Technical Writer; Copy Editor; Corporate Communications Manager; Account Executive; Educator, Research Assistant; Human Resources Manager; Video/Film Producer/Director; Journalist, Copywriter/Editor; PR Consultant"
 },
 {
@@ -652,7 +652,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Actuarial Science", "Business and Finance", "Education", "Engineering", "Statistics"],
+    "careers": ["Actuarial Science", "Business and Finance", "Education", "Engineering", "Statistics"],
     "job_titles": "Actuary; Statistician; Business Analyst"
 },
 {
@@ -676,7 +676,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "Students who have decided to continue to become professionals in Music or would like to pursue post-graduate degrees in Music\r\nwill benefit from the BA in Musical Arts (Special). Courses within the programme include Music Theory, Performance, Music History, Ethnomusicology (Musics of the Caribbean, Introduction to World Music), Music Therapy,  Jazz, Pan,  Choral Arranging, Composition, Choral and Steel Orchestral Techniques. Performance includes individual lessons in Voice, Steelpan, Orchestral Percussion, Piano, Saxophone, Flute, Clarinet, Oboe, Bassoon, French Horn, Trumpet, Trombone, Violin, Indian Musical instruments, Drum Kit and Guitar. On completion, graduates will be able to hone skills in performance, theoretical understanding of music, music education theories and methods as well as musical creativity.\r\n \r\nIn addition to scheduled courses, students may become involved with several ensembles including UWI Arts Steel, UWI Arts Chorale,\r\nUWI Arts Percussion, UWI Arts Indian Classical Ensemble, UWI Arts Afro-Caribbean Drumming Ensemble, UWI Arts Caribbean Contemporary Workshop, UWI Arts Jazz Ensemble, UWI Arts Intermendiate Pan Ensemble, UWI Arts Guitar Ensemble and the UWI Arts Wind Ensemble.\r\n \r\nStudents wishing to pursue a career in music coming out of CSEC or mature students who would like to obtain an academic qualification in Music will benefit from the Certificate in Music; \r\n",
-    "possible_careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
+    "careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
     "job_titles": "Artiste; Artist; Performer; Actor; Dramatist; Educator"
 },
 {
@@ -700,7 +700,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "The BA Spanish includes core courses in Spanish Language, Hispanic Literature, Phonetics and Phonology, Morphology and Syntax.",
-    "possible_careers": ["Education", "Government", "Law", "Social Services", "Health Care", "Tourism", "Publishing And Non-Governmental Organisations", "Law Enforcement", "Sales And Marketing", "Tourism And Travel", "Libraries", "Government Posts / Administrator", "Refugee/Immigrant Assistance"],
+    "careers": ["Education", "Government", "Law", "Social Services", "Health Care", "Tourism", "Publishing And Non-Governmental Organisations", "Law Enforcement", "Sales And Marketing", "Tourism And Travel", "Libraries", "Government Posts / Administrator", "Refugee/Immigrant Assistance"],
     "job_titles": "Linguist; Foreign Officer; Diplomat; Interpreter; Educator, Speech Pathologist, Publishing Specialist, Foreign News Correspondent, Customs/Immigration Officer, Translator/Interpreter\r\n\r\n"
 },
 {
@@ -724,7 +724,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "Programmes offered by the Theatre Arts Unit allow students to develop their knowledge and build their skills in performance related activity through practice and research. Students who have emerged from the CSEC examination as well as mature students will benefit from either of the two Certificate programmes. Those who wish to further enhance their professional careers or wish to continue\r\non to postgraduate study will benefit from the BA in Theatre Arts. Courses within the BA in Theatre Arts include: Performance I/II; Elements of Drama; Directing; Caribbean Drama; Western Theatre History; Asian and African Theatre; Playwriting; Festivals, Drama and\r\nSociety; Production; Caribbean Performance; Theory and Practice of Educative Theatre\r\n \r\nOur graduates teach in many schools, run production companies, are members of the National Theatre Arts Company, and participate in many national theatre productions. The Theatre Arts Unit ensures that you will be able to contextualise your experience to take part in the myriad of national, regional and international activities as a practitioner, director, educator, playwright, theatrical technician,\r\nresearcher, and artistic entrepreneur- enabling you to find your artistic voice.",
-    "possible_careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
+    "careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
     "job_titles": "Artiste; Artist; Performer; Actor; Dramatist; Educator"
 },
 {
@@ -770,7 +770,7 @@
     },
     "corrected": "Changed 'English Languages' to English Language (CSEC)",
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
+    "careers": ["Theatre", "Music", "Visual Arts", "Cultural Organisations", "Education"],
     "job_titles": "Artiste; Artist; Performer; Actor; Dramatist; Educator"
 },
 {
@@ -790,7 +790,7 @@
         "combinations": []
     },
     "description": "The Bachelor of Education degree is a professional degree, which is normally intended for practitioners in the field of education. Its main thrust is towards the holistic development of reflective professionals who are sensitive to the need to combine caring and advocacy with competencies in school and classroom management, leadership, and information and communication technologies.\r\n\r\nCandidates may pursue a major in either of two options:\r\n\r\nEarly Childhood Care and Education (ECCE) or\r\nPrimary Education\r\nAreas of specialization within the primary option are:\r\n\r\nEducational Administration\r\nLanguage Arts\r\nMathematics\r\nScience\r\nSocial Studies",
-    "possible_careers": ["Academia", "Educational Administration", "Teaching"],
+    "careers": ["Academia", "Educational Administration", "Teaching"],
     "job_titles": "Teacher; Principal; School Supervisor"
 },
 {
@@ -810,7 +810,7 @@
         "combinations": []
     },
     "description": "The Bachelor of Education degree is a professional degree, which is normally intended for practitioners in the field of education. Its main thrust is towards the holistic development of reflective professionals who are sensitive to the need to combine caring and advocacy with competencies in school and classroom management, leadership, and information and communication technologies.\r\n\r\nCandidates may pursue a major in either of two options:\r\n\r\nEarly Childhood Care and Education (ECCE) or\r\nPrimary Education\r\nAreas of specialization within the primary option are:\r\n\r\nEducational Administration\r\nLanguage Arts\r\nMathematics\r\nScience\r\nSocial Studies",
-    "possible_careers": ["Academia", "Educational Administration", "Teaching"],
+    "careers": ["Academia", "Educational Administration", "Teaching"],
     "job_titles": "Teacher; Principal; School Supervisor"
 },
 {
@@ -943,7 +943,7 @@
         "combinations": []
     },
     "description": "The Faculty of Law at St Augustine offers a complete undergraduate programme in law which is intended to provide a thorough grounding in the principles of law for those undergraduates who intend to either practice or pursue taught or research graduate degrees.",
-    "possible_careers": ["Government", "Public or Private Practice", "Politics", "Diplomatic Service", "Corporates", "Statutory Authorities", "Public Services"],
+    "careers": ["Government", "Public or Private Practice", "Politics", "Diplomatic Service", "Corporates", "Statutory Authorities", "Public Services"],
     "job_titles": "Lawyer; Solicitor; Barrister; Ministerial Advisor; Diplomat; Consultant"
 },
 {
@@ -966,7 +966,7 @@
         }]
     },
     "description": "The Bachelor of Science in Nursing Degree - Post Registration, (BSN Post Registration), targets candidates already in the Nursing Profession since a requirement for this programme is that candidates must be a Registered Nurse. For those now seeking to enter the profession there is the BSc Nursing (Pre-Registration) progrmme. The BSN Post Registration is structured around the major components of theory, research and clinical practice. The concepts of leadership, critical thinking, decision making, and planned change are integrated throughout the curriculum. The BSN Post Registration comprises four (4) areas of specialization, as outlined below:\r\nSchool Nursing\r\nOncology\r\nNursing Education\r\nNursing Administration\r\nThe BSN Post Registration is offered both full time and part time, with courses available in the ‘summer’ session and on evenings. The duration of our full time curriculum is one calendar year over three semesters; and the duration of our part time curriculum is two calendar years over six semesters. The programme is offered full and part-time in modular format and includes different forms of Distance Education, print, media, teleconference, computer Assisted Instruction (CAI), mentoring and preceptor practicum. ",
-    "possible_careers": ["Public and Private Hospitals", "Doctors’ Offices and Clinics"],
+    "careers": ["Public and Private Hospitals", "Doctors’ Offices and Clinics"],
     "job_titles": "Nurse"
 },
 {
@@ -989,7 +989,7 @@
         }]
     },
     "description": "Unlike the BSN Post Registration, the BSN Pre-Registration targets entry level candidates who are new to the Nursing Profession and is tailored to candidates who are not Registered Nurses. The Programme uses a variety of teaching and learning methods including laboratory and clinical experiences and is designed to prepare candidates to become Registered Nurses, and to provide excellent nursing care to patients. Graduates of the BSN Pre-Registration Programme will be eligible for licensure from the Nursing Council of Trinidad and Tobago to practice as professional nurses in several areas of health-care such as:\r\n• Acute Health Care\r\n• Primary Care\r\n• Preventa ve Care\r\n• Long Term Care\r\nGraduates mayalso  progress to the Masters and Doctorial Levels. ",
-    "possible_careers": ["Public and Private Hospitals", "Doctors’ Offices and Clinics"],
+    "careers": ["Public and Private Hospitals", "Doctors’ Offices and Clinics"],
     "job_titles": "Nurse"
 },
 {
@@ -1027,7 +1027,7 @@
         "combinations": []
     },
     "description": "The BSc Pharmacy consists of: an integrated programme of Basic Medical Sciences; an intensive programme of Community Health; Social Sciences; Pharmacy Studies; Pharmacy Practice, Clinical Pharmacy, including Home Health Care and Outreach Programmes; and Communication Skills. The programme of study extends over four years. Graduates then undertake a six-month internship, as stipulated by the Pharmacy Board of Trinidad & Tobago, which is the regulatory body and licensing authority.",
-    "possible_careers": ["Public and Private Hospitals and Clinics", "Pharmacies", "Pharmaceutical Industry", "Academia", "Research"],
+    "careers": ["Public and Private Hospitals and Clinics", "Pharmacies", "Pharmaceutical Industry", "Academia", "Research"],
     "job_titles": "Pharmacist; Pharmacy Manager; Pharmaceutical Representative"
 },
 {
@@ -1047,7 +1047,7 @@
         "combinations": []
     },
     "description": "The Dental Programme leads to the Doctor of Dental Surgery (DDS) and extends over five years. The Pre-Clinical phase spans two years and utilises a Problem-Based Learning (PBL) methodology. The three clinical years leading to graduation, involve supervised patient management and prevention of oral and dental diseases. Upon the successful completion of the DDS degree, graduates are required to follow a programme in General Dentistry for a period of 12 months prior to certification by the Dental Council as being eligible for full registration to practice dentistry.",
-    "possible_careers": ["Public and Private Dental Hospitals or Clinics", "Private Practice", "Academia"],
+    "careers": ["Public and Private Dental Hospitals or Clinics", "Private Practice", "Academia"],
     "job_titles": "Dentist; Dental Surgeon, Dental Clinician, Educator, Researcher, Administrator/Manager."
 },
 {
@@ -1067,7 +1067,7 @@
         "combinations": []
     },
     "description": "The MBBS Programme which spans five years is divided into three pre-clinical and two clinical years. Upon successful completion of the course of study, graduates must follow an 12-month internship in order to be eligible for certification by the Medical Council and full registration to practise medicine. ",
-    "possible_careers": ["Public & Private Hospitals and Clinics", "Private practice", "Medical research", "Academia", "Pharmaceutical Companies", "Health Insurance", "Corporates."],
+    "careers": ["Public & Private Hospitals and Clinics", "Private practice", "Medical research", "Academia", "Pharmaceutical Companies", "Health Insurance", "Corporates."],
     "job_titles": "Doctor; Physician; General Practitioner; Surgeon; Specialist; Consultant"
 },
 {
@@ -1087,7 +1087,7 @@
         "combinations": []
     },
     "description": "The veterinary education programme leads to the degree of Doctor of Veterinary Medicine (DVM) and extends over five years. The pre-clinical phase spans two years and in the first semester of study medical, dental, and veterinary students together analyze integrated system-based problems. During the clinical phase students are expected to do clinical rotations and are usually assigned to Clinical Clerkships at the Veterinary Hospital of the School of Veterinary Medicine. The UWI School of Veterinary Medicine is the only one in the English-speaking Caribbean offering a complete DVM programme at a single site. The School is equipped with modern teaching and research laboratories, which facilitate practical training, and research projects. Our Veterinary Hospital consists of small animal, farm animal and equine clinics as well as a number of diagnostic laboratories.",
-    "possible_careers": ["Private Practices", "Zoos", "Aquariums", "Academia", "Laboratories"],
+    "careers": ["Private Practices", "Zoos", "Aquariums", "Academia", "Laboratories"],
     "job_titles": "Veterinarian"
 },
 {
@@ -1128,7 +1128,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Biotechnology Firms", "Chemical Companies", "Academia", "Environmental Consultancy", "Food and Drug Industry", "Fisheries and Wildlife", "Ministry of Agriculture", "Research institutes"],
+    "careers": ["Biotechnology Firms", "Chemical Companies", "Academia", "Environmental Consultancy", "Food and Drug Industry", "Fisheries and Wildlife", "Ministry of Agriculture", "Research institutes"],
     "job_titles": "Agronomist, Biochemist; Biologist; Consultant; Microbiologist; Pathologist; Wildlife Biologist; Food and Drug inspector; Fisheries Biologist"
 },
 {
@@ -1154,7 +1154,7 @@
         }]
     },
     "description": "A biomedical technologist, also known as a biomedical equipment technician, repairs and maintains medical equipment. Biomedical technologists must be able to install equipment and test the parts to ensure it works efficiently. The BSc Biomedical Technology (BMET) is a collaborative offering between the Department of Physics and the Faculty of Medical Sciences. This a multidisciplinary field of study incorporating disciplines such as: Physics, Biology, Medicine, Mathematics, and Engineering.",
-    "possible_careers": ["healthcare institutions", "equipment companies"]
+    "careers": ["healthcare institutions", "equipment companies"]
 },
 {
     "name": "Environmental Science and Sustainable Technology",
@@ -1179,7 +1179,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Forestry Science", "Recreation", "Parks and Tourism Management", "Environmental Protection Agencies/Consulting Firms", "Wildlife and Fisheries"],
+    "careers": ["Forestry Science", "Recreation", "Parks and Tourism Management", "Environmental Protection Agencies/Consulting Firms", "Wildlife and Fisheries"],
     "job_titles": "Environmental Analyst; Consultant; Forest/ Park Ranger; Natural Resources Manager"
 },
 {
@@ -1230,7 +1230,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Actuarial Science", "Business and Finance", "Education", "Engineering", "Statistics"],
+    "careers": ["Actuarial Science", "Business and Finance", "Education", "Engineering", "Statistics"],
     "job_titles": "Actuary; Statistician; Business Analyst"
 },
 {
@@ -1256,7 +1256,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Actuarial Science", "Business and Finance", "Education", "Engineering", "Statistics"],
+    "careers": ["Actuarial Science", "Business and Finance", "Education", "Engineering", "Statistics"],
     "job_titles": "Actuary; Statistician; Business Analyst"
 },
 {
@@ -1306,7 +1306,7 @@
         }]
     },
     "description": "Students pursuing the BSc in General Physics choose to minor in any of the following areas: Electronics, Environmental Physics, Material Science or Medical Physics with Bioengineering.",
-    "possible_careers": ["Research Laboratories", "Academia", "Teaching"],
+    "careers": ["Research Laboratories", "Academia", "Teaching"],
     "job_titles": "Science Teacher; Physicist; Laboratory Technician"
 },
 {
@@ -1374,7 +1374,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Auditing", "Assurance Services", "Management Consulting", "Financial Planning", "Financial & Cost Accounting", "Tax Advisory Services", "Business Management"],
+    "careers": ["Auditing", "Assurance Services", "Management Consulting", "Financial Planning", "Financial & Cost Accounting", "Tax Advisory Services", "Business Management"],
     "job_titles": "Auditor; Accountant; Financial Analyst; Tax Advisor"
 },
 {
@@ -1418,7 +1418,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Criminal Justice", "Law", "Health Sciences & Medicine", "Conflict", "Resolution", "Mediation", "Psychology", "Counselling", "Management", "Public Policy", "Social Work", "Research"],
+    "careers": ["Criminal Justice", "Law", "Health Sciences & Medicine", "Conflict", "Resolution", "Mediation", "Psychology", "Counselling", "Management", "Public Policy", "Social Work", "Research"],
     "job_titles": "Counsellor; Consultant; Manager; Social Worker; Psychologist; Sociologist; Child Care Officer; Community Development Officer; EAP Provider/Consultant; Family Care Officer; Family Therapist; Medical Social Worker; Prison Welfare Officer; Probation Officer; Research Officer; School Social Worker; Social Policy Planner; Youth Camp Director;"
 },
 {
@@ -1441,7 +1441,7 @@
         }]
     },
     "description": "The academic programmes offered by the Department of Economics provide the foundation for a range of current economical topics, including national budgets, fiscal measures, exchange rates and economic policy. More than 50 courses in the sciences are offered each year by the department.",
-    "possible_careers": ["Central Banks", "Business Management", "Academia", "International Organisations", "Journalism", "Government", "Environmental/Resource Management", "Public Policy", "International Relations"],
+    "careers": ["Central Banks", "Business Management", "Academia", "International Organisations", "Journalism", "Government", "Environmental/Resource Management", "Public Policy", "International Relations"],
     "job_titles": "Economist; Business Analyst; Economic Advisor; Economic Statistician; Economic Analyst"
 },
 {
@@ -1485,7 +1485,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Restaurant (Food & Beverage) Management", "Hotel Management", "Hospitality Industry Tourism & Tourist Attractions Management", "Leisure", "Recreation and Sport Facilities Management"],
+    "careers": ["Restaurant (Food & Beverage) Management", "Hotel Management", "Hospitality Industry Tourism & Tourist Attractions Management", "Leisure", "Recreation and Sport Facilities Management"],
     "job_titles": "Hospitality Manager; Hotel Manager; Catering Manager"
 },
 {
@@ -1508,7 +1508,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Management Consulting", "Human Resources", "Business Management", "Small Business Management", "Information Technology", "Industrial Relations", "Marketing", "Operations Management", "Finance", "International Relations", "Advertising and Public Relations"],
+    "careers": ["Management Consulting", "Human Resources", "Business Management", "Small Business Management", "Information Technology", "Industrial Relations", "Marketing", "Operations Management", "Finance", "International Relations", "Advertising and Public Relations"],
     "job_titles": "Consultant; Entrepreneur; Management Trainee; Branch Manager; Human Resource Officer; Manager; IT Officer; Business Analyst; Marketing Specialist; Financial Analyst"
 },
 {
@@ -1531,7 +1531,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Management Consulting", "Human Resources", "Business Management", "Small Business Management", "Information Technology", "Industrial Relations", "Marketing", "Operations Management", "Finance", "International Relations", "Advertising and Public Relations"],
+    "careers": ["Management Consulting", "Human Resources", "Business Management", "Small Business Management", "Information Technology", "Industrial Relations", "Marketing", "Operations Management", "Finance", "International Relations", "Advertising and Public Relations"],
     "job_titles": "Consultant; Entrepreneur; Management Trainee; Branch Manager; Human Resource Officer; Manager; IT Officer; Business Analyst; Marketing Specialist; Financial Analyst"
 },
 {
@@ -1575,7 +1575,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Restaurant (Food & Beverage) Management", "Hotel Management", "Hospitality Industry Tourism & Tourist Attractions Management", "Leisure", "Recreation and Sport Facilities Management"],
+    "careers": ["Restaurant (Food & Beverage) Management", "Hotel Management", "Hospitality Industry Tourism & Tourist Attractions Management", "Leisure", "Recreation and Sport Facilities Management"],
     "job_titles": "Hospitality Manager; Hotel Manager; Catering Manager"
 },
 {
@@ -1598,7 +1598,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Management Consulting", "Human Resources", "Business Management", "Small Business Management", "Information Technology", "Industrial Relations", "Marketing", "Operations Management", "Finance", "International Relations", "Advertising and Public Relations"],
+    "careers": ["Management Consulting", "Human Resources", "Business Management", "Small Business Management", "Information Technology", "Industrial Relations", "Marketing", "Operations Management", "Finance", "International Relations", "Advertising and Public Relations"],
     "job_titles": "Consultant; Entrepreneur; Management Trainee; Branch Manager; Human Resource Officer; Manager; IT Officer; Business Analyst; Marketing Specialist; Financial Analyst"
 },
 {
@@ -1621,7 +1621,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Management Consulting", "Human Resources", "Business Management", "Small Business Management", "Information Technology", "Industrial Relations", "Marketing", "Operations Management", "Finance", "International Relations", "Advertising and Public Relations"],
+    "careers": ["Management Consulting", "Human Resources", "Business Management", "Small Business Management", "Information Technology", "Industrial Relations", "Marketing", "Operations Management", "Finance", "International Relations", "Advertising and Public Relations"],
     "job_titles": "Consultant; Entrepreneur; Management Trainee; Branch Manager; Human Resource Officer; Manager; IT Officer; Business Analyst; Marketing Specialist; Financial Analyst"
 },
 {
@@ -1644,7 +1644,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Management Consulting", "Human Resources", "Business Management", "Small Business Management", "Information Technology", "Industrial Relations", "Marketing", "Operations Management", "Finance", "International Relations", "Advertising and Public Relations"],
+    "careers": ["Management Consulting", "Human Resources", "Business Management", "Small Business Management", "Information Technology", "Industrial Relations", "Marketing", "Operations Management", "Finance", "International Relations", "Advertising and Public Relations"],
     "job_titles": "Consultant; Entrepreneur; Management Trainee; Branch Manager; Human Resource Officer; Manager; IT Officer; Business Analyst; Marketing Specialist; Financial Analyst"
 },
 {
@@ -1688,7 +1688,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Criminal Justice", "Law", "Health Sciences & Medicine", "Conflict", "Resolution", "Mediation", "Psychology", "Counselling", "Management", "Public Policy", "Social Work", "Research"],
+    "careers": ["Criminal Justice", "Law", "Health Sciences & Medicine", "Conflict", "Resolution", "Mediation", "Psychology", "Counselling", "Management", "Public Policy", "Social Work", "Research"],
     "job_titles": "Counsellor; Consultant; Manager; Social Worker; Psychologist; Sociologist; Child Care Officer; Community Development Officer; EAP Provider/Consultant; Family Care Officer; Family Therapist; Medical Social Worker; Prison Welfare Officer; Probation Officer; Research Officer; School Social Worker; Social Policy Planner; Youth Camp Director;"
 },
 {
@@ -1732,7 +1732,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Criminal Justice", "Law", "Health Sciences & Medicine", "Conflict", "Resolution", "Mediation", "Psychology", "Counselling", "Management", "Public Policy", "Social Work", "Research"],
+    "careers": ["Criminal Justice", "Law", "Health Sciences & Medicine", "Conflict", "Resolution", "Mediation", "Psychology", "Counselling", "Management", "Public Policy", "Social Work", "Research"],
     "job_titles": "Counsellor; Consultant; Manager; Social Worker; Psychologist; Sociologist; Child Care Officer; Community Development Officer; EAP Provider/Consultant; Family Care Officer; Family Therapist; Medical Social Worker; Prison Welfare Officer; Probation Officer; Research Officer; School Social Worker; Social Policy Planner; Youth Camp Director;"
 },
 {
@@ -1755,7 +1755,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Criminal Justice", "Law", "Health Sciences & Medicine", "Conflict", "Resolution", "Mediation", "Psychology", "Counselling", "Management", "Public Policy", "Social Work", "Research"],
+    "careers": ["Criminal Justice", "Law", "Health Sciences & Medicine", "Conflict", "Resolution", "Mediation", "Psychology", "Counselling", "Management", "Public Policy", "Social Work", "Research"],
     "job_titles": "Counsellor; Consultant; Manager; Social Worker; Psychologist; Sociologist; Child Care Officer; Community Development Officer; EAP Provider/Consultant; Family Care Officer; Family Therapist; Medical Social Worker; Prison Welfare Officer; Probation Officer; Research Officer; School Social Worker; Social Policy Planner; Youth Camp Director;"
 },
 {
@@ -1778,7 +1778,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Professional Teams and Leagues", "Amateur Associations", "Public/Private Recreational Agencies", "Club & Facilities Management", "Sports Marketing and Event Promotion", "Public Relations"],
+    "careers": ["Professional Teams and Leagues", "Amateur Associations", "Public/Private Recreational Agencies", "Club & Facilities Management", "Sports Marketing and Event Promotion", "Public Relations"],
     "job_titles": "Sports Information Director; Facilities Manager; Promoter; Sports Agent"
 },
 {
@@ -1801,7 +1801,7 @@
         }]
     },
     "description": "Answer at least one of the following questions \"what is (programme)\" / \"what skills will students acquire\" / \"what is the focus of the programme\" LIMIT - 200 WORDS",
-    "possible_careers": ["Restaurant (Food & Beverage) Management", "Hotel Management", "Hospitality Industry Tourism & Tourist Attractions Management", "Leisure", "Recreation and Sport Facilities Management"],
+    "careers": ["Restaurant (Food & Beverage) Management", "Hotel Management", "Hospitality Industry Tourism & Tourist Attractions Management", "Leisure", "Recreation and Sport Facilities Management"],
     "job_titles": "Hospitality Manager; Hotel Manager; Catering Manager"
 },
 {
