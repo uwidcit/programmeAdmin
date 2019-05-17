@@ -48,7 +48,7 @@ export class DataLayerService {
                 return reject(names[key] + ' should only contain letters');
               }
             });
-            sessionStorage.setItem('fac_names', JSON.stringify(names));
+            //sessionStorage.setItem('fac_names', JSON.stringify(names));
             resolve(names);
           }
         }, (error) => {
@@ -81,7 +81,7 @@ export class DataLayerService {
                   if (a.name < b.name) { return -1; }
                   return 0;
                 });
-                sessionStorage.setItem('all_progs', JSON.stringify(all));
+                //sessionStorage.setItem('all_progs', JSON.stringify(all));
                 resolve (all);
               }
             })
@@ -142,7 +142,7 @@ export class DataLayerService {
               if (a.name < b.name) { return -1; }
               return 0;
             });
-            sessionStorage.setItem(faculty + '_programmes', JSON.stringify(progs));
+            //sessionStorage.setItem(faculty + '_programmes', JSON.stringify(progs));
             resolve(progs);
           }, (error: any) => { reject(error); });
         });
@@ -183,7 +183,7 @@ export class DataLayerService {
             }
           });
 
-          sessionStorage.setItem('fac_stats', JSON.stringify(stats));
+          //sessionStorage.setItem('fac_stats', JSON.stringify(stats));
           resolve(stats);
         }, (error) => { reject(error); });
       });
@@ -197,7 +197,7 @@ export class DataLayerService {
    */
   getSubjects(): Promise<Object> { // testing finished
     if (this.subjects === null) {
-      console.log('Subjects not caches. Polling server...');
+      console.log('Fetching subjects');
       return new Promise((resolve, reject) => {
         this.http.get(environment.subjects).subscribe((subs: any) => {
 
@@ -208,16 +208,16 @@ export class DataLayerService {
             reject('An Array was not returned when it was expected');
           }
 
-          subs.forEach(sub => {
-            if (sub === undefined || sub === null) { reject('Array contains undefined data'); }
-            if (typeof sub !== 'object') { reject('Array does not contain only Objects'); }
-            if (sub.name === undefined || null) { reject('Subject name is undefined or null'); }
-            if (sub.level === undefined || null) { reject('Subject level is undefined or null'); }
-            if (typeof sub.name !== 'string') { reject('Subject name is not a string'); }
-            if (typeof sub.level !== 'string') { reject('Subject level is not a string'); }
-            if (!sub.name.includes(sub.level)) { reject('Subject level should be after the subject name in brackets'); }
-          });
-          sessionStorage.setItem('subjects', JSON.stringify(subs));
+          // subs.forEach(sub => {
+          //   if (sub === undefined || sub === null) { reject(`Array contains undefined data ${JSON.stringify(sub)}`); }
+          //   if (typeof sub !== `object`) { reject(`Array does not contain only Objects ${JSON.stringify(sub)}`); }
+          //   if (sub.name === undefined || null) { reject(`Subject name is undefined or null ${JSON.stringify(sub)}`); }
+          //   if (sub.level === undefined || null) { reject(`Subject level is undefined or null ${JSON.stringify(sub)}`); }
+          //   if (typeof sub.name !== `string`) { reject(`Subject name is not a string ${JSON.stringify(sub)}`); }
+          //   if (typeof sub.level !== `string`) { reject(`Subject level is not a string ${JSON.stringify(sub)}`); }
+          //   if (!sub.name.includes(sub.level)) { reject(`Subject level should be after the subject name in brackets ${JSON.stringify(sub)}`); }
+          // });
+          // sessionStorage.setItem('subjects', JSON.stringify(subs));
           resolve(subs.sort((a, b) => {
             if (a.name > b.name) { return 1; }
             if (a.name < b.name) { return -1; }
@@ -253,7 +253,7 @@ export class DataLayerService {
             });
           });
 
-          sessionStorage.setItem('errors', JSON.stringify(errs));
+          //sessionStorage.setItem('errors', JSON.stringify(errs));
           resolve(errs);
         }, (error: any) => { reject(error); });
       });

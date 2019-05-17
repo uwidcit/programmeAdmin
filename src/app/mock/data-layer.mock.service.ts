@@ -72,7 +72,7 @@ export class DataLayerMockService {
       });
 
 
-      sessionStorage.setItem(faculty_name + '_programmes', testData[faculty_name]);
+      //sessionStorage.setItem(faculty_name + '_programmes', testData[faculty_name]);
       return Promise.resolve(testData[faculty_name]);
     } else { return this.staticPromise(programmes); }
   }
@@ -91,7 +91,7 @@ export class DataLayerMockService {
             if (a.name < b.name) { return -1; }
             return 0;
           });
-          sessionStorage.setItem('all_progs', JSON.stringify(all));
+          //sessionStorage.setItem('all_progs', JSON.stringify(all));
           return this.staticPromise(JSON.stringify(all));
         }
       });
@@ -134,16 +134,16 @@ export class DataLayerMockService {
         return Promise.reject('An Array was not returned when it was expected');
       }
 
-      testData.forEach(sub => {
-        if (sub === undefined || sub === null) { return Promise.reject('Array contains undefined data'); }
-        if (typeof sub !== 'object') { return Promise.reject('Array does not contain only Objects'); }
-        if (sub.name === undefined || null) { return Promise.reject('Subject name is undefined or null'); }
-        if (sub.level === undefined || null) { return Promise.reject('Subject level is undefined or null'); }
-        if (typeof sub.name !== 'string') { return Promise.reject('Subject name is not a string'); }
-        if (typeof sub.level !== 'string') { return Promise.reject('Subject level is not a string'); }
-        if (!sub.name.includes(sub.level)) { return Promise.reject('Subject level should be after the subject name in brackets'); }
-      });
-      sessionStorage.setItem('subjects', JSON.stringify(testData));
+      // testData.forEach(sub => {
+      //   if (sub === undefined || sub === null) { return Promise.reject('Array contains undefined data'); }
+      //   if (typeof sub !== 'object') { return Promise.reject('Array does not contain only Objects'); }
+      //   if (sub.name === undefined || null) { return Promise.reject('Subject name is undefined or null'); }
+      //   if (sub.level === undefined || null) { return Promise.reject('Subject level is undefined or null'); }
+      //   if (typeof sub.name !== 'string') { return Promise.reject('Subject name is not a string'); }
+      //   if (typeof sub.level !== 'string') { return Promise.reject('Subject level is not a string'); }
+      //   if (!sub.name.includes(sub.level)) { return Promise.reject('Subject level should be after the subject name in brackets'); }
+      // });
+      //sessionStorage.setItem('subjects', JSON.stringify(testData));
       return Promise.resolve(testData.sort((a, b) => {
         if (a.name > b.name) { return 1; }
         if (a.name < b.name) { return -1; }

@@ -45,6 +45,7 @@ export class SubjectsComponent implements OnInit {
 
   ngOnInit() {
     this.data.getSubjects().then((subs: Subject[]) => {
+      console.log(subs);
       this.subjects = subs;
       this.filtered = subs;
     }).catch((error: any) => { console.log(error); });
