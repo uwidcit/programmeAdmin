@@ -16,10 +16,10 @@ export const AppRoutes: Routes = [{
     pathMatch: 'full'
   }, {
     path: '',
-    loadChildren: './material-component/material.module#MaterialComponentsModule'
+    loadChildren: () => import('./material-component/material.module').then(m => m.MaterialComponentsModule)
   }, {
     path: 'home',
-    loadChildren: './starter/starter.module#StarterModule',
+    loadChildren: () => import('./starter/starter.module').then(m => m.StarterModule),
     canActivate: [AuthGuard]
   }, {
     path: 'view',
